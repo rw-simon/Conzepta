@@ -13,6 +13,8 @@ export default {
 		// link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
 	},
 
+	loading: { color: '#000000', height: '4px' },
+
 	// Global CSS (https://go.nuxtjs.dev/config-css)
 	css: ['~/assets/app.sass'],
 
@@ -47,10 +49,10 @@ export default {
 		// workbox: { dev: true },
 	},
 
-	// server: {
-	// 	host: '0.0.0.0',
-	// 	port: 3000,
-	// },
+	server: {
+		host: '0.0.0.0',
+		port: 3000,
+	},
 
 	// Axios module configuration (https://go.nuxtjs.dev/config-axios)
 	axios: {},
