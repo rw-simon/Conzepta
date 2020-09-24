@@ -1,5 +1,8 @@
 <template>
-	<h1>Support</h1>
+	<div>
+		<h1>Support</h1>
+		<CImage />
+	</div>
 </template>
 
 <script>

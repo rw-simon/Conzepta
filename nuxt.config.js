@@ -8,7 +8,11 @@ export default {
 				name: 'viewport',
 				content: 'width=device-width, initial-scale=1',
 			},
-			{ hid: 'description', name: 'description', content: '' },
+			{
+				hid: 'description',
+				name: 'description',
+				content: 'we make IT happen',
+			},
 		],
 		// link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
 	},
@@ -46,7 +50,7 @@ export default {
 			short_name: 'Conzepta',
 			orientation: 'portrait',
 		},
-		// workbox: { dev: true },
+		workbox: { debug: false },
 	},
 
 	// server: {

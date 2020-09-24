@@ -1,7 +1,8 @@
 <template>
 	<header>
+		<Logo />
 		<Menu />
-		<ScrollIndicator />
+		<ScrollIndicator style="grid-column: 1/-1" />
 	</header>
 </template>
 
@@ -13,10 +14,14 @@ export default {
 
 <style lang="sass" scoped>
 header
-	background: white
-	box-shadow: 0px -5px 10px 10px rgba(0,0,0,0.1)
+	display: grid
+	grid-template-columns: 4rem 1fr 4rem
+	grid-template-rows: 4rem
 	margin-bottom: 3rem
 	position: sticky
 	top: 0
 	z-index: 999
+	background: white
+	box-shadow: 0px -5px 10px 10px rgba(0,0,0,0.1)
+	box-sizing: border-box
 </style>

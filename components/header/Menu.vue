@@ -29,12 +29,14 @@ export default {
 		display: grid
 		gap: 1rem
 		width: min-content
-		grid-template-rows: 3rem
 		margin: auto
+		height: 100%
 		align-items: center
 		grid-template-columns: repeat(4, auto)
 		list-style: none
 		padding: 0
+		@include mobile
+			display: none
 		li
 			// display: inline-block
 			a
