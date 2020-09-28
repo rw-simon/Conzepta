@@ -38,6 +38,22 @@ export default {
 		'@nuxtjs/style-resources',
 		// https://go.nuxtjs.dev/pwa
 		'@nuxtjs/pwa',
+		[
+			'@nuxtjs/firebase',
+			{
+				config: {
+					apiKey: 'AIzaSyAkFvVEYyerY4QiRHrBxot-vvYdGKhYAEk',
+					authDomain: 'conzepta-17144.firebaseapp.com',
+					databaseURL: 'https://conzepta-17144.firebaseio.com',
+					projectId: 'conzepta-17144',
+					storageBucket: 'conzepta-17144.appspot.com',
+					messagingSenderId: '199437049066',
+					appId: '1:199437049066:web:c61df4bc6485cbc7f44b93',
+					measurementId: 'G-GM99B4YN1W',
+				},
+				services: {},
+			},
+		],
 	],
 
 	styleResources: {

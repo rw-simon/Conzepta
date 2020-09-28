@@ -41,6 +41,8 @@ export default {
 			// display: inline-block
 			a
 				padding: .5rem 1rem
+				&.nuxt-link-active
+					color: $c-blue
 				&:hover
 					border-bottom: 2px solid $c-blue
 </style>

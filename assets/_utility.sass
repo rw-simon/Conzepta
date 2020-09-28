@@ -1,10 +1,15 @@
 @mixin mobile
-	@media ( max-width: 768px ) and (orientation: portrait)
+	@media ( max-device-width: 768px ) and (orientation: portrait)
+		// MOBILE
+		@content
+
+@mixin mobile-landscape
+	@media ( max-device-height: 768px ) and (orientation: landscape)
 		// MOBILE
 		@content
 
 @mixin tablet
-	@media ( max-width: 1280px )
+	@media ( max-device-width: 1280px )
 		// MOBILE
 		@content
 
@@ -16,12 +21,27 @@
 .bc-blue
 	background-color: $c-blue
 	color: white
+	*
+		color: white
 
 // Text
 .font-mono
 	font-family: 'Lucida Console'
 
 // Layout
+.grid
+	display: grid
+	gap: 8rem
+	&.valign-center
+		align-items: center
+	@for $i from 1 through 12
+		&.cols-#{$i}
+			grid-template-columns: repeat(#{$i}, 1fr)
+			@include mobile
+				grid-template-columns: 1fr
+	@include mobile
+		gap: 4rem
+
 .p-1
 	padding: 1rem 1.66rem
 	box-sizing: border-box
@@ -31,3 +51,6 @@
 
 .br
 	border-radius: 5px
+
+.br-2
+	border-radius: 8px
