@@ -32,15 +32,21 @@
 .grid
 	display: grid
 	gap: 8rem
-	&.valign-center
-		align-items: center
 	@for $i from 1 through 12
 		&.cols-#{$i}
 			grid-template-columns: repeat(#{$i}, 1fr)
 			@include mobile
 				grid-template-columns: 1fr
+			@include mobile-landscape
+				grid-template-columns: 1fr 1fr
 	@include mobile
 		gap: 4rem
+
+.valign-center
+	align-items: center
+
+.valign-end
+	align-items: end
 
 .p-1
 	padding: 1rem 1.66rem

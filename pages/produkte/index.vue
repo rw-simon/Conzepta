@@ -1,29 +1,32 @@
 <template>
 	<div>
-		<div class="intro grid valign-center cols-2">
+		<div class="intro grid valign-end cols-2">
 			<ProductIntro />
 			<div class="filter br-2">
 				<input
 					:class="{
 						'br bc-blue': true,
-						active: selectedCategory == cat.id,
+						active: selectedCategories.includes(cat.id),
 					}"
 					v-for="(cat, i) in productCategories"
 					:key="i"
 					type="button"
 					:value="cat.name"
-					@click="selectedCategory = cat.id"
+					@click="toggleCat(cat.id)"
 				/>
 			</div>
 		</div>
-		<div class="products-list">
-			<article
-				v-show="p.product_category.includes(selectedCategory)"
-				v-for="(p, i) in products"
-				:key="i"
-			>
-				<h1>{{ p.title.rendered }}</h1>
-			</article>
+		<div class="products-list grid cols-3">
+			<ProductPanel
+				v-for="p in products"
+				:key="p.id"
+				v-show="
+					p.product_category.some(
+						(cat) => selectedCategories.indexOf(cat) >= 0
+					)
+				"
+				:product="p"
+			/>
 		</div>
 	</div>
 </template>
@@ -32,7 +35,7 @@
 export default {
 	data() {
 		return {
-			selectedCategory: 2,
+			selectedCategories: [2],
 		}
 	},
 	async asyncData({ store }) {
@@ -41,27 +44,51 @@ export default {
 			productCategories: store.state.productCategories,
 		}
 	},
+	methods: {
+		toggleCat(cat) {
+			this.selectedCategories.includes(cat)
+				? (this.selectedCategories = this.selectedCategories.filter(
+						(c) => {
+							return c != cat
+						}
+				  ))
+				: this.selectedCategories.push(cat)
+			console.log(this.selectedCategories)
+		},
+	},
 }
 </script>
 
 <style lang="sass" scoped>
 .intro
-	min-height: 50vh
-	margin-bottom: 5rem
+	min-height: 40vh
+	margin-bottom: 10rem
 	.filter
 		border: 1px solid $c-blue
 		display: grid
 		grid-template-columns: auto auto auto
+		@include mobile
+			grid-template-columns: 1fr
+		@include mobile-landscape
+			grid-template-columns: 1fr
 		input
 			font-weight: 600
 			margin: 2px 1px
-			border-radius: 0
+			border-radius: 1px
 			transition: background-color .15s ease, color .15s ease
+			background-color: white
+			color: $c-gray
+			@include mobile
+				border-radius: 5px
+				margin: 2px
+			@include mobile-landscape
+				border-radius: 5px
+				margin: 2px
 			&:hover
 				cursor: pointer
 			&.active
-				background-color: white
-				color: $c-gray
+				background-color: $c-blue
+				color: white
 			&:first-child
 				border-top-left-radius: 5px
 				border-bottom-left-radius: 5px
@@ -70,4 +97,7 @@ export default {
 				margin-right: 2px
 				border-top-right-radius: 5px
 				border-bottom-right-radius: 5px
+.products-list
+	grid-auto-flow: dense
+	gap: 4rem
 </style>

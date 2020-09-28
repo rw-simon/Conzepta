@@ -37,7 +37,7 @@ button
 	-webkit-appearance: none
 	appearance: none
 	padding: .5rem 2rem
-	margin: .5rem 0 1rem
+	margin: .5rem 0
 	background: $c-blue
 	display: inline-block
 	border: none
