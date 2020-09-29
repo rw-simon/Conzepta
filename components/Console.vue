@@ -24,7 +24,7 @@ export default {
 		return {
 			title: '',
 			isActive: false,
-			toggleSymbol: 'X',
+			toggleSymbol: '<',
 		}
 	},
 	methods: {
@@ -39,9 +39,9 @@ export default {
 <style lang="sass" scoped>
 #console
 	position: fixed
-	width: 30rem
+	width: 32rem
 	top: 10rem
-	right: -26rem
+	right: -28rem
 	display: grid
 	grid-template-columns: 3rem 1fr
 	transition: right $anim-smooth, bottom $anim-smooth

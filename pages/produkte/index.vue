@@ -16,7 +16,7 @@
 				/>
 			</div>
 		</div>
-		<div class="products-list grid cols-3">
+		<div class="products-list grid cols-3 small-gap">
 			<ProductPanel
 				v-for="p in products"
 				:key="p.id"
@@ -27,6 +27,9 @@
 				"
 				:product="p"
 			/>
+		</div>
+		<div class="more">
+			<ProductMore />
 		</div>
 	</div>
 </template>
@@ -72,6 +75,7 @@ export default {
 		@include mobile-landscape
 			grid-template-columns: 1fr
 		input
+			font-family: 'Arboria', sans-serif
 			font-weight: 600
 			margin: 2px 1px
 			border-radius: 1px
@@ -99,5 +103,4 @@ export default {
 				border-bottom-right-radius: 5px
 .products-list
 	grid-auto-flow: dense
-	gap: 4rem
 </style>

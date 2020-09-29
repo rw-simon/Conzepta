@@ -3,6 +3,7 @@
 		<Header />
 		<Nuxt class="container" />
 		<Console />
+		<Footer />
 	</div>
 </template>
 

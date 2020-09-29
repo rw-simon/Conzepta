@@ -42,7 +42,6 @@ button
 	display: inline-block
 	border: none
 	color: white
-	font-size: .8rem
 	font-family: 'Arboria', sans-serif
 	&:hover
 		cursor: pointer

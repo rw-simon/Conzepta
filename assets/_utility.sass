@@ -32,6 +32,8 @@
 .grid
 	display: grid
 	gap: 8rem
+	&.small-gap
+		gap: 4rem
 	@for $i from 1 through 12
 		&.cols-#{$i}
 			grid-template-columns: repeat(#{$i}, 1fr)
@@ -41,6 +43,8 @@
 				grid-template-columns: 1fr 1fr
 	@include mobile
 		gap: 4rem
+		&.small-gap
+			gap: 1rem
 
 .valign-center
 	align-items: center
