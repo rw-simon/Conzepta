@@ -23,13 +23,20 @@ export default {
 	css: ['~/assets/app.sass'],
 
 	// Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-	plugins: [],
+	plugins: [{ src: '~/plugins/scroll-reveal', mode: 'client' }],
 
 	// Auto import components (https://go.nuxtjs.dev/config-components)
 	components: true,
 
 	// Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
-	buildModules: [],
+	buildModules: [
+		[
+			'@nuxtjs/google-analytics',
+			{
+				id: 'UA-180573922-1',
+			},
+		],
+	],
 
 	// Modules (https://go.nuxtjs.dev/config-modules)
 	modules: [
@@ -38,22 +45,6 @@ export default {
 		'@nuxtjs/style-resources',
 		// https://go.nuxtjs.dev/pwa
 		'@nuxtjs/pwa',
-		[
-			'@nuxtjs/firebase',
-			{
-				config: {
-					apiKey: 'AIzaSyAkFvVEYyerY4QiRHrBxot-vvYdGKhYAEk',
-					authDomain: 'conzepta-17144.firebaseapp.com',
-					databaseURL: 'https://conzepta-17144.firebaseio.com',
-					projectId: 'conzepta-17144',
-					storageBucket: 'conzepta-17144.appspot.com',
-					messagingSenderId: '199437049066',
-					appId: '1:199437049066:web:c61df4bc6485cbc7f44b93',
-					measurementId: 'G-GM99B4YN1W',
-				},
-				services: {},
-			},
-		],
 	],
 
 	styleResources: {
