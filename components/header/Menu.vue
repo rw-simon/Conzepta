@@ -2,16 +2,16 @@
 	<nav class="main-menu">
 		<ul>
 			<li class="menu-item">
-				<nuxt-link to="/wir">Wir</nuxt-link>
+				<nuxt-link :to="localePath('wir')">Wir</nuxt-link>
 			</li>
 			<li class="menu-item">
-				<nuxt-link to="/produkte">Produkte</nuxt-link>
+				<nuxt-link :to="localePath('produkte')">Produkte</nuxt-link>
 			</li>
 			<li class="menu-item">
-				<nuxt-link to="/support">Support</nuxt-link>
+				<nuxt-link :to="localePath('support')">Support</nuxt-link>
 			</li>
 			<li class="menu-item">
-				<nuxt-link to="/portfolio">Portfolio</nuxt-link>
+				<nuxt-link :to="localePath('portfolio')">Portfolio</nuxt-link>
 			</li>
 		</ul>
 	</nav>
