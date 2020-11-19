@@ -1,5 +1,13 @@
 <template>
-	<h1>Portfolio</h1>
+	<div>
+		<div class="container">
+			<div class="grid cols-2">
+				<div>
+					<h3>Referenzen</h3>
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>

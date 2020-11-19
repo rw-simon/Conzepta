@@ -1,18 +1,13 @@
 <template>
-	<div
-		id="console"
-		:class="{ 'bc-blue p-1 br font-mono': true, active: isActive }"
-	>
+	<div id="console" :class="{ 'bc-blue p-1 br font-mono': true, active: isActive }">
 		<p>
-			<span @click="toggleConsole" class="toggle-console"
-				>[{{ toggleSymbol }}]</span
-			>
+			<span @click="toggleConsole" class="toggle-console">[{{ toggleSymbol }}]</span>
 		</p>
 		<div class="content">
 			<p class="title" @click="toggleConsole">Conzepta//</p>
 			<p>{ Unterstützung gefällig? Nehmen Sie mit uns Kontakt auf. }</p>
 			<CButton isOutline isMono text="Team Viewer" />
-			<CButton isOutline isMono text="Kontaktformular" />
+			<nuxt-link to="/support"><CButton isOutline isMono text="Kontaktformular" /></nuxt-link>
 		</div>
 	</div>
 </template>

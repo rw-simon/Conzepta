@@ -2,7 +2,7 @@
 	<header>
 		<Logo />
 		<Menu />
-		<LanguagePicker />
+		<!-- <LanguagePicker /> -->
 		<ScrollIndicator style="grid-column: 1/-1" />
 	</header>
 </template>
@@ -18,7 +18,6 @@ header
 	display: grid
 	grid-template-columns: 4rem 1fr 4rem
 	grid-template-rows: 4rem
-	margin-bottom: 3rem
 	position: sticky
 	top: 0
 	z-index: 999

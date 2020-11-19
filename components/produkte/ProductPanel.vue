@@ -16,9 +16,11 @@
 			"
 		></div>
 		<div class="product-panel-text p-2">
-			<h1 v-html="product.title.rendered" />
+			<h4 v-html="product.title.rendered" />
 			<p v-html="product.acf.product_subtitle" />
-			<CButton text="Mehr" />
+			<nuxt-link :to="'/produkte/' + product.slug"
+				><CButton text="Mehr"
+			/></nuxt-link>
 		</div>
 	</article>
 </template>

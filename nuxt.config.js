@@ -23,8 +23,10 @@ export default {
 	css: ['~/assets/app.sass'],
 
 	// Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-	plugins: [{ src: '~/plugins/scroll-reveal', mode: 'client' }],
-
+	plugins: [
+		{ src: '~/plugins/scroll-reveal', mode: 'client' },
+		{ src: '~/plugins/vue-swiper.js', mode: 'client' }
+	],
 	// Auto import components (https://go.nuxtjs.dev/config-components)
 	components: true,
 

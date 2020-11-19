@@ -1,12 +1,12 @@
 <template>
-	<div class="grid cols-2 section small-gap">
+	<div class="grid cols-2 small-gap">
 		<div>
-			<h2 class="page-more-subtitle">
+			<h3 class="page-more-subtitle">
 				{{ content.acf.product_more.product_more_subtitle }}
-			</h2>
-			<h1 class="page-more-title">
+			</h3>
+			<h2 class="page-more-title">
 				{{ content.acf.product_more.product_more_title }}
-			</h1>
+			</h2>
 		</div>
 		<p class="page-more-intro">
 			{{ content.acf.product_more.product_more_paragraph }}
@@ -25,4 +25,7 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="sass" scoped>
+h3
+	font-size: 2rem
+</style>

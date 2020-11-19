@@ -1,6 +1,5 @@
 <template>
 	<footer class="p-1 font-mono">
-		<p>// Footer work in progress</p>
 		<div class="grid cols-2 small-gap">
 			<section class="footer-left br bc-blue small-gap grid cols-2">
 				<FooterAbout />
@@ -22,6 +21,7 @@ export default {
 
 <style lang="sass" scoped>
 footer
+	margin-top: 4rem
 	@include mobile
 		margin-bottom: 5rem
 section

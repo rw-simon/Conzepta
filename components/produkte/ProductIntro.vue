@@ -1,8 +1,8 @@
 <template>
-	<div class="text">
-		<h2 class="page-subtitle">
+	<div class="product-intro">
+		<h3 class="page-subtitle">
 			{{ content.acf.product_intro.product_intro_subtitle }}
-		</h2>
+		</h3>
 		<h1 class="page-title">
 			{{ content.acf.product_intro.product_intro_title }}
 		</h1>

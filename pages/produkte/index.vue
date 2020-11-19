@@ -1,6 +1,6 @@
 <template>
-	<div>
-		<div class="intro grid valign-end cols-2">
+	<div class="container">
+		<div class="section intro grid valign-end cols-2">
 			<ProductIntro />
 			<div class="filter br-2">
 				<input
@@ -28,7 +28,7 @@
 				:product="p"
 			/>
 		</div>
-		<div class="more">
+		<div class="more section">
 			<ProductMore />
 		</div>
 	</div>
@@ -64,8 +64,6 @@ export default {
 
 <style lang="sass" scoped>
 .intro
-	min-height: 40vh
-	margin-bottom: 10rem
 	.filter
 		border: 1px solid $c-blue
 		display: grid
