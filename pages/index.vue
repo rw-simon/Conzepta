@@ -6,8 +6,7 @@
 				<img src="/icon_white.png" alt="" />
 			</div>
 		</div>
-		<div class="intro jarallax-slow">
-			<img class="jarallax-img" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/home_background1.png" alt="" />
+		<div class="intro" :style="{ transform: 'translateY(' + pos + 'vh)' }">
 			<div class="container">
 				<h2>Vorwärts kommen</h2>
 				<p>
@@ -17,8 +16,7 @@
 				<nuxt-link to="/produkte"><CButton text="Produkte" /></nuxt-link>
 			</div>
 		</div>
-		<div class="since jarallax">
-			<img class="jarallax-img" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/home_background2.png" alt="" />
+		<div class="since">
 			<div class="container">
 				<h3>Etablierte Lösungen</h3>
 				<h2>Seit 1986</h2>
@@ -53,12 +51,7 @@
 				<CButton style="margin-top: 8rem" text="Mehr" />
 			</div>
 		</div>
-		<div class="support jarallax-fast">
-			<img
-				class="jarallax-img"
-				src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/home_background_support-copy.png"
-				alt=""
-			/>
+		<div class="support">
 			<div class="container">
 				<div class="grid cols-2">
 					<span></span>
@@ -117,6 +110,27 @@ export default {
 			content: store.state.pages,
 		}
 	},
+	data() {
+		return {
+			pos: 0,
+		}
+	},
+	methods: {
+		handleScroll() {
+			// Your scroll handling here
+			// let variable = window.innerHeight / window.scrollY
+			// console.log('Window Height: ' + (document.body.clientHeight - window.innerHeight))
+			// console.log('Scroll Position: ' + window.scrollY)
+			// console.log(window.scrollY / window.innerHeight)
+			this.pos = (window.scrollY / (document.body.clientHeight - window.innerHeight)) * 50
+		},
+	},
+	beforeMount() {
+		window.addEventListener('scroll', this.handleScroll)
+	},
+	beforeDestroy() {
+		window.removeEventListener('scroll', this.handleScroll)
+	},
 }
 </script>
 
@@ -129,6 +143,8 @@ img
 	height: 80vh
 	display: grid
 	padding-bottom: 3rem
+	z-index: 999
+	position: relative
 	text-align: center
 	h1
 		color: white
@@ -136,13 +152,14 @@ img
 	img
 		width: 10rem
 .intro
-	// background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/home_background.png')
+	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/home_background.png')
 	background-position: center center
 	background-size: cover
 	background-repeat: no-repeat
-	margin-top: -30rem
+	margin-top: -50vh
 	z-index: -100
 	height: 120vh
+	position: relative
 	display: grid
 	align-items: end
 	padding: 10rem 0
@@ -152,11 +169,12 @@ img
 		h2
 			margin-bottom: 0
 .since
-	height: 120vh
-	margin-top: -20rem
-	// background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/home_background2.png')
-	// background-position: top center
-	// background-repeat: no-repeat
+	height: 150vh
+	margin-top: -10rem
+	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/home_background2.png')
+	background-position: top center
+	background-repeat: no-repeat
+	position: relative
 	display: grid
 	align-items: end
 	img
@@ -167,7 +185,7 @@ img
 	h1
 		margin-bottom: 8rem
 .support
-	// background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/home_background_support-copy.png')
+	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/home_background_support-copy.png')
 	background-position: center left
 	background-repeat: no-repeat
 	height: 50rem
