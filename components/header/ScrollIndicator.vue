@@ -1,9 +1,6 @@
 <template>
 	<div class="indicator-wrapper">
-		<div
-			class="indicator-bar"
-			:style="{ width: scrollPosition + '%' }"
-		></div>
+		<div class="indicator-bar" :style="{ width: scrollY + '%' }"></div>
 	</div>
 </template>
 
@@ -12,9 +9,26 @@ export default {
 	name: 'ScrollIndicator',
 	data() {
 		return {
-			scrollPosition: 60,
+			scrollY: this.position,
 		}
 	},
+	methods: {
+		handleScroll() {
+			// Your scroll handling here
+			// let variable = window.innerHeight / window.scrollY
+			// console.log('Window Height: ' + (document.body.clientHeight - window.innerHeight))
+			// console.log('Scroll Position: ' + window.scrollY)
+			// console.log(window.scrollY / window.innerHeight)
+			this.scrollY = (window.scrollY / (document.body.clientHeight - window.innerHeight)) * 100
+		},
+	},
+	beforeMount() {
+		window.addEventListener('scroll', this.handleScroll)
+	},
+	beforeDestroy() {
+		window.removeEventListener('scroll', this.handleScroll)
+	},
+	props: { position: { default: 0, type: Number } },
 }
 </script>
 
