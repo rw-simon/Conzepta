@@ -6,19 +6,19 @@
 				<img src="/icon_white.png" alt="" />
 			</div>
 		</div>
-		<div class="intro">
+		<div class="intro jarallax-slow">
+			<img class="jarallax-img" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/home_background.png" alt="" />
 			<div class="container">
 				<h2>Vorwärts kommen</h2>
 				<p>
 					Mehr Effizienz und Sicherheit mit <br />
 					Software von Conzepta.
 				</p>
-				<nuxt-link to="/produkte"
-					><CButton text="Produkte"
-				/></nuxt-link>
+				<nuxt-link to="/produkte"><CButton text="Produkte" /></nuxt-link>
 			</div>
 		</div>
-		<div class="since">
+		<div class="since jarallax">
+			<img class="jarallax-img" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/home_background2.png" alt="" />
 			<div class="container">
 				<h3>Etablierte Lösungen</h3>
 				<h2>Seit 1986</h2>
@@ -35,44 +35,30 @@
 				<h1>Vorteile verschaffen mit Conzepta</h1>
 				<div class="grid cols-3">
 					<article>
-						<img
-							src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_puzzle.png"
-							alt=""
-						/>
+						<img src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_puzzle.png" alt="" />
 						<h2>Adaption</h2>
-						<p>
-							Wir bieten keine Pakete ab Stange, sondern
-							individuelle Lösungen und persönlichen Support.
-						</p>
+						<p>Wir bieten keine Pakete ab Stange, sondern individuelle Lösungen und persönlichen Support.</p>
 					</article>
 					<article>
-						<img
-							style="height: 234px; display: block"
-							src=""
-							alt=""
-						/>
+						<img style="height: 234px; display: block" src="" alt="" />
 						<h2>Qualität</h2>
-						<p>
-							Wir liefern Schweizer Qualitätsprodukte aus
-							Eigenentwicklung.
-						</p>
+						<p>Wir liefern Schweizer Qualitätsprodukte aus Eigenentwicklung.</p>
 					</article>
 					<article>
-						<img
-							src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_grabber.png"
-							alt=""
-						/>
+						<img src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_grabber.png" alt="" />
 						<h2>Modern</h2>
-						<p>
-							Wir können Ihre Zukunft nicht vorhersehen. Aber wir
-							können sie programmieren.
-						</p>
+						<p>Wir können Ihre Zukunft nicht vorhersehen. Aber wir können sie programmieren.</p>
 					</article>
 				</div>
 				<CButton style="margin-top: 8rem" text="Mehr" />
 			</div>
 		</div>
-		<div class="support">
+		<div class="support jarallax-fast">
+			<img
+				class="jarallax-img"
+				src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/home_background_support-copy.png"
+				alt=""
+			/>
 			<div class="container">
 				<div class="grid cols-2">
 					<span></span>
@@ -80,33 +66,23 @@
 						<h3>Support</h3>
 						<h2>Für Sie da!</h2>
 						<p>
-							Eine gute Software ist jene, die ohne Probleme
-							läuft. Das garantieren wir Ihnen. Deshalb sind wir
-							für Sie da – wann immer Sie uns brauchen
+							Eine gute Software ist jene, die ohne Probleme läuft. Das garantieren wir Ihnen. Deshalb sind wir für Sie da – wann immer
+							Sie uns brauchen
 						</p>
 						<CButton text="Support" />
 						<div class="list">
 							<article>
 								<img src="/icon_tacho.svg" alt="" />
-								<p>
-									Wir reagieren so, wie Sie es sich wünschen:
-									schnell und flexibel
-								</p>
+								<p>Wir reagieren so, wie Sie es sich wünschen: schnell und flexibel</p>
 							</article>
 							<article>
 								<img src="/icon_lock.svg" alt="" />
-								<p>
-									Wir behandeln Sie so, wie wir selber am
-									liebsten arbeiten: unkompliziert, aber immer
-									diskret.
-								</p>
+								<p>Wir behandeln Sie so, wie wir selber am liebsten arbeiten: unkompliziert, aber immer diskret.</p>
 							</article>
 							<article>
 								<img src="" alt="" />
 								<p>
-									Wir sprechen so, dass Sie uns verstehen:
-									Einfach, wenn etwas nicht klar ist –
-									kompetent, wenn es ins Detail geht.
+									Wir sprechen so, dass Sie uns verstehen: Einfach, wenn etwas nicht klar ist – kompetent, wenn es ins Detail geht.
 								</p>
 							</article>
 						</div>
@@ -118,9 +94,7 @@
 			<div class="container">
 				<h1>News</h1>
 				<br />
-				<h2 style="font-style: italic; margin-bottom: 8rem">
-					keine Einträge gefunden
-				</h2>
+				<h2 style="font-style: italic; margin-bottom: 8rem">keine Einträge gefunden</h2>
 			</div>
 		</div>
 		<!-- <div>
@@ -162,11 +136,13 @@ img
 	img
 		width: 10rem
 .intro
-	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/home_background.png')
+	// background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/home_background.png')
 	background-position: center center
 	background-size: cover
 	background-repeat: no-repeat
-	height: 140vh
+	margin-top: -30rem
+	z-index: -100
+	height: 120vh
 	display: grid
 	align-items: end
 	padding: 10rem 0
@@ -176,24 +152,29 @@ img
 		h2
 			margin-bottom: 0
 .since
-	height: 140vh
-	margin-top: -24rem
-	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/home_background2.png')
-	background-position: top center
-	background-repeat: no-repeat
+	height: 120vh
+	margin-top: -20rem
+	// background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/home_background2.png')
+	// background-position: top center
+	// background-repeat: no-repeat
 	display: grid
 	align-items: end
+	img
+		max-height: 1200px !important
 .vorteile
 	text-align: center
 	margin-bottom: 8rem
 	h1
 		margin-bottom: 8rem
 .support
-	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/home_background_support-copy.png')
+	// background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/home_background_support-copy.png')
 	background-position: center left
 	background-repeat: no-repeat
 	height: 50rem
 	background-size: contain
+	img
+		max-height: 700px !important
+		top: 40vh !important
 	.text
 		margin-top: 10rem
 		.list
@@ -205,7 +186,7 @@ img
 					height: 2rem
 					position: absolute
 					left: -3.25rem
-					top: .5rem
+					top: .5rem !important
 .news
 	text-align: center
 </style>
