@@ -7,7 +7,7 @@
 			</div>
 		</div>
 		<div class="intro jarallax-slow">
-			<img class="jarallax-img" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/home_background.png" alt="" />
+			<img class="jarallax-img" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/home_background1.png" alt="" />
 			<div class="container">
 				<h2>Vorwärts kommen</h2>
 				<p>
