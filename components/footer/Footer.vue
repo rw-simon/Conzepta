@@ -25,7 +25,7 @@ footer
 	@include mobile
 		margin-bottom: 5rem
 section
-	padding: 4rem
+	padding: 2rem
 	.footer-section
 		@include mobile
 			padding: 0

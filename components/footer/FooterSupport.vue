@@ -1,8 +1,8 @@
 <template>
 	<div class="footer-products">
 		<h3>Support</h3>
-		<CButton isOutline isMono text="Kontaktformular" />
-		<CButton isOutline isMono text="Team Viewer" />
+		<nuxt-link to="/support"><CButton isOutline isMono text="Kontaktformular" /></nuxt-link>
+		<nuxt-link to="/"><CButton isOutline isMono text="Team Viewer" /></nuxt-link>
 	</div>
 </template>
 
@@ -14,5 +14,9 @@ export default {
 
 <style lang="sass" scoped>
 h3
-	margin-bottom: 1rem
+	margin-bottom: 2rem
+	font-size: 1.5rem
+	text-transform: none
+p
+	margin: 0
 </style>
