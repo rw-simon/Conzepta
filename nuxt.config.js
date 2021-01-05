@@ -24,9 +24,9 @@ export default {
 
 	// Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
 	plugins: [
-		{ src: '~/plugins/scroll-reveal', mode: 'client' },
+		// { src: '~/plugins/scroll-reveal', mode: 'client' },
+		// { src: '~/plugins/jarallax.js', mode: 'client' },
 		{ src: '~/plugins/vue-swiper.js', mode: 'client' },
-		{src: '~/plugins/jarallax.js', mode: 'client'}
 	],
 	// Auto import components (https://go.nuxtjs.dev/config-components)
 	components: true,
@@ -52,14 +52,16 @@ export default {
 	],
 
 	i18n: {
-		locales: [{code: 'de', iso: 'de-CH'}, {code: 'fr', iso: 'fr-FR'}],
+		locales: [
+			{ code: 'de', iso: 'de-CH' },
+			{ code: 'fr', iso: 'fr-FR' },
+		],
 		defaultLocale: 'de',
 		seo: true,
 		vueI18n: {
 			fallbackLocale: 'de',
-		}
+		},
 	},
-
 
 	styleResources: {
 		sass: ['@/assets/_variables.sass', '@/assets/_utility.sass'],
@@ -74,10 +76,10 @@ export default {
 		workbox: { debug: false },
 	},
 
-	// server: {
-	// 	host: '0.0.0.0',
-	// 	port: 3000,
-	// },
+	server: {
+		host: '0.0.0.0',
+		port: 3000,
+	},
 
 	// Axios module configuration (https://go.nuxtjs.dev/config-axios)
 	axios: {},

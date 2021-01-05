@@ -2,7 +2,7 @@
 	<div>
 		<div class="banner-main">
 			<div class="container">
-				<h1>We make IT happen</h1>
+				<h1>{{ content.title.rendered }}</h1>
 				<img src="/icon_white.png" alt="" />
 			</div>
 		</div>
@@ -87,7 +87,13 @@
 			<div class="container">
 				<h1>News</h1>
 				<br />
-				<h2 style="font-style: italic; margin-bottom: 8rem">keine Einträge gefunden</h2>
+				<div class="news-articles">
+					<article class="news-article" v-for="(a, i) in news" :key="i">
+						<h3>{{ a.acf.datum }}</h3>
+						<h2>{{ a.title.rendered }}</h2>
+						<div v-html="a.content.rendered" />
+					</article>
+				</div>
 			</div>
 		</div>
 		<!-- <div>
@@ -107,7 +113,8 @@
 export default {
 	async asyncData({ store }) {
 		return {
-			content: store.state.pages,
+			content: store.state.pages['homepage'],
+			news: store.state.news,
 		}
 	},
 	data() {
@@ -135,6 +142,16 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.news-articles
+	// display: grid
+	// grid-template-columns: repeat(2, 1fr )
+	// gap: 4rem
+	text-align: left
+	article
+		width: 40%
+		margin: 5rem 0
+		&:nth-child(2n)
+			margin-left: 58%
 img
 	height: auto
 .banner-main

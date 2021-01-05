@@ -1,29 +1,25 @@
 <template>
 	<div>
-		<div class="banner">
+		<div class="banner" style="">
 			<div class="container">
-				<h3>Bussenerfassung</h3>
-				<h1>PolicePad //</h1>
-				<p>
-					PolicePad ist die fortschrittlichste Schweizer Lösung zum Erfassen von Bussen. Schnell, einfach und zuverlässig. Mit smarten
-					Modulen, die fast alles ermöglichen, was Sie sich wünschen.
-				</p>
+				<div style="max-width: 40%" v-html="content.acf.banner.text" />
 			</div>
 		</div>
 		<div class="pp-icons" style="margin-top: 4rem">
 			<div class="container">
-				<div>
-					<img style="width: 3rem" src="/icon_ios.png" alt="" />
-					<img style="width: 3rem" src="/icon_windows.png" alt="" />
-					<img style="width: 3rem" src="/icon_android.png" alt="" />
+				<div style="display: grid; grid-template-columns: repeat(6, 2rem); gap: 0.5rem; align-items: center">
+					<span v-for="(pf, i) in content.platform" :key="i" style="padding: 5px">
+						<img :src="platforms[pf].acf.platform_icon" alt="" />
+					</span>
 				</div>
-				<div class="grid cols-2 small-gap" style="width: 16rem; align-items: center; margin-top: 2rem">
+				<div v-if="content.acf.product_person" class="grid cols-2 small-gap" style="width: 16rem; align-items: center; margin-top: 2rem">
 					<div>
 						<p style="margin: 0; line-height: 1em">Produktmanager</p>
-						<p style="font-weight: 900">Dominic Bürki</p>
+						<p style="font-weight: 900">{{ content.acf.product_person.post_title }}</p>
 					</div>
 					<div>
-						<img src="/portrait_placeholder.png" alt="" />
+						<img if src="" alt="" />
+						<img style="border-radius: 50%" src="/portrait_placeholder.png" alt="" />
 					</div>
 				</div>
 			</div>
@@ -77,57 +73,21 @@
 			</div>
 		</div>
 		<div class="pp-module">
-			<div class="container" style="height: 100%">
+			<div class="container" style="height: 100%; position: relative">
 				<client-only>
 					<swiper class="swiper" :options="swiperOption">
-						<swiper-slide>
-							<h3>Module</h3>
-							<h2>QR Code</h2>
-							<p>
-								Das Modul QRCode erfasst die Fallnummern automatisch. Dieses Verfahren schliesst Tippfehler bei der manuellen
-								Erfassung aus. Zusätzlich kann das Scannen eines QRCodes an anderen Stellen eingesetzt.
-							</p>
-						</swiper-slide>
-						<swiper-slide>
-							<h3>Module</h3>
-							<h2>eCar</h2>
-							<p>
-								Das Modul eCar gleicht ein erfasstes Kontrollschild mit den Daten der Motorfahrzeugkontrolle ab. Die Daten der
-								Motorfahrzeugkontrolle werden automatisch in die Erfassung eines Falles übernommen. Das aktuell unterstützte InfoCar
-								liefert nebst der Fahrzeugmarke und -farbe zusätzlich den Fahrzeugtyp. Diese Informationen können in.
-							</p>
-						</swiper-slide>
-						<swiper-slide>
-							<h3>Module</h3>
-							<h2>Observer</h2>
-							<p>
-								Das Modul Observer gleicht das Kontrollschild mit polizeilichen Datenbeständen in den Bereichen der Fahndung und
-								Observation ab (RIPOL). Die serverseitige Komponente für die RIPOL-Abfragen wurde in Zusammenarbeit von Dycom AG
-								(Hersteller von MACS) entwickelt.
-							</p>
-						</swiper-slide>
-						<swiper-slide>
-							<h3>Module</h3>
-							<h2>eParking</h2>
-							<p>
-								Das Modul eParking gibt Auskunft über alle auf ein Fahrzeug ausgestellten Bewilligungen, etwa Anwohnerparkkarten,
-								Spitex-Bewilligungen oder Marktfahrerbewilligungen. Es überprüft bei bargeldlos bezahlten Parkvorgängen die
-								Parkberechtigung.
-							</p>
-						</swiper-slide>
-						<swiper-slide>
-							<h3>Module</h3>
-							<h2>Print</h2>
-							<p>
-								Das Modul Print erlaubt es, die Fallinformationen mit einem mobilen Bluetooth-Drucker auszudrucken und dem
-								Einzahlungsschein beizulegen.
-							</p>
+						<swiper-slide v-for="(slide, i) in content.acf.policepad_slider" :key="i">
+							<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8rem">
+								<div v-html="slide.slide_text" />
+								<div v-if="slide.slide_image"><img :src="slide.slide_image" alt="" /></div>
+							</div>
 						</swiper-slide>
 					</swiper>
+					<div class="swiper-pagination"></div>
 				</client-only>
 			</div>
 		</div>
-		<div class="backend">
+		<div style="background-color: #e7e9ec; margin-bottom: 12rem" class="backend">
 			<div class="container">
 				<div class="text">
 					<h3>PolicePad Server</h3>
@@ -144,29 +104,26 @@
 		<div class="police">
 			<div class="container">
 				<h3 style="text-align: center">STAPO ZÜRICH / BERNER KAPO / ZÜRCHER KAPO / PRIVATE</h3>
-				<h2 style="text-align: center; margin-bottom: 8rem">Seit eh und je steht PolicPad im Zentrum der Digitalen Datenerfassung</h2>
+				<h2 style="text-align: center; margin-bottom: 8rem">{{ content.acf.numbers.numbers_title }}</h2>
 				<div class="grid cols-5">
 					<div style="grid-column: span 3">
-						<h1 style="font-size: 5rem; margin-bottom: 0; line-height: 1em">30</h1>
+						<h1 style="font-size: 5rem; margin-bottom: 0; line-height: 1em">{{ content.acf.numbers.numbers_actual.numbers_years }}</h1>
 						<h3 style="margin-bottom: 2rem">Jahre</h3>
-						<h1 style="font-size: 5rem; margin-bottom: 0; line-height: 1em">3'000</h1>
+						<h1 style="font-size: 5rem; margin-bottom: 0; line-height: 1em">{{ content.acf.numbers.numbers_actual.numbers_users }}</h1>
 						<h3 style="margin-bottom: 2rem">Nutzer</h3>
-						<h1 style="font-size: 5rem; margin-bottom: 0; line-height: 1em">1'000'000</h1>
+						<h1 style="font-size: 5rem; margin-bottom: 0; line-height: 1em">{{ content.acf.numbers.numbers_actual.numbers_cases }}</h1>
 						<h3 style="margin-bottom: 2rem">Fälle im Jahr</h3>
 					</div>
-					<div style="grid-column: span 2">
-						<p>
-							Mit seinen schweizweit über 3'000 Nutzern und den damit eröffneten 1'000'000 Fällen pro Tag, bewährt sich PolicePad jeden
-							Tag. Mittlerweile ist die Software seit 30 Jahren mit höchster Zuverlässigkeit im Einsatz. PolicePad ist nun schon in der
-							5.Generation und wird laufend an neuen Eingabegeräten angepasst
-						</p>
-					</div>
+					<div style="grid-column: span 2" v-html="content.acf.numbers.numbers_text" />
 				</div>
 			</div>
 		</div>
 		<div style="background: #e7e9ec; margin-top: 8rem" class="anwender">
 			<div class="container" style="padding: 4rem 0">
 				<h2>Anwender</h2>
+				<div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 2rem; align-items: center">
+					<img v-for="(img, i) in content.acf.anwender" :key="i" :src="img" alt="" />
+				</div>
 			</div>
 		</div>
 	</div>
@@ -174,9 +131,16 @@
 
 <script>
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
-import 'swiper/swiper-bundle.css'
+import 'swiper/css/swiper.min.css'
 
 export default {
+	async asyncData({ store }) {
+		return {
+			content: store.state.products['policepad'],
+			platforms: store.state.platforms,
+			person: store.state.person,
+		}
+	},
 	data() {
 		return {
 			showContentKomp: false,
@@ -184,13 +148,11 @@ export default {
 				slidesPerView: 1,
 				spaceBetween: 48,
 				loop: false,
-				disableOnInteraction: false,
-				freeMode: false,
-				autoplay: false,
-				mouseWheel: true,
+				mousewheel: true,
 				direction: 'vertical',
 				pagination: {
 					el: '.swiper-pagination',
+					type: 'bullets',
 					clickable: false,
 				},
 			},
@@ -205,6 +167,10 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.swiper-pagination
+	top: 50%
+	transform: translateY(-50%)
+	left: -8rem
 .banner
 	margin-top: 8rem
 	display: grid
@@ -258,7 +224,6 @@ img
 		height: 100%
 	.swiper-slide
 		height: 20rem
-		width: 40%
 .backend
 	display: grid
 	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/pp-backend-background.png')

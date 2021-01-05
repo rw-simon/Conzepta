@@ -10,9 +10,9 @@
 			<li class="menu-item">
 				<nuxt-link :to="localePath('support')">Support</nuxt-link>
 			</li>
-			<li class="menu-item">
+			<!-- <li class="menu-item">
 				<nuxt-link :to="localePath('portfolio')">Portfolio</nuxt-link>
-			</li>
+			</li> -->
 		</ul>
 	</nav>
 </template>
