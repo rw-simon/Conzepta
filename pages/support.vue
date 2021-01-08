@@ -49,6 +49,29 @@
 			</form>
 			<CButton text="Senden" style="margin-top: 2rem" />
 		</div>
+		<div class="container" style="margin-top: 8rem">
+			<div class="grid cols-2">
+				<div>
+					<p>Conzepta Team<br />Allmendstrasse 54<br />3014 Bern</p>
+					<br />
+					<div class="grid cols-4" style="gap: 0">
+						<img style="grid-column: span 1" src="/busicon.png" alt="" />
+						<div style="grid-column: span 3">
+							<p>B20<br />Richtung Bern Wankdorf</p>
+						</div>
+					</div>
+				</div>
+				<div>
+					<h3>Von Richtung Olten</h3>
+					<h2>Mit dem Auto</h2>
+					<br />
+					<p>
+						Nehmen sie die Ausfahrt 37-BernWankdorf und biegen sie anschliessend in die Papiermühlestrasse ein. Beim ersten Kreisel rechts
+						und dann nur noch dem
+					</p>
+				</div>
+			</div>
+		</div>
 	</div>
 </template>
 

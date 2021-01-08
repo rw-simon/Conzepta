@@ -25,17 +25,19 @@
 				</div>
 			</div>
 		</div>
-		<div style="margin-top: 8rem" class="vernetzen">
-			<div class="container">
-				<div class="grid cols-2">
-					<div style="margin-top: 16rem">
-						<h3>Unabhängig Vernetzen</h3>
-						<h2>Echtzeit Kommunikation zwischen allen Systemen</h2>
-						<p>
-							InterLink "übersetzt" die spezifischen Protokolle in ein Einheitliches. Die Kommunikation zwischen den Terminals und dem
-							Managementsystem findet in Echtzeit statt. Weltweit. Dabei spielt es keine Rolle, ob die Installation nur ein einziges
-							Terminal umfasst oder mehrere Tausend in einem Grosskonzern mit global verteilten
-						</p>
+		<div class="background-diagonal-2">
+			<div style="margin-top: 8rem" class="vernetzen">
+				<div class="container">
+					<div class="grid cols-2">
+						<div style="margin-top: 16rem">
+							<h3>Unabhängig Vernetzen</h3>
+							<h2>Echtzeit Kommunikation zwischen allen Systemen</h2>
+							<p>
+								InterLink "übersetzt" die spezifischen Protokolle in ein Einheitliches. Die Kommunikation zwischen den Terminals und
+								dem Managementsystem findet in Echtzeit statt. Weltweit. Dabei spielt es keine Rolle, ob die Installation nur ein
+								einziges Terminal umfasst oder mehrere Tausend in einem Grosskonzern mit global verteilten
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -78,29 +80,31 @@
 				</div>
 			</div>
 		</div>
-		<div class="clock">
-			<div class="container">
-				<div :class="{ text: true, open: showContentKomp }">
-					<h3>ARBEITSZEITEN AUSWERTEN</h3>
-					<h2>Kommunikation kann so viel mehr</h2>
-					<p class="intro">
-						Auf der Plattform eines Systemanbieters werden Arbeitszeiten ausgewertet und Zutrittsberechtigungen der Mitarbeitenden in
-						einem Betrieb festgelegt. Diese Vorgänge erfordern eine Kommunikation mit den Terminals, die auf die Standorte der.
-					</p>
-					<img
-						@click="toggleContentKomp"
-						:class="{
-							'more-icon': true,
-							mirrored: showContentKomp,
-						}"
-						src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_arrowDown.png"
-						alt=""
-					/>
-					<p :class="{ more: true, active: showContentKomp }">
-						Oftmals stehen in einem Betrieb Terminals verschiedener Hersteller im Einsatz. Dabei zeigt sich oft folgendes Problem: Die
-						Terminals der verschiedenen Hersteller ‘’sprechen eine unterschiedliche Sprache’’, d.h. die Terminals und ihr Host verstehen
-						einander nicht!.
-					</p>
+		<div class="background-diagonal-3">
+			<div class="clock">
+				<div class="container">
+					<div :class="{ text: true, open: showContentKomp }">
+						<h3>ARBEITSZEITEN AUSWERTEN</h3>
+						<h2>Kommunikation kann so viel mehr</h2>
+						<p class="intro">
+							Auf der Plattform eines Systemanbieters werden Arbeitszeiten ausgewertet und Zutrittsberechtigungen der Mitarbeitenden in
+							einem Betrieb festgelegt. Diese Vorgänge erfordern eine Kommunikation mit den Terminals, die auf die Standorte der.
+						</p>
+						<img
+							@click="toggleContentKomp"
+							:class="{
+								'more-icon': true,
+								mirrored: showContentKomp,
+							}"
+							src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_arrowDown.png"
+							alt=""
+						/>
+						<p :class="{ more: true, active: showContentKomp }">
+							Oftmals stehen in einem Betrieb Terminals verschiedener Hersteller im Einsatz. Dabei zeigt sich oft folgendes Problem: Die
+							Terminals der verschiedenen Hersteller ‘’sprechen eine unterschiedliche Sprache’’, d.h. die Terminals und ihr Host
+							verstehen einander nicht!.
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -149,18 +153,29 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.background-diagonal-2
+	background-image: url('/bgdiag2.svg')
+	background-position: center
+	padding: 20vh 0
+	margin: -30vh 0 -70vh
+	position: relative
+	z-index: -99
+.background-diagonal-3
+	background-image: url('/bgdiag3.svg')
+	background-position: center
 .banner
 	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/interlink_banner.png')
 	background-repeat: no-repeat
 	background-size: cover
 	background-position: center
 	min-height: 65.66961251vw
+	z-index: 99
 .vernetzen
 	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/background2.png')
 	background-repeat: no-repeat
-	background-size: cover
-	background-position: center
-	min-height: 50vw
+	background-size: 100%
+	background-position: top center
+	min-height: 80vw
 .funktionen
 	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/background3.png')
 	background-repeat: no-repeat

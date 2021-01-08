@@ -57,7 +57,7 @@ export default {
 		border-bottom-right-radius: 0
 	@include mobile
 		width: 100%
-		bottom: -13.5rem
+		bottom: -11rem
 		right: 0
 		top: auto
 		border-bottom-left-radius: 0
@@ -65,6 +65,7 @@ export default {
 		grid-template-columns: 1fr
 		grid-template-rows: 0 auto
 		padding-bottom: 2rem
+		z-index: 9999999
 		box-shadow: 0px 5px 10px 10px rgba(0,0,0,0.1)
 		p.title
 			margin-bottom: 4rem

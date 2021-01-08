@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="banner-main">
-			<div class="container">
+			<div class="container" style="width: auto">
 				<h1>{{ content.title.rendered }}</h1>
 				<img src="/icon_white.png" alt="" />
 			</div>
@@ -87,12 +87,22 @@
 			<div class="container">
 				<h1>News</h1>
 				<br />
-				<div class="news-articles">
+				<div class="news-articles" style="position: relative">
 					<article class="news-article" v-for="(a, i) in news" :key="i">
 						<h3>{{ a.acf.datum }}</h3>
 						<h2>{{ a.title.rendered }}</h2>
 						<div v-html="a.content.rendered" />
 					</article>
+					<div class="lines">
+						<hr />
+						<hr />
+						<hr />
+						<hr />
+						<hr />
+						<hr />
+						<hr />
+						<hr />
+					</div>
 				</div>
 			</div>
 		</div>
@@ -142,6 +152,20 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.lines
+	position: absolute
+	width: 4rem
+	left: 50%
+	transform: translateX(-50%)
+	top: 0
+	@include mobile
+		display: none
+	hr
+		height: 1px
+		background: black
+		border: none
+		display: block
+		margin-bottom: 5rem
 .news-articles
 	// display: grid
 	// grid-template-columns: repeat(2, 1fr )
@@ -152,6 +176,10 @@ export default {
 		margin: 5rem 0
 		&:nth-child(2n)
 			margin-left: 58%
+		@include mobile
+			width: auto
+			&:nth-child(2n)
+				margin-left: auto
 img
 	height: auto
 .banner-main
@@ -163,6 +191,8 @@ img
 	z-index: 999
 	position: relative
 	text-align: center
+	@include mobile
+		height: 60vh
 	h1
 		color: white
 		font-weight: 300
@@ -180,9 +210,15 @@ img
 	display: grid
 	align-items: end
 	padding: 10rem 0
+	@include mobile
+		background: none
+		height: auto
+		margin-top: auto
 	.container
 		margin-top: 0
 		margin-bottom: 0
+		@include mobile
+			width: 90%
 		h2
 			margin-bottom: 0
 .since
@@ -194,6 +230,12 @@ img
 	position: relative
 	display: grid
 	align-items: end
+	@include mobile
+		.container
+			width: 90%
+		margin-top: 0
+		margin-bottom: 8rem
+		height: auto
 	img
 		max-height: 1200px !important
 .vorteile
@@ -201,17 +243,23 @@ img
 	margin-bottom: 8rem
 	h1
 		margin-bottom: 8rem
+		@include mobile
+			margin-bottom: 4rem
 .support
 	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/home_background_support-copy.png')
 	background-position: center left
 	background-repeat: no-repeat
 	height: 50rem
 	background-size: contain
+	@include mobile
+		background: none
 	img
 		max-height: 700px !important
 		top: 40vh !important
 	.text
 		margin-top: 10rem
+		@include mobile
+			margin-top: 0rem
 		.list
 			margin-top: 6rem
 			article
