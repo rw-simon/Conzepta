@@ -27,6 +27,7 @@ export default {
 		// { src: '~/plugins/scroll-reveal', mode: 'client' },
 		// { src: '~/plugins/jarallax.js', mode: 'client' },
 		{ src: '~/plugins/vue-swiper.js', mode: 'client' },
+		{ src: '~/plugins/scroll-reveal.js', mode: 'client' },
 	],
 	// Auto import components (https://go.nuxtjs.dev/config-components)
 	components: true,

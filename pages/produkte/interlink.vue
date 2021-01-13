@@ -159,10 +159,12 @@ export default {
 	padding: 20vh 0
 	margin: -30vh 0 -70vh
 	position: relative
+	background-repeat: no-repeat
 	z-index: -99
 .background-diagonal-3
 	background-image: url('/bgdiag3.svg')
 	background-position: center
+	background-repeat: no-repeat
 .banner
 	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/interlink_banner.png')
 	background-repeat: no-repeat

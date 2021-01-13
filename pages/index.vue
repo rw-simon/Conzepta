@@ -2,50 +2,66 @@
 	<div>
 		<div class="banner-main">
 			<div class="container" style="width: auto">
-				<h1>{{ content.title.rendered }}</h1>
-				<img src="/icon_white.png" alt="" />
+				<h1 v-scroll-reveal>{{ content.title.rendered }}</h1>
+				<img v-scroll-reveal="{ delay: 200 }" src="/icon_white.png" alt="" />
+				<div style="width: 64px; text-align: center; margin: auto; margin-top: 5rem; margin-bottom: -5rem">
+					<img src="/arrows.png" alt="" />
+				</div>
 			</div>
 		</div>
-		<div class="intro" :style="{ transform: 'translateY(' + pos + 'vh)' }">
+		<div class="intro">
+			<!-- :style="{ transform: 'translateY(' + pos + 'vh)' }"> -->
 			<div class="container">
-				<h2>Vorwärts kommen</h2>
-				<p>
+				<h2 v-scroll-reveal>Vorwärts kommen</h2>
+				<p v-scroll-reveal="{ delay: 200 }">
 					Mehr Effizienz und Sicherheit mit <br />
 					Software von Conzepta.
 				</p>
-				<nuxt-link to="/produkte"><CButton text="Produkte" /></nuxt-link>
+				<nuxt-link style="z-index: 99999999; position: relative" v-scroll-reveal="{ delay: 400 }" to="/produkte"
+					><CButton text="Produkte"
+				/></nuxt-link>
 			</div>
 		</div>
 		<div class="since">
 			<div class="container">
-				<h3>Etablierte Lösungen</h3>
-				<h2>Seit 1986</h2>
-				<p>
+				<h3 v-scroll-reveal>Etablierte Lösungen</h3>
+				<h2 v-scroll-reveal="{ delay: 200 }">Seit 1986</h2>
+				<p v-scroll-reveal="{ delay: 400 }">
 					Die Zeichen der Zeit erkennen und <br />
 					Lösungen dafür suchen: Das haben unsere <br />
 					Gründer vor über 30 Jahren getan.
 				</p>
-				<nuxt-link to="/wir"><CButton text="Wir" /></nuxt-link>
+				<nuxt-link v-scroll-reveal="{ delay: 600 }" to="/wir"><CButton text="Wir" /></nuxt-link>
 			</div>
 		</div>
 		<div class="vorteile">
 			<div class="container">
-				<h1>Vorteile verschaffen mit Conzepta</h1>
-				<div class="grid cols-3">
+				<h1 v-scroll-reveal="{ delay: 0 }">Vorteile verschaffen mit Conzepta</h1>
+				<div v-scroll-reveal="{ delay: 200 }" class="grid cols-3">
 					<article>
-						<img src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_puzzle.png" alt="" />
-						<h2>Adaption</h2>
-						<p>Wir bieten keine Pakete ab Stange, sondern individuelle Lösungen und persönlichen Support.</p>
+						<img
+							v-scroll-reveal="{ delay: 300 }"
+							src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_puzzle.png"
+							alt=""
+						/>
+						<h2 v-scroll-reveal="{ delay: 400 }">Adaption</h2>
+						<p v-scroll-reveal="{ delay: 500 }">
+							Wir bieten keine Pakete ab Stange, sondern individuelle Lösungen und persönlichen Support.
+						</p>
 					</article>
 					<article>
-						<img style="height: 234px; display: block" src="" alt="" />
-						<h2>Qualität</h2>
-						<p>Wir liefern Schweizer Qualitätsprodukte aus Eigenentwicklung.</p>
+						<img v-scroll-reveal="{ delay: 500 }" style="height: 234px; display: block" src="" alt="" />
+						<h2 v-scroll-reveal="{ delay: 600 }">Qualität</h2>
+						<p v-scroll-reveal="{ delay: 700 }">Wir liefern Schweizer Qualitätsprodukte aus Eigenentwicklung.</p>
 					</article>
 					<article>
-						<img src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_grabber.png" alt="" />
-						<h2>Modern</h2>
-						<p>Wir können Ihre Zukunft nicht vorhersehen. Aber wir können sie programmieren.</p>
+						<img
+							v-scroll-reveal="{ delay: 700 }"
+							src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_grabber.png"
+							alt=""
+						/>
+						<h2 v-scroll-reveal="{ delay: 800 }">Modern</h2>
+						<p v-scroll-reveal="{ delay: 900 }">Wir können Ihre Zukunft nicht vorhersehen. Aber wir können sie programmieren.</p>
 					</article>
 				</div>
 				<CButton style="margin-top: 8rem" text="Mehr" />
@@ -56,24 +72,24 @@
 				<div class="grid cols-2">
 					<span></span>
 					<div class="text">
-						<h3>Support</h3>
-						<h2>Für Sie da!</h2>
-						<p>
+						<h3 v-scroll-reveal="{ delay: 0 }">Support</h3>
+						<h2 v-scroll-reveal="{ delay: 200 }">Für Sie da!</h2>
+						<p v-scroll-reveal="{ delay: 400 }">
 							Eine gute Software ist jene, die ohne Probleme läuft. Das garantieren wir Ihnen. Deshalb sind wir für Sie da – wann immer
 							Sie uns brauchen
 						</p>
-						<CButton text="Support" />
+						<CButton v-scroll-reveal="{ delay: 600 }" text="Support" />
 						<div class="list">
-							<article>
+							<article v-scroll-reveal="{ delay: 300 }">
 								<img src="/icon_tacho.svg" alt="" />
 								<p>Wir reagieren so, wie Sie es sich wünschen: schnell und flexibel</p>
 							</article>
-							<article>
+							<article v-scroll-reveal="{ delay: 500 }">
 								<img src="/icon_lock.svg" alt="" />
 								<p>Wir behandeln Sie so, wie wir selber am liebsten arbeiten: unkompliziert, aber immer diskret.</p>
 							</article>
-							<article>
-								<img src="" alt="" />
+							<article v-scroll-reveal="{ delay: 700 }">
+								<img style="height: 37px" src="/icon_ribbon.png" alt="" />
 								<p>
 									Wir sprechen so, dass Sie uns verstehen: Einfach, wenn etwas nicht klar ist – kompetent, wenn es ins Detail geht.
 								</p>
@@ -88,12 +104,15 @@
 				<h1>News</h1>
 				<br />
 				<div class="news-articles" style="position: relative">
-					<article class="news-article" v-for="(a, i) in news" :key="i">
+					<article v-scroll-reveal="{ delay: 200 }" class="news-article" v-for="(a, i) in news" :key="i">
 						<h3>{{ a.acf.datum }}</h3>
 						<h2>{{ a.title.rendered }}</h2>
 						<div v-html="a.content.rendered" />
 					</article>
 					<div class="lines">
+						<hr />
+						<hr />
+						<hr />
 						<hr />
 						<hr />
 						<hr />
@@ -204,7 +223,7 @@ img
 	background-size: cover
 	background-repeat: no-repeat
 	margin-top: -50vh
-	z-index: -100
+	z-index: 0
 	height: 120vh
 	position: relative
 	display: grid
@@ -225,7 +244,7 @@ img
 	height: 150vh
 	margin-top: -10rem
 	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/home_background2.png')
-	background-position: top center
+	background-position: top right
 	background-repeat: no-repeat
 	position: relative
 	display: grid

@@ -1,11 +1,11 @@
 <template>
-	<div id="console" :class="{ 'bc-blue p-1 br font-mono': true, active: isActive }">
+	<div id="console" :class="{ 'bc-blue br font-mono': true, active: isActive }">
 		<p>
 			<span @click="toggleConsole" class="toggle-console">[{{ toggleSymbol }}]</span>
 		</p>
 		<div class="content">
 			<p class="title" @click="toggleConsole">Conzepta//</p>
-			<p>{ Unterstützung gefällig? Nehmen Sie mit uns Kontakt auf. }</p>
+			<p>Unterstützung gefällig? Nehmen Sie mit uns Kontakt auf.</p>
 			<!-- <CButton isOutline isMono text="Team Viewer" /> -->
 			<nuxt-link to="/support"><CButton isOutline isMono text="Kontaktformular" /></nuxt-link>
 		</div>
@@ -18,8 +18,8 @@ export default {
 	data() {
 		return {
 			title: '',
-			isActive: false,
-			toggleSymbol: '<',
+			isActive: true,
+			toggleSymbol: 'X',
 		}
 	},
 	methods: {
@@ -33,10 +33,12 @@ export default {
 
 <style lang="sass" scoped>
 #console
+	padding: 1rem
 	position: fixed
 	width: 32rem
 	top: 10rem
-	right: -28rem
+	right: -30.2rem
+	z-index: 99999
 	display: grid
 	grid-template-columns: 3rem 1fr
 	transition: right $anim-smooth, bottom $anim-smooth

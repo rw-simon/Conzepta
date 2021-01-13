@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="section intro grid valign-end cols-2">
 			<ProductIntro />
-			<div class="filter br-2">
+			<!-- <div class="filter br-2">
 				<input
 					:class="{
 						'br bc-blue': true,
@@ -14,19 +14,10 @@
 					:value="cat.name"
 					@click="toggleCat(cat.id)"
 				/>
-			</div>
+			</div> -->
 		</div>
 		<div class="products-list grid cols-3 small-gap">
-			<ProductPanel
-				v-for="p in products"
-				:key="p.id"
-				v-show="
-					p.product_category.some(
-						(cat) => selectedCategories.indexOf(cat) >= 0
-					)
-				"
-				:product="p"
-			/>
+			<ProductPanel v-for="p in products" :key="p.id" :product="p" />
 		</div>
 		<div class="more section">
 			<ProductMore />
@@ -50,11 +41,9 @@ export default {
 	methods: {
 		toggleCat(cat) {
 			this.selectedCategories.includes(cat)
-				? (this.selectedCategories = this.selectedCategories.filter(
-						(c) => {
-							return c != cat
-						}
-				  ))
+				? (this.selectedCategories = this.selectedCategories.filter((c) => {
+						return c != cat
+				  }))
 				: this.selectedCategories.push(cat)
 			console.log(this.selectedCategories)
 		},

@@ -13,16 +13,21 @@
 							<img :src="platforms[pf].acf.platform_icon" alt="" />
 						</span>
 					</div>
-					<div v-if="content.acf.product_person" class="grid cols-2 small-gap" style="width: 16rem; align-items: center; margin-top: 2rem">
-						<div>
-							<p style="margin: 0; line-height: 1em">Produktmanager</p>
-							<p style="font-weight: 900">{{ content.acf.product_person.post_title }}</p>
-						</div>
-						<div>
-							<img if src="" alt="" />
-							<img style="border-radius: 50%" src="/portrait_placeholder.png" alt="" />
-						</div>
-					</div>
+					<nuxt-link to="/wir#team"
+						><div
+							v-if="content.acf.product_person"
+							class="grid cols-2 small-gap"
+							style="width: 16rem; align-items: center; margin-top: 2rem"
+						>
+							<div>
+								<p style="margin: 0; line-height: 1em">Produktmanager</p>
+								<p style="font-weight: 900">{{ content.acf.product_person.post_title }}</p>
+							</div>
+							<div>
+								<img if src="" alt="" />
+								<img style="border-radius: 50%" src="/portrait_placeholder.png" alt="" />
+							</div></div
+					></nuxt-link>
 				</div>
 			</div>
 			<div class="kompromisslos">
@@ -125,8 +130,8 @@
 		<div style="background: #e7e9ec; margin-top: 8rem" class="anwender">
 			<div class="container" style="padding: 4rem 0">
 				<h2>Anwender</h2>
-				<div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 2rem; align-items: center">
-					<img v-for="(img, i) in content.acf.anwender" :key="i" :src="img" alt="" />
+				<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; align-items: center">
+					<img style="padding: 2rem; max-width: 200px" v-for="(img, i) in content.acf.anwender" :key="i" :src="img" alt="" />
 				</div>
 			</div>
 		</div>

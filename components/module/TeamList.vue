@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div id="team">
 		<article class="list-entry" v-for="(p, i) in list" :key="i">
 			<div class="container">
 				<div class="grid cols-2">
@@ -10,17 +10,9 @@
 						<h2>{{ p.post_title }}</h2>
 						<p>«{{ p.acf.person_description }}»</p>
 						<p v-if="p.acf.person_details.person_details_email">
-							<a
-								class="c-blue"
-								target="_blank"
-								:href="
-									'mailto:' +
-									p.acf.person_details.person_details_email
-								"
-								>{{
-									p.acf.person_details.person_details_email
-								}}</a
-							>
+							<a class="c-blue" target="_blank" :href="'mailto:' + p.acf.person_details.person_details_email">{{
+								p.acf.person_details.person_details_email
+							}}</a>
 						</p>
 						<p v-if="p.acf.person_details.person_details_phone">
 							{{ p.acf.person_details.person_details_phone }}

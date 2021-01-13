@@ -3,35 +3,20 @@
 		<div v-if="content.text_2_columns_background">
 			<div
 				:style="{
-					backgroundImage:
-						'url(' + content.text_2_columns_background.url + ')',
+					backgroundImage: 'url(' + content.text_2_columns_background.url + ')',
 					backgroundSize: 'contain',
 					backgroundRepeat: 'no-repeat',
-					height:
-						(content.text_2_columns_background.height /
-							content.text_2_columns_background.width) *
-							100 +
-						'vw',
+					height: (content.text_2_columns_background.height / content.text_2_columns_background.width) * 70 + 'vw',
 				}"
 			>
 				<div class="text-two-columns container">
-					<div
-						class="column"
-						v-for="(c, i) in columns"
-						:key="i"
-						v-html="c"
-					/>
+					<div class="column" v-for="(c, i) in columns" :key="i" v-html="c" />
 				</div>
 			</div>
 		</div>
 		<div v-else>
 			<div class="text-two-columns container">
-				<div
-					class="column"
-					v-for="(c, i) in columns"
-					:key="i"
-					v-html="c"
-				/>
+				<div class="column" v-for="(c, i) in columns" :key="i" v-html="c" />
 			</div>
 		</div>
 	</div>
@@ -42,10 +27,7 @@ export default {
 	name: 'TextTwoColumns',
 	data() {
 		return {
-			columns: [
-				this.content.text_2_columns_column_1,
-				this.content.text_2_columns_column_2,
-			],
+			columns: [this.content.text_2_columns_column_1, this.content.text_2_columns_column_2],
 		}
 	},
 	props: {

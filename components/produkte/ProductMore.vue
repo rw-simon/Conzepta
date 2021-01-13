@@ -8,9 +8,12 @@
 				{{ content.acf.product_more.product_more_title }}
 			</h2>
 		</div>
-		<p class="page-more-intro">
-			{{ content.acf.product_more.product_more_paragraph }}
-		</p>
+		<div>
+			<p class="page-more-intro">
+				{{ content.acf.product_more.product_more_paragraph }}
+			</p>
+			<nuxt-link to="support"><CButton text="Kontaktformular" /></nuxt-link>
+		</div>
 	</div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-	<div class="section">
+	<div class="section wir">
 		<div class="module" v-for="(m, i) in content.acf.modules" :key="i">
 			<Module :module="m" />
 		</div>
@@ -16,4 +16,12 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="sass" scoped>
+.wir
+	background-image: url('/background_globe.png')
+	background-size: contain
+	background-position: top right
+	margin-top: 0
+	padding-top: 10rem
+	background-repeat: no-repeat
+</style>

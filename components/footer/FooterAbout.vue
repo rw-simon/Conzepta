@@ -1,10 +1,10 @@
 <template>
 	<div class="footer-about-us">
 		<h3>Wir</h3>
-		<nuxt-link to="/wir/geschichte"><p>Geschichte</p></nuxt-link>
+		<nuxt-link to="/wir"><p>Geschichte</p></nuxt-link>
 		<nuxt-link to="/wir/offene-stellen"><p>Offene Stellen</p></nuxt-link>
 		<nuxt-link to="/wir/news"><p>News</p></nuxt-link>
-		<nuxt-link to="/wir/kontakt"><p>Kontakt</p></nuxt-link>
+		<nuxt-link to="/support"><p>Kontakt</p></nuxt-link>
 		<nuxt-link to="/wir/archiv"><p>Archiv</p></nuxt-link>
 		<nuxt-link to="/impressum"><p>Impressum</p></nuxt-link>
 		<nuxt-link to="/agb"><p>AGB</p></nuxt-link>
