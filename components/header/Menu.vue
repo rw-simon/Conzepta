@@ -2,7 +2,7 @@
 	<nav class="main-menu">
 		<ul>
 			<li class="menu-item">
-				<nuxt-link :to="localePath('index')">Home</nuxt-link>
+				<nuxt-link to="/index">Home</nuxt-link>
 			</li>
 			<li class="menu-item">
 				<nuxt-link :to="localePath('wir')">Wir</nuxt-link>
@@ -46,6 +46,15 @@ export default {
 				padding: .5rem 1rem
 				&.nuxt-link-active
 					color: $c-blue
+					background-image: linear-gradient(90deg, $c-blue, $c-blue)
+					background-size: 10px 2px
+					background-repeat: no-repeat
+					background-position: 1rem bottom
 				&:hover
-					border-bottom: 2px solid $c-blue
+					color: $c-blue
+					// border-bottom: 2px solid $c-blue
+					background-image: linear-gradient(90deg, $c-blue, $c-blue)
+					background-size: 10px 2px
+					background-repeat: no-repeat
+					background-position: 1rem bottom
 </style>
