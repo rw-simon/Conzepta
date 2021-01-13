@@ -2,7 +2,7 @@
 	<nav class="main-menu">
 		<ul>
 			<li class="menu-item">
-				<nuxt-link to="/index">Home</nuxt-link>
+				<nuxt-link to="/">Home</nuxt-link>
 			</li>
 			<li class="menu-item">
 				<nuxt-link :to="localePath('wir')">Wir</nuxt-link>
