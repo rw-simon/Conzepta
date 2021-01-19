@@ -22,7 +22,7 @@ export default {
 <style lang="sass" scoped>
 h3
 	margin-bottom: 2rem
-	font-size: 1.5rem
+	font-size: 1.1rem
 	text-transform: none
 p
 	margin: 0

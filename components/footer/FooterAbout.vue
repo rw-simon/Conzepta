@@ -1,13 +1,16 @@
 <template>
 	<div class="footer-about-us">
 		<h3>Wir</h3>
-		<nuxt-link to="/wir"><p>Geschichte</p></nuxt-link>
-		<nuxt-link to="/wir/offene-stellen"><p>Offene Stellen</p></nuxt-link>
-		<nuxt-link to="/wir/news"><p>News</p></nuxt-link>
-		<nuxt-link to="/support"><p>Kontakt</p></nuxt-link>
-		<nuxt-link to="/wir/archiv"><p>Archiv</p></nuxt-link>
-		<nuxt-link to="/impressum"><p>Impressum</p></nuxt-link>
-		<nuxt-link to="/agb"><p>AGB</p></nuxt-link>
+		<div class="grid cols-2 small-gap" style="row-gap: 0; column-gap: 1rem">
+			<nuxt-link to="/wir"><p>Geschichte</p></nuxt-link>
+			<nuxt-link to="/wir/offene-stellen"><p>Offene Stellen</p></nuxt-link>
+			<nuxt-link to="/produkte"><p>Portfolio</p></nuxt-link>
+			<nuxt-link to="/support"><p>Kontakt</p></nuxt-link>
+			<nuxt-link to="/impressum"><p>Impressum</p></nuxt-link>
+			<nuxt-link to="/archiv"><p>Archiv</p></nuxt-link>
+			<nuxt-link to="/#news"><p>News</p></nuxt-link>
+			<nuxt-link to="/agb"><p>AGB</p></nuxt-link>
+		</div>
 	</div>
 </template>
 
@@ -21,7 +24,7 @@ export default {
 h3
 	margin-bottom: 2rem
 	text-transform: none
-	font-size: 1.5rem
+	font-size: 1.1rem
 p
 	margin: 0
 </style>

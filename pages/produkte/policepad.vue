@@ -13,12 +13,8 @@
 							<img :src="platforms[pf].acf.platform_icon" alt="" />
 						</span>
 					</div>
-					<nuxt-link to="/wir#team"
-						><div
-							v-if="content.acf.product_person"
-							class="grid cols-2 small-gap"
-							style="width: 16rem; align-items: center; margin-top: 2rem"
-						>
+					<nuxt-link v-if="content.acf.product_person" :to="'/wir#' + content.acf.product_person.post_name"
+						><div class="grid cols-2 small-gap" style="width: 16rem; align-items: center; margin-top: 2rem">
 							<div>
 								<p style="margin: 0; line-height: 1em">Produktmanager</p>
 								<p style="font-weight: 900">{{ content.acf.product_person.post_title }}</p>

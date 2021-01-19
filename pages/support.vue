@@ -10,7 +10,16 @@
 							Eine gute Software ist jene, die ohne Probleme läuft. Das garantieren wir Ihnen. Deshalb sind wir für Sie da – wann immer
 							Sie uns brauchen
 						</p>
-						<br /><br />
+					</div>
+					<div style="align-self: end; text-align: right">
+						<a
+							style="display: inline-block; line-height: 1em; border: 1px solid blue; border-radius: 4px; padding: 0.3rem 2rem"
+							href="https://teamviewer.com"
+							target="_blank"
+							><img src="/logo-teamviewer.svg" style="height: 1.5rem" alt=""
+						/></a>
+					</div>
+					<div>
 						<p>Email: team@conzepta.ch <br />Telefon: +41 348 60 20</p>
 					</div>
 				</div>
@@ -87,6 +96,19 @@
 						und dann nur noch dem
 					</p>
 				</div>
+			</div>
+			<br />
+			<div>
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2505.72679096551!2d7.449444113907455!3d46.96051126040452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e39edef28aee1%3A0x62b5697e8242d481!2sAllmendstrasse%2054%2C%203014%20Bern!5e0!3m2!1sen!2sch!4v1611054249814!5m2!1sen!2sch"
+					width="960"
+					height="640"
+					frameborder="0"
+					style="border: 0"
+					allowfullscreen=""
+					aria-hidden="false"
+					tabindex="0"
+				></iframe>
 			</div>
 		</div>
 	</div>

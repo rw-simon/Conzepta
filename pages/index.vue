@@ -99,7 +99,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="news">
+		<div class="news" id="news">
 			<div class="container">
 				<h1>News</h1>
 				<br />

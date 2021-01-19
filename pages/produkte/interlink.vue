@@ -12,15 +12,17 @@
 							und die Betriebsdatenerfassung in
 						</p>
 						<img style="width: 3rem" src="/icon_windows.png" alt="" />
-						<div class="grid cols-2 small-gap" style="width: 16rem; align-items: center; margin-top: 2rem">
-							<div>
-								<p style="margin: 0; line-height: 1em">Produktmanager</p>
-								<p style="font-weight: 900">Dominic Bürki</p>
+						<nuxt-link to="/wir#dominic-luethi">
+							<div class="grid cols-2 small-gap" style="width: 16rem; align-items: center; margin-top: 2rem">
+								<div>
+									<p style="margin: 0; line-height: 1em">Produktmanager</p>
+									<p style="font-weight: 900">Dominic Bürki</p>
+								</div>
+								<div>
+									<img style="height: auto" src="/portrait_placeholder.png" alt="" />
+								</div>
 							</div>
-							<div>
-								<img style="height: auto" src="/portrait_placeholder.png" alt="" />
-							</div>
-						</div>
+						</nuxt-link>
 					</div>
 				</div>
 			</div>

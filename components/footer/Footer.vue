@@ -1,13 +1,15 @@
 <template>
 	<footer class="p-1 font-mono">
-		<div class="grid cols-2 small-gap">
-			<section class="footer-left br bc-blue small-gap grid cols-2">
-				<FooterAbout style="border-left: 2px solid white; padding-left: 2rem" />
-				<FooterProducts style="border-left: 2px solid white; padding-left: 2rem" />
+		<div class="grid cols-2 small-gap" style="gap: 1rem; grid-template-columns: 5fr 3fr">
+			<section class="footer-left br bc-blue small-gap grid cols-3" style="column-gap: 1rem">
+				<span></span>
+				<FooterAbout style="min-width: 15rem; border-left: 1px solid white; padding-left: 2rem" />
+				<FooterProducts style="min-width: 10rem; border-left: 1px solid white; padding-left: 2rem" />
 			</section>
-			<section class="footer-right br bc-blue small-gap grid cols-2">
-				<FooterContact style="border-left: 2px solid white; padding-left: 2rem" />
-				<FooterSupport style="border-left: 2px solid white; padding-left: 2rem" />
+			<section class="footer-right br bc-blue small-gap grid cols-3">
+				<FooterContact />
+				<FooterSupport />
+				<span></span>
 			</section>
 		</div>
 		<div style="text-align: center; margin-top: 1rem">
@@ -24,11 +26,12 @@ export default {
 
 <style lang="sass" scoped>
 footer
-	margin-top: 4rem
+	font-size: .7rem
+	margin-top: 5rem
 	@include mobile
 		margin-bottom: 5rem
 section
-	padding: 2rem
+	padding: 1rem 2rem
 	.footer-section
 		@include mobile
 			padding: 0

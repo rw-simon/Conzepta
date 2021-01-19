@@ -1,6 +1,6 @@
 <template>
 	<div id="team">
-		<article class="list-entry" v-for="(p, i) in list" :key="i">
+		<article :id="p.post_name" class="list-entry" v-for="(p, i) in list" :key="i">
 			<div class="container">
 				<div class="grid cols-2">
 					<section class="desc">
@@ -32,6 +32,7 @@ export default {
 	name: 'TeamList',
 	data() {
 		return {
+			id: '',
 			list: this.content.team_list_objects,
 		}
 	},
