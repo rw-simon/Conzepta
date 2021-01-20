@@ -1,0 +1,170 @@
+<template>
+	<div>
+		<div class="banner">
+			<div class="background">
+				<div class="container">
+					<div class="grid cols-2">
+						<span></span>
+						<div>
+							<h3>Fahrtenschreiber</h3>
+							<h1>Tachifox</h1>
+							<p>
+								TachiFox ist die praxisorientierte Lösung der Conzepta und Les Routiers Suisses zum Erfassen von Daten, welche der
+								Arbeits- und Ruhezeit Verordnung ARV unterliegen. Die Fahrer- und Fahrzeugdaten können zentral und unkompliziert
+								eingelesen, bearbeitet und ergänzt werden. TachiFox vereinfacht die Auswertung der Daten nach den gesetzlich
+								vorgegebenen Richtwerten und informiert den Benutzer über mögliche Verstösse.
+							</p>
+							<br />
+							<nuxt-link :to="'/wir#dominic-luethi'"
+								><div class="grid cols-2 small-gap" style="width: 16rem; align-items: center; margin-top: 2rem">
+									<div>
+										<p style="margin: 0; line-height: 1em">Produktmanager</p>
+										<p style="font-weight: 900">Dominic Bürki</p>
+									</div>
+									<div>
+										<img if src="" alt="" />
+										<img style="height: auto; border-radius: 50%" src="/portrait_placeholder.png" alt="" />
+									</div></div
+							></nuxt-link>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="section grid cols-2">
+				<div>
+					<h3>3. Generation</h3>
+					<h2>Unaufhörliches Massschneidern</h2>
+					<p>
+						TachiFox besteht seit rund 15 Jahren und ist mittlerweile in der dritten Generation als moderne Web-Anwendung verfügbar.
+						Dadurch konnte auf die Bedürfnisse der Fahrer und Firmen eingegangen werden. Durch die enge Zusammenarbeite mit Les Routiers
+						Suisses wird das Produkt laufend an neue Kundenanforderungen angepasst und um smarte Funktionen erweitert.
+					</p>
+				</div>
+				<div>
+					<img style="height: auto" src="/tachiimg.png" alt="" />
+				</div>
+			</div>
+		</div>
+		<div class="background2">
+			<div class="container">
+				<div class="tachiimg2">
+					<img style="height: auto" src="/tachiimg2.png" alt="" />
+				</div>
+				<div class="grid cols-2">
+					<span></span>
+					<div>
+						<h3>Funktionen</h3>
+						<h2>Alles wichtige an einem Ort</h2>
+						<p>
+							Nebst den Grundfunktionen wie Einlesen, Bearbeiten und Auswerten der Daten, unterstützt TachiFox das Verwalten von
+							Organisationen und Einzelfahrern.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="aktivitaten">
+			<div class="container" style="margin-top: 8rem; height: 100%; position: relative">
+				<client-only>
+					<swiper class="swiper" :options="swiperOption">
+						<swiper-slide>
+							<div class="slider-grid">
+								<div class="slider-text">
+									<h3>Aktivitäten</h3>
+									<h2>Volle Kontrolle über die Arbeitstätigkeit</h2>
+									<p>
+										Eine Aktivität bezieht sich auf eine Arbeitstätigkeit eines Fahrers wie z.B. Lenkzeit, Bereitschaftszeit etc.
+										Aktivitäten werden chronologisch aufgelistet und können durch Benutzer eingesehen und
+									</p>
+								</div>
+								<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
+							</div>
+						</swiper-slide>
+						<swiper-slide>
+							<div class="slider-grid">
+								<div class="slider-text">
+									<p>Slider Content</p>
+								</div>
+								<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
+							</div>
+						</swiper-slide>
+						<swiper-slide>
+							<div class="slider-grid">
+								<div class="slider-text">
+									<p>Slider Content</p>
+								</div>
+								<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
+							</div>
+						</swiper-slide>
+					</swiper>
+					<div class="swiper-pagination"></div>
+				</client-only>
+			</div>
+		</div>
+	</div>
+</template>
+
+<script>
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
+import 'swiper/css/swiper.min.css'
+
+export default {
+	data() {
+		return {
+			swiperOption: {
+				slidesPerView: 1,
+				spaceBetween: 48,
+				loop: false,
+				mousewheel: true,
+				direction: 'vertical',
+				pagination: {
+					el: '.swiper-pagination',
+					type: 'bullets',
+					clickable: false,
+				},
+			},
+		}
+	},
+}
+</script>
+
+<style lang="sass" scoped>
+.aktivitaten
+	height: 20rem
+	.slider-grid
+		display: grid
+		grid-template-columns: 1fr 1fr
+		align-items: center
+		gap: 8rem
+		@include mobile
+			grid-template-columns: 1fr
+			.slider-image
+				display: none
+	.swiper-container
+		height: 100%
+	.swiper-slide
+		height: 20rem
+.swiper-pagination
+	top: 50%
+	transform: translateY(-50%)
+	left: -8rem
+.banner
+	background-image: linear-gradient(90deg, white, $c-gray-light)
+	height: 80vh
+	.background
+		height: 100%
+		box-sizing: border-box
+		padding-top: 8rem
+		background-image: url('/bgtachi.png')
+		background-size: cover
+		background-position: bottom center
+.background2
+	margin-top: 24rem
+	background-image: linear-gradient(90deg, $c-gray-light, white)
+	padding-bottom: 4rem
+	.tachiimg2
+		transform: translateY(-50%)
+		margin-bottom: -20%
+</style>
