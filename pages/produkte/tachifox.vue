@@ -32,7 +32,7 @@
 			</div>
 		</div>
 		<div class="container">
-			<div class="section grid cols-2">
+			<div style="align-items: center" class="section grid cols-2">
 				<div>
 					<h3>3. Generation</h3>
 					<h2>Unaufhörliches Massschneidern</h2>
@@ -65,42 +65,109 @@
 				</div>
 			</div>
 		</div>
-		<div class="aktivitaten">
-			<div class="container" style="margin-top: 8rem; height: 100%; position: relative">
-				<client-only>
-					<swiper class="swiper" :options="swiperOption">
-						<swiper-slide>
-							<div class="slider-grid">
-								<div class="slider-text">
-									<h3>Aktivitäten</h3>
-									<h2>Volle Kontrolle über die Arbeitstätigkeit</h2>
-									<p>
-										Eine Aktivität bezieht sich auf eine Arbeitstätigkeit eines Fahrers wie z.B. Lenkzeit, Bereitschaftszeit etc.
-										Aktivitäten werden chronologisch aufgelistet und können durch Benutzer eingesehen und
-									</p>
+		<div class="background-diagonal-3">
+			<div class="aktivitaten">
+				<div class="container" style="margin-top: 8rem; height: 100%; position: relative">
+					<client-only>
+						<swiper class="swiper" :options="swiperOption">
+							<swiper-slide>
+								<div class="slider-grid">
+									<div class="slider-text">
+										<h3>Aktivitäten</h3>
+										<h2>Volle Kontrolle über die Arbeitstätigkeit</h2>
+										<p>
+											Eine Aktivität bezieht sich auf eine Arbeitstätigkeit eines Fahrers wie z.B. Lenkzeit, Bereitschaftszeit
+											etc. Aktivitäten werden chronologisch aufgelistet und können durch Benutzer eingesehen und
+										</p>
+									</div>
+									<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
 								</div>
-								<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
-							</div>
-						</swiper-slide>
-						<swiper-slide>
-							<div class="slider-grid">
-								<div class="slider-text">
-									<p>Slider Content</p>
+							</swiper-slide>
+							<swiper-slide>
+								<div class="slider-grid">
+									<div class="slider-text">
+										<p>Slider Content</p>
+									</div>
+									<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
 								</div>
-								<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
-							</div>
-						</swiper-slide>
-						<swiper-slide>
-							<div class="slider-grid">
-								<div class="slider-text">
-									<p>Slider Content</p>
+							</swiper-slide>
+							<swiper-slide>
+								<div class="slider-grid">
+									<div class="slider-text">
+										<p>Slider Content</p>
+									</div>
+									<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
 								</div>
-								<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
-							</div>
-						</swiper-slide>
-					</swiper>
-					<div class="swiper-pagination"></div>
-				</client-only>
+							</swiper-slide>
+						</swiper>
+						<div class="swiper-pagination"></div>
+					</client-only>
+				</div>
+			</div>
+			<div class="rapporte">
+				<div class="container">
+					<div style="align-items: center" class="section grid cols-2">
+						<img src="/rapport.png" style="height: auto" alt="" />
+						<div>
+							<h3>Rapporte</h3>
+							<h2>Einfach übersichtlich auszuwerten</h2>
+							<p>
+								Die Aktivitäten können als Rapport übersichtlich dargestellt werden. Rapporte enthalten grafische Elemente,
+								Zusammenzüge von Fahrerdaten und die Ergebnisse der ARV Auswertung.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="verwaltung">
+			<div class="container">
+				<div class="section grid cols-2">
+					<span></span>
+					<div>
+						<h2>Fahrer- und Fahrzeugverwaltung</h2>
+						<p>
+							Die erfassten Fahrer und Fahrzeuge werden übersichtlich dargestellt und können effizient bearbeitet werden. TachiFox
+							unterstützt die Benutzer durch eine freundliche Erinnerung, Daten einzulesen, wenn dies lange nicht
+						</p>
+						<span style="height: 10rem; display: block" />
+						<h2>Sondertagsverwaltung</h2>
+						<p>
+							Unternehmen können firmeneigene Sondertage definieren und erfassen. Dies Unterstützt die Unternehmung bei der Verwaltung
+							von Aktivitäten von Gruppen oder einzelnen Fahrern. Fahrer können so manuell Aktivitäten hinzufügen und verwalten, damit
+							alle für die ARV26
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="benutzerverwaltung">
+			<div class="container">
+				<div class="section grid cols-2">
+					<div>
+						<h2>Benutzerverwaltung</h2>
+						<p>
+							In der Benutzerverwaltung werden den Benutzern der Organisation ihre Rollen und Fahrer zugeordnet. Hier können
+							hierarchische Stufen geschaffen werden, indem Benutzern verschiedene Rollen / Funktionen zugewiesen werden.
+						</p>
+						<CButton text="Datenblatt" />
+					</div>
+					<img style="height: auto" src="/01.png" alt="" />
+				</div>
+			</div>
+		</div>
+		<div class="anwender">
+			<div class="container">
+				<div class="section">
+					<h2>Anwender</h2>
+				</div>
+			</div>
+		</div>
+		<div class="kontrolle">
+			<div class="container">
+				<div class="section" style="text-align: center">
+					<h2>Für eine kontrollierte Fahrt: TachiFox</h2>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -131,6 +198,30 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.kontrolle
+	background-image: url('/38_Abfahrt.png')
+	background-size: cover
+	height: 110vh
+	background-repeat: no-repeat
+	background-position-y: 5rem
+.anwender
+	background-image: url('/36_Anwender.png')
+	background-size: cover
+	height: 80vh
+	background-repeat: no-repeat
+	background-position-y: 5rem
+.verwaltung
+	background-image: url('/bgtachi3.png')
+	background-position: left center
+	background-repeat: no-repeat
+	background-size: cover
+	padding: 8rem 0
+	background-size: contain
+.background-diagonal-3
+	background-image: url('/bgdiag3.svg')
+	padding: 8rem 0
+	background-position: center
+	background-repeat: no-repeat
 .aktivitaten
 	height: 20rem
 	.slider-grid
