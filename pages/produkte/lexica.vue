@@ -49,7 +49,16 @@
 		<div class="funktionen">
 			<div class="container">
 				<div class="section grid cols-2">
-					<span></span>
+					<span>
+						<span class="easteregg">
+							<span class="hover"
+								><span></span>
+								<div class="easteregg-content">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, quibusdam id. Consequatur ea quibusdam error.
+								</div>
+							</span>
+						</span>
+					</span>
 					<div>
 						<h3>Funktionen</h3>
 						<h2>Lexica kann individuell gestaltet werden</h2>
@@ -211,6 +220,41 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.easteregg
+	.hover
+		display: block
+		height: 3rem
+		width: 3rem
+		border: 3px solid $c-blue
+		border-radius: 50%
+		display: grid
+		align-items: center
+		cursor: pointer
+		position: absolute
+		left: 35%
+		span
+			position: absolute
+			justify-self: center
+			display: block
+			height: 1rem
+			width: 1rem
+			border-radius: 50%
+			background-color: $c-blue
+		.easteregg-content
+			display: none
+			background: $c-blue
+			color: white
+			padding: 1rem
+			width: 300px
+			top: 2rem
+			right: 2rem
+			position: absolute
+		&:hover
+			background-color: $c-blue
+			.easteregg-content
+				display: block
+			span
+				background-color: white
 .anwender, .funktionsumfang
 	padding: 12rem 0
 .funktionsumfang
