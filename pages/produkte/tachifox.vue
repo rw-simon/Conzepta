@@ -15,11 +15,11 @@
 								vorgegebenen Richtwerten und informiert den Benutzer über mögliche Verstösse.
 							</p>
 							<br />
-							<nuxt-link :to="'/wir#dominic-luethi'"
+							<nuxt-link :to="'/wir#philippe-luethi'"
 								><div class="grid cols-2 small-gap" style="width: 16rem; align-items: center; margin-top: 2rem">
 									<div>
 										<p style="margin: 0; line-height: 1em">Produktmanager</p>
-										<p style="font-weight: 900">Dominic Bürki</p>
+										<p style="font-weight: 900">Philippe Lützi</p>
 									</div>
 									<div>
 										<img if src="" alt="" />

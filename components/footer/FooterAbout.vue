@@ -4,7 +4,7 @@
 		<div class="grid cols-2 small-gap" style="row-gap: 0; column-gap: 1rem">
 			<nuxt-link to="/wir"><p>Geschichte</p></nuxt-link>
 			<nuxt-link to="/wir/offene-stellen"><p>Offene Stellen</p></nuxt-link>
-			<nuxt-link to="/produkte"><p>Portfolio</p></nuxt-link>
+			<nuxt-link to="/portfolio"><p>Portfolio</p></nuxt-link>
 			<nuxt-link to="/support"><p>Kontakt</p></nuxt-link>
 			<nuxt-link to="/impressum"><p>Impressum</p></nuxt-link>
 			<nuxt-link to="/archiv"><p>Archiv</p></nuxt-link>
