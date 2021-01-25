@@ -1,6 +1,6 @@
 <template>
 	<footer class="p-1 font-mono">
-		<div class="grid cols-2 small-gap" style="gap: 1rem; grid-template-columns: 5fr 3fr">
+		<div class="grid cols-2 small-gap" style="gap: 1rem">
 			<section class="footer-left br bc-blue small-gap grid cols-3" style="column-gap: 1rem">
 				<span></span>
 				<FooterAbout style="min-width: 15rem; border-left: 1px solid white; padding-left: 2rem" />
@@ -35,4 +35,6 @@ section
 	.footer-section
 		@include mobile
 			padding: 0
+.grid
+	grid-template-columns: 5fr 3fr
 </style>

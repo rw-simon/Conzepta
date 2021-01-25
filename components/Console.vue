@@ -61,6 +61,7 @@ export default {
 		width: 100%
 		bottom: -11rem
 		right: 0
+		box-sizing: border-box
 		top: auto
 		border-bottom-left-radius: 0
 		border-bottom-right-radius: 0

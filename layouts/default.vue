@@ -3,7 +3,8 @@
 		<Header />
 		<Nuxt />
 		<Console />
-		<Footer />
+		<Footer id="footer" />
+		<FooterMobile id="footer-mobile" />
 	</div>
 </template>
 
@@ -15,4 +16,12 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="sass" scoped>
+#footer-mobile
+	display: none
+	@include mobile
+		display: block
+#footer
+	@include mobile
+		display: none
+</style>
