@@ -2,25 +2,15 @@
 	<article
 		:class="{
 			'project-panel br valign-end': true,
-			'is-fullsize':
-				product.acf.product_panelimage.product_panelimage_fullsize,
+			'is-fullsize': product.acf.product_panelimage.product_panelimage_fullsize,
 			['span-' + product.acf.columns]: true,
 		}"
 	>
-		<div
-			class="product-featured-image"
-			:style="
-				'background-image: url(' +
-				product.acf.product_panelimage.product_panelimage_src.url +
-				')'
-			"
-		></div>
+		<div class="product-featured-image" :style="'background-image: url(' + product.acf.product_panelimage.product_panelimage_src.url + ')'"></div>
 		<div class="product-panel-text p-2">
 			<h4 v-html="product.title.rendered" />
 			<p v-html="product.acf.product_subtitle" />
-			<nuxt-link :to="'/produkte/' + product.slug"
-				><CButton text="Mehr"
-			/></nuxt-link>
+			<nuxt-link :to="'/produkte/' + product.slug"><CButton text="Mehr" /></nuxt-link>
 		</div>
 	</article>
 </template>
@@ -93,5 +83,5 @@ article
 			grid-column: 1/-1
 		.product-panel-text
 			grid-row: 1/-1
-			grid-column: 1
+			grid-column: 2
 </style>
