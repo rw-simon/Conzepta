@@ -13,6 +13,12 @@
 			<li class="menu-item">
 				<nuxt-link :to="localePath('support')">Support</nuxt-link>
 			</li>
+			<li class="menu-item">
+				<nuxt-link :to="localePath('portfolio')">Portfolio</nuxt-link>
+			</li>
+			<li class="menu-item">
+				<nuxt-link :to="localePath('archiv')">Archiv</nuxt-link>
+			</li>
 			<!-- <li class="menu-item">
 				<nuxt-link :to="localePath('portfolio')">Portfolio</nuxt-link>
 			</li> -->
@@ -35,7 +41,7 @@ export default {
 		margin: auto
 		height: 100%
 		align-items: center
-		grid-template-columns: repeat(4, auto)
+		grid-template-columns: repeat(6, auto)
 		list-style: none
 		padding: 0
 		@include mobile

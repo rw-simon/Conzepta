@@ -207,7 +207,7 @@ img
 	height: auto
 .banner-main
 	background: $c-blue
-	background: linear-gradient(0deg, $c-blue-light 0%, $c-blue 100%)
+	background: linear-gradient(0deg, $c-blue-light 0%, $c-blue 50%)
 	height: 80vh
 	display: grid
 	padding-bottom: 3rem
