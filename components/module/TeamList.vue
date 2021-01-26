@@ -52,6 +52,8 @@ export default {
 		.desc
 			grid-column: 2
 			grid-row: 1
+			@include mobile
+				grid-column: 1
 	img
 		height: auto
 </style>

@@ -50,7 +50,11 @@
 						</p>
 					</article>
 					<article>
-						<img v-scroll-reveal="{ delay: 500 }" style="height: 234px; display: block" src="" alt="" />
+						<img
+							v-scroll-reveal="{ delay: 500 }"
+							src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2021/01/icon_gut.png"
+							alt=""
+						/>
 						<h2 v-scroll-reveal="{ delay: 600 }">Qualität</h2>
 						<p v-scroll-reveal="{ delay: 700 }">Wir liefern Schweizer Qualitätsprodukte aus Eigenentwicklung.</p>
 					</article>
@@ -78,7 +82,7 @@
 							Eine gute Software ist jene, die ohne Probleme läuft. Das garantieren wir Ihnen. Deshalb sind wir für Sie da – wann immer
 							Sie uns brauchen
 						</p>
-						<CButton v-scroll-reveal="{ delay: 600 }" text="Support" />
+						<nuxt-link to="/support"><CButton v-scroll-reveal="{ delay: 600 }" text="Support" /></nuxt-link>
 						<div class="list">
 							<article v-scroll-reveal="{ delay: 300 }">
 								<img src="/icon_tacho.svg" alt="" />
@@ -212,13 +216,14 @@ img
 	text-align: center
 	@include mobile
 		height: 60vh
+		padding-top: 3rem
 	h1
 		color: white
 		font-weight: 300
 	img
 		width: 10rem
 .intro
-	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/home_background.png')
+	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2021/01/home_background_1.png')
 	background-position: center center
 	background-size: cover
 	background-repeat: no-repeat
@@ -233,6 +238,7 @@ img
 		background: none
 		height: auto
 		margin-top: auto
+		padding-bottom: 4rem
 	.container
 		margin-top: 0
 		margin-bottom: 0
@@ -252,9 +258,12 @@ img
 	@include mobile
 		.container
 			width: 90%
+			margin: 0 auto
 		margin-top: 0
-		margin-bottom: 8rem
+		padding-top: 50vh
 		height: auto
+		margin-bottom: 8rem
+		background-size: 150%
 	img
 		max-height: 1200px !important
 .vorteile
@@ -265,7 +274,7 @@ img
 		@include mobile
 			margin-bottom: 4rem
 .support
-	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/home_background_support-copy.png')
+	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2021/01/home_background_support-copy.png')
 	background-position: center left
 	background-repeat: no-repeat
 	height: 50rem
@@ -291,4 +300,7 @@ img
 					top: .5rem !important
 .news
 	text-align: center
+	@include mobile
+		h1
+			margin-bottom: 0
 </style>

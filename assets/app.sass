@@ -79,6 +79,8 @@ img
 	.row
 		display: grid
 		grid-template-columns: repeat(12, 1fr)
+	@include mobile
+		width: 90%
 	@include mobile-landscape
 		padding-right: 4rem // space right so the console doesn't interfere
 		box-sizing: border-box

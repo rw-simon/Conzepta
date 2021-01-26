@@ -2,7 +2,7 @@
 	<div>
 		<div class="banner" style="">
 			<div class="container">
-				<div style="max-width: 40%" v-html="content.acf.banner.text" />
+				<div class="cc" v-html="content.acf.banner.text" />
 			</div>
 		</div>
 		<div class="background-gradient" style="padding-top: 4rem">
@@ -14,7 +14,7 @@
 						</span>
 					</div>
 					<nuxt-link v-if="content.acf.product_person" :to="'/wir#' + content.acf.product_person.post_name"
-						><div class="grid cols-2 small-gap" style="width: 16rem; align-items: center; margin-top: 2rem">
+						><div class="grid cols-2 small-gap person" style="align-items: center; margin-top: 2rem">
 							<div>
 								<p style="margin: 0; line-height: 1em">Produktmanager</p>
 								<p style="font-weight: 900">{{ content.acf.product_person.post_title }}</p>
@@ -126,7 +126,7 @@
 		<div style="background: #e7e9ec; margin-top: 8rem" class="anwender">
 			<div class="container" style="padding: 4rem 0">
 				<h2>Anwender</h2>
-				<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; align-items: center">
+				<div style="display: grid; gap: 2rem; align-items: center" class="grid cols-3">
 					<img style="padding: 2rem; max-width: 200px" v-for="(img, i) in content.acf.anwender" :key="i" :src="img" alt="" />
 				</div>
 			</div>
@@ -172,6 +172,16 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.person
+	width: 16rem
+	@include mobile
+		width: auto
+		&.grid.cols-2
+			grid-template-columns: 2fr 1fr
+.cc
+	max-width: 40%
+	@include mobile
+		max-width: 100%
 .background-gradient
 	background-image: linear-gradient(90deg, white, #e7e9ec)
 .background-diagonal
@@ -179,6 +189,8 @@ export default {
 	background-size: cover
 	background-repeat: no-repeat
 	padding: 8rem 0
+	@include mobile
+		padding-bottom: 4rem
 .swiper-pagination
 	top: 50%
 	transform: translateY(-50%)
@@ -192,10 +204,14 @@ export default {
 	background-size: cover
 	background-repeat: no-repeat
 	background-position: center center
+	@include mobile
+		margin-top: 2rem
 	h3
 		color: black
 	p
 		width: 40%
+		@include mobile
+			width: auto
 img
 	height: auto
 	transition: transform 100ms ease
@@ -210,6 +226,8 @@ img
 	background-size: cover
 	background-repeat: no-repeat
 	background-position: center center
+	@include mobile
+		min-height: 50vh
 	.container
 		@include mobile
 			width: auto
@@ -219,8 +237,11 @@ img
 		transition: padding-top 350ms ease-out
 		@include mobile
 			width: auto
+			padding-top: 5rem
 		&.open
 			padding-top: 15rem
+			@include mobile
+				padding-top: 5rem
 		p
 			margin: 3rem 0
 			&.more
@@ -239,6 +260,7 @@ img
 	height: 20rem
 	@include mobile
 		margin-bottom: 0
+		height: 20rem
 	.slider-grid
 		display: grid
 		grid-template-columns: 1fr 1fr
@@ -253,11 +275,16 @@ img
 		height: 20rem
 .backend
 	display: grid
-	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2021/01/pp-backend-background-.png')
+	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2021/01/pp-backend-background-1-1.png')
 	background-size: contain
 	background-repeat: no-repeat
 	background-position: center right
 	height: 60rem
+	@include mobile
+		height: 25rem
+		background: none
 	.text
 		width: 40%
+		@include mobile
+			width: auto
 </style>

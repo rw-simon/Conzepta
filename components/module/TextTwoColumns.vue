@@ -2,11 +2,11 @@
 	<div>
 		<div v-if="content.text_2_columns_background">
 			<div
+				class="co"
 				:style="{
 					backgroundImage: 'url(' + content.text_2_columns_background.url + ')',
 					backgroundSize: 'contain',
 					backgroundRepeat: 'no-repeat',
-					height: (content.text_2_columns_background.height / content.text_2_columns_background.width) * 70 + 'vw',
 				}"
 			>
 				<div class="text-two-columns container">
@@ -37,6 +37,11 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.co
+	height: 50vw
+	@include mobile
+		height: auto
+		padding-top: 20vh
 .text-two-columns
 	display: grid
 	grid-template-columns: 1fr 1fr

@@ -173,19 +173,19 @@
 			<div class="anwender">
 				<div class="container" style="padding: 4rem 0">
 					<h2>Anwender</h2>
-					<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; align-items: center">
+					<div class="grid cols-3" style="display: grid; gap: 2rem; align-items: center">
 						<img
-							style="padding: 2rem; max-width: 200px"
+							style="padding: 2rem; max-width: 200px; height: auto"
 							src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/09/Screenshot-2020-12-03-at-11.09.36.png"
 							alt=""
 						/>
 						<img
-							style="padding: 2rem; max-width: 200px"
+							style="padding: 2rem; max-width: 200px; height: auto"
 							src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/09/Screenshot-2020-12-03-at-11.09.45.png"
 							alt=""
 						/>
 						<img
-							style="padding: 2rem; max-width: 200px"
+							style="padding: 2rem; max-width: 200px; height: auto"
 							src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/09/Screenshot-2020-12-03-at-11.09.54.png"
 							alt=""
 						/>
@@ -204,10 +204,12 @@ export default {
 		return {
 			swiperOption: {
 				slidesPerView: 1,
-				spaceBetween: 48,
-				loop: false,
+				spaceBetween: 96,
+				loop: true,
 				mousewheel: true,
 				direction: 'vertical',
+				simulateTouch: false,
+				speed: 400,
 				pagination: {
 					el: '.swiper-pagination',
 					type: 'bullets',

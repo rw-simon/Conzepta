@@ -22,4 +22,6 @@ export default {
 .text-headline
 	div
 		margin: 0 8rem
+		@include mobile
+			margin: 0
 </style>

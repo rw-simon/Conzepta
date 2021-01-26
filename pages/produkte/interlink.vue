@@ -1,10 +1,10 @@
 <template>
 	<div>
-		<div class="banner" style="margin-top: 8rem">
+		<div class="banner">
 			<div class="container">
 				<div class="grid cols-2">
 					<div></div>
-					<div style="margin-top: 16rem">
+					<div class="texti">
 						<h3>Kommunikatonssystem</h3>
 						<h1>Interlink//</h1>
 						<p>
@@ -13,7 +13,7 @@
 						</p>
 						<img style="width: 3rem" src="/icon_windows.png" alt="" />
 						<nuxt-link to="/wir#urs-blaser">
-							<div class="grid cols-2 small-gap" style="width: 16rem; align-items: center; margin-top: 2rem">
+							<div class="grid cols-2 small-gap person" style="align-items: center; margin-top: 2rem">
 								<div>
 									<p style="margin: 0; line-height: 1em">Produktmanager</p>
 									<p style="font-weight: 900">Urs Blaser</p>
@@ -68,7 +68,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="funktionen" style="margin-top: 16rem">
+			<div class="funktionen">
 				<div class="container">
 					<div class="grid cols-2">
 						<span></span>
@@ -112,11 +112,11 @@
 						</div>
 					</div>
 				</div>
-				<div class="banner-footer" style="margin-top: 8rem">
+				<div class="banner-footer">
 					<div class="container">
 						<div class="grid cols-2">
 							<div></div>
-							<div style="margin-top: 16rem">
+							<div class="ppi">
 								<h3>VERBINDET BESTEHENDE SYSTEME</h3>
 								<h1>Öffnet Türen</h1>
 								<p>
@@ -159,6 +159,22 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.ppi
+	margin-top: 16rem
+	@include mobile
+		margin-top: 0
+.person
+	width: 16rem
+	@include mobile
+		width: auto
+		&.grid.cols-2
+			grid-template-columns: 2fr 1fr
+.texti
+	margin-top: 16rem
+	@include mobile
+		margin-top: 0
+		h1
+			margin-bottom: 24rem
 .linebg
 	background-image: url('/linebg.png')
 	background-position: top center
@@ -168,6 +184,10 @@ export default {
 	background-size: contain
 	background-repeat: no-repeat
 	z-index: -99
+	@include mobile
+		margin-top: 0
+		padding-top: 0
+		background-image: url('/linebgmob.png')
 .background-diagonal-2
 	background-image: url('/bgdiag2.svg')
 	background-position: center
@@ -182,6 +202,8 @@ export default {
 	background-repeat: no-repeat
 	margin: -20rem 0
 	padding: 10rem 0
+	@include mobile
+		padding-top: 0
 .banner-footer
 	background-image: url('/interlink-footer.png')
 	background-repeat: no-repeat
@@ -189,31 +211,59 @@ export default {
 	background-position: center
 	min-height: 65.66961251vw
 	z-index: 99
+	margin-top: 8rem
+	@include mobile
+		margin-top: 0
+		background-position: left 0
+		background-size: 150%
+		padding-top: 20rem
 .banner
 	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2021/01/interlink_banner-copy.png')
 	background-repeat: no-repeat
 	background-size: cover
 	background-position: center
 	min-height: 65.66961251vw
+	margin-top: 8rem
 	z-index: 99
+	@include mobile
+		margin-top: 0
+		background-position: left 10rem
+		background-size: 150%
 .vernetzen
 	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/background2.png')
 	background-repeat: no-repeat
 	background-size: 100%
 	background-position: top center
 	min-height: 80vw
+	@include mobile
+		padding-top: 30vh
+		background-image: url('/interlinkmob.png')
 .funktionen
 	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2021/01/background3-2.png')
 	background-repeat: no-repeat
 	background-size: cover
 	background-position: center
 	min-height: 80vw
+	margin-top: 16rem
+	@include mobile
+		background-image: url('/interlinkbg3.png')
+		background-position: top center
+		margin-top: 0
+		padding-top: 16rem
+		background-size: contain
 .clock
 	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/backgroun4.png')
 	background-repeat: no-repeat
 	background-size: cover
 	background-position: center
 	min-height: 40vw
+	@include mobile
+		background-image: url('/interlinkbg4.png')
+		background-position: top center
+		// margin-top: 0
+		padding-top: 13rem
+		min-height: 0
+		background-size: contain
 img
 	height: auto
 	transition: transform 100ms ease
@@ -225,6 +275,8 @@ img
 	width: 40%
 	transition: padding-top 350ms ease-out
 	padding-top: 8rem
+	@include mobile
+		width: auto
 	&.open
 		padding-top: 2rem
 	p
