@@ -63,7 +63,7 @@
 				<div class="container">
 					<div class="grid cols-2 small-gap">
 						<div class="image">
-							<img src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/image_policepad.png" alt="" />
+							<img src="/polpadintuitiv.png" alt="" />
 						</div>
 						<div class="text">
 							<h3>Funktionen</h3>
@@ -222,7 +222,7 @@ img
 .kompromisslos
 	// margin-top: 8rem
 	min-height: 200vh
-	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/background_policepad.png')
+	background-image: url('/polpadbg1.png')
 	background-size: cover
 	background-repeat: no-repeat
 	background-position: center center
@@ -254,6 +254,10 @@ img
 .funktionen
 	.grid
 		align-items: center
+	.image
+		margin: -5rem
+		@include mobile
+			margin: 0
 .pp-module
 	margin-top: 8rem
 	margin-bottom: 8rem

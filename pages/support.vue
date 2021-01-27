@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div style="padding: 12rem 0; background: #e7e9ec">
+		<div style="padding: 12rem 0; background: #e7e9ec" id="support">
 			<div class="container">
 				<div class="grid cols-2">
 					<div>
@@ -45,7 +45,7 @@
 						placeholder="Email"
 					/>
 					<select
-						style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%"
+						style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%; background-color: white"
 						name=""
 						id=""
 						value="Anliegen"
@@ -72,7 +72,61 @@
 						rows="10"
 					></textarea>
 				</form>
-				<CButton text="Senden" style="margin-top: 2rem" />
+				<div class="grid cols-3 small-gap" style="align-items: center; margin-top: 2rem">
+					<CButton text="Senden" />
+					<span
+						style="
+							padding: 0.5rem 2rem 0.5rem 0.5rem;
+							border: blue 1px solid;
+							border-radius: 5px;
+							box-sizing: border-box;
+							margin: 0;
+							width: 100%;
+						"
+					>
+						<input
+							style="
+								padding: 0;
+								height: 1rem;
+								width: 1rem;
+								border: blue 1px solid;
+								border-radius: 3px;
+								margin-right: 10px;
+								vertical-align: text-top;
+							"
+							type="checkbox"
+							name=""
+							id=""
+						/>
+						Ich bin kein Roboter
+					</span>
+					<span
+						style="
+							padding: 0.5rem 2rem 0.5rem 0.5rem;
+							border: blue 1px solid;
+							border-radius: 5px;
+							box-sizing: border-box;
+							margin: 0;
+							width: 100%;
+						"
+					>
+						<input
+							style="
+								padding: 0;
+								height: 1rem;
+								width: 1rem;
+								border: blue 1px solid;
+								border-radius: 3px;
+								margin-right: 10px;
+								vertical-align: text-top;
+							"
+							type="checkbox"
+							name=""
+							id=""
+						/>
+						Kopie an mich senden
+					</span>
+				</div>
 			</div>
 		</div>
 		<div class="container" style="margin-top: 8rem">

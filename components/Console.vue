@@ -1,9 +1,16 @@
 <template>
 	<div id="console" :class="{ 'bc-blue br font-mono': true, active: isActive }">
 		<p>
-			<span @click="toggleConsole" class="toggle-console">[{{ toggleSymbol }}]</span>
+			<span v-if="!cookieText" @click="toggleConsole" class="toggle-console">[{{ toggleSymbol }}]</span>
 		</p>
-		<div class="content">
+		<div class="content" v-if="cookieText">
+			<p class="title" @click="toggleConsole">Conzepta//</p>
+			<p>Wir verwenden Cookies um unsere Seite zu optimieren.</p>
+			<!-- <CButton isOutline isMono text="Team Viewer" /> -->
+			<CButton @click.native="cookieText = false" isOutline isMono text="Zustimmen" />
+			<CButton isMono text="Info" />
+		</div>
+		<div class="content" v-else>
 			<p class="title" @click="toggleConsole">Conzepta//</p>
 			<p>Unterstützung gefällig? Nehmen Sie mit uns Kontakt auf.</p>
 			<!-- <CButton isOutline isMono text="Team Viewer" /> -->
@@ -17,6 +24,7 @@ export default {
 	name: 'Console',
 	data() {
 		return {
+			cookieText: true,
 			title: '',
 			isActive: true,
 			toggleSymbol: 'X',
