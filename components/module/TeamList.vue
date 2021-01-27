@@ -19,7 +19,8 @@
 						</p>
 					</section>
 					<section class="image">
-						<img :src="p.acf.person_portrait.url" alt="" />
+						<img v-if="p.acf.person_portrait.url" :src="p.acf.person_portrait.url" alt="" />
+						<img v-else src="/99_Profilbild.png" alt="" />
 					</section>
 				</div>
 			</div>

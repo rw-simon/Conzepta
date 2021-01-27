@@ -1,25 +1,25 @@
 <template>
 	<div>
-		<div class="banner">
+		<div v-scroll-reveal="{ delay: 0 }" class="banner">
 			<div class="container">
 				<div class="grid cols-2">
 					<div></div>
 					<div class="texti">
-						<h3>Kommunikatonssystem</h3>
-						<h1>Interlink//</h1>
-						<p>
+						<h3 v-scroll-reveal="{ delay: 0 }">Kommunikatonssystem</h3>
+						<h1 v-scroll-reveal="{ delay: 200 }">Interlink//</h1>
+						<p v-scroll-reveal="{ delay: 400 }">
 							Mit InterLink hat die conzepta ein zukunftsweisendes Kommunikationssystem für die Präsenzzeitkontrolle, Zutrittskontrolle
 							und die Betriebsdatenerfassung in
 						</p>
-						<img style="width: 3rem" src="/icon_windows.png" alt="" />
+						<img v-scroll-reveal="{ delay: 600 }" style="width: 3rem" src="/icon_windows.png" alt="" />
 						<nuxt-link to="/wir#urs-blaser">
 							<div class="grid cols-2 small-gap person" style="align-items: center; margin-top: 2rem">
 								<div>
-									<p style="margin: 0; line-height: 1em">Produktmanager</p>
-									<p style="font-weight: 900">Urs Blaser</p>
+									<p v-scroll-reveal="{ delay: 800 }" style="margin: 0; line-height: 1em">Produktmanager</p>
+									<p v-scroll-reveal="{ delay: 1000 }" style="font-weight: 900">Urs Blaser</p>
 								</div>
 								<div>
-									<img style="height: auto" src="/portrait_placeholder.png" alt="" />
+									<img v-scroll-reveal="{ delay: 1200 }" style="height: auto" src="/portrait_placeholder.png" alt="" />
 								</div>
 							</div>
 						</nuxt-link>
@@ -33,9 +33,9 @@
 					<div class="container">
 						<div class="grid cols-2">
 							<div style="margin-top: 16rem">
-								<h3>Unabhängig Vernetzen</h3>
-								<h2>Echtzeit Kommunikation zwischen allen Systemen</h2>
-								<p>
+								<h3 v-scroll-reveal="{ delay: 0 }">Unabhängig Vernetzen</h3>
+								<h2 v-scroll-reveal="{ delay: 200 }">Echtzeit Kommunikation zwischen allen Systemen</h2>
+								<p v-scroll-reveal="{ delay: 400 }">
 									InterLink "übersetzt" die spezifischen Protokolle in ein Einheitliches. Die Kommunikation zwischen den Terminals
 									und dem Managementsystem findet in Echtzeit statt. Weltweit. Dabei spielt es keine Rolle, ob die Installation nur
 									ein einziges Terminal umfasst oder mehrere Tausend in einem Grosskonzern mit global verteilten
@@ -47,19 +47,21 @@
 			</div>
 			<div class="something" style="margin-top: 10rem">
 				<div class="container">
-					<h3 style="text-align: center">BIXBI SYSTEMS / KABA / MPDV / PCS / PRIMION / TYCO / VICKING</h3>
-					<h2 style="text-align: center; margin-bottom: 8rem">InterLink kommuniziert mit Terminals verschiedener Hersteller</h2>
+					<h3 v-scroll-reveal="{ delay: 0 }" style="text-align: center">BIXBI SYSTEMS / KABA / MPDV / PCS / PRIMION / TYCO / VICKING</h3>
+					<h2 v-scroll-reveal="{ delay: 200 }" style="text-align: center; margin-bottom: 8rem">
+						InterLink kommuniziert mit Terminals verschiedener Hersteller
+					</h2>
 					<div class="grid cols-5">
 						<div style="grid-column: span 3">
-							<h1 style="font-size: 5rem; margin-bottom: 0; line-height: 1em">20</h1>
-							<h3 style="margin-bottom: 2rem">Jahre</h3>
-							<h1 style="font-size: 5rem; margin-bottom: 0; line-height: 1em">30'000</h1>
-							<h3 style="margin-bottom: 2rem">Terminals</h3>
-							<h1 style="font-size: 5rem; margin-bottom: 0; line-height: 1em">3'000'000</h1>
-							<h3 style="margin-bottom: 2rem">Buchungen pro Tag</h3>
+							<h1 v-scroll-reveal="{ delay: 0 }" style="font-size: 5rem; margin-bottom: 0; line-height: 1em">20</h1>
+							<h3 v-scroll-reveal="{ delay: 100 }" style="margin-bottom: 2rem">Jahre</h3>
+							<h1 v-scroll-reveal="{ delay: 200 }" style="font-size: 5rem; margin-bottom: 0; line-height: 1em">30'000</h1>
+							<h3 v-scroll-reveal="{ delay: 300 }" style="margin-bottom: 2rem">Terminals</h3>
+							<h1 v-scroll-reveal="{ delay: 400 }" style="font-size: 5rem; margin-bottom: 0; line-height: 1em">3'000'000</h1>
+							<h3 v-scroll-reveal="{ delay: 500 }" style="margin-bottom: 2rem">Buchungen pro Tag</h3>
 						</div>
 						<div style="grid-column: span 2">
-							<p>
+							<p v-scroll-reveal="{ delay: 300 }">
 								Mit seinen weltweit über 30'000 Terminals und den damit gemachten 3'000'000 Buchungen pro Tag, hat sich InterLink zu
 								einer stabilen Konstante im Markt entwickelt und ist seit mehr als 20 Jahren mit höchster Zuverlässigkeit im Einsatz.
 								Aktuelle Generationen der Terminals werden unterstützt und neue laufend hinzugefügt.
@@ -73,9 +75,9 @@
 					<div class="grid cols-2">
 						<span></span>
 						<div style="margin-top: 6rem">
-							<h3>Funktionen</h3>
-							<h2>Da schaltet die Konkurrenz ab</h2>
-							<p>
+							<h3 v-scroll-reveal="{ delay: 0 }">Funktionen</h3>
+							<h2 v-scroll-reveal="{ delay: 200 }">Da schaltet die Konkurrenz ab</h2>
+							<p v-scroll-reveal="{ delay: 400 }">
 								Weitere interessante Aspekte sind der Offline-Betrieb, die Datensicherung, sowie ein einzigartiges technisches
 								Analysetool.
 							</p>
@@ -89,9 +91,9 @@
 				<div class="clock">
 					<div class="container">
 						<div :class="{ text: true, open: showContentKomp }">
-							<h3>ARBEITSZEITEN AUSWERTEN</h3>
-							<h2>Kommunikation kann so viel mehr</h2>
-							<p class="intro">
+							<h3 v-scroll-reveal="{ delay: 0 }">ARBEITSZEITEN AUSWERTEN</h3>
+							<h2 v-scroll-reveal="{ delay: 200 }">Kommunikation kann so viel mehr</h2>
+							<p v-scroll-reveal="{ delay: 400 }" class="intro">
 								Auf der Plattform eines Systemanbieters werden Arbeitszeiten ausgewertet und Zutrittsberechtigungen der Mitarbeitenden
 								in einem Betrieb festgelegt. Diese Vorgänge erfordern eine Kommunikation mit den Terminals, die auf die Standorte der.
 							</p>
@@ -117,9 +119,9 @@
 						<div class="grid cols-2">
 							<div></div>
 							<div class="ppi">
-								<h3>VERBINDET BESTEHENDE SYSTEME</h3>
-								<h1>Öffnet Türen</h1>
-								<p>
+								<h3 v-scroll-reveal="{ delay: 0 }">VERBINDET BESTEHENDE SYSTEME</h3>
+								<h1 v-scroll-reveal="{ delay: 200 }">Öffnet Türen</h1>
+								<p v-scroll-reveal="{ delay: 400 }">
 									InterLink entfaltet dabei eine seiner einzigartigen Eigenschaften: Er übersetzt die Sprachen (Protokolle) der
 									Terminals auf dasjenige Protokoll seines (Gesprächs-) Partners und wieder zurück. Dies scheint auf den ersten
 									Blick einfach, doch es ist ähnlich komplex wie bei der Übersetzung einer natürlichen Sprache: Es reicht nicht nur

@@ -7,7 +7,7 @@ Vue.use(VueScrollReveal, {
 	reset: false,
 	easing: 'ease-out',
 	viewOffset: {
-		bottom: 150,
+		bottom: 20,
 		top: 25,
 	},
 })

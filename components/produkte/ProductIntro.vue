@@ -1,12 +1,12 @@
 <template>
 	<div class="product-intro">
-		<h3 class="page-subtitle">
+		<h3 class="page-subtitle" v-scroll-reveal="{ delay: 0 }">
 			{{ content.acf.product_intro.product_intro_subtitle }}
 		</h3>
-		<h1 class="page-title">
+		<h1 class="page-title" v-scroll-reveal="{ delay: 200 }">
 			{{ content.acf.product_intro.product_intro_title }}
 		</h1>
-		<p class="page-intro">
+		<p class="page-intro" v-scroll-reveal="{ delay: 400 }">
 			{{ content.acf.product_intro.product_intro_paragraph }}
 		</p>
 	</div>

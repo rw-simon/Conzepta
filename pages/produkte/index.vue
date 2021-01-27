@@ -17,7 +17,7 @@
 			</div> -->
 		</div>
 		<div class="products-list grid cols-3 small-gap">
-			<ProductPanel v-for="p in products" :key="p.id" :product="p" />
+			<ProductPanel v-for="(p, i) in products" :key="p.id" :product="p" v-scroll-reveal="{ delay: 200 }" />
 		</div>
 		<div class="more section">
 			<ProductMore />

@@ -4,7 +4,7 @@
 			<div class="container" style="width: auto">
 				<!-- <h1 v-scroll-reveal>{{ content.title.rendered }}</h1> -->
 				<img v-scroll-reveal="{ delay: 200 }" src="/icon_white.png" alt="" />
-				<div style="width: 64px; text-align: center; margin: auto; margin-top: 5rem; margin-bottom: -5rem">
+				<div v-scroll-reveal="{ delay: 400 }" style="width: 64px; text-align: center; margin: auto; margin-top: 5rem; margin-bottom: -5rem">
 					<img src="/arrows.png" alt="" />
 				</div>
 			</div>
@@ -41,26 +41,26 @@
 					<article>
 						<img v-scroll-reveal="{ delay: 300 }" src="/grid1.png" alt="" />
 						<h2 v-scroll-reveal="{ delay: 400 }">Adaption</h2>
-						<p style="padding: 2rem; box-sizing: border-box" v-scroll-reveal="{ delay: 500 }">
+						<p style="padding: 0 2rem; box-sizing: border-box" v-scroll-reveal="{ delay: 500 }">
 							Wir bieten keine Pakete ab Stange, sondern individuelle Lösungen und persönlichen Support.
 						</p>
 					</article>
 					<article>
 						<img v-scroll-reveal="{ delay: 500 }" src="/grid2.png" alt="" />
 						<h2 v-scroll-reveal="{ delay: 600 }">Qualität</h2>
-						<p style="padding: 2rem; box-sizing: border-box" v-scroll-reveal="{ delay: 700 }">
+						<p style="padding: 0 2rem; box-sizing: border-box" v-scroll-reveal="{ delay: 700 }">
 							Wir liefern Schweizer Qualitätsprodukte aus Eigenentwicklung.
 						</p>
 					</article>
 					<article>
 						<img v-scroll-reveal="{ delay: 700 }" src="/grid3.png" alt="" />
 						<h2 v-scroll-reveal="{ delay: 800 }">Modern</h2>
-						<p style="padding: 2rem; box-sizing: border-box" v-scroll-reveal="{ delay: 900 }">
+						<p style="padding: 0 2rem; box-sizing: border-box" v-scroll-reveal="{ delay: 900 }">
 							Wir können Ihre Zukunft nicht vorhersehen. Aber wir können sie programmieren.
 						</p>
 					</article>
 				</div>
-				<nuxt-link to="/wir#unser-angebot"><CButton style="margin-top: 8rem" text="Mehr" /></nuxt-link>
+				<nuxt-link to="/wir#unser-angebot"><CButton style="margin-top: 3rem" text="Mehr" /></nuxt-link>
 			</div>
 		</div>
 		<div class="support">
@@ -214,7 +214,7 @@ img
 		color: white
 		font-weight: 300
 	img
-		width: 20rem
+		width: 15rem
 .intro
 	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2021/01/home_background_1.png')
 	background-position: center center
@@ -241,7 +241,8 @@ img
 			margin-bottom: 0
 .since
 	height: 150vh
-	margin-top: -10rem
+	margin-top: -20rem
+	padding-top: 10rem
 	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/home_background2.png')
 	background-position: top right
 	background-repeat: no-repeat

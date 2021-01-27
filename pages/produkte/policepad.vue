@@ -2,7 +2,7 @@
 	<div>
 		<div class="banner" style="">
 			<div class="container">
-				<div class="cc" v-html="content.acf.banner.text" />
+				<div v-scroll-reveal="{ delay: 100 }" class="cc" v-html="content.acf.banner.text" />
 			</div>
 		</div>
 		<div class="background-gradient" style="padding-top: 4rem">
@@ -10,18 +10,19 @@
 				<div class="container">
 					<div style="display: grid; grid-template-columns: repeat(6, 2rem); gap: 0.5rem; align-items: center">
 						<span v-for="(pf, i) in content.platform" :key="i" style="padding: 5px">
-							<img :src="platforms[pf].acf.platform_icon" alt="" />
+							<img :src="platforms[pf].acf.platform_icon" v-scroll-reveal="{ delay: 100 * i }" alt="" />
 						</span>
 					</div>
 					<nuxt-link v-if="content.acf.product_person" :to="'/wir#' + content.acf.product_person.post_name"
 						><div class="grid cols-2 small-gap person" style="align-items: center; margin-top: 2rem">
 							<div>
-								<p style="margin: 0; line-height: 1em">Produktmanager</p>
-								<p style="font-weight: 900">{{ content.acf.product_person.post_title }}</p>
+								<p v-scroll-reveal="{ delay: 300 }" style="margin: 0; line-height: 1em">Produktmanager</p>
+								<p v-scroll-reveal="{ delay: 400 }" style="margin: 0; font-weight: 900">
+									{{ content.acf.product_person.post_title }}
+								</p>
 							</div>
 							<div>
-								<img if src="" alt="" />
-								<img style="border-radius: 50%" src="/portrait_placeholder.png" alt="" />
+								<img v-scroll-reveal="{ delay: 500 }" style="border-radius: 50%" src="/portrait_placeholder.png" alt="" />
 							</div></div
 					></nuxt-link>
 				</div>
@@ -29,12 +30,11 @@
 			<div class="kompromisslos">
 				<div class="container">
 					<div :class="{ text: true, open: showContentKomp }">
-						<h3>Kompromisslos</h3>
-						<h2>Genau so, wie es sein soll</h2>
-						<p class="intro">
-							Dank langjähriger Erfahrung und der engen Zusammenarbeit mit Polizeikorps und privaten Nutzern überzeugt PolicePad durch
-							seine Effizienz: es ist einfach zu erlernen und zu bedienen. Flexible Module ergänzen die Anwendung mit hilfreichen
-							Funktionen. Durch einfaches und schnelles Konfigurieren lässt sich die App weiter individualisieren.
+						<h3 v-scroll-reveal="{ delay: 0 }">Kompromisslos</h3>
+						<h2 v-scroll-reveal="{ delay: 200 }">Genau so, wie es sein soll</h2>
+						<p v-scroll-reveal="{ delay: 400 }" class="intro">
+							Dank langjähriger Erfahrung und der engen Zusammenarbeit mit Polizeikorps und privaten Nutzern überzeugt PolicePad durch seine Effizienz: es ist einfach zu erlernen und zu bedienen. Flexible Module ergänzen die Anwendung
+							mit hilfreichen Funktionen. Durch einfaches und schnelles Konfigurieren lässt sich die App weiter individualisieren.
 						</p>
 						<img
 							@click="toggleContentKomp"
@@ -46,13 +46,11 @@
 							alt=""
 						/>
 						<p :class="{ more: true, active: showContentKomp }">
-							PolicePad hatte den besten Treiber für Innovation, den es gibt: die Realität. Die erste Version ging vor rund 30 Jahren in
-							Betrieb. Mit jedem Tag, jedem Einsatz, jeder einzelnen erfassten Busse wurde das System besser. Heute steht PolicePad auf
-							allen gängigen Plattformen (iOS, Windows, Android) zur Verfügung.
+							PolicePad hatte den besten Treiber für Innovation, den es gibt: die Realität. Die erste Version ging vor rund 30 Jahren in Betrieb. Mit jedem Tag, jedem Einsatz, jeder einzelnen erfassten Busse wurde das System besser.
+							Heute steht PolicePad auf allen gängigen Plattformen (iOS, Windows, Android) zur Verfügung.
 							<br />
-							Die Bedienung und zahlreiche Zusatzmodule haben wir in enger Zusammenarbeit mit unseren Kunden ausgearbeitet, verfeinert
-							und mit smarten Funktionen ergänzt. Um den Erfassungsablauf zu vereinfachen, die Eingaben zu beschleunigen und die
-							Datenqualität zu erhöhen.
+							Die Bedienung und zahlreiche Zusatzmodule haben wir in enger Zusammenarbeit mit unseren Kunden ausgearbeitet, verfeinert und mit smarten Funktionen ergänzt. Um den Erfassungsablauf zu vereinfachen, die Eingaben zu
+							beschleunigen und die Datenqualität zu erhöhen.
 						</p>
 					</div>
 				</div>
@@ -63,14 +61,14 @@
 				<div class="container">
 					<div class="grid cols-2 small-gap">
 						<div class="image">
-							<img src="/polpadintuitiv.png" alt="" />
+							<img v-scroll-reveal="{ delay: 0 }" src="/polpadintuitiv.png" alt="" />
 						</div>
 						<div class="text">
-							<h3>Funktionen</h3>
-							<h2>Simpel und intuitiv</h2>
-							<p>
-								Die Kernfunktion von PolicePad ist simpel: Das Erfassen von Ordnungsbussen. Doch dahinter steckt sehr viel mehr. Etwa:
-								Eine intelligente Suchfunktion, der Live-Abgleich mit mehreren Datenbeständen oder schnelleres Erfassen mit Favoriten.
+							<h3 v-scroll-reveal="{ delay: 0 }">Funktionen</h3>
+							<h2 v-scroll-reveal="{ delay: 200 }">Simpel und intuitiv</h2>
+							<p v-scroll-reveal="{ delay: 400 }">
+								Die Kernfunktion von PolicePad ist simpel: Das Erfassen von Ordnungsbussen. Doch dahinter steckt sehr viel mehr. Etwa: Eine intelligente Suchfunktion, der Live-Abgleich mit mehreren Datenbeständen oder schnelleres
+								Erfassen mit Favoriten.
 							</p>
 						</div>
 					</div>
@@ -95,39 +93,43 @@
 		<div style="background-color: #e7e9ec; margin-bottom: 12rem" class="backend">
 			<div class="container">
 				<div class="text">
-					<h3>PolicePad Server</h3>
-					<h2>Backend</h2>
-					<p>
-						Der PolicePadServer ist die Gegenstelle von PolicePad und nimmt die Fälle entgegen, speichert diese, stellt sie dar und bietet
-						diverse Statistiken. Verwalten Sie die Fälle, steuern Sie Gruppen und verwaltne Sie die mobilen Eingabegeräte. Mit dem
-						Bereitstellen der Stammdaten können Sie Inhalte live übertragen und in der App darstellen. Die Exportkontrolle dient der
-						Sicherstellung, dass alle Fälle übertragen wurden.
+					<h3 v-scroll-reveal="{ delay: 0 }">PolicePad Server</h3>
+					<h2 v-scroll-reveal="{ delay: 200 }">Backend</h2>
+					<p v-scroll-reveal="{ delay: 400 }">
+						Der PolicePadServer ist die Gegenstelle von PolicePad und nimmt die Fälle entgegen, speichert diese, stellt sie dar und bietet diverse Statistiken. Verwalten Sie die Fälle, steuern Sie Gruppen und verwaltne Sie die mobilen
+						Eingabegeräte. Mit dem Bereitstellen der Stammdaten können Sie Inhalte live übertragen und in der App darstellen. Die Exportkontrolle dient der Sicherstellung, dass alle Fälle übertragen wurden.
 					</p>
 				</div>
 			</div>
 		</div>
 		<div class="police">
 			<div class="container">
-				<h3 style="text-align: center">STAPO ZÜRICH / BERNER KAPO / ZÜRCHER KAPO / PRIVATE</h3>
-				<h2 style="text-align: center; margin-bottom: 8rem">{{ content.acf.numbers.numbers_title }}</h2>
+				<h3 v-scroll-reveal="{ delay: 0 }" style="text-align: center">STAPO ZÜRICH / BERNER KAPO / ZÜRCHER KAPO / PRIVATE</h3>
+				<h2 v-scroll-reveal="{ delay: 200 }" style="text-align: center; margin-bottom: 8rem">{{ content.acf.numbers.numbers_title }}</h2>
 				<div class="grid cols-5">
 					<div style="grid-column: span 3">
-						<h1 style="font-size: 4.5rem; margin-bottom: 0; line-height: 1em">{{ content.acf.numbers.numbers_actual.numbers_years }}</h1>
-						<h3 style="margin-bottom: 2rem">Jahre</h3>
-						<h1 style="font-size: 4.5rem; margin-bottom: 0; line-height: 1em">{{ content.acf.numbers.numbers_actual.numbers_users }}</h1>
-						<h3 style="margin-bottom: 2rem">Nutzer</h3>
-						<h1 style="font-size: 4.5rem; margin-bottom: 0; line-height: 1em">{{ content.acf.numbers.numbers_actual.numbers_cases }}</h1>
-						<h3 style="margin-bottom: 2rem">Fälle im Jahr</h3>
+						<h1 v-scroll-reveal="{ delay: 0 }" style="font-size: 4.5rem; margin-bottom: 0; line-height: 1em">
+							{{ content.acf.numbers.numbers_actual.numbers_years }}
+						</h1>
+						<h3 v-scroll-reveal="{ delay: 100 }" style="margin-bottom: 2rem">Jahre</h3>
+						<h1 v-scroll-reveal="{ delay: 200 }" style="font-size: 4.5rem; margin-bottom: 0; line-height: 1em">
+							{{ content.acf.numbers.numbers_actual.numbers_users }}
+						</h1>
+						<h3 v-scroll-reveal="{ delay: 300 }" style="margin-bottom: 2rem">Nutzer</h3>
+						<h1 v-scroll-reveal="{ delay: 400 }" style="font-size: 4.5rem; margin-bottom: 0; line-height: 1em">
+							{{ content.acf.numbers.numbers_actual.numbers_cases }}
+						</h1>
+						<h3 v-scroll-reveal="{ delay: 500 }" style="margin-bottom: 2rem">Fälle im Jahr</h3>
 					</div>
-					<div style="grid-column: span 2" v-html="content.acf.numbers.numbers_text" />
+					<div v-scroll-reveal="{ delay: 200 }" style="grid-column: span 2" v-html="content.acf.numbers.numbers_text" />
 				</div>
 			</div>
 		</div>
-		<div style="background: #e7e9ec; margin-top: 8rem" class="anwender">
+		<div style="margin-top: 8rem" class="anwender">
 			<div class="container" style="padding: 4rem 0">
 				<h2>Anwender</h2>
 				<div style="display: grid; gap: 2rem; align-items: center" class="grid cols-3">
-					<img style="padding: 2rem; max-width: 200px" v-for="(img, i) in content.acf.anwender" :key="i" :src="img" alt="" />
+					<img v-scroll-reveal="{ delay: 200 * i }" style="padding: 2rem; max-width: 200px" v-for="(img, i) in content.acf.anwender" :key="i" :src="img" alt="" />
 				</div>
 			</div>
 		</div>
@@ -174,6 +176,7 @@ export default {
 <style lang="sass" scoped>
 .person
 	width: 16rem
+	align-items: center
 	@include mobile
 		width: auto
 		&.grid.cols-2

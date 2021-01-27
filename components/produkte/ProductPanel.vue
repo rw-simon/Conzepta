@@ -38,6 +38,7 @@ article
 		grid-column: 2
 		grid-row: 1/-1
 		@include mobile
+			background-size: contain
 			grid-column: 1/-1
 		@include mobile-landscape
 			grid-column: 1/-1
@@ -52,6 +53,8 @@ article
 	&.span-2
 		grid-template-columns: 1fr 1fr
 		grid-column: span 2
+		.product-featured-image
+			background-size: 110%
 		@include mobile
 			grid-column: 1/-1
 			grid-template-columns: 1fr

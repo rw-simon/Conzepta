@@ -46,7 +46,7 @@ export default {
 	},
 	data() {
 		return {
-			selectedCategories: [2],
+			selectedCategories: [0],
 			productCategories: ['Alle', 'PolicePad', 'Lexica', 'Interlink', 'TachiFox'],
 		}
 	},

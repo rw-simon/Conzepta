@@ -2,55 +2,32 @@
 	<div>
 		<div style="padding: 12rem 0; background: #e7e9ec" id="support">
 			<div class="container">
-				<div class="grid cols-2">
+				<div class="grid cols-2" style="row-gap: 2rem">
 					<div>
-						<h3>Jederzeit</h3>
-						<h1>Support</h1>
-						<p>
-							Eine gute Software ist jene, die ohne Probleme läuft. Das garantieren wir Ihnen. Deshalb sind wir für Sie da – wann immer
-							Sie uns brauchen
-						</p>
+						<h3 v-scroll-reveal="{ delay: 0 }">Jederzeit</h3>
+						<h1 v-scroll-reveal="{ delay: 200 }">Support</h1>
+						<p v-scroll-reveal="{ delay: 400 }">Eine gute Software ist jene, die ohne Probleme läuft. Das garantieren wir Ihnen. Deshalb sind wir für Sie da – wann immer Sie uns brauchen</p>
 					</div>
 					<div style="align-self: end; text-align: right">
-						<a
-							style="display: inline-block; line-height: 1em; border: 1px solid blue; border-radius: 4px; padding: 0.3rem 2rem"
-							href="https://teamviewer.com"
-							target="_blank"
+						<a style="display: inline-block; line-height: 1em; border: 1px solid blue; border-radius: 4px; padding: 0.3rem 2rem" href="https://teamviewer.com" target="_blank"
 							><img src="/logo-teamviewer.svg" style="height: 1.5rem" alt=""
 						/></a>
 					</div>
 					<div>
-						<p>Email: team@conzepta.ch <br />Telefon: +41 348 60 20</p>
+						<p v-scroll-reveal="{ delay: 500 }">Email: team@conzepta.ch <br />Telefon: +41 348 60 20</p>
 					</div>
 				</div>
-				<p>Und übrigens: Wenn alles läuft, sind Sie bei uns erst recht willkommen, zu einer Tasse Kaffee oder Tee. Denn auch</p>
+				<p v-scroll-reveal="{ delay: 700 }">Und übrigens: Wenn alles läuft, sind Sie bei uns erst recht willkommen, zu einer Tasse Kaffee oder Tee. Denn auch</p>
 			</div>
 			<div style="margin-top: 8rem" class="container">
 				<h3>Direkt</h3>
 				<h2>Kontakt</h2>
 				<form action="" class="grid cols-2" style="gap: 2rem">
-					<input
-						style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%"
-						type="text"
-						placeholder="Vorname"
-					/>
-					<input
-						style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%"
-						type="text"
-						placeholder="Nachname"
-					/>
-					<input
-						style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%"
-						type="text"
-						placeholder="Email"
-					/>
-					<select
-						style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%; background-color: white"
-						name=""
-						id=""
-						value="Anliegen"
-					>
-						<option value="anliegen">Anliegen</option>
+					<input v-scroll-reveal="{ delay: 200 }" style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%" type="text" placeholder="Vorname" />
+					<input v-scroll-reveal="{ delay: 400 }" style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%" type="text" placeholder="Nachname" />
+					<input v-scroll-reveal="{ delay: 600 }" style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%" type="text" placeholder="Email" />
+					<select v-scroll-reveal="{ delay: 800 }" :style="[selectedAnliegen == '' ? { color: 'gray' } : { color: 'black' }]" name="anliegen" id="" v-model="selectedAnliegen">
+						<option value="" hidden>Anliegen</option>
 						<option value="techprob">Technische Probleme</option>
 						<option value="pp">Police Pad</option>
 						<option value="lex">Lexica</option>
@@ -64,66 +41,16 @@
 					type="text"
 					placeholder="Anliegen"
 				/> -->
-					<textarea
-						style="border: blue 1px solid; border-radius: 5px; width: 100%; grid-column: span 2"
-						name=""
-						id=""
-						cols="30"
-						rows="10"
-					></textarea>
+					<textarea v-scroll-reveal="{ delay: 1000 }" style="border: blue 1px solid; border-radius: 5px; width: 100%; grid-column: span 2" name="" id="" cols="30" rows="10"></textarea>
 				</form>
 				<div class="grid cols-3 small-gap" style="align-items: center; margin-top: 2rem">
 					<CButton text="Senden" />
-					<span
-						style="
-							padding: 0.5rem 2rem 0.5rem 0.5rem;
-							border: blue 1px solid;
-							border-radius: 5px;
-							box-sizing: border-box;
-							margin: 0;
-							width: 100%;
-						"
-					>
-						<input
-							style="
-								padding: 0;
-								height: 1rem;
-								width: 1rem;
-								border: blue 1px solid;
-								border-radius: 3px;
-								margin-right: 10px;
-								vertical-align: text-top;
-							"
-							type="checkbox"
-							name=""
-							id=""
-						/>
+					<span style="padding: 0.5rem 2rem 0.5rem 0.5rem; border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%">
+						<input style="padding: 0; height: 1rem; width: 1rem; border: blue 1px solid; border-radius: 3px; margin-right: 10px; vertical-align: text-top" type="checkbox" name="" id="" />
 						Ich bin kein Roboter
 					</span>
-					<span
-						style="
-							padding: 0.5rem 2rem 0.5rem 0.5rem;
-							border: blue 1px solid;
-							border-radius: 5px;
-							box-sizing: border-box;
-							margin: 0;
-							width: 100%;
-						"
-					>
-						<input
-							style="
-								padding: 0;
-								height: 1rem;
-								width: 1rem;
-								border: blue 1px solid;
-								border-radius: 3px;
-								margin-right: 10px;
-								vertical-align: text-top;
-							"
-							type="checkbox"
-							name=""
-							id=""
-						/>
+					<span style="padding: 0.5rem 2rem 0.5rem 0.5rem; border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%">
+						<input style="padding: 0; height: 1rem; width: 1rem; border: blue 1px solid; border-radius: 3px; margin-right: 10px; vertical-align: text-top" type="checkbox" name="" id="" />
 						Kopie an mich senden
 					</span>
 				</div>
@@ -132,23 +59,20 @@
 		<div class="container" style="margin-top: 8rem">
 			<div class="grid cols-2">
 				<div>
-					<p>Conzepta Team<br />Allmendstrasse 54<br />3014 Bern</p>
+					<p v-scroll-reveal="{ delay: 0 }">Conzepta Team<br />Allmendstrasse 54<br />3014 Bern</p>
 					<br />
 					<div class="grid cols-4" style="gap: 0">
-						<img style="grid-column: span 1" src="/busicon.png" alt="" />
-						<div style="grid-column: span 3">
+						<img v-scroll-reveal="{ delay: 200 }" style="grid-column: span 1; height: auto" src="/busicon.png" alt="" />
+						<div v-scroll-reveal="{ delay: 400 }" style="grid-column: span 3">
 							<p>B20<br />Richtung Bern Wankdorf</p>
 						</div>
 					</div>
 				</div>
 				<div>
-					<h3>Von Richtung Olten</h3>
-					<h2>Mit dem Auto</h2>
+					<h3 v-scroll-reveal="{ delay: 0 }">Von Richtung Olten</h3>
+					<h2 v-scroll-reveal="{ delay: 200 }">Mit dem Auto</h2>
 					<br />
-					<p>
-						Nehmen sie die Ausfahrt 37-BernWankdorf und biegen sie anschliessend in die Papiermühlestrasse ein. Beim ersten Kreisel rechts
-						und dann nur noch dem
-					</p>
+					<p v-scroll-reveal="{ delay: 400 }">Nehmen sie die Ausfahrt 37-BernWankdorf und biegen sie anschliessend in die Papiermühlestrasse ein. Beim ersten Kreisel rechts und dann nur noch dem</p>
 				</div>
 			</div>
 			<br />
@@ -169,7 +93,21 @@
 </template>
 
 <script>
-export default {}
+export default {
+	data() {
+		return {
+			selectedAnliegen: '',
+		}
+	},
+}
 </script>
 
-<style></style>
+<style lang="sass" scoped>
+select
+	border: blue 1px solid
+	border-radius: 5px
+	box-sizing: border-box
+	margin: 0
+	width: 100%
+	background-color: white
+</style>

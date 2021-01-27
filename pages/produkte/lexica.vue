@@ -1,13 +1,13 @@
 <template>
 	<div>
 		<div class="bggradient">
-			<div class="banner">
+			<div v-scroll-reveal="{ delay: 0 }" class="banner">
 				<div class="container">
 					<div class="section grid cols-2">
 						<div style="padding: 12rem 0">
-							<h3>Nachschlagwerk</h3>
-							<h1>Lexica//</h1>
-							<p>
+							<h3 v-scroll-reveal="{ delay: 0 }">Nachschlagwerk</h3>
+							<h1 v-scroll-reveal="{ delay: 200 }">Lexica//</h1>
+							<p v-scroll-reveal="{ delay: 400 }">
 								Lexica ist das digitale Nachschlagewerk für die unterschiedlichsten Ansammlungen von Gesetzen, Regeln, Statuten usw.
 								Mit Tags und persönlichen Notizen können Einträge flexibel und einfach ergänzt werden. Die Suche oder die praktischen
 								Assistenten ermöglichen das einfache Finden von Einträgen.
@@ -18,12 +18,16 @@
 							<nuxt-link :to="'/wir#philippe-luethi'"
 								><div class="grid cols-2 small-gap" style="width: 16rem; align-items: center; margin-top: 2rem">
 									<div>
-										<p style="margin: 0; line-height: 1em">Produktmanager</p>
-										<p style="font-weight: 900">Philippe Lüthi</p>
+										<p v-scroll-reveal="{ delay: 0 }" style="margin: 0; line-height: 1em">Produktmanager</p>
+										<p v-scroll-reveal="{ delay: 200 }" style="margin: 0; font-weight: 900">Philippe Lüthi</p>
 									</div>
 									<div>
-										<img if src="" alt="" />
-										<img style="height: auto; border-radius: 50%" src="/portrait_placeholder.png" alt="" />
+										<img
+											v-scroll-reveal="{ delay: 400 }"
+											style="height: auto; border-radius: 50%"
+											src="/portrait_placeholder.png"
+											alt=""
+										/>
 									</div></div
 							></nuxt-link>
 						</div>
@@ -34,9 +38,9 @@
 				<div class="container">
 					<div class="section grid cols-2">
 						<div>
-							<h3>Gesetze / Statuten / Regeln</h3>
-							<h2>Gemeinsam mit den Kunden entwickelt</h2>
-							<p>
+							<h3 v-scroll-reveal="{ delay: 0 }">Gesetze / Statuten / Regeln</h3>
+							<h2 v-scroll-reveal="{ delay: 200 }">Gemeinsam mit den Kunden entwickelt</h2>
+							<p v-scroll-reveal="{ delay: 400 }">
 								Lexica wurde ursprünglich als digitaler Nachfolger für den Bussenziffern-Katalog (Bussenziffernbüchlein) entwickelt.
 								In der Zwischenzeit hat sich Lexica als erfolgreiches und innovatives Nachschlagewerk etabliert. Mit Hilfe
 								konstruktiver Kundenfeedbacks konnten weitere zukunftsorientierte Erweiterungen geplant und umgesetzt werden
@@ -60,9 +64,9 @@
 						</span>
 					</span>
 					<div>
-						<h3>Funktionen</h3>
-						<h2>Lexica kann individuell gestaltet werden</h2>
-						<p>
+						<h3 v-scroll-reveal="{ delay: 0 }">Funktionen</h3>
+						<h2 v-scroll-reveal="{ delay: 200 }">Lexica kann individuell gestaltet werden</h2>
+						<p v-scroll-reveal="{ delay: 400 }">
 							Mit Lexica lassen sich sehr einfach Ansammlungen von Einträgen einbinden, erweitern und mit persönlichen Notizen ergänzen.
 							Die Benutzer gelangen zu diesen Einträgen entweder über eine Textsuche oder über diverse Assistenten. Der Gestaltung der
 						</p>
@@ -175,16 +179,19 @@
 					<h2>Anwender</h2>
 					<div class="grid cols-3" style="display: grid; gap: 2rem; align-items: center">
 						<img
+							v-scroll-reveal="{ delay: 0 }"
 							style="padding: 2rem; max-width: 200px; height: auto"
 							src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/09/Screenshot-2020-12-03-at-11.09.36.png"
 							alt=""
 						/>
 						<img
+							v-scroll-reveal="{ delay: 200 }"
 							style="padding: 2rem; max-width: 200px; height: auto"
 							src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/09/Screenshot-2020-12-03-at-11.09.45.png"
 							alt=""
 						/>
 						<img
+							v-scroll-reveal="{ delay: 400 }"
 							style="padding: 2rem; max-width: 200px; height: auto"
 							src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/09/Screenshot-2020-12-03-at-11.09.54.png"
 							alt=""
