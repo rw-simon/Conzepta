@@ -14,7 +14,7 @@
 			<p class="title" @click="toggleConsole">Conzepta//</p>
 			<p>Unterstützung gefällig? Nehmen Sie mit uns Kontakt auf.</p>
 			<!-- <CButton isOutline isMono text="Team Viewer" /> -->
-			<nuxt-link to="/support"><CButton isOutline isMono text="Kontaktformular" /></nuxt-link>
+			<nuxt-link to="/support#support"><CButton isOutline isMono text="Kontaktformular" /></nuxt-link>
 		</div>
 	</div>
 </template>
@@ -59,7 +59,7 @@ export default {
 		&:hover
 			cursor: pointer
 	&.active
-		right: 1rem
+		right: 1.66rem
 	@include mobile-landscape
 		bottom: 0
 		top: auto

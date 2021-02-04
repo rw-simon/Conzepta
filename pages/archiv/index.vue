@@ -34,6 +34,20 @@
 				</div>
 			</div>
 		</div>
+		<div class="second">
+			<div class="container">
+				<div class="grid cols-2">
+					<article style="grid-column: 1" class="news-article">
+						<h3>12.11.2018</h3>
+						<h2>Nationaler Zukunftstag</h2>
+						<p>
+							Am Donnerstag, 12. November, fand der jährliche nationale Zukunftstag statt. Auch die Conzepta hat in diesem Jahr Besuch von einem Schüler erhalten. Fünftklässler Robin hat einen Einblick in den IT-Alltag erhalten und
+							konnte tatkräftig mitarbeiten.
+						</p>
+					</article>
+				</div>
+			</div>
+		</div>
 	</div>
 </template>
 

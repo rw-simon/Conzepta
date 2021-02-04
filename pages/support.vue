@@ -17,7 +17,9 @@
 						<p v-scroll-reveal="{ delay: 500 }">Email: team@conzepta.ch <br />Telefon: +41 348 60 20</p>
 					</div>
 				</div>
-				<p v-scroll-reveal="{ delay: 700 }">Und übrigens: Wenn alles läuft, sind Sie bei uns erst recht willkommen, zu einer Tasse Kaffee oder Tee. Denn auch</p>
+				<p v-scroll-reveal="{ delay: 700 }">
+					Und übrigens: Wenn alles läuft, sind Sie bei uns erst recht willkommen, zu einer Tasse Kaffee oder Tee. Denn auch das garantieren wir Ihnen: Die besten Gespräche sind doch jene, die ganz ohne Probleme auskommen.
+				</p>
 			</div>
 			<div style="margin-top: 8rem" class="container">
 				<h3>Direkt</h3>
@@ -41,7 +43,7 @@
 					type="text"
 					placeholder="Anliegen"
 				/> -->
-					<textarea v-scroll-reveal="{ delay: 1000 }" style="border: blue 1px solid; border-radius: 5px; width: 100%; grid-column: span 2" name="" id="" cols="30" rows="10"></textarea>
+					<textarea v-scroll-reveal="{ delay: 1000 }" style="border: blue 1px solid; border-radius: 5px; width: 100%; grid-column: span 2" name="" id="" cols="30" rows="10" v-model="textArea"></textarea>
 				</form>
 				<div class="grid cols-3 small-gap" style="align-items: center; margin-top: 2rem">
 					<CButton text="Senden" />
@@ -97,6 +99,12 @@ export default {
 	data() {
 		return {
 			selectedAnliegen: '',
+			textArea: '',
+		}
+	},
+	mounted() {
+		if (this.$route.params.text == 'huhu') {
+			console.log('HUHU')
 		}
 	},
 }

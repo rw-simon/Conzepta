@@ -7,10 +7,7 @@
 					<div class="texti">
 						<h3 v-scroll-reveal="{ delay: 0 }">Kommunikatonssystem</h3>
 						<h1 v-scroll-reveal="{ delay: 200 }">Interlink//</h1>
-						<p v-scroll-reveal="{ delay: 400 }">
-							Mit InterLink hat die conzepta ein zukunftsweisendes Kommunikationssystem für die Präsenzzeitkontrolle, Zutrittskontrolle
-							und die Betriebsdatenerfassung in
-						</p>
+						<p v-scroll-reveal="{ delay: 400 }">Mit InterLink hat die conzepta ein zukunftsweisendes Kommunikationssystem für die Präsenzzeitkontrolle, Zutrittskontrolle und die Betriebsdatenerfassung in</p>
 						<img v-scroll-reveal="{ delay: 600 }" style="width: 3rem" src="/icon_windows.png" alt="" />
 						<nuxt-link to="/wir#urs-blaser">
 							<div class="grid cols-2 small-gap person" style="align-items: center; margin-top: 2rem">
@@ -36,9 +33,8 @@
 								<h3 v-scroll-reveal="{ delay: 0 }">Unabhängig Vernetzen</h3>
 								<h2 v-scroll-reveal="{ delay: 200 }">Echtzeit Kommunikation zwischen allen Systemen</h2>
 								<p v-scroll-reveal="{ delay: 400 }">
-									InterLink "übersetzt" die spezifischen Protokolle in ein Einheitliches. Die Kommunikation zwischen den Terminals
-									und dem Managementsystem findet in Echtzeit statt. Weltweit. Dabei spielt es keine Rolle, ob die Installation nur
-									ein einziges Terminal umfasst oder mehrere Tausend in einem Grosskonzern mit global verteilten
+									InterLink "übersetzt" die spezifischen Protokolle in ein Einheitliches. Die Kommunikation zwischen den Terminals und dem Managementsystem findet in Echtzeit statt. Weltweit. Dabei spielt es keine Rolle, ob die
+									Installation nur ein einziges Terminal umfasst oder mehrere Tausend in einem Grosskonzern mit global verteilten
 								</p>
 							</div>
 						</div>
@@ -48,9 +44,7 @@
 			<div class="something" style="margin-top: 10rem">
 				<div class="container">
 					<h3 v-scroll-reveal="{ delay: 0 }" style="text-align: center">BIXBI SYSTEMS / KABA / MPDV / PCS / PRIMION / TYCO / VICKING</h3>
-					<h2 v-scroll-reveal="{ delay: 200 }" style="text-align: center; margin-bottom: 8rem">
-						InterLink kommuniziert mit Terminals verschiedener Hersteller
-					</h2>
+					<h2 v-scroll-reveal="{ delay: 200 }" style="text-align: center; margin-bottom: 8rem">InterLink kommuniziert mit Terminals verschiedener Hersteller</h2>
 					<div class="grid cols-5">
 						<div style="grid-column: span 3">
 							<h1 v-scroll-reveal="{ delay: 0 }" style="font-size: 5rem; margin-bottom: 0; line-height: 1em">20</h1>
@@ -62,9 +56,8 @@
 						</div>
 						<div style="grid-column: span 2">
 							<p v-scroll-reveal="{ delay: 300 }">
-								Mit seinen weltweit über 30'000 Terminals und den damit gemachten 3'000'000 Buchungen pro Tag, hat sich InterLink zu
-								einer stabilen Konstante im Markt entwickelt und ist seit mehr als 20 Jahren mit höchster Zuverlässigkeit im Einsatz.
-								Aktuelle Generationen der Terminals werden unterstützt und neue laufend hinzugefügt.
+								Mit seinen weltweit über 30'000 Terminals und den damit gemachten 3'000'000 Buchungen pro Tag, hat sich InterLink zu einer stabilen Konstante im Markt entwickelt und ist seit mehr als 20 Jahren mit höchster
+								Zuverlässigkeit im Einsatz. Aktuelle Generationen der Terminals werden unterstützt und neue laufend hinzugefügt.
 							</p>
 						</div>
 					</div>
@@ -77,10 +70,7 @@
 						<div style="margin-top: 6rem">
 							<h3 v-scroll-reveal="{ delay: 0 }">Funktionen</h3>
 							<h2 v-scroll-reveal="{ delay: 200 }">Da schaltet die Konkurrenz ab</h2>
-							<p v-scroll-reveal="{ delay: 400 }">
-								Weitere interessante Aspekte sind der Offline-Betrieb, die Datensicherung, sowie ein einzigartiges technisches
-								Analysetool.
-							</p>
+							<p v-scroll-reveal="{ delay: 400 }">Weitere interessante Aspekte sind der Offline-Betrieb, die Datensicherung, sowie ein einzigartiges technisches Analysetool.</p>
 						</div>
 					</div>
 				</div>
@@ -94,8 +84,8 @@
 							<h3 v-scroll-reveal="{ delay: 0 }">ARBEITSZEITEN AUSWERTEN</h3>
 							<h2 v-scroll-reveal="{ delay: 200 }">Kommunikation kann so viel mehr</h2>
 							<p v-scroll-reveal="{ delay: 400 }" class="intro">
-								Auf der Plattform eines Systemanbieters werden Arbeitszeiten ausgewertet und Zutrittsberechtigungen der Mitarbeitenden
-								in einem Betrieb festgelegt. Diese Vorgänge erfordern eine Kommunikation mit den Terminals, die auf die Standorte der.
+								Auf der Plattform eines Systemanbieters werden Arbeitszeiten ausgewertet und Zutrittsberechtigungen der Mitarbeitenden in einem Betrieb festgelegt. Diese Vorgänge erfordern eine Kommunikation mit den Terminals, die auf
+								die Standorte der.
 							</p>
 							<img
 								@click="toggleContentKomp"
@@ -107,9 +97,8 @@
 								alt=""
 							/>
 							<p :class="{ more: true, active: showContentKomp }">
-								Oftmals stehen in einem Betrieb Terminals verschiedener Hersteller im Einsatz. Dabei zeigt sich oft folgendes Problem:
-								Die Terminals der verschiedenen Hersteller ‘’sprechen eine unterschiedliche Sprache’’, d.h. die Terminals und ihr Host
-								verstehen einander nicht!.
+								Oftmals stehen in einem Betrieb Terminals verschiedener Hersteller im Einsatz. Dabei zeigt sich oft folgendes Problem: Die Terminals der verschiedenen Hersteller ‘’sprechen eine unterschiedliche Sprache’’, d.h. die
+								Terminals und ihr Host verstehen einander nicht!.
 							</p>
 						</div>
 					</div>
@@ -120,13 +109,11 @@
 							<div></div>
 							<div class="ppi">
 								<h3 v-scroll-reveal="{ delay: 0 }">VERBINDET BESTEHENDE SYSTEME</h3>
-								<h1 v-scroll-reveal="{ delay: 200 }">Öffnet Türen</h1>
+								<h2 v-scroll-reveal="{ delay: 200 }">Öffnet Türen</h2>
 								<p v-scroll-reveal="{ delay: 400 }">
-									InterLink entfaltet dabei eine seiner einzigartigen Eigenschaften: Er übersetzt die Sprachen (Protokolle) der
-									Terminals auf dasjenige Protokoll seines (Gesprächs-) Partners und wieder zurück. Dies scheint auf den ersten
-									Blick einfach, doch es ist ähnlich komplex wie bei der Übersetzung einer natürlichen Sprache: Es reicht nicht nur
-									eine Wort-zu-Wort Übersetzung, sondern es muss der ganze Kontext berücksichtigt werden. Technisch gesehen sind
-									dies z.B. unterschiedliche Datenstrukturen der beiden Systeme, die es aufeinander abzustimmen.
+									InterLink entfaltet dabei eine seiner einzigartigen Eigenschaften: Er übersetzt die Sprachen (Protokolle) der Terminals auf dasjenige Protokoll seines (Gesprächs-) Partners und wieder zurück. Dies scheint auf den
+									ersten Blick einfach, doch es ist ähnlich komplex wie bei der Übersetzung einer natürlichen Sprache: Es reicht nicht nur eine Wort-zu-Wort Übersetzung, sondern es muss der ganze Kontext berücksichtigt werden.
+									Technisch gesehen sind dies z.B. unterschiedliche Datenstrukturen der beiden Systeme, die es aufeinander abzustimmen.
 								</p>
 							</div>
 						</div>

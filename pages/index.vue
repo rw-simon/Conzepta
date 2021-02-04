@@ -17,9 +17,7 @@
 					Mehr Effizienz und Sicherheit mit <br />
 					Software von Conzepta.
 				</p>
-				<nuxt-link style="z-index: 99999999; position: relative" v-scroll-reveal="{ delay: 400 }" to="/produkte"
-					><CButton text="Produkte"
-				/></nuxt-link>
+				<nuxt-link style="z-index: 99999999; position: relative" v-scroll-reveal="{ delay: 400 }" to="/produkte"><CButton text="Produkte" /></nuxt-link>
 			</div>
 		</div>
 		<div class="since">
@@ -41,23 +39,17 @@
 					<article>
 						<img v-scroll-reveal="{ delay: 300 }" src="/grid1.png" alt="" />
 						<h2 v-scroll-reveal="{ delay: 400 }">Adaption</h2>
-						<p style="padding: 0 2rem; box-sizing: border-box" v-scroll-reveal="{ delay: 500 }">
-							Wir bieten keine Pakete ab Stange, sondern individuelle Lösungen und persönlichen Support.
-						</p>
+						<p style="padding: 0 2rem; box-sizing: border-box" v-scroll-reveal="{ delay: 500 }">Wir bieten keine Pakete ab Stange, sondern individuelle Lösungen und persönlichen Support.</p>
 					</article>
 					<article>
 						<img v-scroll-reveal="{ delay: 500 }" src="/grid2.png" alt="" />
 						<h2 v-scroll-reveal="{ delay: 600 }">Qualität</h2>
-						<p style="padding: 0 2rem; box-sizing: border-box" v-scroll-reveal="{ delay: 700 }">
-							Wir liefern Schweizer Qualitätsprodukte aus Eigenentwicklung.
-						</p>
+						<p style="padding: 0 2rem; box-sizing: border-box" v-scroll-reveal="{ delay: 700 }">Wir liefern Schweizer Qualitätsprodukte aus Eigenentwicklung.</p>
 					</article>
 					<article>
 						<img v-scroll-reveal="{ delay: 700 }" src="/grid3.png" alt="" />
 						<h2 v-scroll-reveal="{ delay: 800 }">Modern</h2>
-						<p style="padding: 0 2rem; box-sizing: border-box" v-scroll-reveal="{ delay: 900 }">
-							Wir können Ihre Zukunft nicht vorhersehen. Aber wir können sie programmieren.
-						</p>
+						<p style="padding: 0 2rem; box-sizing: border-box" v-scroll-reveal="{ delay: 900 }">Wir können Ihre Zukunft nicht vorhersehen. Aber wir können sie programmieren.</p>
 					</article>
 				</div>
 				<nuxt-link to="/wir#unser-angebot"><CButton style="margin-top: 3rem" text="Mehr" /></nuxt-link>
@@ -71,8 +63,7 @@
 						<h3 v-scroll-reveal="{ delay: 0 }">Support</h3>
 						<h2 v-scroll-reveal="{ delay: 200 }">Für Sie da!</h2>
 						<p v-scroll-reveal="{ delay: 400 }">
-							Eine gute Software ist jene, die ohne Probleme läuft. Das garantieren wir Ihnen. Deshalb sind wir für Sie da – wann immer
-							Sie uns brauchen
+							Eine gute Software ist jene, die ohne Probleme läuft. Aber auch eine gute Software kann mal einen schlechten Tag haben. Deshalb sind wir für Sie da, wann immer Sie uns brauchen. Das garantieren wir Ihnen.
 						</p>
 						<nuxt-link to="/support#support"><CButton v-scroll-reveal="{ delay: 600 }" text="Support" /></nuxt-link>
 						<div class="list">
@@ -82,13 +73,11 @@
 							</article>
 							<article v-scroll-reveal="{ delay: 500 }">
 								<img src="/icon_lock.svg" alt="" />
-								<p>Wir behandeln Sie so, wie wir selber am liebsten arbeiten: unkompliziert, aber immer diskret.</p>
+								<p>Wir sprechen so, dass Sie uns verstehen: ehrlich und kompetent.</p>
 							</article>
 							<article v-scroll-reveal="{ delay: 700 }">
 								<img style="height: 37px" src="/icon_ribbon.png" alt="" />
-								<p>
-									Wir sprechen so, dass Sie uns verstehen: Einfach, wenn etwas nicht klar ist – kompetent, wenn es ins Detail geht.
-								</p>
+								<p>Wir behandeln Sie so, wie wir es uns auch wünschen: freundlich, persönlich und unkompliziert.</p>
 							</article>
 						</div>
 					</div>

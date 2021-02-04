@@ -1,7 +1,5 @@
 <template>
-	<nuxt-link to="/"
-		><img src="/icon.png" alt="Conzepta Logo" title="Conzepta Logo"
-	/></nuxt-link>
+	<nuxt-link to="/"><img style="height: auto" src="/icon.png" alt="Conzepta Logo" title="Conzepta Logo" /></nuxt-link>
 </template>
 
 <script>

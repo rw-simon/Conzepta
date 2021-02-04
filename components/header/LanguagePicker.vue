@@ -1,8 +1,8 @@
 <template>
 	<div class="language-picker">
-		<CIcon style="grid-column: span 2" src="language" size="medium" />
 		<nuxt-link :to="switchLocalePath('de')">DE</nuxt-link>
 		<nuxt-link :to="switchLocalePath('fr')">FR</nuxt-link>
+		<img src="/80_Globus.svg" style="height: 2rem" alt="" />
 	</div>
 </template>
 
@@ -14,9 +14,16 @@ export default {
 
 <style lang="sass" scoped>
 div.language-picker
+	padding-top: 1rem
+	align-self: start
+	padding-right: 1rem
 	display: grid
-	align-content: center
-	grid-template-columns: repeat(2, 1fr)
+	align-items: center
+	grid-template-columns: repeat(3, 1fr)
+	a
+		color: $c-gray
+	.nuxt-link-exact-active
+		color: $c-blue
 	*
 		justify-self: center
 </style>
