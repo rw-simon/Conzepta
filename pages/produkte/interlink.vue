@@ -7,7 +7,9 @@
 					<div class="texti">
 						<h3 v-scroll-reveal="{ delay: 0 }">Kommunikatonssystem</h3>
 						<h1 v-scroll-reveal="{ delay: 200 }">Interlink//</h1>
-						<p v-scroll-reveal="{ delay: 400 }">Mit InterLink hat die conzepta ein zukunftsweisendes Kommunikationssystem für die Präsenzzeitkontrolle, Zutrittskontrolle und die Betriebsdatenerfassung in</p>
+						<p v-scroll-reveal="{ delay: 400 }">
+							InterLink ist ein zuverlässiges Kommunikationssystem, das steuert, was einen Betrieb ausmacht: Zutrittskontrolle, Präsenzzeit, Betriebsdaten. Das heisst: Ihre Sicherheit in Echtzeit, weltweit.
+						</p>
 						<img v-scroll-reveal="{ delay: 600 }" style="width: 3rem" src="/icon_windows.png" alt="" />
 						<nuxt-link to="/wir#urs-blaser">
 							<div class="grid cols-2 small-gap person" style="align-items: center; margin-top: 2rem">
@@ -31,10 +33,10 @@
 						<div class="grid cols-2">
 							<div style="margin-top: 16rem">
 								<h3 v-scroll-reveal="{ delay: 0 }">Unabhängig Vernetzen</h3>
-								<h2 v-scroll-reveal="{ delay: 200 }">Echtzeit Kommunikation zwischen allen Systemen</h2>
+								<h2 v-scroll-reveal="{ delay: 200 }">Ein Protokoll für alle Hersteller</h2>
 								<p v-scroll-reveal="{ delay: 400 }">
-									InterLink "übersetzt" die spezifischen Protokolle in ein Einheitliches. Die Kommunikation zwischen den Terminals und dem Managementsystem findet in Echtzeit statt. Weltweit. Dabei spielt es keine Rolle, ob die
-									Installation nur ein einziges Terminal umfasst oder mehrere Tausend in einem Grosskonzern mit global verteilten
+									InterLink setzt dort an, wo Hersteller aufhören: Es «übersetzt» die spezifischen Protokolle in ein Einheitliches. Die Kommunikation zwischen den Terminals und dem Managementsystem findet in Echtzeit statt. Dabei
+									spielt es keine Rolle, ob Ihr Betrieb nur ein einziges Terminal umfasst oder mehrere Tausend in einem Grosskonzern mit global verteilten Produktionsstätten
 								</p>
 							</div>
 						</div>
@@ -56,8 +58,8 @@
 						</div>
 						<div style="grid-column: span 2">
 							<p v-scroll-reveal="{ delay: 300 }">
-								Mit seinen weltweit über 30'000 Terminals und den damit gemachten 3'000'000 Buchungen pro Tag, hat sich InterLink zu einer stabilen Konstante im Markt entwickelt und ist seit mehr als 20 Jahren mit höchster
-								Zuverlässigkeit im Einsatz. Aktuelle Generationen der Terminals werden unterstützt und neue laufend hinzugefügt.
+								Mit seinen weltweit über 30'000 Terminals und den damit gemachten 3 Millionen Buchungen pro Tag hat sich InterLink zu einem bewährten Assistent entwickelt. Unsere Eigenentwicklung steht bereits seit über 20 Jahren mit
+								höchster Zuverlässigkeit im Einsatz. Aktuelle Generationen der Terminals werden unterstützt und neue laufend ergänzt
 							</p>
 						</div>
 					</div>
@@ -228,12 +230,13 @@ export default {
 		padding-top: 30vh
 		background-image: url('/interlinkmob.png')
 .funktionen
-	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2021/01/background3-2.png')
+	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2021/02/background3-1.png')
 	background-repeat: no-repeat
 	background-size: cover
 	background-position: center
-	min-height: 80vw
-	margin-top: 16rem
+	min-height: 100vw
+	margin-top: 20rem
+	margin-bottom: -25rem
 	@include mobile
 		background-image: url('/interlinkbg3.png')
 		background-position: top center

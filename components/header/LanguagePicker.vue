@@ -2,7 +2,7 @@
 	<div class="language-picker">
 		<nuxt-link :to="switchLocalePath('de')">DE</nuxt-link>
 		<nuxt-link :to="switchLocalePath('fr')">FR</nuxt-link>
-		<img src="/80_Globus.svg" style="height: 2rem" alt="" />
+		<img src="/80_Globus.png" style="height: 2rem" alt="" />
 	</div>
 </template>
 

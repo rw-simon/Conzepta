@@ -65,7 +65,7 @@
 						<p v-scroll-reveal="{ delay: 400 }">
 							Eine gute Software ist jene, die ohne Probleme läuft. Aber auch eine gute Software kann mal einen schlechten Tag haben. Deshalb sind wir für Sie da, wann immer Sie uns brauchen. Das garantieren wir Ihnen.
 						</p>
-						<nuxt-link to="/support#support"><CButton v-scroll-reveal="{ delay: 600 }" text="Support" /></nuxt-link>
+						<nuxt-link :to="{ path: '/support', hash: '#support' }"><CButton v-scroll-reveal="{ delay: 600 }" text="Support" /></nuxt-link>
 						<div class="list">
 							<article v-scroll-reveal="{ delay: 300 }">
 								<img src="/icon_tacho.svg" alt="" />
@@ -205,7 +205,7 @@ img
 	img
 		width: 15rem
 .intro
-	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2021/01/home_background_1.png')
+	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2021/02/home_background.png')
 	background-position: center center
 	background-size: cover
 	background-repeat: no-repeat

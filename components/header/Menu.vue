@@ -25,13 +25,13 @@
 				</ul>
 			</li>
 			<li class="menu-item">
-				<nuxt-link to="/support#support">Support</nuxt-link>
+				<nuxt-link :to="{ path: '/support', hash: '#support' }">Support</nuxt-link>
 				<ul class="submenu" v-if="opened">
 					<li style="color: white">-</li>
 					<li style="color: white">-</li>
 					<li style="color: white">-</li>
-					<li><nuxt-link to="/support#support">Kontakt</nuxt-link></li>
-					<li><nuxt-link to="/support#support">Kontaktformular</nuxt-link></li>
+					<li><nuxt-link :to="{ path: '/support', hash: '#support' }">Kontakt</nuxt-link></li>
+					<li><nuxt-link :to="{ path: '/support', hash: '#support' }">Kontaktformular</nuxt-link></li>
 				</ul>
 			</li>
 			<!-- <li class="menu-item">

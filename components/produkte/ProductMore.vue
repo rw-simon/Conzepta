@@ -12,7 +12,7 @@
 			<p class="page-more-intro" v-scroll-reveal="{ delay: 200 }">
 				{{ content.acf.product_more.product_more_paragraph }}
 			</p>
-			<nuxt-link to="support/#support" v-scroll-reveal="{ delay: 400 }"><CButton text="Kontaktformular" /></nuxt-link>
+			<nuxt-link :to="{ path: '/support', hash: '#support' }" v-scroll-reveal="{ delay: 400 }"><CButton text="Kontaktformular" /></nuxt-link>
 		</div>
 	</div>
 </template>

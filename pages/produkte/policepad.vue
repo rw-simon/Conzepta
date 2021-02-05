@@ -33,8 +33,8 @@
 						<h3 v-scroll-reveal="{ delay: 0 }">Kompromisslos</h3>
 						<h2 v-scroll-reveal="{ delay: 200 }">Genau so, wie es sein soll</h2>
 						<p v-scroll-reveal="{ delay: 400 }" class="intro">
-							Dank langjähriger Erfahrung und der engen Zusammenarbeit mit Polizeikorps und privaten Nutzern überzeugt PolicePad durch seine Effizienz: es ist einfach zu erlernen und zu bedienen. Flexible Module ergänzen die Anwendung
-							mit hilfreichen Funktionen. Durch einfaches und schnelles Konfigurieren lässt sich die App weiter individualisieren.
+							Dank langjähriger Erfahrung und der engen Zusammenarbeit mit Polizeikorps und privaten Nutzern überzeugt PolicePad durch seine Effizienz: es ist intiuitiv und einfach zu bedienen. Flexible Module ergänzen die Anwendung mit
+							hilfreichen Funktionen. Durch einfaches und schnelles Konfigurieren lässt sich die App weiter individualisieren
 						</p>
 						<img
 							@click="toggleContentKomp"
@@ -46,11 +46,9 @@
 							alt=""
 						/>
 						<p :class="{ more: true, active: showContentKomp }">
-							PolicePad hatte den besten Treiber für Innovation, den es gibt: die Realität. Die erste Version ging vor rund 30 Jahren in Betrieb. Mit jedem Tag, jedem Einsatz, jeder einzelnen erfassten Busse wurde das System besser.
-							Heute steht PolicePad auf allen gängigen Plattformen (iOS, Windows, Android) zur Verfügung.
-							<br />
-							Die Bedienung und zahlreiche Zusatzmodule haben wir in enger Zusammenarbeit mit unseren Kunden ausgearbeitet, verfeinert und mit smarten Funktionen ergänzt. Um den Erfassungsablauf zu vereinfachen, die Eingaben zu
-							beschleunigen und die Datenqualität zu erhöhen.
+							PolicePad hatte den besten Treiber für Innovation, den es gibt: die Realität. Die erste Version ging vor rund 30 Jahren in Betrieb. Mit jedem Tag und jedem Einsatz wurde das System besser. Heute steht PolicePad auf allen
+							gängigen Plattformen zur Verfügung. Die Bedienung und zahlreiche Zusatzmodule haben wir in enger Zusammenarbeit mit unseren Kunden ausgearbeitet, verfeinert und mit smarten Funktionen ergänzt. Um den Erfassungsablauf zu
+							vereinfachen, die Eingaben zu beschleunigen und die Datenqualität zu erhöhen.
 						</p>
 					</div>
 				</div>
@@ -67,8 +65,8 @@
 							<h3 v-scroll-reveal="{ delay: 0 }">Funktionen</h3>
 							<h2 v-scroll-reveal="{ delay: 200 }">Simpel und intuitiv</h2>
 							<p v-scroll-reveal="{ delay: 400 }">
-								Die Kernfunktion von PolicePad ist simpel: Das Erfassen von Ordnungsbussen. Doch dahinter steckt sehr viel mehr. Etwa: Eine intelligente Suchfunktion, der Live-Abgleich mit mehreren Datenbeständen oder schnelleres
-								Erfassen mit Favoriten.
+								Die Kernfunktion von PolicePad ist simpel: das Erfassen von Bussen. Doch dahinter steckt sehr viel mehr. Etwa: eine intelligente Suchfunktion, der Live-Abgleich mit mehreren Datenbeständen oder schnelleres Erfassen mit
+								Favoriten.
 							</p>
 						</div>
 					</div>
@@ -125,6 +123,71 @@
 				</div>
 			</div>
 		</div>
+		<div id="grundfunk" style="margin-top: 8rem">
+			<div class="container">
+				<h2>Grundfunktionen</h2>
+			</div>
+			<div>
+				<div class="container">
+					<div class="grid cols-2">
+						<h4>Erfassung</h4>
+						<div>
+							<ul>
+								<li>Erfassen von Ordnungsbussen</li>
+								<li>Erfassen von Verzeigungen</li>
+								<li>Erfassen von kantonalrechtlichen Bussen</li>
+								<li>Erfassen von gemeinderechtlichen Bussen</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bg-gray">
+				<div class="container">
+					<div class="grid cols-2">
+						<h4>Erfassung</h4>
+						<div>
+							<ul>
+								<li>Erfassen von Ordnungsbussen</li>
+								<li>Erfassen von Verzeigungen</li>
+								<li>Erfassen von kantonalrechtlichen Bussen</li>
+								<li>Erfassen von gemeinderechtlichen Bussen</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="container">
+					<div class="grid cols-2">
+						<h4>Erfassung</h4>
+						<div>
+							<ul>
+								<li>Erfassen von Ordnungsbussen</li>
+								<li>Erfassen von Verzeigungen</li>
+								<li>Erfassen von kantonalrechtlichen Bussen</li>
+								<li>Erfassen von gemeinderechtlichen Bussen</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bg-gray">
+				<div class="container">
+					<div class="grid cols-2">
+						<h4>Erfassung</h4>
+						<div>
+							<ul>
+								<li>Erfassen von Ordnungsbussen</li>
+								<li>Erfassen von Verzeigungen</li>
+								<li>Erfassen von kantonalrechtlichen Bussen</li>
+								<li>Erfassen von gemeinderechtlichen Bussen</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div style="margin-top: 8rem" class="anwender">
 			<div class="container" style="padding: 4rem 0">
 				<h2>Anwender</h2>
@@ -174,6 +237,14 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+#grundfunk
+	.container
+		padding-top: 4rem
+		padding-bottom: 4rem
+		li
+			line-height: 2em
+.bg-gray
+	background-color: $c-gray-light
 .person
 	width: 16rem
 	align-items: center
@@ -203,7 +274,7 @@ export default {
 	display: grid
 	align-items: baseline
 	min-height: 32rem
-	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/09/banner_policepad.png')
+	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/09/banner_policepad-1.png')
 	background-size: cover
 	background-repeat: no-repeat
 	background-position: center center

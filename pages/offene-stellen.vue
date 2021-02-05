@@ -40,7 +40,7 @@
 							</ul>
 							<br /><br /><br />
 							<p>Der Arbeitsort der Stelle ist in Bern und die Stelle ist ab Januar 2021 verfügbar. Wir freuen uns auf Deine Bewerbung per Mail.</p>
-							<nuxt-link to="/support#support"><CButton text="Bewerben" /></nuxt-link>
+							<nuxt-link :to="{ path: '/support', hash: '#support' }"><CButton text="Bewerben" /></nuxt-link>
 						</div>
 						<div>
 							<h4>Was du mitbringst</h4>

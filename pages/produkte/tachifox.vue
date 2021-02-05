@@ -9,8 +9,8 @@
 							<h3 v-scroll-reveal="{ delay: 0 }">Fahrtenschreiber</h3>
 							<h1 v-scroll-reveal="{ delay: 200 }">Tachifox</h1>
 							<p v-scroll-reveal="{ delay: 400 }">
-								TachiFox ist die praxisorientierte Lösung der Conzepta und Les Routiers Suisses zum Erfassen von Daten, welche der Arbeits- und Ruhezeit Verordnung ARV unterliegen. Die Fahrer- und Fahrzeugdaten können zentral und
-								unkompliziert eingelesen, bearbeitet und ergänzt werden. TachiFox vereinfacht die Auswertung der Daten nach den gesetzlich vorgegebenen Richtwerten und informiert den Benutzer über mögliche Verstösse.
+								TachiFox ist die praxisorientierte Lösung von Conzepta und Les Routiers Suisses zum Erfassen von Daten, welche der Arbeits- und Ruhezeit Verordnung ARV unterliegen. TachiFox vereinfacht die Auswertung der Daten nach
+								den gesetzlich vorgegebenen Richtwerten. Der Assistent informiert Sie sofort über mögliche Verstösse. Verwalten Sie sämtliche Fahrer- und Fahrzeugdaten an einem Ort: einlesen, bearbeiten und ergänzen.
 							</p>
 							<br />
 							<nuxt-link :to="'/wir#philippe-luethi'"
@@ -32,10 +32,10 @@
 			<div style="align-items: center" class="section grid cols-2">
 				<div>
 					<h3 v-scroll-reveal="{ delay: 0 }">3. Generation</h3>
-					<h2 v-scroll-reveal="{ delay: 200 }">Unaufhörliches Massschneidern</h2>
+					<h2 v-scroll-reveal="{ delay: 200 }">Unaufhörliches Verbessern</h2>
 					<p v-scroll-reveal="{ delay: 400 }">
 						TachiFox besteht seit rund 15 Jahren und ist mittlerweile in der dritten Generation als moderne Web-Anwendung verfügbar. Dadurch konnte auf die Bedürfnisse der Fahrer und Firmen eingegangen werden. Durch die enge
-						Zusammenarbeite mit Les Routiers Suisses wird das Produkt laufend an neue Kundenanforderungen angepasst und um smarte Funktionen erweitert.
+						Zusammenarbeit mit Les Routiers Suisses konnten wir das Produkt laufend an die Bedürfnisse der Logistikunternehmen anpassen und um smarte Funktionen erweitern.
 					</p>
 				</div>
 				<div>
@@ -52,7 +52,7 @@
 					<span></span>
 					<div>
 						<h3 v-scroll-reveal="{ delay: 0 }">Funktionen</h3>
-						<h2 v-scroll-reveal="{ delay: 200 }">Alles wichtige an einem Ort</h2>
+						<h2 v-scroll-reveal="{ delay: 200 }">Alles an einem Ort</h2>
 						<p v-scroll-reveal="{ delay: 400 }">Nebst den Grundfunktionen wie Einlesen, Bearbeiten und Auswerten der Daten, unterstützt TachiFox das Verwalten von Organisationen und Einzelfahrern.</p>
 					</div>
 				</div>
@@ -116,13 +116,14 @@
 					<div>
 						<h2 v-scroll-reveal="{ delay: 0 }">Fahrer- und Fahrzeugverwaltung</h2>
 						<p v-scroll-reveal="{ delay: 200 }">
-							Die erfassten Fahrer und Fahrzeuge werden übersichtlich dargestellt und können effizient bearbeitet werden. TachiFox unterstützt die Benutzer durch eine freundliche Erinnerung, Daten einzulesen, wenn dies lange nicht
+							Die erfassten Fahrer und Fahrzeuge werden übersichtlich dargestellt und können effizient bearbeitet werden. TachiFox unterstützt die Benutzer durch eine freundliche Erinnerung, Daten einzulesen, wenn dies lange nicht mehr
+							erfolgt ist.
 						</p>
 						<span style="height: 10rem; display: block" />
 						<h2 v-scroll-reveal="{ delay: 300 }">Sondertagsverwaltung</h2>
 						<p v-scroll-reveal="{ delay: 500 }">
-							Unternehmen können firmeneigene Sondertage definieren und erfassen. Dies Unterstützt die Unternehmung bei der Verwaltung von Aktivitäten von Gruppen oder einzelnen Fahrern. Fahrer können so manuell Aktivitäten hinzufügen
-							und verwalten, damit alle für die ARV26
+							Unternehmen können firmeneigene Sondertage definieren und erfassen. Dies unterstützt die Verwaltung von Aktivitäten von Gruppen oder einzelnen Fahrern. Fahrer können so manuell Aktivitäten hinzufügen und verwalten, damit
+							alle für die ARV26-Auswertung benötigten Daten vorhanden sind.
 						</p>
 					</div>
 				</div>
@@ -134,7 +135,8 @@
 					<div>
 						<h2 v-scroll-reveal="{ delay: 0 }">Benutzerverwaltung</h2>
 						<p v-scroll-reveal="{ delay: 200 }">
-							In der Benutzerverwaltung werden den Benutzern der Organisation ihre Rollen und Fahrer zugeordnet. Hier können hierarchische Stufen geschaffen werden, indem Benutzern verschiedene Rollen / Funktionen zugewiesen werden.
+							In der Benutzerverwaltung werden den Benutzern ihre Rollen und Fahrer zugeordnet. Hier können hierarchische Stufen geschaffen werden, indem Benutzern verschiedene Rollen und Funktionen zugewiesen werden. In einem
+							Unternehmen können so etwa Disponenten und Fahrer erfasst werden. Fahrer haben nur Einblick in ihre eigenen Daten, während Disponenten die Daten aller Fahrer einsehen und verwalten können.
 						</p>
 						<CButton v-scroll-reveal="{ delay: 400 }" text="Datenblatt" />
 					</div>
