@@ -183,6 +183,7 @@ export default {
 			margin-left: 58%
 		@include mobile
 			width: auto
+			border-bottom: 1px solid black
 			&:nth-child(2n)
 				margin-left: auto
 img

@@ -1,6 +1,6 @@
 <template>
 	<nav class="main-menu">
-		<ul>
+		<ul :class="{ opened: opened }">
 			<li class="menu-item">
 				<nuxt-link to="/" exact>Home</nuxt-link>
 			</li>
@@ -62,8 +62,6 @@ export default {
 		grid-template-columns: repeat(6, auto)
 		list-style: none
 		padding: 0
-		@include mobile
-			display: none
 		li
 			position: relative
 			// display: inline-block

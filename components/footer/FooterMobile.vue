@@ -13,6 +13,7 @@
 					<p @click="isOpen = 'wir'">Wir</p>
 					<div :style="[isOpen == 'wir' ? { 'max-height': '16rem' } : { 'max-height': 0 }]">
 						<nuxt-link to="/wir">Geschichte</nuxt-link>
+						<nuxt-link to="/portfolio">Portfolio</nuxt-link>
 						<nuxt-link to="/offene-stellen">Offene Stellen</nuxt-link>
 						<nuxt-link to="/#news">News</nuxt-link>
 						<nuxt-link to="/support">Kontakt</nuxt-link>
@@ -60,7 +61,7 @@
 export default {
 	data() {
 		return {
-			isOpen: 'wir',
+			isOpen: '',
 		}
 	},
 }

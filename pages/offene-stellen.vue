@@ -39,8 +39,10 @@
 								<li>Möglichkeit deine Ideen in der Unternehmung einzubringen</li>
 							</ul>
 							<br /><br /><br />
-							<p>Der Arbeitsort der Stelle ist in Bern und die Stelle ist ab Januar 2021 verfügbar. Wir freuen uns auf Deine Bewerbung per Mail.</p>
-							<nuxt-link :to="{ path: '/support', hash: '#support' }"><CButton text="Bewerben" /></nuxt-link>
+							<div class="hide-mob">
+								<p>Der Arbeitsort der Stelle ist in Bern und die Stelle ist ab Januar 2021 verfügbar. Wir freuen uns auf Deine Bewerbung per Mail.</p>
+								<nuxt-link :to="{ path: '/support', hash: '#support' }"><CButton text="Bewerben" /></nuxt-link>
+							</div>
 						</div>
 						<div>
 							<h4>Was du mitbringst</h4>
@@ -72,6 +74,10 @@
 								<li>Möglichkeit deine Ideen in der Unternehmung einzubringen</li>
 							</ul>
 						</div>
+						<div class="hide-des">
+							<p>Der Arbeitsort der Stelle ist in Bern und die Stelle ist ab Januar 2021 verfügbar. Wir freuen uns auf Deine Bewerbung per Mail.</p>
+							<nuxt-link :to="{ path: '/support', hash: '#support' }"><CButton text="Bewerben" /></nuxt-link>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -84,6 +90,13 @@ export default {}
 </script>
 
 <style lang="sass" scoped>
+.hide-mob
+	@include mobile
+		display: none
+.hide-des
+	display: hide
+	@include mobile
+		display: block
 h4
 	margin-top: 2rem
 ul

@@ -4,7 +4,7 @@
 			<div v-scroll-reveal="{ delay: 0 }" class="banner">
 				<div class="container">
 					<div class="section grid cols-2">
-						<div style="padding: 12rem 0">
+						<div class="padfix">
 							<h3 v-scroll-reveal="{ delay: 0 }">Nachschlagwerk</h3>
 							<h1 v-scroll-reveal="{ delay: 200 }">Lexica//</h1>
 							<p v-scroll-reveal="{ delay: 400 }">
@@ -15,7 +15,7 @@
 						</div>
 						<div style="align-self: end; padding-left: 5rem">
 							<nuxt-link :to="'/wir#philippe-luethi'"
-								><div class="grid cols-2 small-gap" style="width: 16rem; align-items: center; margin-top: 2rem">
+								><div class="grid small-gap force" style="width: 16rem; align-items: center; margin-top: 2rem">
 									<div>
 										<p v-scroll-reveal="{ delay: 0 }" style="margin: 0; line-height: 1em">Produktmanager</p>
 										<p v-scroll-reveal="{ delay: 200 }" style="margin: 0; font-weight: 900">Philippe Lüthi</p>
@@ -54,7 +54,7 @@
 							</span>
 						</span>
 					</span>
-					<div>
+					<div class="mobilefix">
 						<h3 v-scroll-reveal="{ delay: 0 }">WEIT MEHR ALS EIN BUCH</h3>
 						<h2 v-scroll-reveal="{ delay: 200 }">Was Lexica alles kann</h2>
 						<p v-scroll-reveal="{ delay: 400 }">
@@ -207,7 +207,19 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.mobilefix
+	@include mobile
+		padding-top: 5rem
+.force
+	@include mobile
+		grid-template-columns: 3fr 1fr !important
+.padfix
+	padding: 12rem 0
+	@include mobile
+		padding: 4rem 0
 .easteregg
+	@include mobile
+		display: none
 	.hover
 		display: block
 		height: 3rem
@@ -244,6 +256,11 @@ export default {
 				background-color: white
 .anwender, .funktionsumfang
 	padding: 12rem 0
+	@include mobile
+		padding: 0
+.anwender
+	.grid
+		justify-items: center
 .funktionsumfang
 	height: 20rem
 	.slider-grid
@@ -269,6 +286,9 @@ export default {
 	background-repeat: no-repeat
 	background-position: left center
 	background-image: url('/lexibg3.png')
+	@include mobile
+		background-position-y: top
+		padding-bottom: 0
 .bggradient
 	background-image: linear-gradient(90deg, white, $c-gray-light)
 .gesetze
@@ -277,10 +297,14 @@ export default {
 	background-repeat: no-repeat
 	background-position: right center
 	background-image: url('/bglexi2.png')
+	@include mobile
+		padding-top: 2rem
 .banner
 	padding: 12rem 0
 	background-size: cover
 	background-repeat: no-repeat
 	background-position: center center
 	background-image: url('/lexibg.png')
+	@include mobile
+		padding-top: 2rem
 </style>

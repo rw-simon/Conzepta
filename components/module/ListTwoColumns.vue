@@ -60,7 +60,7 @@ export default {
 				height: 2rem
 	@include mobile
 		grid-template-columns: 1fr
-		gap: 4rem
+		gap: 0
 		padding-left: 3rem
 	@include mobile-landscape
 		gap: 4rem

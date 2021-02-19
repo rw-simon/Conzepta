@@ -237,10 +237,21 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.anwender
+	.grid
+		@include mobile
+			justify-items: center
+			img
+				max-width: 180px !important
 #grundfunk
 	.container
 		padding-top: 4rem
 		padding-bottom: 4rem
+		@include mobile
+			padding: 0
+			.grid
+				gap: 1rem
+				padding: 2rem 1rem
 		li
 			line-height: 2em
 .bg-gray

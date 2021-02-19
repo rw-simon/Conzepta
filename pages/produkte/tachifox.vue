@@ -14,7 +14,7 @@
 							</p>
 							<br />
 							<nuxt-link :to="'/wir#philippe-luethi'"
-								><div class="grid cols-2 small-gap" style="width: 16rem; align-items: center; margin-top: 2rem">
+								><div class="grid force small-gap" style="width: 16rem; align-items: center; margin-top: 2rem">
 									<div>
 										<p v-scroll-reveal="{ delay: 0 }" style="margin: 0; line-height: 1em">Produktmanager</p>
 										<p v-scroll-reveal="{ delay: 200 }" style="margin: 0; font-weight: 900">Philippe Lüthi</p>
@@ -28,9 +28,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="container">
+		<div class="container firstsec">
 			<div style="align-items: center" class="section grid cols-2">
-				<div>
+				<div class="firstmobsec">
 					<h3 v-scroll-reveal="{ delay: 0 }">3. Generation</h3>
 					<h2 v-scroll-reveal="{ delay: 200 }">Unaufhörliches Verbessern</h2>
 					<p v-scroll-reveal="{ delay: 400 }">
@@ -38,7 +38,7 @@
 						Zusammenarbeit mit Les Routiers Suisses konnten wir das Produkt laufend an die Bedürfnisse der Logistikunternehmen anpassen und um smarte Funktionen erweitern.
 					</p>
 				</div>
-				<div>
+				<div class="secmobfirst">
 					<img style="height: auto" src="/tachiimg.png" alt="" />
 				</div>
 			</div>
@@ -132,7 +132,7 @@
 		<div class="benutzerverwaltung">
 			<div class="container">
 				<div class="section grid cols-2" style="margin-top: 0">
-					<div>
+					<div class="firstmobsec">
 						<h2 v-scroll-reveal="{ delay: 0 }">Benutzerverwaltung</h2>
 						<p v-scroll-reveal="{ delay: 200 }">
 							In der Benutzerverwaltung werden den Benutzern ihre Rollen und Fahrer zugeordnet. Hier können hierarchische Stufen geschaffen werden, indem Benutzern verschiedene Rollen und Funktionen zugewiesen werden. In einem
@@ -140,7 +140,7 @@
 						</p>
 						<CButton v-scroll-reveal="{ delay: 400 }" text="Datenblatt" />
 					</div>
-					<img style="height: auto" src="/01.png" alt="" />
+					<img class="secmobfirst" style="height: auto" src="/01.png" alt="" />
 				</div>
 			</div>
 		</div>
@@ -186,18 +186,34 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.firstmobsec
+	grid-row: 2
+.secmobfirst
+	grid-row: 1
+.firstsec
+	@include mobile
+		margin-top: 8rem
+.force
+	@include mobile
+		grid-template-columns: 3fr 1fr !important
 .kontrolle
 	background-image: url('/38_Abfahrt.png')
 	background-size: cover
 	height: 110vh
 	background-repeat: no-repeat
 	background-position-y: 5rem
+	@include mobile
+		height: 50vh
+		background-position-x: right
 .anwender
 	background-image: url('/36_Anwender.png')
 	background-size: cover
 	height: 80vh
 	background-repeat: no-repeat
 	background-position-y: 5rem
+	@include mobile
+		height: 40vh
+		background-position-y: 2rem
 .verwaltung
 	background-image: url('/bgtachi3.png')
 	background-position: left center
@@ -205,11 +221,17 @@ export default {
 	background-size: cover
 	padding: 8rem 0
 	background-size: contain
+	@include mobile
+		background-position-y: top
+		padding: 0
+		padding-top: 8rem
 .background-diagonal-3
 	background-image: url('/bgdiag3.svg')
 	padding: 8rem 0
 	background-position: center
 	background-repeat: no-repeat
+	@include mobile
+		padding: 0
 .aktivitaten
 	height: 20rem
 	.slider-grid

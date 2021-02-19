@@ -25,6 +25,8 @@ export default {
 	padding-top: 10rem
 	background-repeat: no-repeat
 	@include mobile
+		h1
+			font-size: 2rem
 		padding-top: 10rem
 		margin-top: -3rem
 		background-position-y: -20vh

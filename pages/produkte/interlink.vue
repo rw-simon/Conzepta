@@ -49,11 +49,11 @@
 					<h2 v-scroll-reveal="{ delay: 200 }" style="text-align: center; margin-bottom: 8rem">InterLink kommuniziert mit Terminals verschiedener Hersteller</h2>
 					<div class="grid cols-5">
 						<div style="grid-column: span 3">
-							<h1 v-scroll-reveal="{ delay: 0 }" style="font-size: 5rem; margin-bottom: 0; line-height: 1em">20</h1>
+							<h1 v-scroll-reveal="{ delay: 0 }" style="margin-bottom: 0; line-height: 1em">20</h1>
 							<h3 v-scroll-reveal="{ delay: 100 }" style="margin-bottom: 2rem">Jahre</h3>
-							<h1 v-scroll-reveal="{ delay: 200 }" style="font-size: 5rem; margin-bottom: 0; line-height: 1em">30'000</h1>
+							<h1 v-scroll-reveal="{ delay: 200 }" style="margin-bottom: 0; line-height: 1em">30'000</h1>
 							<h3 v-scroll-reveal="{ delay: 300 }" style="margin-bottom: 2rem">Terminals</h3>
-							<h1 v-scroll-reveal="{ delay: 400 }" style="font-size: 5rem; margin-bottom: 0; line-height: 1em">3'000'000</h1>
+							<h1 v-scroll-reveal="{ delay: 400 }" style="margin-bottom: 0; line-height: 1em">3'000'000</h1>
 							<h3 v-scroll-reveal="{ delay: 500 }" style="margin-bottom: 2rem">Buchungen pro Tag</h3>
 						</div>
 						<div style="grid-column: span 2">
@@ -123,7 +123,7 @@
 				</div>
 			</div>
 		</div>
-		<div style="margin-top: 8rem">
+		<div class="datenblatt">
 			<div class="container">
 				<CButton text="Datenblatt" />
 			</div>
@@ -150,6 +150,14 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.datenblatt
+	margin-top: 8rem
+	@include mobile
+		margin-top: 12rem
+.something h1
+	font-size: 5rem
+	@include mobile
+		font-size: 3rem
 .ppi
 	margin-top: 16rem
 	@include mobile
@@ -195,6 +203,7 @@ export default {
 	padding: 10rem 0
 	@include mobile
 		padding-top: 0
+		margin-top: 22rem
 .banner-footer
 	background-image: url('/interlink-footer.png')
 	background-repeat: no-repeat

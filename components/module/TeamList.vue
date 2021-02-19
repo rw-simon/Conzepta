@@ -3,22 +3,20 @@
 		<article :id="p.post_name" class="list-entry" v-for="(p, i) in list" :key="i">
 			<div class="container">
 				<div class="grid cols-2">
-					<section class="desc">
+					<section class="desc firstmobsec">
 						<h3>
 							{{ p.acf.person_details.person_details_position }}
 						</h3>
 						<h2>{{ p.post_title }}</h2>
 						<p>«{{ p.acf.person_description }}»</p>
 						<p v-if="p.acf.person_details.person_details_email">
-							<a class="c-blue" target="_blank" :href="'mailto:' + p.acf.person_details.person_details_email">{{
-								p.acf.person_details.person_details_email
-							}}</a>
+							<a class="c-blue" target="_blank" :href="'mailto:' + p.acf.person_details.person_details_email">{{ p.acf.person_details.person_details_email }}</a>
 						</p>
 						<p v-if="p.acf.person_details.person_details_phone">
 							{{ p.acf.person_details.person_details_phone }}
 						</p>
 					</section>
-					<section class="image">
+					<section class="image secmobfirst">
 						<img v-if="p.acf.person_portrait.url" :src="p.acf.person_portrait.url" alt="" />
 						<img v-else src="/99_Profilbild.png" alt="" />
 					</section>
@@ -42,6 +40,10 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.firstmobsec
+	grid-row: 2
+.secmobfirst
+	grid-row: 1
 .list-entry
 	background: $c-gray-light
 	padding: 5rem 0
@@ -55,6 +57,7 @@ export default {
 			grid-row: 1
 			@include mobile
 				grid-column: 1
+				grid-row: 2
 	img
 		height: auto
 </style>

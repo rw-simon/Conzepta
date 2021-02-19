@@ -1,9 +1,11 @@
 <template>
 	<header :class="{ opened: showSubmenu }" @mouseenter="showSubmenu = true" @mouseleave="showSubmenu = false">
 		<Logo />
-		<Menu :opened="showSubmenu" />
+		<Menu class="menuu" :opened="showSubmenu" />
 		<LanguagePicker />
+		<MobileIcon @click.native="showSubmenu = !showSubmenu" />
 		<ScrollIndicator style="grid-column: 1/-1" />
+		<MobileMenu class="menumob" />
 	</header>
 </template>
 
@@ -13,10 +15,22 @@ export default {
 	data() {
 		return { showSubmenu: false }
 	},
+	watch: {
+		$route() {
+			this.showSubmenu = false
+		},
+	},
 }
 </script>
 
 <style lang="sass" scoped>
+.menuu
+	@include mobile
+		display: none
+.menumob
+	display: none
+	grid-row: 3
+	grid-column: 1/-1
 header
 	display: grid
 	grid-template-columns: 4rem 1fr 8rem
@@ -29,4 +43,9 @@ header
 	box-sizing: border-box
 	&.opened
 		grid-template-rows: 17rem
+		@include mobile
+			width: 100%
+			grid-template-rows: 4rem
+			.menumob
+				display: block
 </style>
