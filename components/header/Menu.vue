@@ -7,31 +7,34 @@
 			<li class="menu-item">
 				<nuxt-link :to="localePath('wir')">Wir</nuxt-link>
 				<ul class="submenu" v-if="opened">
+					<li style="color: white">-</li>
+					<li style="color: white">-</li>
 					<li><nuxt-link :to="localePath('portfolio')">Portfolio</nuxt-link></li>
-					<li><nuxt-link :to="localePath('archiv')">Archiv</nuxt-link></li>
-					<li><nuxt-link :to="localePath('wir')">Geschichte</nuxt-link></li>
-					<li><nuxt-link :to="localePath('wir')">News</nuxt-link></li>
-					<li><nuxt-link :to="localePath('offene-stellen')">Offene Stellen</nuxt-link></li>
+					<li><nuxt-link :to="{ path: '/archiv' }">News</nuxt-link></li>
+					<li><nuxt-link :to="localePath('offene-stellen')">Jobs</nuxt-link></li>
+					<!-- <li><nuxt-link :to="localePath('archiv')">Archiv</nuxt-link></li> -->
+					<!-- <li><nuxt-link :to="localePath('wir')">Geschichte</nuxt-link></li> -->
 				</ul>
 			</li>
 			<li class="menu-item">
 				<nuxt-link :to="localePath('produkte')">Produkte</nuxt-link>
 				<ul class="submenu" v-if="opened">
-					<li><nuxt-link :to="localePath('/produkte/policepad')">Policepad</nuxt-link></li>
+					<li><nuxt-link :to="localePath('/produkte/policepad')">PolicePad</nuxt-link></li>
 					<li><nuxt-link :to="localePath('/produkte/lexica')">Lexica</nuxt-link></li>
-					<li><nuxt-link :to="localePath('/produkte/interlink')">Interlink</nuxt-link></li>
-					<li><nuxt-link :to="localePath('/produkte/tachifox')">Tachifox</nuxt-link></li>
+					<li><nuxt-link :to="localePath('/produkte/interlink')">InterLink</nuxt-link></li>
+					<li><nuxt-link :to="localePath('/produkte/tachifox')">TachiFox</nuxt-link></li>
 					<li><nuxt-link :to="localePath('/produkte/parkingpad')">ParkingPad</nuxt-link></li>
 				</ul>
 			</li>
 			<li class="menu-item">
-				<nuxt-link :to="{ path: '/support', hash: '#support' }">Support</nuxt-link>
+				<nuxt-link :to="{ path: '/kontakt' }">Kontakt</nuxt-link>
 				<ul class="submenu" v-if="opened">
 					<li style="color: white">-</li>
 					<li style="color: white">-</li>
 					<li style="color: white">-</li>
-					<li><nuxt-link :to="{ path: '/support', hash: '#support' }">Kontakt</nuxt-link></li>
-					<li><nuxt-link :to="{ path: '/support', hash: '#support' }">Kontaktformular</nuxt-link></li>
+					<li style="color: white">-</li>
+					<li><nuxt-link :to="{ path: '/support' }">Support</nuxt-link></li>
+					<!-- <li><nuxt-link :to="{ path: '/support', hash: '#kontaktformular' }">Kontaktformular</nuxt-link></li> -->
 				</ul>
 			</li>
 			<!-- <li class="menu-item">
@@ -72,7 +75,7 @@ export default {
 				position: absolute
 				z-index: 50;
 				top: 0
-				padding-top: 5rem
+				padding-top: 3rem
 				border-left: 1px solid $c-blue
 				height: fit-content
 				display: block

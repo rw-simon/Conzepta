@@ -7,7 +7,7 @@
 						<span></span>
 						<div>
 							<h3 v-scroll-reveal="{ delay: 0 }">Fahrtenschreiber</h3>
-							<h1 v-scroll-reveal="{ delay: 200 }">Tachifox</h1>
+							<h1 v-scroll-reveal="{ delay: 200 }">TachiFox //</h1>
 							<p v-scroll-reveal="{ delay: 400 }">
 								TachiFox ist die praxisorientierte Lösung von Conzepta und Les Routiers Suisses zum Erfassen von Daten, welche der Arbeits- und Ruhezeit Verordnung ARV unterliegen. TachiFox vereinfacht die Auswertung der Daten nach
 								den gesetzlich vorgegebenen Richtwerten. Der Assistent informiert Sie sofort über mögliche Verstösse. Verwalten Sie sämtliche Fahrer- und Fahrzeugdaten an einem Ort: einlesen, bearbeiten und ergänzen.

@@ -9,27 +9,27 @@
 					<a @click="opened = 'wir'">Wir</a>
 					<ul class="submenu" v-if="opened == 'wir'">
 						<li><nuxt-link :to="localePath('portfolio')">Portfolio</nuxt-link></li>
-						<li><nuxt-link :to="localePath('archiv')">Archiv</nuxt-link></li>
-						<li><nuxt-link :to="localePath('wir')">Geschichte</nuxt-link></li>
 						<li><nuxt-link :to="localePath('wir')">News</nuxt-link></li>
-						<li><nuxt-link :to="localePath('offene-stellen')">Offene Stellen</nuxt-link></li>
+						<li><nuxt-link :to="localePath('offene-stellen')">Jobs</nuxt-link></li>
+						<!-- <li><nuxt-link :to="localePath('archiv')">Archiv</nuxt-link></li>
+						<li><nuxt-link :to="localePath('wir')">Geschichte</nuxt-link></li> -->
 					</ul>
 				</li>
 				<li class="menu-item">
 					<a @click="opened = 'produkte'">Produkte</a>
 					<ul class="submenu" v-if="opened == 'produkte'">
-						<li><nuxt-link :to="localePath('/produkte/policepad')">Policepad</nuxt-link></li>
+						<li><nuxt-link :to="localePath('/produkte/policepad')">PolicePad</nuxt-link></li>
 						<li><nuxt-link :to="localePath('/produkte/lexica')">Lexica</nuxt-link></li>
-						<li><nuxt-link :to="localePath('/produkte/interlink')">Interlink</nuxt-link></li>
-						<li><nuxt-link :to="localePath('/produkte/tachifox')">Tachifox</nuxt-link></li>
+						<li><nuxt-link :to="localePath('/produkte/interlink')">InterLink</nuxt-link></li>
+						<li><nuxt-link :to="localePath('/produkte/tachifox')">TachiFox</nuxt-link></li>
 						<li><nuxt-link :to="localePath('/produkte/parkingpad')">ParkingPad</nuxt-link></li>
 					</ul>
 				</li>
 				<li class="menu-item">
-					<a @click="opened = 'support'">Support</a>
+					<a @click="opened = 'support'">Kontakt</a>
 					<ul class="submenu" v-if="opened == 'support'">
-						<li><nuxt-link :to="{ path: '/support', hash: '#support' }">Kontakt</nuxt-link></li>
-						<li><nuxt-link :to="{ path: '/support', hash: '#support' }">Kontaktformular</nuxt-link></li>
+						<li><nuxt-link :to="{ path: '/kontakt' }">Kontaktformular</nuxt-link></li>
+						<li><nuxt-link :to="{ path: '/support' }">Support</nuxt-link></li>
 					</ul>
 				</li>
 				<li class="menu-item">

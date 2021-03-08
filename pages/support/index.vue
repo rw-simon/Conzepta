@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h1>Support</h1>
+		<h1>Support //</h1>
 		<CImage />
 	</div>
 </template>

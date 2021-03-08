@@ -14,7 +14,7 @@
 			<p class="title" @click="toggleConsole">Conzepta//</p>
 			<p>Unterstützung gefällig? Nehmen Sie mit uns Kontakt auf.</p>
 			<!-- <CButton isOutline isMono text="Team Viewer" /> -->
-			<nuxt-link :to="{ path: '/support', hash: '#support' }"><CButton isOutline isMono text="Kontaktformular" /></nuxt-link>
+			<nuxt-link :to="{ path: '/kontakt' }"><CButton isOutline isMono text="Kontaktformular" /></nuxt-link>
 		</div>
 	</div>
 </template>

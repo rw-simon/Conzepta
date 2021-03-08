@@ -41,12 +41,22 @@ export default {
 
 <style lang="sass" scoped>
 .firstmobsec
-	grid-row: 2
+	@include mobile
+		grid-row: 2 !important
+		grid-column: 1 !important
 .secmobfirst
-	grid-row: 1
+	@include mobile
+		grid-row: 1 !important
+		grid-column: 1 !important
 .list-entry
 	background: $c-gray-light
 	padding: 5rem 0
+	.image
+		grid-column: 2
+		grid-row: 1
+	.desc
+		grid-row: 1
+		grid-column: 1
 	&:nth-child(2n)
 		background: white
 		.image

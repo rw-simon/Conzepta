@@ -34,18 +34,24 @@ export default {
 header
 	display: grid
 	grid-template-columns: 4rem 1fr 8rem
-	grid-template-rows: 4rem
-	position: sticky
+	grid-template-rows: 1fr
+	height: 4.5rem
+	position: fixed
+	width: 100%
 	top: 0
 	z-index: 99999
 	background: white
 	box-shadow: 0px -5px 10px 10px rgba(0,0,0,0.1)
 	box-sizing: border-box
+	transition: height 200ms ease
 	&.opened
-		grid-template-rows: 17rem
+		height: 15rem
+		// grid-template-rows: 17rem
 		@include mobile
 			width: 100%
 			grid-template-rows: 4rem
+			height: auto
+			position: sticky
 			.menumob
 				display: block
 </style>

@@ -5,7 +5,7 @@
 				<div class="grid cols-2 small-gap" style="align-items: end">
 					<div>
 						<h3>Unsere Vergangenheit</h3>
-						<h1>Archiv//</h1>
+						<h1>News //</h1>
 					</div>
 					<div class="filter br-2">
 						<input
@@ -23,7 +23,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="second" v-for="(a, i) in news" :key="i">
+		<div class="second" :id="`news-${i}`" v-for="(a, i) in news" :key="i">
 			<div class="container">
 				<div class="grid cols-2">
 					<article style="grid-column: 1" class="news-article">
@@ -61,7 +61,7 @@ export default {
 	data() {
 		return {
 			selectedCategories: [0],
-			productCategories: ['Alle', 'PolicePad', 'Lexica', 'Interlink', 'TachiFox'],
+			productCategories: ['Alle', 'PolicePad', 'Lexica', 'InterLink', 'TachiFox'],
 		}
 	},
 	methods: {
@@ -69,6 +69,7 @@ export default {
 			if (cat == 0) {
 				this.selectedCategories = [0]
 			} else {
+				this.selectedCategories = []
 				this.selectedCategories.includes(cat)
 					? (this.selectedCategories = this.selectedCategories.filter((c) => {
 							return c != cat

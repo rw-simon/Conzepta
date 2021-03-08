@@ -6,7 +6,7 @@
 					<div class="section grid cols-2">
 						<div class="padfix">
 							<h3 v-scroll-reveal="{ delay: 0 }">Nachschlagwerk</h3>
-							<h1 v-scroll-reveal="{ delay: 200 }">Lexica//</h1>
+							<h1 v-scroll-reveal="{ delay: 200 }">Lexica //</h1>
 							<p v-scroll-reveal="{ delay: 400 }">
 								Lexica ist das digitale Nachschlagewerk für alle, die im Namen des Gesetzes unterwegs sind: Gesetze, Regeln, Statuten und vieles mehr in einer einzigen App. Und Lexica ist ein ganz persönlicher Helfer: Ergänzen Sie die
 								Einträge individuell mit Tags und Notizen. Mittels einer ausgeklügelten Suchfunktion und einem praktischen Assistenten finden Sie sofort den Artikel, den Sie brauchen.
@@ -15,7 +15,7 @@
 						</div>
 						<div style="align-self: end; padding-left: 5rem">
 							<nuxt-link :to="'/wir#philippe-luethi'"
-								><div class="grid small-gap force" style="width: 16rem; align-items: center; margin-top: 2rem">
+								><div class="grid cols-2 small-gap force" style="width: 16rem; align-items: center; margin-top: 2rem">
 									<div>
 										<p v-scroll-reveal="{ delay: 0 }" style="margin: 0; line-height: 1em">Produktmanager</p>
 										<p v-scroll-reveal="{ delay: 200 }" style="margin: 0; font-weight: 900">Philippe Lüthi</p>
@@ -24,6 +24,14 @@
 										<img v-scroll-reveal="{ delay: 400 }" style="height: auto; border-radius: 50%" src="/portrait_placeholder.png" alt="" />
 									</div></div
 							></nuxt-link>
+							<div style="display: grid; grid-template-columns: repeat(6, 2rem); gap: 0.5rem; align-items: center">
+								<span style="padding: 5px">
+									<img style="height: auto; " src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/12/icon_apple.png" v-scroll-reveal="{ delay: 100}" alt="" />
+								</span>
+								<span style="padding: 5px">
+									<img style="height: auto; opacity: 0.33" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/12/icon_android.png" v-scroll-reveal="{ delay: 100}" alt="" />
+								</span>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -198,7 +206,7 @@ export default {
 				pagination: {
 					el: '.swiper-pagination',
 					type: 'bullets',
-					clickable: false,
+					clickable: true,
 				},
 			},
 		}

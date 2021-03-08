@@ -5,10 +5,10 @@
 				<div class="grid cols-2" style="align-items: end">
 					<div>
 						<h3>Referenzen</h3>
-						<h1>Portfolio</h1>
+						<h1>Portfolio //</h1>
 						<p>
 							Sie überlegen sich, ob unsere Software auch Ihren Alltag erleichtern könnte? Im Portfolio zeigen wir Ihnen, wer bereits Produkte von Conzepta im Einsatz hat. Denn Erfahrungen, die sie bereits damit machen konnten, können
-							Ihr Ratgeber sein. Setzten Sie sich unverbindlich in Verbindung mit uns, wenn Sie mehr zu spezifischen Projekten erfahren möchten.
+							Ihr Ratgeber sein. Setzten Sie sich unverbindlich mit uns in Verbindung, wenn Sie mehr zu spezifischen Projekten erfahren möchten.
 						</p>
 					</div>
 					<div class="filter br-2">

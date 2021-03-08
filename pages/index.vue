@@ -5,13 +5,14 @@
 				<!-- <h1 v-scroll-reveal>{{ content.title.rendered }}</h1> -->
 				<img v-scroll-reveal="{ delay: 200 }" src="/icon_white.png" alt="" />
 				<div v-scroll-reveal="{ delay: 400 }" style="width: 64px; text-align: center; margin: auto; margin-top: 5rem; margin-bottom: -5rem">
-					<img src="/arrows.png" alt="" />
+					<img @click="scrollDown" src="/arrows.png" alt="" />
 				</div>
 			</div>
 		</div>
 		<div class="intro">
 			<!-- :style="{ transform: 'translateY(' + pos + 'vh)' }"> -->
 			<div class="container">
+				<span v-if="$i18n.locale == 'fr'">Franz:</span>
 				<h2 v-scroll-reveal>Vorwärts kommen</h2>
 				<p v-scroll-reveal="{ delay: 200 }">
 					Mehr Effizienz und Sicherheit mit <br />
@@ -22,6 +23,7 @@
 		</div>
 		<div class="since">
 			<div class="container">
+				<span v-if="$i18n.locale == 'fr'">Franz:</span>
 				<h3 v-scroll-reveal>Etablierte Lösungen</h3>
 				<h2 v-scroll-reveal="{ delay: 200 }">Seit 1986</h2>
 				<p v-scroll-reveal="{ delay: 400 }">
@@ -34,6 +36,7 @@
 		</div>
 		<div class="vorteile">
 			<div class="container">
+				<span v-if="$i18n.locale == 'fr'">Franz:</span>
 				<h1 v-scroll-reveal="{ delay: 0 }">Vorteile verschaffen mit Conzepta</h1>
 				<div v-scroll-reveal="{ delay: 200 }" class="grid cols-3 small-gap">
 					<article>
@@ -60,6 +63,7 @@
 				<div class="grid cols-2">
 					<span></span>
 					<div class="text">
+						<span v-if="$i18n.locale == 'fr'">Franz:</span>
 						<h3 v-scroll-reveal="{ delay: 0 }">Support</h3>
 						<h2 v-scroll-reveal="{ delay: 200 }">Für Sie da!</h2>
 						<p v-scroll-reveal="{ delay: 400 }">
@@ -93,6 +97,7 @@
 						<h3>{{ a.acf.datum }}</h3>
 						<h2>{{ a.title.rendered }}</h2>
 						<div v-html="a.content.rendered" />
+						<nuxt-link to="/archiv#news-257" class="more"><img style="width: 4rem" src="/arrows_bot.png" alt="" /></nuxt-link>
 					</article>
 					<div class="lines">
 						<hr />
@@ -146,6 +151,12 @@ export default {
 			// console.log(window.scrollY / window.innerHeight)
 			this.pos = (window.scrollY / (document.body.clientHeight - window.innerHeight)) * 50
 		},
+		scrollDown() {
+			window.scrollTo({
+				top: 1000,
+				behavior: 'smooth',
+			})
+		},
 	},
 	beforeMount() {
 		window.addEventListener('scroll', this.handleScroll)
@@ -177,6 +188,8 @@ export default {
 	// gap: 4rem
 	text-align: left
 	article
+		.more
+			display: none
 		width: 40%
 		margin: 5rem 0
 		&:nth-child(2n)
@@ -186,12 +199,15 @@ export default {
 			border-bottom: 1px solid black
 			&:nth-child(2n)
 				margin-left: auto
+		&:first-child
+			.more
+				display: block
 img
 	height: auto
 .banner-main
 	background: $c-blue
 	background: linear-gradient(0deg, $c-blue-light 0%, $c-blue 50%)
-	height: 80vh
+	height: 100vh
 	display: grid
 	padding-bottom: 3rem
 	z-index: 999
@@ -212,11 +228,11 @@ img
 	background-repeat: no-repeat
 	margin-top: -50vh
 	z-index: 0
-	height: 120vh
+	height: 100vh
 	position: relative
 	display: grid
 	align-items: end
-	padding: 10rem 0
+	padding: 20rem 0
 	@include mobile
 		background: none
 		height: auto
@@ -230,7 +246,7 @@ img
 		h2
 			margin-bottom: 0
 .since
-	height: 150vh
+	height: 120vh
 	margin-top: -20rem
 	padding-top: 10rem
 	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/home_background2.png')

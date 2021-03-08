@@ -6,9 +6,10 @@
 					<div></div>
 					<div class="texti">
 						<h3 v-scroll-reveal="{ delay: 0 }">Kommunikatonssystem</h3>
-						<h1 v-scroll-reveal="{ delay: 200 }">Interlink//</h1>
+						<h1 v-scroll-reveal="{ delay: 200 }">InterLink //</h1>
 						<p v-scroll-reveal="{ delay: 400 }">
-							InterLink ist ein zuverlässiges Kommunikationssystem, das steuert, was einen Betrieb ausmacht: Zutrittskontrolle, Präsenzzeit, Betriebsdaten. Das heisst: Ihre Sicherheit in Echtzeit, weltweit.
+							InterLink ist ein zuverlässiges Kommunikationssystem, das Ihre Mitarbeiter während der Arbeitszeit begleitet: Präferenzzeiten erfassen, Zutritte gewähren, Auftragszeiten buchen. Das heisst: Sie erhalten Betriebsdaten und
+							Sicherheit in Echtzeit, weltweit.
 						</p>
 						<img v-scroll-reveal="{ delay: 600 }" style="width: 3rem" src="/icon_windows.png" alt="" />
 						<nuxt-link to="/wir#urs-blaser">
@@ -205,7 +206,7 @@ export default {
 		padding-top: 0
 		margin-top: 22rem
 .banner-footer
-	background-image: url('/interlink-footer.png')
+	background-image: url('/InterLink-footer.png')
 	background-repeat: no-repeat
 	background-size: cover
 	background-position: center
@@ -218,7 +219,7 @@ export default {
 		background-size: 150%
 		padding-top: 20rem
 .banner
-	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2021/01/interlink_banner-copy.png')
+	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2021/01/InterLink_banner-copy.png')
 	background-repeat: no-repeat
 	background-size: cover
 	background-position: center
@@ -237,7 +238,7 @@ export default {
 	min-height: 80vw
 	@include mobile
 		padding-top: 30vh
-		background-image: url('/interlinkmob.png')
+		background-image: url('/InterLinkmob.png')
 .funktionen
 	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2021/02/background3-1.png')
 	background-repeat: no-repeat
@@ -247,7 +248,7 @@ export default {
 	margin-top: 20rem
 	margin-bottom: -25rem
 	@include mobile
-		background-image: url('/interlinkbg3.png')
+		background-image: url('/InterLinkbg3.png')
 		background-position: top center
 		margin-top: 0
 		padding-top: 16rem
@@ -259,7 +260,7 @@ export default {
 	background-position: center
 	min-height: 40vw
 	@include mobile
-		background-image: url('/interlinkbg4.png')
+		background-image: url('/InterLinkbg4.png')
 		background-position: top center
 		// margin-top: 0
 		padding-top: 13rem
