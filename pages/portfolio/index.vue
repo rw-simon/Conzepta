@@ -15,7 +15,7 @@
 						<input
 							:class="{
 								'br bc-blue': true,
-								active: selected.includes(i),
+								active: selectedCategories.includes(i),
 							}"
 							v-for="(cat, i) in productCategories"
 							:key="i"
@@ -34,20 +34,21 @@
 export default {
 	data() {
 		return {
-			selected: [0],
+			selectedCategories: [0],
 			productCategories: ['Alle', 'PolicePad', 'Lexica', 'Interlink', 'TachiFox'],
 		}
 	},
 	methods: {
 		toggleCat(cat) {
 			if (cat == 0) {
-				this.selected = [0]
+				this.selectedCategories = [0]
 			} else {
-				this.selected.includes(cat)
-					? (this.selectedCategories = this.selected.filter((c) => {
+				this.selectedCategories = []
+				this.selectedCategories.includes(cat)
+					? (this.selectedCategories = this.selectedCategories.filter((c) => {
 							return c != cat
 					  }))
-					: this.selected.push(cat)
+					: this.selectedCategories.push(cat)
 			}
 		},
 	},

@@ -16,7 +16,7 @@
 						<option value="int">InterLink</option>
 						<option value="tac">TachiFox</option>
 						<option value="par">ParkingPad</option>
-						<option value="all">Bewerbung</option>
+						<option value="bew">Bewerbung</option>
 						<option value="all">Allgemein</option>
 					</select>
 					<!-- <input
@@ -77,16 +77,22 @@
 
 <script>
 export default {
+	async asyncData({ query }) {
+		return {
+			textArea: query.text,
+			selectedAnliegen: query.anliegen,
+		}
+	},
 	data() {
 		return {
-			selectedAnliegen: '',
-			textArea: '',
+			// selectedAnliegen: '',
+			// textArea: '',
 		}
 	},
 	mounted() {
-		if (this.$route.params.text == 'huhu') {
-			console.log('HUHU')
-		}
+		// if (this.$route.params.text == 'huhu') {
+		// 	console.log('HUHU')
+		// }
 	},
 }
 </script>

@@ -346,22 +346,24 @@ img
 .pp-module
 	margin-top: 8rem
 	margin-bottom: 8rem
-	height: 20rem
+	height: 28rem
 	@include mobile
 		margin-bottom: 0
 		height: 20rem
 	.slider-grid
 		display: grid
-		grid-template-columns: 1fr 1fr
+		grid-template-columns: 1fr 2fr
 		gap: 8rem
+		align-items: center
 		@include mobile
 			grid-template-columns: 1fr
 			.slider-image
 				display: none
 	.swiper-container
 		height: 100%
+		width: 140%
 	.swiper-slide
-		height: 20rem
+		height: 28rem
 .backend
 	display: grid
 	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2021/01/pp-backend-background-1-1.png')

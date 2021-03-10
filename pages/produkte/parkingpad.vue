@@ -14,7 +14,7 @@
 						Tel: +41 348 60 20
 					</p>
 					<br />
-					<CButton text="Informieren Sie mich" />
+					<nuxt-link :to="{ path: '/kontakt', query: { anliegen: 'par', text: 'Guten Tag. Bitte schicken Sie mir unterlagen betreffend dem Projekt ParkingPad Freundliche Grüsse' } }"><CButton text="Informieren Sie mich" /></nuxt-link>
 				</div>
 			</div>
 		</div>

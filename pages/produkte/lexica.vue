@@ -5,7 +5,7 @@
 				<div class="container">
 					<div class="section grid cols-2">
 						<div class="padfix">
-							<h3 v-scroll-reveal="{ delay: 0 }">Nachschlagwerk</h3>
+							<h3 v-scroll-reveal="{ delay: 0 }">Nachschlagewerk</h3>
 							<h1 v-scroll-reveal="{ delay: 200 }">Lexica //</h1>
 							<p v-scroll-reveal="{ delay: 400 }">
 								Lexica ist das digitale Nachschlagewerk für alle, die im Namen des Gesetzes unterwegs sind: Gesetze, Regeln, Statuten und vieles mehr in einer einzigen App. Und Lexica ist ein ganz persönlicher Helfer: Ergänzen Sie die
@@ -270,10 +270,10 @@ export default {
 	.grid
 		justify-items: center
 .funktionsumfang
-	height: 20rem
+	height: 28rem
 	.slider-grid
 		display: grid
-		grid-template-columns: 1fr 1fr
+		grid-template-columns: 1fr 2fr
 		align-items: center
 		gap: 8rem
 		@include mobile
@@ -282,8 +282,9 @@ export default {
 				display: none
 	.swiper-container
 		height: 100%
+		width: 140%
 	.swiper-slide
-		height: 20rem
+		height: 28rem
 .swiper-pagination
 	top: 50%
 	transform: translateY(-50%)

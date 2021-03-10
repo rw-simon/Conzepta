@@ -72,7 +72,7 @@
 						</div>
 						<div class="bewbut">
 							<p>Der Arbeitsort der Stelle ist in Bern und die Stelle ist ab Januar 2021 verfügbar. Wir freuen uns auf deine Bewerbung per Mail.</p>
-							<nuxt-link :to="{ path: '/support', hash: '#support' }"><CButton text="Bewerben" /></nuxt-link>
+							<nuxt-link :to="{ path: '/kontakt', hash: '#kontakt', query: { anliegen: 'bew', text: 'Guten Tag. Ich möchte mich gerne auf die Stelle X bewerben. Lorem ipsum …' } }"><CButton text="Bewerben" /></nuxt-link>
 						</div>
 					</div>
 				</div>
