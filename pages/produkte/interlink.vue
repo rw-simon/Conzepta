@@ -37,7 +37,7 @@
 								<h2 v-scroll-reveal="{ delay: 200 }">Ein Protokoll für alle Hersteller</h2>
 								<p v-scroll-reveal="{ delay: 400 }">
 									InterLink setzt dort an, wo Hersteller aufhören: Es «übersetzt» die spezifischen Protokolle in ein Einheitliches. Die Kommunikation zwischen den Terminals und dem Managementsystem findet in Echtzeit statt. Dabei
-									spielt es keine Rolle, ob Ihr Betrieb nur ein einziges Terminal umfasst oder mehrere Tausend in einem Grosskonzern mit global verteilten Produktionsstätten
+									spielt es keine Rolle, ob Ihr Betrieb nur ein einziges Terminal umfasst oder mehrere Tausend in einem Grosskonzern mit global verteilten Produktionsstätten.
 								</p>
 							</div>
 						</div>
@@ -132,6 +132,11 @@
 		<div style="background: #e7e9ec; margin-top: 8rem" class="anwender">
 			<div class="container" style="padding: 4rem 0">
 				<h2>Anwender</h2>
+				<div class="grid cols-3" style="display: grid; gap: 2rem; align-items: center">
+					<img v-scroll-reveal="{ delay: 0 }" style="padding: 2rem; max-width: 200px; height: auto" src="/portfolio/interlink/allegion.png" alt="" />
+					<img v-scroll-reveal="{ delay: 200 }" style="padding: 2rem; max-width: 200px; height: auto" src="/portfolio/interlink/interflex.png" alt="" />
+					<img v-scroll-reveal="{ delay: 400 }" style="padding: 2rem; max-width: 200px; height: auto" src="/portfolio/interlink/mpdv.png" alt="" />
+				</div>
 			</div>
 		</div>
 	</div>

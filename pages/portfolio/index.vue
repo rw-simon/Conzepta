@@ -26,6 +26,29 @@
 					</div>
 				</div>
 			</div>
+			<div class="section">
+				<div class="logos">
+					<div class="grid cols-3">
+						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(1)" class="policepad" src="/portfolio/policepad/kapo_bern.png" alt="" />
+						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(1)" class="policepad" src="/portfolio/policepad/kapo_schwyz.png" alt="" />
+						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(1)" class="policepad" src="/portfolio/policepad/stadt_biel.png" alt="" />
+						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(1)" class="policepad" src="/portfolio/policepad/stapo_stgallen.png" alt="" />
+						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(1)" class="policepad" src="/portfolio/policepad/stapo_winterthur.png" alt="" />
+						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(1)" class="policepad" src="/portfolio/policepad/stapo_zurich.jpg" alt="" />
+						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(3)" class="interlink" src="/portfolio/interlink/allegion.png" alt="" />
+						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(3)" class="interlink" src="/portfolio/interlink/bmw.png" alt="" />
+						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(3)" class="interlink" src="/portfolio/interlink/coop.png" alt="" />
+						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(3)" class="interlink" src="/portfolio/interlink/grz.png" alt="" />
+						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(3)" class="interlink" src="/portfolio/interlink/interflex.png" alt="" />
+						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(3)" class="interlink" src="/portfolio/interlink/migros.png" alt="" />
+						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(3)" class="interlink" src="/portfolio/interlink/mpdv.png" alt="" />
+						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(3)" class="interlink" src="/portfolio/interlink/polypoint.png" alt="" />
+						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(3)" class="interlink" src="/portfolio/interlink/spital_bern.png" alt="" />
+						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(3)" class="interlink" src="/portfolio/interlink/zeit_ag.png" alt="" />
+						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(4)" class="tachifox" src="/portfolio/tachifox/lesroutierssuisse.png" alt="" />
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </template>
@@ -56,6 +79,14 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.logos
+	img
+		height: auto
+		max-height: 5rem
+	.grid
+		align-items: center
+		row-gap: 4rem
+		justify-items: center
 .filter
 		border: 1px solid $c-blue
 		display: grid
