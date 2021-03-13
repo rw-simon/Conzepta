@@ -37,7 +37,7 @@
 								<h2 v-scroll-reveal="{ delay: 200 }">Ein Protokoll für alle Hersteller</h2>
 								<p v-scroll-reveal="{ delay: 400 }">
 									InterLink setzt dort an, wo Hersteller aufhören: Es «übersetzt» die spezifischen Protokolle in ein Einheitliches. Die Kommunikation zwischen den Terminals und dem Managementsystem findet in Echtzeit statt. Dabei
-									spielt es keine Rolle, ob Ihr Betrieb nur ein einziges Terminal umfasst oder mehrere Tausend in einem Grosskonzern mit global verteilten Produktionsstätten.
+									spielt es keine Rolle, ob Ihr Betrieb nur ein einziges Terminal betreibt oder mehrere Tausend in einem Grosskonzern mit global verteilten Produktionsstätten verwaltet.
 								</p>
 							</div>
 						</div>
@@ -46,7 +46,7 @@
 			</div>
 			<div class="something" style="margin-top: 10rem">
 				<div class="container">
-					<h3 v-scroll-reveal="{ delay: 0 }" style="text-align: center">BIXBI SYSTEMS / KABA / MPDV / PCS / PRIMION / TYCO / VICKING</h3>
+					<h3 v-scroll-reveal="{ delay: 0 }" style="text-align: center">BIXI SYSTEMS / DORMAKABA / MPDV / PCS / PRIMION / TYCO / VICKING</h3>
 					<h2 v-scroll-reveal="{ delay: 200 }" style="text-align: center; margin-bottom: 8rem">InterLink kommuniziert mit Terminals verschiedener Hersteller</h2>
 					<div class="grid cols-5">
 						<div style="grid-column: span 3">
@@ -59,8 +59,8 @@
 						</div>
 						<div style="grid-column: span 2">
 							<p v-scroll-reveal="{ delay: 300 }">
-								Mit seinen weltweit über 30'000 Terminals und den damit gemachten 3 Millionen Buchungen pro Tag hat sich InterLink zu einem bewährten Assistent entwickelt. Unsere Eigenentwicklung steht bereits seit über 20 Jahren mit
-								höchster Zuverlässigkeit im Einsatz. Aktuelle Generationen der Terminals werden unterstützt und neue laufend ergänzt
+								Mit seinen weltweit über 30'000 Terminals und den damit gemachten 3 Millionen Buchungen pro Tag hat sich InterLink als bewährtes System etabliert. Unsere Eigenentwicklung steht bereits seit über 20 Jahren mit höchster
+								Zuverlässigkeit im Einsatz. Viele Generationen von Terminals werden unterstützt und laufend werden neue Terminals hinzugefügt.
 							</p>
 						</div>
 					</div>
@@ -87,8 +87,8 @@
 							<h3 v-scroll-reveal="{ delay: 0 }">ARBEITSZEITEN AUSWERTEN</h3>
 							<h2 v-scroll-reveal="{ delay: 200 }">Kommunikation kann so viel mehr</h2>
 							<p v-scroll-reveal="{ delay: 400 }" class="intro">
-								Auf der Plattform eines Systemanbieters werden Arbeitszeiten ausgewertet und Zutrittsberechtigungen der Mitarbeitenden in einem Betrieb festgelegt. Diese Vorgänge erfordern eine Kommunikation mit den Terminals, die auf
-								die Standorte der.
+								Mit dem Betriebsdatenmanagement (noch anderes Wort suchen) einer Unternehmung werden Arbeitszeiten ausgewertet und Zutrittsberechtigungen der Mitarbeitenden festgelegt. Diese Vorgänge erfordern eine Kommunikation mit
+								Zeit- und Zutrittsterminals, die über die verschiedenen Standorte der Firma verteilt sind.
 							</p>
 							<img
 								@click="toggleContentKomp"
@@ -100,8 +100,8 @@
 								alt=""
 							/>
 							<p :class="{ more: true, active: showContentKomp }">
-								Oftmals stehen in einem Betrieb Terminals verschiedener Hersteller im Einsatz. Dabei zeigt sich oft folgendes Problem: Die Terminals der verschiedenen Hersteller ‘’sprechen eine unterschiedliche Sprache’’, d.h. die
-								Terminals und ihr Host verstehen einander nicht!.
+								Oftmals stehen in einem Betrieb Terminals verschiedener Hersteller im Einsatz. Dabei zeigt sich folgendes Problem: Die Terminals der verschiedenen Hersteller ‘’sprechen eine unterschiedliche Sprache’’, d.h. die
+								Terminals und das Managementsystem verstehen einander nicht.
 							</p>
 						</div>
 					</div>
@@ -116,7 +116,7 @@
 								<p v-scroll-reveal="{ delay: 400 }">
 									InterLink entfaltet dabei eine seiner einzigartigen Eigenschaften: Er übersetzt die Sprachen (Protokolle) der Terminals auf dasjenige Protokoll seines (Gesprächs-) Partners und wieder zurück. Dies scheint auf den
 									ersten Blick einfach, doch es ist ähnlich komplex wie bei der Übersetzung einer natürlichen Sprache: Es reicht nicht nur eine Wort-zu-Wort Übersetzung, sondern es muss der ganze Kontext berücksichtigt werden.
-									Technisch gesehen sind dies z.B. unterschiedliche Datenstrukturen der beiden Systeme, die es aufeinander abzustimmen.
+									Technisch gesehen sind dies z.B. unterschiedliche Datenstrukturen der beiden Systeme, die es aufeinander abzustimmen gilt.
 								</p>
 							</div>
 						</div>
@@ -124,11 +124,11 @@
 				</div>
 			</div>
 		</div>
-		<div class="datenblatt">
+		<!-- <div class="datenblatt">
 			<div class="container">
 				<CButton text="Datenblatt" />
 			</div>
-		</div>
+		</div> -->
 		<div style="background: #e7e9ec; margin-top: 8rem" class="anwender">
 			<div class="container" style="padding: 4rem 0">
 				<h2>Anwender</h2>
@@ -224,7 +224,7 @@ export default {
 		background-size: 150%
 		padding-top: 20rem
 .banner
-	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2021/01/InterLink_banner-copy.png')
+	background-image: url('/interlinkdoor.png')
 	background-repeat: no-repeat
 	background-size: cover
 	background-position: center

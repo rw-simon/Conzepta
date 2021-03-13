@@ -10,17 +10,17 @@
 							<h1 v-scroll-reveal="{ delay: 200 }">TachiFox //</h1>
 							<p v-scroll-reveal="{ delay: 400 }">
 								TachiFox ist die praxisorientierte Lösung von Conzepta und Les Routiers Suisses zum Erfassen von Daten, welche der Arbeits- und Ruhezeit Verordnung ARV unterliegen. TachiFox vereinfacht die Auswertung der Daten nach
-								den gesetzlich vorgegebenen Richtwerten. Der Assistent informiert Sie sofort über mögliche Verstösse. Verwalten Sie sämtliche Fahrer- und Fahrzeugdaten an einem Ort: einlesen, bearbeiten und ergänzen.
+								den gesetzlich vorgegebenen Richtwerten. Der Assistent informiert Sie sofort über mögliche Verstösse. Verwalten Sie sämtliche Fahrer- und Fahrzeugdaten an einem Ort: einlesen, bearbeiten und auswerten.
 							</p>
 							<br />
 							<nuxt-link :to="'/wir#philippe-luethi'"
-								><div class="grid force small-gap" style="width: 16rem; align-items: center; margin-top: 2rem">
+								><div class="grid cols-2 small-gap person" style="align-items: center; margin-top: 2rem">
 									<div>
-										<p v-scroll-reveal="{ delay: 0 }" style="margin: 0; line-height: 1em">Produktmanager</p>
-										<p v-scroll-reveal="{ delay: 200 }" style="margin: 0; font-weight: 900">Philippe Lüthi</p>
+										<p v-scroll-reveal="{ delay: 300 }" style="margin: 0; line-height: 1em">Produktmanager</p>
+										<p v-scroll-reveal="{ delay: 400 }" style="margin: 0; font-weight: 900">Philippe Lüthi</p>
 									</div>
 									<div>
-										<img v-scroll-reveal="{ delay: 400 }" style="height: auto; border-radius: 50%" src="/portrait_placeholder.png" alt="" />
+										<img v-scroll-reveal="{ delay: 500 }" style="height: auto; border-radius: 50%" src="/portrait_placeholder.png" alt="" />
 									</div></div
 							></nuxt-link>
 						</div>
@@ -31,11 +31,14 @@
 		<div class="container firstsec">
 			<div style="align-items: center" class="section grid cols-2">
 				<div class="firstmobsec">
+					<a href="https://www.routiers.ch/">
+						<img style="height: auto; width: 10rem; margin-bottom: 2rem" src="/portfolio/tachifox/lesroutierssuisse.png" alt="" />
+					</a>
 					<h3 v-scroll-reveal="{ delay: 0 }">3. Generation</h3>
 					<h2 v-scroll-reveal="{ delay: 200 }">Unaufhörliches Verbessern</h2>
 					<p v-scroll-reveal="{ delay: 400 }">
-						TachiFox besteht seit rund 15 Jahren und ist mittlerweile in der dritten Generation als moderne Web-Anwendung verfügbar. Dadurch konnte auf die Bedürfnisse der Fahrer und Firmen eingegangen werden. Durch die enge
-						Zusammenarbeit mit Les Routiers Suisses konnten wir das Produkt laufend an die Bedürfnisse der Logistikunternehmen anpassen und um smarte Funktionen erweitern.
+						TachiFox besteht seit rund 15 Jahren und ist mittlerweile in der aktuellen Generation als moderne Web-Anwendung verfügbar. Durch die enge Zusammenarbeit mit Les Routiers Suisses konnten wir das Produkt laufend an die
+						Bedürfnisse der Logistikunternehmen anpassen und um smarte Funktionen erweitern.
 					</p>
 				</div>
 				<div class="secmobfirst">
@@ -136,21 +139,24 @@
 						<h2 v-scroll-reveal="{ delay: 0 }">Benutzerverwaltung</h2>
 						<p v-scroll-reveal="{ delay: 200 }">
 							In der Benutzerverwaltung werden den Benutzern ihre Rollen und Fahrer zugeordnet. Hier können hierarchische Stufen geschaffen werden, indem Benutzern verschiedene Rollen und Funktionen zugewiesen werden. In einem
-							Unternehmen können so etwa Disponenten und Fahrer erfasst werden. Fahrer haben nur Einblick in ihre eigenen Daten, während Disponenten die Daten aller Fahrer einsehen und verwalten können.
+							Unternehmen können so etwa Disponenten und Fahrer erfasst werden. Fahrer haben nur Einblick in ihre eigenen Daten, während Disponenten die Daten aller Fahrer einsehen und verwalten können, nicht ganz, sie können nur Daten
+							von ihnen zugewiesenen Fahrern sehen.
 						</p>
-						<CButton v-scroll-reveal="{ delay: 400 }" text="Datenblatt" />
+						<br /><br />
+						<br />
+						<!-- <CButton v-scroll-reveal="{ delay: 400 }" text="Datenblatt" /> -->
 					</div>
 					<img class="secmobfirst" style="height: auto" src="/01.png" alt="" />
 				</div>
 			</div>
 		</div>
-		<div class="anwender">
+		<!-- <div class="anwender">
 			<div class="container">
 				<div class="section">
 					<h2>Anwender</h2>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<div class="kontrolle">
 			<div class="container">
 				<div class="section" style="text-align: center">
@@ -177,7 +183,7 @@ export default {
 				pagination: {
 					el: '.swiper-pagination',
 					type: 'bullets',
-					clickable: false,
+					clickable: true,
 				},
 			},
 		}
@@ -186,10 +192,19 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.person
+	width: 16rem
+	align-items: center
+	@include mobile
+		width: auto
+		&.grid.cols-2
+			grid-template-columns: 2fr 1fr
 .firstmobsec
-	grid-row: 2
+	@include mobile
+		grid-row: 2
 .secmobfirst
-	grid-row: 1
+	@include mobile
+		grid-row: 1
 .firstsec
 	@include mobile
 		margin-top: 8rem

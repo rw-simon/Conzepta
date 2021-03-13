@@ -85,8 +85,8 @@
 							<swiper-slide>
 								<div class="slider-grid">
 									<div class="slider-text">
-										<h3>ALL IN ONE</h3>
-										<h2>Lexica denkt an alles</h2>
+										<h3>FUNKTIONSUMFANG</h3>
+										<h2>Mit Liebe zum Detail entwickelt</h2>
 										<p><strong>Suche:</strong> Die Suche funktioniert Ansammlungsübergreifend und findet Text in der Beschreibung, den Tags oder den persönlichen Notizen.</p>
 									</div>
 									<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
@@ -95,9 +95,13 @@
 							<swiper-slide>
 								<div class="slider-grid">
 									<div class="slider-text">
-										<h3>ALL IN ONE</h3>
-										<h2>Lexica denkt an alles</h2>
-										<p><strong>Tags:</strong> Tags erleichtern die Suche vor allem von nicht täglichen Begriffen, so kann etwa nach «Ampel» gesucht werden, obwohl diese als «Lichtsignalanlage» im Gesetz hinterlegt ist</p>
+										<h3>FUNKTIONSUMFANG</h3>
+										<h2>Mit Liebe zum Detail entwickelt</h2>
+										<p><strong>Tags:</strong> Tags erleichtern die Suche vor
+allem von nicht täglichen Begriffen, so kann
+z.B. nach "Ampel" gesucht werden, obwohl
+diese als "Lichtsignalanlage" im
+entsprechenden Gesetz hinterlegt ist.</p>
 									</div>
 									<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
 								</div>
@@ -105,9 +109,12 @@
 							<swiper-slide>
 								<div class="slider-grid">
 									<div class="slider-text">
-										<h3>ALL IN ONE</h3>
-										<h2>Lexica denkt an alles</h2>
-										<p><strong>Notizen:</strong> Persönliche Notizen ergänzen einen Eintrag individuell und bleiben bei neuen Versionen erhalten. Zusätzlich werden die Notizen in die Suche einbezogen.</p>
+										<h3>FUNKTIONSUMFANG</h3>
+										<h2>Mit Liebe zum Detail entwickelt</h2>
+										<p><strong>Notizen:</strong> Persönliche Notizen
+ergänzen einen Eintrag individuell und bleiben
+bei neuen Versionen erhalten. Zusätzlich
+werden die Notizen in die Suche einbezogen.</p>
 									</div>
 									<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
 								</div>
@@ -115,10 +122,12 @@
 							<swiper-slide>
 								<div class="slider-grid">
 									<div class="slider-text">
-										<h3>ALL IN ONE</h3>
-										<h2>Lexica denkt an alles</h2>
+										<h3>FUNKTIONSUMFANG</h3>
+										<h2>Mit Liebe zum Detail entwickelt</h2>
 										<p>
-											<strong>Favoriten:</strong> Selbstdefinierte Einträge können prominent platziert werden.
+											<strong>Favoriten:</strong> Selbstdefinierte Einträge
+können als Favoriten definiert und somit
+prominent platziert werden.
 										</p>
 									</div>
 									<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
@@ -127,9 +136,14 @@
 							<swiper-slide>
 								<div class="slider-grid">
 									<div class="slider-text">
-										<h3>ALL IN ONE</h3>
-										<h2>Lexica denkt an alles</h2>
-										<p><strong>Assistenten:</strong> Die Assistenten erlauben das Finden von Einträgen mit Hilfe von grafischen Elementen. Die anwendbaren Ziffern werden auf einer Grafik, welche alltägliche Situationen abbildet, schnell und einfach ermittelt.</p>
+										<h3>FUNKTIONSUMFANG</h3>
+										<h2>Mit Liebe zum Detail entwickelt</h2>
+										<p><strong>Assistenten:</strong> Die Assistenten erlauben
+das Finden von Einträgen mit Hilfe von
+grafischen Elementen. Die anwendbaren
+Ziffern werden auf einer Grafik, welche
+alltägliche Situationen abbildet, schnell und
+einfach ermittelt.</p>
 									</div>
 									<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
 								</div>
@@ -137,10 +151,14 @@
 							<swiper-slide>
 								<div class="slider-grid">
 									<div class="slider-text">
-										<h3>ALL IN ONE</h3>
-										<h2>Lexica denkt an alles</h2>
+										<h3>FUNKTIONSUMFANG</h3>
+										<h2>Mit Liebe zum Detail entwickelt</h2>
 										<p>
-<strong>Updates:</strong> Anpassungen der Ansammlungen oder einzelner Einträge können bequem online gemacht werden. Die persönlichen Notizen bleiben erhalten.
+<strong>Updates:</strong> Anpassungen der
+Ansammlungen oder einzelne Einträge davon,
+können bequem online gemacht werden. Die
+persönlichen Notizen der Benutzer bleiben
+natürlich erhalten.
 										</p>
 									</div>
 									<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
@@ -149,10 +167,15 @@
 							<swiper-slide>
 								<div class="slider-grid">
 									<div class="slider-text">
-										<h3>ALL IN ONE</h3>
-										<h2>Backend</h2>
+										<h3>FUNKTIONSUMFANG</h3>
+										<h2>Mit Liebe zum Detail entwickelt</h2>
 										<p>
-<strong>Datenaustausch:</strong> Lexica kann Daten von und zu anderen System importieren und exportieren. So lassen sich beispielsweise Ziffern anwählen und ins PolicePad übermitteln. Oder man gelangt von PolicePad zu den detaillierten Informationen von Lexica.
+<strong>Datenaustausch:</strong> Lexica kann Daten
+von und zu anderen System importieren und
+exportieren. So lassen sich z.B. Ziffern
+anwählen und ins PolicePad übermitteln. Oder
+man gelangt von PolicePad zu den
+detaillierten Informationen von Lexica.
 										</p>
 									</div>
 									<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
@@ -161,10 +184,16 @@
 							<swiper-slide>
 								<div class="slider-grid">
 									<div class="slider-text">
-										<h3>ALL IN ONE</h3>
-										<h2>Backend</h2>
+										<h3>FUNKTIONSUMFANG</h3>
+										<h2>Mit Liebe zum Detail entwickelt</h2>
 										<p>
-<strong>Backend:</strong> Das Backend stellt eine einfache und intuitive Oberfläche zur Verfügung, um die Ansammlung von Einträgen praktisch zu editieren und neue Versionen davon zu generieren. Zusätzlich können Benutzer und Gruppen verwaltet sowie weitere Einstellungen vorgenommen werden.
+<strong>Backend:</strong> Das Backend stellt eine einfache und
+intuitive Oberfläche zur Verfügung um die
+Ansammlung von Einträgen praktisch zu
+Editieren und neue Versionen davon zu
+generieren. Zusätzlich können Benutzer und
+Gruppen verwaltet, sowie weitere
+Einstellungen vorgenommen werden.
 										</p>
 									</div>
 									<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>

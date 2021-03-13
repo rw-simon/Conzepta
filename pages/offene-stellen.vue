@@ -5,16 +5,16 @@
 				<div class="grid cols-2">
 					<div>
 						<h3>Arbeiten bei Conzepta</h3>
-						<h1>Freie Stellen //</h1>
+						<h1>Jobs //</h1>
 						<p>
-							Die conzepta team AG ist eine kleine, etablierte Software-Firma mit Sitz in Bern. Unser Ziel ist es, das Leben unserer Kunden Stück für Stück einfacher zu machen, damit sie ihren Arbeitsalltag effizienter erledigen können.
-							So entwickeln wir seit über 20 Jahren innovative Software für verschiedenste Kundengruppen, wie z.B. Polizeikorps, Transportunternehmen oder global tätige Konzerne. Wir suchen motivierte Unterstützung, um die Welt von
-							morgen noch ein Stück digitaler zu machen.
+							Die Conzepta ist eine kleine, etablierte Software-Firma mit Sitz in Bern. Unser Ziel ist es, das Leben unserer Kunden Stück für Stück einfacher zu machen, damit sie ihren Arbeitsalltag effizienter erledigen können. So
+							entwickeln wir seit über 20 Jahren innovative Software für verschiedenste Kundengruppen, wie z.B. Polizeikorps, Transportunternehmen oder global tätige Konzerne. Wir suchen motivierte Unterstützung, um die Welt von morgen
+							noch ein Stück digitaler zu machen.
 						</p>
 					</div>
 				</div>
 			</div>
-			<div style="background-color: #e7e9ec; padding: 5rem 0; margin-top: 8rem">
+			<div style="background-color: #e7e9ec; padding: 5rem 0; margin-top: 8rem; display: none">
 				<div class="container">
 					<h3>Offene Stellen</h3>
 					<h2>Software Entwickler*in .Net<br />60-80%</h2>
@@ -74,6 +74,13 @@
 							<p>Der Arbeitsort der Stelle ist in Bern und die Stelle ist ab Januar 2021 verfügbar. Wir freuen uns auf deine Bewerbung per Mail.</p>
 							<nuxt-link :to="{ path: '/kontakt', hash: '#kontakt', query: { anliegen: 'bew', text: 'Guten Tag. Ich möchte mich gerne auf die Stelle X bewerben. Lorem ipsum …' } }"><CButton text="Bewerben" /></nuxt-link>
 						</div>
+					</div>
+				</div>
+			</div>
+			<div style="background-color: #e7e9ec; padding: 5rem 0; margin-top: 8rem">
+				<div class="container">
+					<div>
+						<p>Hinweis: Zurzeit sind leider keine offenen Stellen zu vergeben. Deine spontane Bewerbung ist jederzeit gerne willkommen.</p>
 					</div>
 				</div>
 			</div>

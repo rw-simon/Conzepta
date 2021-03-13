@@ -10,14 +10,14 @@
 					<input v-scroll-reveal="{ delay: 600 }" style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%" type="text" placeholder="Email" />
 					<select v-scroll-reveal="{ delay: 800 }" :style="[selectedAnliegen == '' ? { color: 'gray' } : { color: 'black' }]" name="anliegen" id="" v-model="selectedAnliegen">
 						<option value="" hidden>Anliegen</option>
-						<option value="techprob">Technische Probleme</option>
-						<option value="pp">Police Pad</option>
-						<option value="lex">Lexica</option>
-						<option value="int">InterLink</option>
-						<option value="tac">TachiFox</option>
-						<option value="par">ParkingPad</option>
-						<option value="bew">Bewerbung</option>
 						<option value="all">Allgemein</option>
+						<option value="bew">Bewerbung</option>
+						<option value="int">InterLink</option>
+						<option value="lex">Lexica</option>
+						<option value="par">ParkingPad</option>
+						<option value="pp">Police Pad</option>
+						<option value="tac">TachiFox</option>
+						<option value="techprob">Technische Probleme</option>
 					</select>
 					<!-- <input
 					style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%"
@@ -27,7 +27,6 @@
 					<textarea v-scroll-reveal="{ delay: 1000 }" style="border: blue 1px solid; border-radius: 5px; width: 100%; grid-column: span 2" name="" id="" cols="30" rows="10" v-model="textArea"></textarea>
 				</form>
 				<div class="grid cols-3 small-gap" style="align-items: center; margin-top: 2rem">
-					<CButton text="Senden" />
 					<span style="padding: 0.5rem 2rem 0.5rem 0.5rem; border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%">
 						<input style="padding: 0; height: 1rem; width: 1rem; border: blue 1px solid; border-radius: 3px; margin-right: 10px; vertical-align: text-top" type="checkbox" name="" id="" />
 						Ich bin kein Roboter
@@ -36,6 +35,7 @@
 						<input style="padding: 0; height: 1rem; width: 1rem; border: blue 1px solid; border-radius: 3px; margin-right: 10px; vertical-align: text-top" type="checkbox" name="" id="" />
 						Kopie an mich senden
 					</span>
+					<CButton text="Senden" />
 				</div>
 			</div>
 		</div>
@@ -52,7 +52,7 @@
 					</div>
 				</div>
 				<div>
-					<h3 v-scroll-reveal="{ delay: 0 }">Von Richtung Olten</h3>
+					<h3 v-scroll-reveal="{ delay: 0 }">Von der Autobahn</h3>
 					<h2 v-scroll-reveal="{ delay: 200 }">Mit dem Auto</h2>
 					<br />
 					<p v-scroll-reveal="{ delay: 400 }">Nehmen sie die Ausfahrt 37-BernWankdorf und biegen sie anschliessend in die Papiermühlestrasse ein. Beim ersten Kreisel rechts und dann nur noch dem</p>

@@ -4,11 +4,9 @@
 			<div class="container">
 				<div class="grid cols-2" style="row-gap: 2rem">
 					<div>
-						<h3 v-scroll-reveal="{ delay: 0 }">Jederzeit</h3>
+						<h3 v-scroll-reveal="{ delay: 0 }">Für Sie da</h3>
 						<h1 v-scroll-reveal="{ delay: 200 }">Support //</h1>
-						<p v-scroll-reveal="{ delay: 400 }">
-							Eine gute Software ist jene, die ohne Probleme läuft. Aber auch eine gute Software kann mal einen schlechten Tag haben. Deshalb sind wir für Sie da, wann immer Sie uns brauchen. Das garantieren wir Ihnen.
-						</p>
+						<p v-scroll-reveal="{ delay: 400 }">Eine gute Software ist jene, die ohne Probleme läuft. Aber auch eine gute Software kann mal einen schlechten Tag haben. Deshalb sind wir für Sie da, wann immer Sie uns brauchen.</p>
 					</div>
 					<div class="tvb" style="align-self: end; text-align: right">
 						<a style="display: inline-block; line-height: 1em; border: 1px solid blue; border-radius: 4px; padding: 0.3rem 2rem" href="https://teamviewer.com" target="_blank"

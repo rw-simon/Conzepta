@@ -33,8 +33,8 @@
 						<h3 v-scroll-reveal="{ delay: 0 }">Kompromisslos</h3>
 						<h2 v-scroll-reveal="{ delay: 200 }">Genau so, wie es sein soll</h2>
 						<p v-scroll-reveal="{ delay: 400 }" class="intro">
-							Dank langjähriger Erfahrung und der engen Zusammenarbeit mit Polizeikorps und privaten Nutzern überzeugt PolicePad durch seine Effizienz: es ist intiuitiv und einfach zu bedienen. Flexible Module ergänzen die Anwendung mit
-							hilfreichen Funktionen. Durch einfaches und schnelles Konfigurieren lässt sich die App weiter individualisieren
+							Dank langjähriger Erfahrung und der engen Zusammenarbeit mit Polizeikorps überzeugt PolicePad durch seine Effizienz: es ist intiuitiv und einfach zu bedienen. Flexible Module ergänzen die Anwendung mit hilfreichen
+							Funktionen. Durch einfaches und schnelles Konfigurieren lässt sich die App weiter individualisieren
 						</p>
 						<img
 							@click="toggleContentKomp"
@@ -46,9 +46,9 @@
 							alt=""
 						/>
 						<p :class="{ more: true, active: showContentKomp }">
-							PolicePad hatte den besten Treiber für Innovation, den es gibt: die Realität. Die erste Version ging vor rund 30 Jahren in Betrieb. Mit jedem Tag und jedem Einsatz wurde das System besser. Heute steht PolicePad auf allen
-							gängigen Plattformen zur Verfügung. Die Bedienung und zahlreiche Zusatzmodule haben wir in enger Zusammenarbeit mit unseren Kunden ausgearbeitet, verfeinert und mit smarten Funktionen ergänzt. Um den Erfassungsablauf zu
-							vereinfachen, die Eingaben zu beschleunigen und die Datenqualität zu erhöhen.
+							PolicePad hatte den besten Treiber für Innovation, den es gibt: die Realität. Die erste Version ging vor rund 30 Jahren in Betrieb. Mit jedem Tag und jedem Einsatz wurde das System besser. Heute steht PolicePad auf
+							verschiedenen Plattformen zur Verfügung. Die Bedienung und zahlreiche Zusatzmodule haben wir in enger Zusammenarbeit mit unseren Kunden ausgearbeitet, verfeinert und mit smarten Funktionen ergänzt. Um den Erfassungsablauf
+							zu vereinfachen, die Eingaben zu beschleunigen und die Datenqualität zu erhöhen.
 						</p>
 					</div>
 				</div>
@@ -94,7 +94,7 @@
 					<h3 v-scroll-reveal="{ delay: 0 }">PolicePad Server</h3>
 					<h2 v-scroll-reveal="{ delay: 200 }">Backend</h2>
 					<p v-scroll-reveal="{ delay: 400 }">
-						Der PolicePadServer ist die Gegenstelle von PolicePad und nimmt die Fälle entgegen, speichert diese, stellt sie dar und bietet diverse Statistiken. Verwalten Sie die Fälle, steuern Sie Gruppen und verwaltne Sie die mobilen
+						Der PolicePadServer ist die Gegenstelle von PolicePad und nimmt die Fälle entgegen, speichert diese, stellt sie dar und bietet diverse Statistiken. Verwalten Sie die Fälle, steuern Sie Gruppen und verwalten Sie die mobilen
 						Eingabegeräte. Mit dem Bereitstellen der Stammdaten können Sie Inhalte live übertragen und in der App darstellen. Die Exportkontrolle dient der Sicherstellung, dass alle Fälle übertragen wurden.
 					</p>
 				</div>
@@ -145,13 +145,13 @@
 			<div class="bg-gray">
 				<div class="container">
 					<div class="grid cols-2">
-						<h4>Erfassung</h4>
+						<h4>Bearbeiten</h4>
 						<div>
 							<ul>
-								<li>Erfassen von Ordnungsbussen</li>
-								<li>Erfassen von Verzeigungen</li>
-								<li>Erfassen von kantonalrechtlichen Bussen</li>
-								<li>Erfassen von gemeinderechtlichen Bussen</li>
+								<li>Kumulieren von Bussen</li>
+								<li>Ergänzen von Bussen</li>
+								<li>Ersetzen von Bussen</li>
+								<li>Löschen von Bussen</li>
 							</ul>
 						</div>
 					</div>
@@ -160,13 +160,15 @@
 			<div>
 				<div class="container">
 					<div class="grid cols-2">
-						<h4>Erfassung</h4>
+						<h4>Integriert</h4>
 						<div>
 							<ul>
-								<li>Erfassen von Ordnungsbussen</li>
-								<li>Erfassen von Verzeigungen</li>
-								<li>Erfassen von kantonalrechtlichen Bussen</li>
-								<li>Erfassen von gemeinderechtlichen Bussen</li>
+								<li>Offline-fähig: Unkomplizierte Erfassung auch in Gebieten ohne Datenempfang</li>
+								<li>Camera: Machen Sie vor Ort Fotos zu einem Fall, die dank fälschungssicherer Signatur als Beweismittel dienen</li>
+								<li>Favorites: Beim manuellen Erfassen werden die wahrscheinlichsten Eingaben als Favoriten angezeigt</li>
+								<li>LexiConnect: Verbindung zum elektronischen Nachschlagewerk Lexica für gesetzliche</li>
+								<li>Regelwerke. Aus den Eingabefeldern können Sie direkt in die entsprechenden Assistenten des</li>
+								<li>Lexica navigieren und Tatbestände automatisch in den neuen Fall übernehmen</li>
 							</ul>
 						</div>
 					</div>
@@ -175,13 +177,14 @@
 			<div class="bg-gray">
 				<div class="container">
 					<div class="grid cols-2">
-						<h4>Erfassung</h4>
+						<h4>Integrierbare Datenbestände</h4>
 						<div>
 							<ul>
-								<li>Erfassen von Ordnungsbussen</li>
-								<li>Erfassen von Verzeigungen</li>
-								<li>Erfassen von kantonalrechtlichen Bussen</li>
-								<li>Erfassen von gemeinderechtlichen Bussen</li>
+								<li>Bereits erfasste Bussen und Verzeigungen</li>
+								<li>Parkvorgänge (eParking, easyPark, parkingPay usw.)</li>
+								<li>Bewilligungen (Anwohnerparkkarten, Tagesbewilligungen usw.)</li>
+								<li>Fahndungslisten (RIPOL usw.)</li>
+								<li>MFK-Auskünfte (InfoCar usw.)</li>
 							</ul>
 						</div>
 					</div>

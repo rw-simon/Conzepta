@@ -13,7 +13,7 @@
 			</section>
 		</div>
 		<div style="text-align: center; margin-top: 1rem">
-			<p>&copy; 2021 Conzepta Team AG. All rights reserved. <nuxt-link to="impressum">Impressum</nuxt-link> | <nuxt-link to="agb">AGB</nuxt-link></p>
+			<p>&copy; 2021 Conzepta Team AG. All rights reserved. <nuxt-link to="/impressum">Impressum</nuxt-link> | <nuxt-link to="/agb">AGB</nuxt-link></p>
 		</div>
 	</footer>
 </template>

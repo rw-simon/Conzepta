@@ -40,17 +40,17 @@
 				<h1 v-scroll-reveal="{ delay: 0 }">Vorteile verschaffen mit Conzepta</h1>
 				<div v-scroll-reveal="{ delay: 200 }" class="grid cols-3 small-gap">
 					<article>
-						<img v-scroll-reveal="{ delay: 300 }" src="/grid1.png" alt="" />
+						<img v-scroll-reveal="{ delay: 300 }" src="/puzzle.png" alt="" />
 						<h2 v-scroll-reveal="{ delay: 400 }">Adaption</h2>
 						<p style="padding: 0 2rem; box-sizing: border-box" v-scroll-reveal="{ delay: 500 }">Wir bieten keine Pakete ab Stange, sondern individuelle Lösungen und persönlichen Support.</p>
 					</article>
 					<article>
-						<img v-scroll-reveal="{ delay: 500 }" src="/grid2.png" alt="" />
+						<img v-scroll-reveal="{ delay: 500 }" src="/checkmark.png" alt="" />
 						<h2 v-scroll-reveal="{ delay: 600 }">Qualität</h2>
 						<p style="padding: 0 2rem; box-sizing: border-box" v-scroll-reveal="{ delay: 700 }">Wir liefern Schweizer Qualitätsprodukte aus Eigenentwicklung.</p>
 					</article>
 					<article>
-						<img v-scroll-reveal="{ delay: 700 }" src="/grid3.png" alt="" />
+						<img v-scroll-reveal="{ delay: 700 }" src="/grabber.png" alt="" />
 						<h2 v-scroll-reveal="{ delay: 800 }">Modern</h2>
 						<p style="padding: 0 2rem; box-sizing: border-box" v-scroll-reveal="{ delay: 900 }">Wir können Ihre Zukunft nicht vorhersehen. Aber wir können sie programmieren.</p>
 					</article>
@@ -66,9 +66,7 @@
 						<span v-if="$i18n.locale == 'fr'">Franz:</span>
 						<h3 v-scroll-reveal="{ delay: 0 }">Support</h3>
 						<h2 v-scroll-reveal="{ delay: 200 }">Für Sie da!</h2>
-						<p v-scroll-reveal="{ delay: 400 }">
-							Eine gute Software ist jene, die ohne Probleme läuft. Aber auch eine gute Software kann mal einen schlechten Tag haben. Deshalb sind wir für Sie da, wann immer Sie uns brauchen. Das garantieren wir Ihnen.
-						</p>
+						<p v-scroll-reveal="{ delay: 400 }">Eine gute Software ist jene, die ohne Probleme läuft. Aber auch eine gute Software kann mal einen schlechten Tag haben. Deshalb sind wir für Sie da, wann immer Sie uns brauchen.</p>
 						<nuxt-link :to="{ path: '/support', hash: '#support' }"><CButton v-scroll-reveal="{ delay: 600 }" text="Support" /></nuxt-link>
 						<div class="list">
 							<article v-scroll-reveal="{ delay: 300 }">
