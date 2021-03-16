@@ -80,7 +80,7 @@
 			<div style="background-color: #e7e9ec; padding: 5rem 0; margin-top: 8rem">
 				<div class="container">
 					<div>
-						<p>Hinweis: Zurzeit sind leider keine offenen Stellen zu vergeben. Deine spontane Bewerbung ist jederzeit gerne willkommen.</p>
+						<p>Zurzeit sind leider keine offenen Stellen zu vergeben. Deine spontane Bewerbung ist jederzeit gerne willkommen.</p>
 					</div>
 				</div>
 			</div>

@@ -250,6 +250,7 @@ img
 	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/home_background2.png')
 	background-position: top right
 	background-repeat: no-repeat
+	background-size: contain
 	position: relative
 	display: grid
 	align-items: end

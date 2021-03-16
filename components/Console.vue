@@ -4,7 +4,7 @@
 			<span v-if="!cookieText" @click="toggleConsole" class="toggle-console">[{{ toggleSymbol }}]</span>
 		</p>
 		<div class="content" v-if="cookieText">
-			<p class="title" @click="toggleConsole">Conzepta//</p>
+			<p class="title" @click="toggleConsole">Conzepta //</p>
 			<p>Wir verwenden Cookies um unsere Seite zu optimieren.</p>
 			<!-- <CButton isOutline isMono text="Team Viewer" /> -->
 			<CButton @click.native="cookieText = false" isOutline isMono text="Zustimmen" />

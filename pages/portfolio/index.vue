@@ -29,12 +29,13 @@
 			<div class="section">
 				<div class="logos">
 					<div class="grid cols-3">
-						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(1)" class="policepad" src="/portfolio/policepad/kapo_bern.png" alt="" />
+						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(1) || selectedCategories.includes(2)" class="policepad" src="/portfolio/policepad/kapo_bern.png" alt="" />
 						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(1)" class="policepad" src="/portfolio/policepad/kapo_schwyz.png" alt="" />
-						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(1)" class="policepad" src="/portfolio/policepad/stadt_biel.png" alt="" />
+						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(2)" class="lexica" src="/portfolio/policepad/kapo_zurich.png" alt="" />
+						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(1) || selectedCategories.includes(2)" class="policepad" src="/portfolio/policepad/stadt_biel.png" alt="" />
 						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(1)" class="policepad" src="/portfolio/policepad/stapo_stgallen.png" alt="" />
 						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(1)" class="policepad" src="/portfolio/policepad/stapo_winterthur.png" alt="" />
-						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(1)" class="policepad" src="/portfolio/policepad/stapo_zurich.jpg" alt="" />
+						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(1) || selectedCategories.includes(2)" class="policepad" src="/portfolio/policepad/stapo_zurich.jpg" alt="" />
 						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(3)" class="interlink" src="/portfolio/interlink/allegion.png" alt="" />
 						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(3)" class="interlink" src="/portfolio/interlink/bmw.png" alt="" />
 						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(3)" class="interlink" src="/portfolio/interlink/coop.png" alt="" />
