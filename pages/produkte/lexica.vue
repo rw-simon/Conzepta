@@ -82,12 +82,13 @@
 				<div class="container" style="margin-top: 8rem; height: 100%; position: relative">
 					<client-only>
 						<swiper class="swiper" :options="swiperOption">
+							
 							<swiper-slide>
 								<div class="slider-grid">
 									<div class="slider-text">
-										<h3>FUNKTIONSUMFANG</h3>
-										<h2>Mit Liebe zum Detail entwickelt</h2>
-										<p><strong>Suche:</strong> Die Suche funktioniert Ansammlungsübergreifend und findet Text in der Beschreibung, den Tags oder den persönlichen Notizen.</p>
+										<h3>FUNKTIONEN</h3>
+										<h2>Tags</h2>
+										<p>Tags erleichtern die Suche vor allem von nicht täglichen Begriffen, so kann z.B. nach "Ampel" gesucht werden, obwohl diese als "Lichtsignalanlage" im entsprechenden Gesetz hinterlegt ist.</p>
 									</div>
 									<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
 								</div>
@@ -95,13 +96,9 @@
 							<swiper-slide>
 								<div class="slider-grid">
 									<div class="slider-text">
-										<h3>FUNKTIONSUMFANG</h3>
-										<h2>Mit Liebe zum Detail entwickelt</h2>
-										<p><strong>Tags:</strong> Tags erleichtern die Suche vor
-allem von nicht täglichen Begriffen, so kann
-z.B. nach "Ampel" gesucht werden, obwohl
-diese als "Lichtsignalanlage" im
-entsprechenden Gesetz hinterlegt ist.</p>
+										<h3>FUNKTIONEN</h3>
+										<h2>Notizen</h2>
+										<p>Persönliche Notizen ergänzen einen Eintrag individuell und bleiben bei neuen Versionen erhalten. Zusätzlich werden die Notizen in die Suche einbezogen.</p>
 									</div>
 									<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
 								</div>
@@ -109,25 +106,10 @@ entsprechenden Gesetz hinterlegt ist.</p>
 							<swiper-slide>
 								<div class="slider-grid">
 									<div class="slider-text">
-										<h3>FUNKTIONSUMFANG</h3>
-										<h2>Mit Liebe zum Detail entwickelt</h2>
-										<p><strong>Notizen:</strong> Persönliche Notizen
-ergänzen einen Eintrag individuell und bleiben
-bei neuen Versionen erhalten. Zusätzlich
-werden die Notizen in die Suche einbezogen.</p>
-									</div>
-									<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
-								</div>
-							</swiper-slide>
-							<swiper-slide>
-								<div class="slider-grid">
-									<div class="slider-text">
-										<h3>FUNKTIONSUMFANG</h3>
-										<h2>Mit Liebe zum Detail entwickelt</h2>
+										<h3>FUNKTIONEN</h3>
+										<h2>Favoriten</h2>
 										<p>
-											<strong>Favoriten:</strong> Selbstdefinierte Einträge
-können als Favoriten definiert und somit
-prominent platziert werden.
+											Selbstdefinierte Einträge können als Favoriten definiert und somit prominent platziert werden.
 										</p>
 									</div>
 									<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
@@ -136,14 +118,9 @@ prominent platziert werden.
 							<swiper-slide>
 								<div class="slider-grid">
 									<div class="slider-text">
-										<h3>FUNKTIONSUMFANG</h3>
-										<h2>Mit Liebe zum Detail entwickelt</h2>
-										<p><strong>Assistenten:</strong> Die Assistenten erlauben
-das Finden von Einträgen mit Hilfe von
-grafischen Elementen. Die anwendbaren
-Ziffern werden auf einer Grafik, welche
-alltägliche Situationen abbildet, schnell und
-einfach ermittelt.</p>
+										<h3>FUNKTIONEN</h3>
+										<h2>Assistenten</h2>
+										<p>Die Assistenten erlauben das Finden von Einträgen mit Hilfe von grafischen Elementen. Die anwendbaren Ziffern werden auf einer Grafik, welche alltägliche Situationen abbildet, schnell und einfach ermittelt.</p>
 									</div>
 									<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
 								</div>
@@ -151,15 +128,9 @@ einfach ermittelt.</p>
 							<swiper-slide>
 								<div class="slider-grid">
 									<div class="slider-text">
-										<h3>FUNKTIONSUMFANG</h3>
-										<h2>Mit Liebe zum Detail entwickelt</h2>
-										<p>
-<strong>Updates:</strong> Anpassungen der
-Ansammlungen oder einzelne Einträge davon,
-können bequem online gemacht werden. Die
-persönlichen Notizen der Benutzer bleiben
-natürlich erhalten.
-										</p>
+										<h3>FUNKTIONEN</h3>
+										<h2>Updates</h2>
+										<p>Anpassungen der Ansammlungen oder einzelne Einträge davon, können bequem online gemacht werden. Die persönlichen Notizen der Benutzer bleiben natürlich erhalten.</p>
 									</div>
 									<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
 								</div>
@@ -167,16 +138,9 @@ natürlich erhalten.
 							<swiper-slide>
 								<div class="slider-grid">
 									<div class="slider-text">
-										<h3>FUNKTIONSUMFANG</h3>
-										<h2>Mit Liebe zum Detail entwickelt</h2>
-										<p>
-<strong>Datenaustausch:</strong> Lexica kann Daten
-von und zu anderen System importieren und
-exportieren. So lassen sich z.B. Ziffern
-anwählen und ins PolicePad übermitteln. Oder
-man gelangt von PolicePad zu den
-detaillierten Informationen von Lexica.
-										</p>
+										<h3>FUNKTIONEN</h3>
+										<h2>Datenaustausch</h2>
+										<p>Lexica kann Daten von und zu anderen System importieren und exportieren. So lassen sich z.B. Ziffern anwählen und ins PolicePad übermitteln. Oder man gelangt von PolicePad zu den detaillierten Informationen von Lexica.</p>
 									</div>
 									<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
 								</div>
@@ -184,17 +148,9 @@ detaillierten Informationen von Lexica.
 							<swiper-slide>
 								<div class="slider-grid">
 									<div class="slider-text">
-										<h3>FUNKTIONSUMFANG</h3>
-										<h2>Mit Liebe zum Detail entwickelt</h2>
-										<p>
-<strong>Backend:</strong> Das Backend stellt eine einfache und
-intuitive Oberfläche zur Verfügung um die
-Ansammlung von Einträgen praktisch zu
-Editieren und neue Versionen davon zu
-generieren. Zusätzlich können Benutzer und
-Gruppen verwaltet, sowie weitere
-Einstellungen vorgenommen werden.
-										</p>
+										<h3>FUNKTIONEN</h3>
+										<h2>Backend</h2>
+										<p>Das Backend stellt eine einfache und intuitive Oberfläche zur Verfügung um die Ansammlung von Einträgen praktisch zu Editieren und neue Versionen davon zu generieren. Zusätzlich können Benutzer und Gruppen verwaltet, sowie weitere Einstellungen vorgenommen werden.</p>
 									</div>
 									<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
 								</div>

@@ -10,7 +10,7 @@
 							<h1 v-scroll-reveal="{ delay: 200 }">TachiFox //</h1>
 							<p v-scroll-reveal="{ delay: 400 }">
 								TachiFox ist die praxisorientierte Lösung von Conzepta und Les Routiers Suisses zum Erfassen von Daten, welche der Arbeits- und Ruhezeit Verordnung ARV unterliegen. TachiFox vereinfacht die Auswertung der Daten nach
-								den gesetzlich vorgegebenen Richtwerten. Der Assistent informiert Sie sofort über mögliche Verstösse. Verwalten Sie sämtliche Fahrer- und Fahrzeugdaten an einem Ort: einlesen, bearbeiten und auswerten.
+								den gesetzlich vorgegebenen Richtwerten. Das System informiert Sie sofort über mögliche Verstösse. Verwalten Sie Fahrer- und Fahrzeugdaten an einem Ort: einlesen, bearbeiten und auswerten.
 							</p>
 							<br />
 							<nuxt-link :to="'/wir#philippe-luethi'"
@@ -69,29 +69,52 @@
 							<swiper-slide>
 								<div class="slider-grid">
 									<div class="slider-text">
-										<h3 v-scroll-reveal="{ delay: 0 }">Aktivitäten</h3>
-										<h2 v-scroll-reveal="{ delay: 200 }">Volle Kontrolle über die Arbeitstätigkeit</h2>
+										<h3 v-scroll-reveal="{ delay: 0 }">Alles im Blick</h3>
+										<h2 v-scroll-reveal="{ delay: 200 }">Geordnet</h2>
 										<p v-scroll-reveal="{ delay: 400 }">
-											Eine Aktivität bezieht sich auf eine Arbeitstätigkeit eines Fahrers wie z.B. Lenkzeit, Bereitschaftszeit etc. Aktivitäten werden chronologisch aufgelistet und können durch Benutzer eingesehen und
+											Das Einlesen der Fahrer- und Fahrzeugdaten erfolgt über den TachiFoxReader. Dieser übermittelt die Daten an den Server, wo diese weiterverarbeitet und dem entsprechenden Fahrer oder Fahrzeug zugeordnet
+											werden. Die Tachograph-Daten können auch direkt über den Browser hochgeladen werden.
 										</p>
 									</div>
-									<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
+									<div class="slider-image">
+										<video style="width: 100% !important" autoplay muted loop>
+											<source src="/01_Geordnet_Fahrer (1).mp4" type="video/mp4" />
+											Your browser does not support the video tag.
+										</video>
+									</div>
 								</div>
 							</swiper-slide>
 							<swiper-slide>
 								<div class="slider-grid">
 									<div class="slider-text">
-										<p>Slider Content</p>
+										<h3>Alles im Blick</h3>
+										<h2>Rückverfolgbar</h2>
+										<p>
+											Eine Aktivität bezieht sich auf eine Arbeitstätigkeit eines Fahrers wie etwa die Lenkzeit oder Bereitschaftszeit. Aktivitäten werden chronologisch aufgelistet und können durch Benutzer eingesehen und
+											bearbeitet werden.
+										</p>
 									</div>
-									<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
+									<div class="slider-image">
+										<video style="width: 100% !important" autoplay muted loop>
+											<source src="/02_Rueckverfolgbar_Aktivitaet (1).mp4" type="video/mp4" />
+											Your browser does not support the video tag.
+										</video>
+									</div>
 								</div>
 							</swiper-slide>
 							<swiper-slide>
 								<div class="slider-grid">
 									<div class="slider-text">
-										<p>Slider Content</p>
+										<h3>Alles im Blick</h3>
+										<h2>Übersichtlich</h2>
+										<p>Die Aktivitäten können als Rapport übersichtlich dargestellt werden. Rapporte enthalten grafische Elemente, Zusammenzüge von Fahrerdaten und die Ergebnisse der ARV Auswertung.</p>
 									</div>
-									<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
+									<div class="slider-image">
+										<video style="width: 100% !important" autoplay muted loop>
+											<source src="/03_Uebersichtlich_Rapport (1).mp4" type="video/mp4" />
+											Your browser does not support the video tag.
+										</video>
+									</div>
 								</div>
 							</swiper-slide>
 						</swiper>
@@ -139,8 +162,7 @@
 						<h2 v-scroll-reveal="{ delay: 0 }">Benutzerverwaltung</h2>
 						<p v-scroll-reveal="{ delay: 200 }">
 							In der Benutzerverwaltung werden den Benutzern ihre Rollen und Fahrer zugeordnet. Hier können hierarchische Stufen geschaffen werden, indem Benutzern verschiedene Rollen und Funktionen zugewiesen werden. In einem
-							Unternehmen können so etwa Disponenten und Fahrer erfasst werden. Fahrer haben nur Einblick in ihre eigenen Daten, während Disponenten die Daten aller Fahrer einsehen und verwalten können, nicht ganz, sie können nur Daten
-							von ihnen zugewiesenen Fahrern sehen.
+							Unternehmen können so etwa Disponenten und Fahrer erfasst werden. Fahrer haben nur Einblick in ihre eigenen Daten, während Disponenten die Daten aller ihnen zugeteilten Fahrer einsehen und verwalten können.
 						</p>
 						<br /><br />
 						<br />
@@ -251,7 +273,7 @@ export default {
 	height: 20rem
 	.slider-grid
 		display: grid
-		grid-template-columns: 1fr 1fr
+		grid-template-columns: 1fr 2fr
 		align-items: center
 		gap: 8rem
 		@include mobile

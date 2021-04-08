@@ -102,7 +102,7 @@
 		</div>
 		<div class="police">
 			<div class="container">
-				<h3 v-scroll-reveal="{ delay: 0 }" style="text-align: center">STAPO ZÜRICH / BERNER KAPO / ZÜRCHER KAPO / PRIVATE</h3>
+				<!-- <h3 v-scroll-reveal="{ delay: 0 }" style="text-align: center">STAPO ZÜRICH / BERNER KAPO / ZÜRCHER KAPO / PRIVATE</h3> -->
 				<h2 v-scroll-reveal="{ delay: 200 }" style="text-align: center; margin-bottom: 8rem">{{ content.acf.numbers.numbers_title }}</h2>
 				<div class="grid cols-5">
 					<div style="grid-column: span 3">
@@ -163,12 +163,13 @@
 						<h4>Integriert</h4>
 						<div>
 							<ul>
-								<li>Offline-fähig: Unkomplizierte Erfassung auch in Gebieten ohne Datenempfang</li>
-								<li>Camera: Machen Sie vor Ort Fotos zu einem Fall, die dank fälschungssicherer Signatur als Beweismittel dienen</li>
-								<li>Favorites: Beim manuellen Erfassen werden die wahrscheinlichsten Eingaben als Favoriten angezeigt</li>
-								<li>LexiConnect: Verbindung zum elektronischen Nachschlagewerk Lexica für gesetzliche</li>
-								<li>Regelwerke. Aus den Eingabefeldern können Sie direkt in die entsprechenden Assistenten des</li>
-								<li>Lexica navigieren und Tatbestände automatisch in den neuen Fall übernehmen</li>
+								<li>Offline-fähig: Unkomplizierte Erfassung auch in Gebieten ohne Datenempfang.</li>
+								<li>Camera: Machen Sie vor Ort Fotos zu einem Fall, die dank fälschungssicherer Signatur als Beweismittel dienen.</li>
+								<li>Favorites: Beim manuellen Erfassen werden die wahrscheinlichsten Eingaben als Favoriten angezeigt.</li>
+								<li>
+									LexiConnect: Verbindung zum elektronischen Nachschlagewerk Lexica für gesetzliche Regelwerke. Aus den Eingabefeldern können Sie direkt in die entsprechenden Assistenten des Lexica navigieren und Tatbestände
+									automatisch in den neuen Fall übernehmen.
+								</li>
 							</ul>
 						</div>
 					</div>

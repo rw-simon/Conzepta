@@ -95,17 +95,35 @@
 						<h3>{{ a.acf.datum }}</h3>
 						<h2>{{ a.title.rendered }}</h2>
 						<div v-html="a.content.rendered" />
-						<nuxt-link to="/archiv#news-257" class="more"><img style="width: 4rem" src="/arrows_bot.png" alt="" /></nuxt-link>
+						<div v-if="newsToggled == i" class="more-news">
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt consectetur expedita dolorum praesentium tenetur, deserunt ex tempora placeat doloremque maiores voluptates eveniet at. Culpa tenetur voluptate
+								voluptatibus molestias soluta necessitatibus.
+							</p>
+						</div>
+						<a
+							@click="
+								if (newsToggled == i) {
+									newsToggled = 0
+								} else {
+									newsToggled = i
+								}
+							"
+							class="more"
+							><img style="width: 3rem" src="/arrows_bot.png" alt=""
+						/></a>
 					</article>
 					<div class="lines">
 						<hr />
+						<hr class="long" />
+						<span>2021</span>
 						<hr />
 						<hr />
 						<hr />
 						<hr />
 						<hr />
 						<hr />
-						<hr />
+						<span>2021</span>
 						<hr />
 						<hr />
 						<hr />
@@ -138,6 +156,7 @@ export default {
 	data() {
 		return {
 			pos: 0,
+			newsToggled: 0,
 		}
 	},
 	methods: {
@@ -174,12 +193,20 @@ export default {
 	top: 0
 	@include mobile
 		display: none
+	span
+		position: absolute
+		left: 300%
+		top: 3rem
+		font-size: 3rem
+		font-weight: 300
 	hr
 		height: 1px
 		background: black
 		border: none
 		display: block
 		margin-bottom: 5rem
+		&.long
+			width: 200%
 .news-articles
 	// display: grid
 	// grid-template-columns: repeat(2, 1fr )

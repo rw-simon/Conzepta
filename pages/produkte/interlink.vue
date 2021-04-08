@@ -8,8 +8,8 @@
 						<h3 v-scroll-reveal="{ delay: 0 }">Kommunikatonssystem</h3>
 						<h1 v-scroll-reveal="{ delay: 200 }">InterLink //</h1>
 						<p v-scroll-reveal="{ delay: 400 }">
-							InterLink ist ein zuverlässiges Kommunikationssystem, das Ihre Mitarbeiter während der Arbeitszeit begleitet: Präferenzzeiten erfassen, Zutritte gewähren, Auftragszeiten buchen. Das heisst: Sie erhalten Betriebsdaten und
-							Sicherheit in Echtzeit, weltweit.
+							InterLink ist ein zuverlässiges Kommunikationssystem, das Ihre Mitarbeitenden während der Arbeitszeit begleitet: Präferenzzeiten erfassen, Zutritte gewähren, Auftragszeiten buchen. Sie erhalten alle Aktivitäten in
+							Echtzeit, weltweit.
 						</p>
 						<img v-scroll-reveal="{ delay: 600 }" style="width: 3rem" src="/icon_windows.png" alt="" />
 						<nuxt-link to="/wir#urs-blaser">
@@ -36,8 +36,8 @@
 								<h3 v-scroll-reveal="{ delay: 0 }">Unabhängig Vernetzen</h3>
 								<h2 v-scroll-reveal="{ delay: 200 }">Ein Protokoll für alle Hersteller</h2>
 								<p v-scroll-reveal="{ delay: 400 }">
-									InterLink setzt dort an, wo Hersteller aufhören: Es «übersetzt» die spezifischen Protokolle in ein Einheitliches. Die Kommunikation zwischen den Terminals und dem Managementsystem findet in Echtzeit statt. Dabei
-									spielt es keine Rolle, ob Ihr Betrieb nur ein einziges Terminal betreibt oder mehrere Tausend in einem Grosskonzern mit global verteilten Produktionsstätten verwaltet.
+									InterLink setzt dort an, wo Hersteller aufhören: Es «übersetzt» die spezifischen Protokolle in ein Einheitliches. Die Kommunikation zwischen den Zeit- und Zutrittsterminals und dem Managementsystem findet in
+									Echtzeit statt. Dabei spielt es keine Rolle, ob Ihr Betrieb nur ein einziges Terminal betreibt oder mehrere Tausend in einem Grosskonzern mit global verteilten Produktionsstätten verwaltet.
 								</p>
 							</div>
 						</div>
@@ -87,8 +87,9 @@
 							<h3 v-scroll-reveal="{ delay: 0 }">ARBEITSZEITEN AUSWERTEN</h3>
 							<h2 v-scroll-reveal="{ delay: 200 }">Kommunikation kann so viel mehr</h2>
 							<p v-scroll-reveal="{ delay: 400 }" class="intro">
-								Mit dem Betriebsdatenmanagement (noch anderes Wort suchen) einer Unternehmung werden Arbeitszeiten ausgewertet und Zutrittsberechtigungen der Mitarbeitenden festgelegt. Diese Vorgänge erfordern eine Kommunikation mit
-								Zeit- und Zutrittsterminals, die über die verschiedenen Standorte der Firma verteilt sind.
+								Bewegen sich Mitarbeitende mit einem Badge an ihrem Arbeitsort, passiert im Hintergrund vieles: Türen müssen, je nach Person, öffnen oder verschlossen bleiben. Arbeitszeiten werden erfasst. Viele Schnittstellen, die
+								ineinandergreifen. Und Daten, die Sie im Auge behalten wollen. InterLink bietet Ihnen eine reibungslose Kommunikation aller Zeit- und Zutrittsterminals, die über die verschiedenen Standorte Ihres Betriebs verteilt
+								sind.
 							</p>
 							<img
 								@click="toggleContentKomp"

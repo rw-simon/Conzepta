@@ -4,38 +4,46 @@
 			<div id="kontaktformular" style="padding-top: 8rem" class="container">
 				<h3>Direkt</h3>
 				<h1>Kontakt</h1>
-				<form action="" class="grid cols-2" style="gap: 2rem">
-					<input v-scroll-reveal="{ delay: 200 }" style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%" type="text" placeholder="Vorname" />
-					<input v-scroll-reveal="{ delay: 400 }" style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%" type="text" placeholder="Nachname" />
-					<input v-scroll-reveal="{ delay: 600 }" style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%" type="text" placeholder="Email" />
-					<select v-scroll-reveal="{ delay: 800 }" :style="[selectedAnliegen == '' ? { color: 'gray' } : { color: 'black' }]" name="anliegen" id="" v-model="selectedAnliegen">
-						<option value="" hidden>Anliegen</option>
-						<option value="all">Allgemein</option>
-						<option value="bew">Bewerbung</option>
-						<option value="int">InterLink</option>
-						<option value="lex">Lexica</option>
-						<option value="par">ParkingPad</option>
-						<option value="pp">Police Pad</option>
-						<option value="tac">TachiFox</option>
-						<option value="techprob">Technische Probleme</option>
-					</select>
-					<!-- <input
+				<div v-if="!sent">
+					<form action="" class="grid cols-2" style="gap: 2rem">
+						<input v-model="form.vorname" v-scroll-reveal="{ delay: 200 }" style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%" type="text" placeholder="Vorname" />
+						<input v-model="form.nachname" v-scroll-reveal="{ delay: 400 }" style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%" type="text" placeholder="Nachname" />
+						<input v-model="form.email" v-scroll-reveal="{ delay: 600 }" style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%" type="text" placeholder="Email" />
+						<select v-scroll-reveal="{ delay: 800 }" :style="[selectedAnliegen == '' ? { color: 'gray' } : { color: 'black' }]" name="anliegen" id="" v-model="selectedAnliegen">
+							<option value="" hidden>Anliegen</option>
+							<option value="all">Allgemein</option>
+							<option value="bew">Bewerbung</option>
+							<option value="int">InterLink</option>
+							<option value="lex">Lexica</option>
+							<option value="par">ParkingPad</option>
+							<option value="pp">Police Pad</option>
+							<option value="tac">TachiFox</option>
+							<option value="techprob">Technische Probleme</option>
+						</select>
+						<!-- <input
 					style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%"
 					type="text"
 					placeholder="Anliegen"
 				/> -->
-					<textarea v-scroll-reveal="{ delay: 1000 }" style="border: blue 1px solid; border-radius: 5px; width: 100%; grid-column: span 2" name="" id="" cols="30" rows="10" v-model="textArea"></textarea>
-				</form>
-				<div class="grid cols-3 small-gap" style="align-items: center; margin-top: 2rem">
-					<span style="padding: 0.5rem 2rem 0.5rem 0.5rem; border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%">
-						<input style="padding: 0; height: 1rem; width: 1rem; border: blue 1px solid; border-radius: 3px; margin-right: 10px; vertical-align: text-top" type="checkbox" name="" id="" />
-						Ich bin kein Roboter
-					</span>
-					<span style="padding: 0.5rem 2rem 0.5rem 0.5rem; border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%">
-						<input style="padding: 0; height: 1rem; width: 1rem; border: blue 1px solid; border-radius: 3px; margin-right: 10px; vertical-align: text-top" type="checkbox" name="" id="" />
-						Kopie an mich senden
-					</span>
-					<CButton text="Senden" />
+						<textarea v-scroll-reveal="{ delay: 1000 }" style="border: blue 1px solid; border-radius: 5px; width: 100%; grid-column: span 2" name="" id="" cols="30" rows="10" v-model="textArea"></textarea>
+					</form>
+					<div class="grid cols-3 small-gap" style="align-items: center; margin-top: 2rem">
+						<span style="padding: 0.5rem 2rem 0.5rem 0.5rem; border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%">
+							<input v-model="robot" style="padding: 0; height: 1rem; width: 1rem; border: blue 1px solid; border-radius: 3px; margin-right: 10px; vertical-align: text-top" type="checkbox" name="" id="" />
+							Ich bin kein Roboter
+						</span>
+						<span style="padding: 0.5rem 2rem 0.5rem 0.5rem; border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%">
+							<input style="padding: 0; height: 1rem; width: 1rem; border: blue 1px solid; border-radius: 3px; margin-right: 10px; vertical-align: text-top" type="checkbox" name="" id="" />
+							Kopie an mich senden
+						</span>
+						<CButton text="Senden" @click.native="send" />
+					</div>
+					<div v-if="error">
+						<p style="color: red">{{ error }}</p>
+					</div>
+				</div>
+				<div v-else>
+					<h4>Vielen Dank für Ihre Nachricht. Wir werden uns gerne bei Ihnen zurückmelden.</h4>
 				</div>
 			</div>
 		</div>
@@ -81,6 +89,14 @@ export default {
 		return {
 			textArea: query.text,
 			selectedAnliegen: query.anliegen,
+			sent: false,
+			robot: false,
+			form: {
+				vorname: '',
+				nachname: '',
+				email: '',
+			},
+			error: '',
 		}
 	},
 	data() {
@@ -93,6 +109,33 @@ export default {
 		// if (this.$route.params.text == 'huhu') {
 		// 	console.log('HUHU')
 		// }
+	},
+	methods: {
+		send() {
+			if (this.form.vorname) {
+				if (this.form.nachname) {
+					if (this.form.email) {
+						if (this.textArea) {
+							if (this.robot) {
+								if (this.selectedAnliegen) {
+									this.sent = true
+								}
+							} else {
+								this.error = 'Bitte wählen Sie die captcha-Checkbox an'
+							}
+						} else {
+							this.error = 'Bitte geben Sie eine Nachricht ein'
+						}
+					} else {
+						this.error = 'Bitte geben Sie eine gültige Email-Adresse an'
+					}
+				} else {
+					this.error = 'Bitte geben Sie einen gültigen Nachnamen an'
+				}
+			} else {
+				this.error = 'Bitte geben Sie einen gültigen Vornamen an'
+			}
+		},
 	},
 }
 </script>
