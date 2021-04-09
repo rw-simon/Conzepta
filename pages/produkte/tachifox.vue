@@ -174,6 +174,8 @@
 		</div>
 		<div class="daskanntachifox">
 			<div class="container">
+				<h3>All das kann Tachifox</h3>
+				<h2 style="margin-bottom: 4rem">Funktionen</h2>
 				<div class="list-two-columns">
 					<div class="column-1">
 						<article>
