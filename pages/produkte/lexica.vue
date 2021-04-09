@@ -55,12 +55,7 @@
 			<div class="container">
 				<div class="section grid cols-2">
 					<span>
-						<span class="easteregg">
-							<span class="hover"
-								><span></span>
-								<div class="easteregg-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, quibusdam id. Consequatur ea quibusdam error.</div>
-							</span>
-						</span>
+						<Poi x="10" text=" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ut, laudantium deleniti ea repellendus, officiis mollitia corporis vero amet maiores perspiciatis! Repellendus exercitationem alias sapiente nam accusamus, voluptas distinctio adipisci." />
 					</span>
 					<div class="mobilefix">
 						<h3 v-scroll-reveal="{ delay: 0 }">WEIT MEHR ALS EIN BUCH</h3>

@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div style="padding: 4rem 0 12rem; background: #e7e9ec" id="support">
+		<div style="padding: 4rem 0 4rem; background: #e7e9ec" id="support">
 			<div id="kontaktformular" style="padding-top: 8rem" class="container">
 				<h3>Direkt</h3>
 				<h1>Kontakt</h1>
@@ -46,28 +46,56 @@
 					<h4>Vielen Dank für Ihre Nachricht. Wir werden uns gerne bei Ihnen zurückmelden.</h4>
 				</div>
 			</div>
+			<div class="container" style="margin-top: 8rem">
+				<p>
+					Conzepta Team AG <br />
+					Allmendstrasse 54 <br />
+					3014 Bern
+				</p>
+				<p>
+					<span style="display: inline-block; width: 100px">Email:</span><a href="mailto:team@conzepta.ch">team@conzepta.ch</a><br />
+					<span style="display: inline-block; width: 100px">Telefon:</span><a href="tel:+413486020">+41 348 60 20</a>
+				</p>
+			</div>
 		</div>
 		<div class="container" style="margin-top: 8rem">
 			<div class="grid cols-2">
 				<div>
-					<p v-scroll-reveal="{ delay: 0 }">Conzepta Team<br />Allmendstrasse 54<br />3014 Bern</p>
-					<br />
-					<div class="grid cols-4" style="gap: 0">
-						<img v-scroll-reveal="{ delay: 200 }" style="grid-column: span 1; height: auto" src="/busicon.png" alt="" />
-						<div v-scroll-reveal="{ delay: 400 }" style="grid-column: span 3">
-							<p>B20<br />Richtung Bern Wankdorf</p>
-						</div>
+					<div>
+						<h3 v-scroll-reveal="{ delay: 0 }">In 10 Minuten</h3>
+						<h2 v-scroll-reveal="{ delay: 200 }">Mit dem ÖV</h2>
+						<br />
+						<p v-scroll-reveal="{ delay: 400 }">
+							<ul style="padding-left: 2rem;">
+								<li style="margin-bottom: 1rem;">Am Bahnhof Bern auf den grossen Platz</li>
+								<li style="margin-bottom: 1rem;">Bus Nr. 20 Richtung Bern Wankdorf</li>
+								<li style="margin-bottom: 1rem;">Aussteigen bei Wyleregg</li>
+								<li style="margin-bottom: 1rem;">Der Busrichtung nachlaufen</li>
+								<li style="margin-bottom: 1rem;">Bei der Kreuzung mit der Allmendstrasse rechts einbiegen.</li>
+							</ul>
+						</p>
 					</div>
 				</div>
 				<div>
-					<h3 v-scroll-reveal="{ delay: 0 }">Von der Autobahn</h3>
-					<h2 v-scroll-reveal="{ delay: 200 }">Mit dem Auto</h2>
-					<br />
-					<p v-scroll-reveal="{ delay: 400 }">Nehmen sie die Ausfahrt 37-BernWankdorf und biegen sie anschliessend in die Papiermühlestrasse ein. Beim ersten Kreisel rechts und dann nur noch dem</p>
-				</div>
+<div>
+						<h3 v-scroll-reveal="{ delay: 0 }">Auf schnellstem Weg</h3>
+						<h2 v-scroll-reveal="{ delay: 200 }">Mit dem Auto</h2>
+						<br />
+						<p v-scroll-reveal="{ delay: 400 }">
+							<ul style="padding-left: 2rem;">
+								<li style="margin-bottom: 1rem">Ausfahrt 37 – Bern Wankdorf</li>
+								<li style="margin-bottom: 1rem">Linke Fahrbahn benutzen</li>
+								<li style="margin-bottom: 1rem">Im (Untergrund-)Kreisel die erste Ausfahrt (rechts)</li>
+								<li style="margin-bottom: 1rem">Alles geradeaus</li>
+								<li style="margin-bottom: 1rem">Bei der coop Pronto Tankstelle über die Kreuzung fahren (Achtung Ampel)</li>
+								<li style="margin-bottom: 1rem">In die nächste Seitenstrasse Links einbiegen</li>
+							</ul>
+						</p>
+					</div>
+									</div>
 			</div>
 			<br />
-			<div>
+			<div style="margin-top: 4rem">
 				<iframe
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2505.72679096551!2d7.449444113907455!3d46.96051126040452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e39edef28aee1%3A0x62b5697e8242d481!2sAllmendstrasse%2054%2C%203014%20Bern!5e0!3m2!1sen!2sch!4v1611054249814!5m2!1sen!2sch"
 					width="960"

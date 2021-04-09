@@ -4,7 +4,7 @@
 			<div class="container">
 				<div class="grid cols-2 small-gap" style="align-items: end">
 					<div>
-						<h3>Unsere Vergangenheit</h3>
+						<h3>Aktuell</h3>
 						<h1>News //</h1>
 					</div>
 					<div class="filter br-2">

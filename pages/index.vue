@@ -123,7 +123,6 @@
 						<hr />
 						<hr />
 						<hr />
-						<span>2021</span>
 						<hr />
 						<hr />
 						<hr />

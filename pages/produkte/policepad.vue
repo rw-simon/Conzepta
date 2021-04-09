@@ -34,7 +34,7 @@
 						<h2 v-scroll-reveal="{ delay: 200 }">Genau so, wie es sein soll</h2>
 						<p v-scroll-reveal="{ delay: 400 }" class="intro">
 							Dank langjähriger Erfahrung und der engen Zusammenarbeit mit Polizeikorps überzeugt PolicePad durch seine Effizienz: es ist intiuitiv und einfach zu bedienen. Flexible Module ergänzen die Anwendung mit hilfreichen
-							Funktionen. Durch einfaches und schnelles Konfigurieren lässt sich die App weiter individualisieren
+							Funktionen. Durch einfaches und schnelles Konfigurieren lässt sich die App weiter individualisieren.
 						</p>
 						<img
 							@click="toggleContentKomp"
