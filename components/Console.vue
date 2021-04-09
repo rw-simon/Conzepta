@@ -7,7 +7,15 @@
 			<p class="title" @click="toggleConsole">Conzepta //</p>
 			<p>Wir verwenden Cookies um unsere Seite zu optimieren.</p>
 			<!-- <CButton isOutline isMono text="Team Viewer" /> -->
-			<CButton @click.native="cookieText = false" isOutline isMono text="Zustimmen" />
+			<CButton
+				@click.native="
+					cookieText = false
+					setCookie()
+				"
+				isOutline
+				isMono
+				text="Zustimmen"
+			/>
 			<CButton isMono text="Info" />
 		</div>
 		<div class="content" v-else>
@@ -20,11 +28,12 @@
 </template>
 
 <script>
+import Cookie from 'js-cookie'
 export default {
 	name: 'Console',
 	data() {
 		return {
-			cookieText: true,
+			cookieText: false,
 			title: '',
 			isActive: true,
 			toggleSymbol: 'X',
@@ -35,12 +44,24 @@ export default {
 			this.isActive = !this.isActive
 			this.toggleSymbol = this.isActive ? 'X' : '<'
 		},
+		setCookie() {
+			this.$store.dispatch('setCookie')
+		},
+	},
+	mounted() {
+		if (Cookie.get('accepted') == 'true') {
+			console.log('true')
+			this.cookieText = false
+		} else {
+			this.cookieText = true
+		}
 	},
 }
 </script>
 
 <style lang="sass" scoped>
 #console
+	box-shadow: 0 10px 25px -10px rgba(0,0,0,0.3)
 	padding: 1rem
 	position: fixed
 	width: 32rem

@@ -172,6 +172,51 @@
 				</div>
 			</div>
 		</div>
+		<div class="daskanntachifox">
+			<div class="container">
+				<div class="list-two-columns">
+					<div class="column-1">
+						<article>
+							<img src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" class="list-icon" alt="" />
+							<h4>Einlesen</h4>
+							<p>Tachograph Karten und Dateien lassen sich für Fahrer und Farzeug importieren.</p>
+						</article>
+						<article>
+							<img src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" class="list-icon" alt="" />
+							<h4>Chauffeurverordnung</h4>
+							<p>ARV Daten können ausgewertet werden.</p>
+						</article>
+						<article>
+							<img src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" class="list-icon" alt="" />
+							<h4>Fahrtenkontrolle</h4>
+							<p>Daten können für eine Betriebskontrolle exportiert werden.</p>
+						</article>
+						<article>
+							<img src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" class="list-icon" alt="" />
+							<h4>Verwaltung</h4>
+							<p>Aktivitäten, Benutzer und Fahrerkarten lassen sich einfach verwalten.</p>
+						</article>
+					</div>
+					<div class="column-2">
+						<article>
+							<img src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" class="list-icon" alt="" />
+							<h4>Nachverfolgung</h4>
+							<p>Änderungen sind nachverfolgbar.</p>
+						</article>
+						<article>
+							<img src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" class="list-icon" alt="" />
+							<h4>Sondertage</h4>
+							<p>Ein Kalender mit Sondertagen kann aufgerufen werden.</p>
+						</article>
+						<article>
+							<img src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" class="list-icon" alt="" />
+							<h4>Rapporte</h4>
+							<p>Fahrer- und Fahrzeugrapporte lassen sich einfach generieren, ob wöchentlich oder monatlich.</p>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
 		<!-- <div class="anwender">
 			<div class="container">
 				<div class="section">
@@ -214,6 +259,29 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.list-two-columns
+	display: grid
+	grid-template-columns: 1fr 1fr
+	gap: 8rem
+	article
+		margin-bottom: 2rem
+		position: relative
+		.list-icon
+			position: absolute
+			left: -4.5rem
+			top: .5rem
+			max-width: 3rem
+			height: 3rem
+			@include mobile
+				left: -3rem
+				max-width: 2rem
+				height: 2rem
+	@include mobile
+		grid-template-columns: 1fr
+		gap: 0
+		padding-left: 3rem
+	@include mobile-landscape
+		gap: 4rem
 .person
 	width: 16rem
 	align-items: center

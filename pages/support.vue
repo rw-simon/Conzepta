@@ -19,8 +19,16 @@
 							<h3>Kommen Sie vorbei</h3>
 							<h2>Öffnungszeiten</h2>
 							<p>
-								<span style="display: inline-block; width: 200px">Montag bis Freitag:</span><a href="mailto:team@conzepta.ch">08:00 - 12:00 Uhr / 13:00 - 17:00 Uhr</a><br />
-								<span style="display: inline-block; width: 200px">In Notfällen:</span><a href="tel:+41314444444">+41 (0)31 444 44 44</a>
+								<span style="display: inline-block; width: 200px"
+									>Montag bis <br />
+									Freitag:</span
+								><span style="display: inline-block"
+									><a href="mailto:team@conzepta.ch"
+										>08:00 - 12:00 Uhr <br />
+										13:00 - 17:00 Uhr</a
+									></span
+								><br />
+								<span style="margin-top: 12px; display: inline-block; width: 200px">In Notfällen:</span><span><a href="tel:+41314444444">+41 (0)31 444 44 44</a></span>
 							</p>
 						</div>
 					</div>

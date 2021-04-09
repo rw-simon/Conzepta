@@ -1,3 +1,4 @@
+import Cookie from 'js-cookie'
 import axios from 'axios'
 export const state = () => ({
 	pages: {},
@@ -53,11 +54,12 @@ export const mutations = {
 }
 
 export const actions = {
+	setCookie() {
+		Cookie.set('accepted', 'true')
+	},
 	async nuxtServerInit({ commit }) {
 		const pageRequest = await axios.get('https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/pages?per_page=100')
-		const productRequest = await axios.get(
-			'https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/products?per_page=100&orderby=menu_order&order=asc'
-		)
+		const productRequest = await axios.get('https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/products?per_page=100&orderby=menu_order&order=asc')
 		const productCategoryRequest = await axios.get('https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/product_category?per_page=100')
 		const newsRequest = await axios.get('https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/news?per_page=100')
 		const platformRequest = await axios.get('https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/platform?per_page=100')

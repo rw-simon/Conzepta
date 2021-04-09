@@ -55,7 +55,7 @@
 			<div class="container">
 				<div class="section grid cols-2">
 					<span>
-						<Poi x="10" text=" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ut, laudantium deleniti ea repellendus, officiis mollitia corporis vero amet maiores perspiciatis! Repellendus exercitationem alias sapiente nam accusamus, voluptas distinctio adipisci." />
+						<!-- <Poi x="10" text=" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ut, laudantium deleniti ea repellendus, officiis mollitia corporis vero amet maiores perspiciatis! Repellendus exercitationem alias sapiente nam accusamus, voluptas distinctio adipisci." /> -->
 					</span>
 					<div class="mobilefix">
 						<h3 v-scroll-reveal="{ delay: 0 }">WEIT MEHR ALS EIN BUCH</h3>
