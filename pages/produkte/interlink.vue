@@ -50,11 +50,11 @@
 					<h2 v-scroll-reveal="{ delay: 200 }" style="text-align: center; margin-bottom: 8rem">InterLink kommuniziert mit Terminals verschiedener Hersteller</h2>
 					<div class="grid cols-5">
 						<div style="grid-column: span 3">
-							<h1 v-scroll-reveal="{ delay: 0 }" style="margin-bottom: 0; line-height: 1em">20</h1>
+							<h1 v-scroll-reveal="{ delay: 0 }" style="margin-bottom: 0; line-height: 1em"><RollingNumber :number="20" /></h1>
 							<h3 v-scroll-reveal="{ delay: 100 }" style="margin-bottom: 2rem">Jahre</h3>
-							<h1 v-scroll-reveal="{ delay: 200 }" style="margin-bottom: 0; line-height: 1em">30'000</h1>
+							<h1 v-scroll-reveal="{ delay: 200 }" style="margin-bottom: 0; line-height: 1em"><RollingNumber :number="30000" /></h1>
 							<h3 v-scroll-reveal="{ delay: 300 }" style="margin-bottom: 2rem">Terminals</h3>
-							<h1 v-scroll-reveal="{ delay: 400 }" style="margin-bottom: 0; line-height: 1em">3'000'000</h1>
+							<h1 v-scroll-reveal="{ delay: 400 }" style="margin-bottom: 0; line-height: 1em"><RollingNumber :number="3000000" /></h1>
 							<h3 v-scroll-reveal="{ delay: 500 }" style="margin-bottom: 2rem">Buchungen pro Tag</h3>
 						</div>
 						<div style="grid-column: span 2">

@@ -107,15 +107,18 @@
 				<div class="grid cols-5">
 					<div style="grid-column: span 3">
 						<h1 v-scroll-reveal="{ delay: 0 }" style="font-size: 4.5rem; margin-bottom: 0; line-height: 1em">
-							{{ content.acf.numbers.numbers_actual.numbers_years }}
+							<RollingNumber :number="30" />
+							<!-- {{ content.acf.numbers.numbers_actual.numbers_years }} -->
 						</h1>
 						<h3 v-scroll-reveal="{ delay: 100 }" style="margin-bottom: 2rem">Jahre</h3>
 						<h1 v-scroll-reveal="{ delay: 200 }" style="font-size: 4.5rem; margin-bottom: 0; line-height: 1em">
-							{{ content.acf.numbers.numbers_actual.numbers_users }}
+							<RollingNumber :number="3000" />
+							<!-- {{ content.acf.numbers.numbers_actual.numbers_users }} -->
 						</h1>
 						<h3 v-scroll-reveal="{ delay: 300 }" style="margin-bottom: 2rem">Nutzer</h3>
 						<h1 v-scroll-reveal="{ delay: 400 }" style="font-size: 4.5rem; margin-bottom: 0; line-height: 1em">
-							{{ content.acf.numbers.numbers_actual.numbers_cases }}
+							<RollingNumber :number="1000000" />
+							<!-- {{ content.acf.numbers.numbers_actual.numbers_cases }} -->
 						</h1>
 						<h3 v-scroll-reveal="{ delay: 500 }" style="margin-bottom: 2rem">Fälle im Jahr</h3>
 					</div>

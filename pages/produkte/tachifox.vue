@@ -327,6 +327,7 @@ export default {
 	background-repeat: no-repeat
 	background-size: cover
 	padding: 8rem 0
+	margin-top: -20rem
 	background-size: contain
 	@include mobile
 		background-position-y: top
@@ -334,7 +335,9 @@ export default {
 		padding-top: 8rem
 .background-diagonal-3
 	background-image: url('/bgdiag3.svg')
-	padding: 8rem 0
+	padding: 25rem 0
+	margin-top: -20rem
+	z-index: 0
 	background-position: center
 	background-repeat: no-repeat
 	@include mobile
@@ -372,6 +375,8 @@ export default {
 	margin-top: 24rem
 	background-image: linear-gradient(90deg, $c-gray-light, white)
 	padding-bottom: 4rem
+	z-index: 10
+	position: relative
 	.tachiimg2
 		transform: translateY(-50%)
 		margin-bottom: -20%
