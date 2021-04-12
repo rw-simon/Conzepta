@@ -86,7 +86,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="news" id="news">
+		<!-- <div class="news" id="news">
 			<div class="container">
 				<h1>News</h1>
 				<br />
@@ -94,14 +94,14 @@
 					<article v-scroll-reveal="{ delay: 200 }" class="news-article" v-for="(a, i) in news" :key="i">
 						<h3>{{ a.acf.datum }}</h3>
 						<h2>{{ a.title.rendered }}</h2>
-						<div v-html="a.content.rendered" />
-						<div v-if="newsToggled == i" class="more-news">
+						<div v-html="a.content.rendered" /> -->
+		<!-- <div v-if="newsToggled == i" class="more-news">
 							<p>
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt consectetur expedita dolorum praesentium tenetur, deserunt ex tempora placeat doloremque maiores voluptates eveniet at. Culpa tenetur voluptate
 								voluptatibus molestias soluta necessitatibus.
 							</p>
-						</div>
-						<a
+						</div> -->
+		<!-- <a
 							@click="
 								if (newsToggled == i) {
 									newsToggled = 0
@@ -111,8 +111,8 @@
 							"
 							class="more"
 							><img style="width: 3rem" src="/arrows_bot.png" alt=""
-						/></a>
-					</article>
+						/></a> -->
+		<!-- </article>
 					<div class="lines">
 						<hr />
 						<hr class="long" />
@@ -122,11 +122,88 @@
 						<hr />
 						<hr />
 						<hr />
+						<span>2020</span>
 						<hr />
 						<hr />
 						<hr />
 						<hr />
 						<nuxt-link to="archiv"><img src="/arrows_bot.png" alt="" /></nuxt-link>
+					</div>
+				</div>
+			</div>
+		</div> -->
+		<div class="news" id="news">
+			<div class="container">
+				<h1>News</h1>
+				<div class="news-grid">
+					<div>
+						<article style="margin-top: 4rem">
+							<h3>01.01.2021</h3>
+							<nuxt-link to="/archiv"><h2>TachiFox3 – Ein Jahr danach</h2></nuxt-link>
+							<p>
+								Im Januar 2020 konnten wir in Zusammenarbeit mit «Les Routiers Suisses» die neuste Version von TachiFox online schalten. Seither ist die Anwendung ganz einfach im Web erreichbar, nicht wie zuvor als reine
+								Windows-Software. Wie hat das den Transport-Alltag erleichtert? Wir haben uns bei TachiFox-Nutzern umgehört. Hier geht’s zum Artikel.
+							</p>
+						</article>
+						<article style="margin-top: 24rem">
+							<h3>01.04.2019</h3>
+							<nuxt-link to="/archiv"><h2>Sehen wir uns im Wankdorf</h2></nuxt-link>
+							<p>
+								Die Conzepta ist Sponsor des diesjährigen Schweizer-Polizei-Informatik-Kongress SPIK. Wir stellen unsere Polizei-Produkte am SPIK vor. Besuchen Sie uns an unserem Messestand am 4. April 2019 im Stade de Suisse in Bern.
+							</p>
+						</article>
+					</div>
+					<div>
+						<div class="line">
+							<hr />
+						</div>
+						<div class="line">
+							<hr />
+						</div>
+						<div class="line">
+							<span style="top: -1.75rem; left: 15rem">2021</span>
+							<hr style="width: 250%" />
+						</div>
+						<div class="line">
+							<hr />
+						</div>
+						<div class="line">
+							<hr />
+						</div>
+						<div class="line">
+							<hr />
+						</div>
+						<div class="line">
+							<span style="top: -1.75rem; right: 15rem; text-align: right">2020</span>
+							<hr style="width: 250%; margin-left: -150%" />
+						</div>
+						<div class="line">
+							<hr />
+						</div>
+						<div class="line">
+							<hr />
+						</div>
+						<div class="line">
+							<hr />
+						</div>
+						<div class="line">
+							<span style="top: -1.75rem; left: 15rem">2019</span>
+							<hr style="width: 250%" />
+						</div>
+						<div class="line">
+							<hr />
+						</div>
+						<nuxt-link to="archiv"><img src="/arrows_bot.png" alt="" /></nuxt-link>
+					</div>
+					<div>
+						<article style="margin-top: 24rem">
+							<h3>16.10.2020</h3>
+							<nuxt-link to="/archiv"><h2>Hallo, neue Webseite</h2></nuxt-link>
+							<p>
+								Nach mehreren Monaten Arbeit ist geboren: Unsere neue Präsenz im World Wide Web. Für einmal haben wir übrigens etwas nicht selber programmiert: Wir durften mit den Profis von Formfeld zusammenarbeiten – und freuen uns
+								sehr über das, was entstanden ist. Und natürlich freuen wir uns über jedes Feedback von Ihnen.
+							</p>
+						</article>
 					</div>
 				</div>
 			</div>
@@ -184,20 +261,28 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.news-grid
+	display: grid
+	position: relative
+	gap: 4rem
+	grid-template-columns: 1fr 5rem 1fr
+	article
+		text-align: left
+	.line
+		position: relative
+		margin: 5rem 0
+		span
+			position: absolute
+			font-size: 3rem
+			top: 0
 .lines
-	position: absolute
+	// position: absolute
 	width: 4rem
 	left: 50%
 	transform: translateX(-50%)
 	top: 0
 	@include mobile
 		display: none
-	span
-		position: absolute
-		left: 300%
-		top: 3rem
-		font-size: 3rem
-		font-weight: 300
 	hr
 		height: 1px
 		background: black
@@ -325,7 +410,7 @@ img
 					top: .5rem !important
 .news
 	text-align: center
-	margin-top: -10rem
+	// margin-top: -10rem
 	padding-top: 10rem
 	margin-bottom: 10rem
 	@include mobile

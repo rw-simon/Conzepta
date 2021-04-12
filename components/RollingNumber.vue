@@ -33,7 +33,7 @@ export default {
 		},
 		countUp() {
 			this.i = window.setInterval(() => {
-				let change = this.number / this.interval
+				let change = this.number / this.interval / 2
 				if (this.displayNumber != this.number) {
 					// var change = (this.number - this.displayNumber) / 100
 					change = change >= 0 ? Math.ceil(change) : Math.floor(change)
