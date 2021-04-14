@@ -6,11 +6,12 @@
 					<p @click="isOpen = 'support'">Support</p>
 					<div :style="[isOpen == 'support' ? { 'max-height': '6rem' } : { 'max-height': 0 }]">
 						<p>Nehmen Sie mit uns Kontakt auf</p>
-						<nuxt-link to="/support"><CButton isOutline isMono text="Kontaktformular" /></nuxt-link>
+						<nuxt-link :to="{ path: '/support', hash: '#support' }"><CButton isOutline isMono text="Kontaktformular" /></nuxt-link>
 					</div>
 				</section>
 				<section class="wir">
-					<p @click="isOpen = 'wir'">Wir</p>
+					<nuxt-link style="margin: 0; border: 0; padding: 0" v-if="isOpen == 'wir'" to="/wir">Wir</nuxt-link>
+					<p v-else @click="isOpen = 'wir'">Wir</p>
 					<div :style="[isOpen == 'wir' ? { 'max-height': '16rem' } : { 'max-height': 0 }]">
 						<nuxt-link to="/portfolio">Portfolio</nuxt-link>
 						<nuxt-link to="/#news">News</nuxt-link>
@@ -22,7 +23,8 @@
 					</div>
 				</section>
 				<section class="produkte">
-					<p @click="isOpen = 'produkte'">Produkte</p>
+					<nuxt-link style="margin: 0; border: 0; padding: 0" v-if="isOpen == 'produkte'" to="/produkte">Produkte</nuxt-link>
+					<p v-else @click="isOpen = 'produkte'">Produkte</p>
 					<div :style="[isOpen == 'produkte' ? { 'max-height': '11rem' } : { 'max-height': 0 }]">
 						<nuxt-link to="/produkte/policepad">PolicePad</nuxt-link>
 						<nuxt-link to="/produkte/lexica">Lexica</nuxt-link>

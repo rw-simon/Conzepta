@@ -54,6 +54,8 @@ export default {
 	.image
 		grid-column: 2
 		grid-row: 1
+		@include mobile
+			transform: scale(0.7)
 	.desc
 		grid-row: 1
 		grid-column: 1

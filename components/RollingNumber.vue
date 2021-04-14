@@ -53,4 +53,6 @@ export default {
 <style lang="sass" scoped>
 span
 	font-size: 5rem
+	@include mobile
+		font-size: 3rem
 </style>

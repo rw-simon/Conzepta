@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div style="padding: 12rem 0; background: #e7e9ec" id="support">
+		<div style="background: #e7e9ec" id="support">
 			<div class="container">
 				<div class="grid cols-2" style="row-gap: 2rem">
 					<div>
@@ -56,6 +56,10 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+#support
+	padding: 12rem 0
+	@include mobile
+		padding: 4rem 0
 .tvb
 	@include mobile
 		a

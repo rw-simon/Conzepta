@@ -347,6 +347,7 @@ img
 		height: auto
 		margin-top: auto
 		padding-bottom: 4rem
+		padding-top: 6rem
 	.container
 		margin-top: 0
 		margin-bottom: 0
@@ -383,6 +384,7 @@ img
 		margin-bottom: 8rem
 		@include mobile
 			margin-bottom: 4rem
+			font-size: 2rem
 .support
 	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2021/01/home_background_support-copy.png')
 	background-position: center left
@@ -400,6 +402,8 @@ img
 			margin-top: 0rem
 		.list
 			margin-top: 6rem
+			@include mobile
+				padding-left: 4rem
 			article
 				position: relative
 				img
@@ -414,6 +418,7 @@ img
 	padding-top: 10rem
 	margin-bottom: 10rem
 	@include mobile
+		display: none
 		margin-top: 0
 		padding-top: 0
 		h1

@@ -371,12 +371,17 @@ export default {
 		background-image: url('/bgtachi.png')
 		background-size: cover
 		background-position: bottom center
+		@include mobile
+			background-image: none
+			padding-top: 0
 .background2
 	margin-top: 24rem
 	background-image: linear-gradient(90deg, $c-gray-light, white)
 	padding-bottom: 4rem
 	z-index: 10
 	position: relative
+	@include mobile
+		margin-top: 12rem
 	.tachiimg2
 		transform: translateY(-50%)
 		margin-bottom: -20%

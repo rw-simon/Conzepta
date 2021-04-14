@@ -85,6 +85,8 @@ export default {
 .header
 	background-image: linear-gradient(90deg, white, $c-gray-light)
 	padding: 10rem 0 15rem
+	@include mobile
+		padding: 4rem 0
 .second
 	padding: 5rem 0
 	&:nth-child(2n +1)

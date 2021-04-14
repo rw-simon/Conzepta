@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Header />
-		<Nuxt />
+		<Nuxt class="nuxt" />
 		<Console />
 		<Footer id="footer" />
 		<FooterMobile id="footer-mobile" />
@@ -17,6 +17,9 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.nuxt
+	@include mobile
+		padding-top: 4rem
 #footer-mobile
 	display: none
 	@include mobile

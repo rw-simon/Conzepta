@@ -104,7 +104,7 @@
 			<div class="container">
 				<!-- <h3 v-scroll-reveal="{ delay: 0 }" style="text-align: center">STAPO ZÜRICH / BERNER KAPO / ZÜRCHER KAPO / PRIVATE</h3> -->
 				<h2 v-scroll-reveal="{ delay: 200 }" style="text-align: center; margin-bottom: 8rem">{{ content.acf.numbers.numbers_title }}</h2>
-				<div class="grid cols-5">
+				<div class="grid cols-5 small-gap">
 					<div style="grid-column: span 3">
 						<h1 v-scroll-reveal="{ delay: 0 }" style="font-size: 4.5rem; margin-bottom: 0; line-height: 1em">
 							<RollingNumber :number="30" />
@@ -298,6 +298,7 @@ export default {
 	background-position: center center
 	@include mobile
 		margin-top: 2rem
+		background: none
 	h3
 		color: black
 	p
@@ -369,6 +370,8 @@ img
 	.swiper-container
 		height: 100%
 		width: 140%
+		@include mobile
+			width: 100%
 	.swiper-slide
 		height: 28rem
 .backend

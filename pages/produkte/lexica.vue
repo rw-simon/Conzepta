@@ -13,7 +13,7 @@
 							</p>
 							<div class="grid"></div>
 						</div>
-						<div style="align-self: end; padding-left: 5rem">
+						<div class="produktemanager" style="align-self: end;">
 							<nuxt-link :to="'/wir#philippe-luethi'"
 								><div class="grid cols-2 small-gap force" style="width: 16rem; align-items: center; margin-top: 2rem">
 									<div>
@@ -195,6 +195,10 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.produktmanager
+	 padding-left: 5rem
+	 @include mobile
+	 	padding-left: 0
 .mobilefix
 	@include mobile
 		padding-top: 5rem
@@ -263,6 +267,8 @@ export default {
 	.swiper-container
 		height: 100%
 		width: 140%
+		@include mobile
+			width: 100%
 	.swiper-slide
 		height: 28rem
 .swiper-pagination
@@ -278,6 +284,10 @@ export default {
 	@include mobile
 		background-position-y: top
 		padding-bottom: 0
+		background-size: 170%
+		padding-top: 14rem
+		ul
+			padding-left: 2rem
 .bggradient
 	background-image: linear-gradient(90deg, white, $c-gray-light)
 .gesetze
@@ -286,8 +296,14 @@ export default {
 	background-repeat: no-repeat
 	background-position: right center
 	background-image: url('/bglexi2.png')
+	.section
+		@include mobile
+			padding-top: 14rem !important
 	@include mobile
 		padding-top: 2rem
+		background-position: top right
+		background-size: 150%
+		margin-top: -5rem
 .banner
 	padding: 12rem 0
 	background-size: cover
@@ -295,5 +311,6 @@ export default {
 	background-position: center center
 	background-image: url('/lexibg.png')
 	@include mobile
-		padding-top: 2rem
+		padding: 2rem 0
+		background: none
 </style>

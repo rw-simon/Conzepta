@@ -157,6 +157,12 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.anwender
+	.grid
+		@include mobile
+			justify-items: center
+			img
+				max-width: 180px !important
 .datenblatt
 	margin-top: 8rem
 	@include mobile
