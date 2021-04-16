@@ -5,8 +5,6 @@
 				class="co"
 				:style="{
 					backgroundImage: 'url(' + content.text_2_columns_background.url + ')',
-					backgroundSize: 'contain',
-					backgroundRepeat: 'no-repeat',
 				}"
 			>
 				<div class="text-two-columns container">
@@ -38,10 +36,13 @@ export default {
 
 <style lang="sass" scoped>
 .co
+	background-size: contain
+	background-repeat: no-repeat
 	height: 50vw
 	@include mobile
 		height: auto
-		padding-top: 20vh
+		padding-top: 36vh
+		background-size: 150%
 .text-two-columns
 	display: grid
 	grid-template-columns: 1fr 1fr

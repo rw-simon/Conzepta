@@ -248,11 +248,16 @@ export default {
 				spaceBetween: 48,
 				loop: false,
 				mousewheel: true,
-				direction: 'vertical',
+				direction: 'horizontal',
 				pagination: {
 					el: '.swiper-pagination',
 					type: 'bullets',
 					clickable: true,
+				},
+				breakpoints: {
+					960: {
+						direction: 'vertical',
+					},
 				},
 			},
 		}
@@ -332,7 +337,9 @@ export default {
 	@include mobile
 		background-position-y: top
 		padding: 0
-		padding-top: 8rem
+		padding-top: 14rem
+		margin-top: 0
+		background-size: 150%
 .background-diagonal-3
 	background-image: url('/bgdiag3.svg')
 	padding: 25rem 0
@@ -342,6 +349,7 @@ export default {
 	background-repeat: no-repeat
 	@include mobile
 		padding: 0
+		margin-top: 0
 .aktivitaten
 	height: 20rem
 	.slider-grid
@@ -361,6 +369,12 @@ export default {
 	top: 50%
 	transform: translateY(-50%)
 	left: -8rem
+	@include mobile
+		transform: rotate(-90deg)
+		left: 50%
+		right: 50%
+		top: auto
+		bottom: -2rem
 .banner
 	background-image: linear-gradient(90deg, white, $c-gray-light)
 	height: 80vh

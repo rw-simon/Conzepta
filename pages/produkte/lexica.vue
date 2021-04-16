@@ -73,6 +73,11 @@
 				</div>
 			</div>
 		</div>
+		<div class="lexiconnect">
+			<div class="container">
+				<img src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/09/06_LexiConnect.png" style="height: auto" alt="">
+			</div>
+		</div>
 		<div class="bgdiag">
 			<div class="funktionsumfang">
 				<div class="container" style="margin-top: 8rem; height: 100%; position: relative">
@@ -179,15 +184,20 @@ export default {
 			swiperOption: {
 				slidesPerView: 1,
 				spaceBetween: 96,
-				loop: true,
+				loop: false,
 				mousewheel: true,
-				direction: 'vertical',
+				direction: 'horizontal',
 				simulateTouch: false,
 				speed: 400,
 				pagination: {
 					el: '.swiper-pagination',
 					type: 'bullets',
 					clickable: true,
+				},
+				breakpoints: {
+					960: {
+						direction: 'vertical',
+					},
 				},
 			},
 		}
@@ -215,7 +225,7 @@ export default {
 .padfix
 	padding: 12rem 0
 	@include mobile
-		padding: 4rem 0
+		padding: 0
 .easteregg
 	@include mobile
 		display: none

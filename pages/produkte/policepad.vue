@@ -78,7 +78,7 @@
 						<swiper class="swiper" :options="swiperOption">
 							<swiper-slide v-for="(slide, i) in content.acf.policepad_slider" :key="i">
 								<div class="slider-grid">
-									<div v-html="slide.slide_text" />
+									<div class="slider-content" v-html="slide.slide_text" />
 									<div class="slider-image" v-if="slide.slide_image"><img :src="slide.slide_image" alt="" /></div>
 								</div>
 							</swiper-slide>
@@ -226,11 +226,16 @@ export default {
 				spaceBetween: 48,
 				loop: false,
 				mousewheel: true,
-				direction: 'vertical',
+				direction: 'horizontal',
 				pagination: {
 					el: '.swiper-pagination',
 					type: 'bullets',
 					clickable: true,
+				},
+				breakpoints: {
+					960: {
+						direction: 'vertical',
+					},
 				},
 			},
 		}
@@ -299,6 +304,8 @@ export default {
 	@include mobile
 		margin-top: 2rem
 		background: none
+		min-height: auto
+		padding: 2rem 0 4rem
 	h3
 		color: black
 	p
@@ -321,6 +328,7 @@ img
 	background-position: center center
 	@include mobile
 		min-height: 50vh
+		background: none
 	.container
 		@include mobile
 			width: auto
@@ -357,7 +365,7 @@ img
 	height: 28rem
 	@include mobile
 		margin-bottom: 0
-		height: 20rem
+		height: 40rem
 	.slider-grid
 		display: grid
 		grid-template-columns: 1fr 2fr
@@ -365,8 +373,13 @@ img
 		align-items: center
 		@include mobile
 			grid-template-columns: 1fr
+			grid-template-rows: auto
+			gap: 1rem
+			align-items: start
+			.slider-content
+				grid-row: 2
 			.slider-image
-				display: none
+				grid-row: 1
 	.swiper-container
 		height: 100%
 		width: 140%

@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div style="padding: 12rem 0" id="offene-stellen">
+		<div id="offene-stellen">
 			<div class="container">
 				<div class="grid cols-2">
 					<div>
@@ -93,6 +93,10 @@ export default {}
 </script>
 
 <style lang="sass" scoped>
+#offene-stellen
+	padding: 12rem 0
+	@include mobile
+		padding: 4rem 0
 .bewbut
 	grid-column: 2
 	@include mobile

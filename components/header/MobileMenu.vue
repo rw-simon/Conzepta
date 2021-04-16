@@ -30,8 +30,8 @@
 				<li class="menu-item">
 					<a @click="opened = 'support'">Kontakt</a>
 					<ul class="submenu" v-if="opened == 'support'">
-						<li><nuxt-link :to="{ path: '/kontakt' }">Kontaktformular</nuxt-link></li>
-						<li><nuxt-link :to="{ path: '/support' }">Support</nuxt-link></li>
+						<li><nuxt-link :to="{ path: '/kontakt', hash: '#kontakt' }">Kontaktformular</nuxt-link></li>
+						<li><nuxt-link :to="{ path: '/support', hash: '#support' }">Support</nuxt-link></li>
 					</ul>
 				</li>
 				<li class="menu-item">

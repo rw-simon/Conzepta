@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div style="padding: 4rem 0 4rem; background: #e7e9ec" id="support">
-			<div id="kontaktformular" style="padding-top: 8rem" class="container">
+			<div id="kontaktformular" class="container">
 				<h3>Direkt</h3>
 				<h1>Kontakt</h1>
 				<div v-if="!sent">
@@ -169,6 +169,10 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+#kontaktformular
+	padding-top: 8rem
+	@include mobile
+		padding-top: 0
 .tvb
 	@include mobile
 		a
