@@ -102,8 +102,8 @@ export default {
 		p.title
 			margin-bottom: 4rem
 			transition: margin-bottom $anim-smooth
-		span.toggle-console
-			display: none
+			@include mobile
+				padding-left: 2.5rem
 		&.active
 			right: 0
 			bottom: 0
