@@ -383,7 +383,9 @@ img
 	height: 60rem
 	@include mobile
 		height: 25rem
-		background: none
+		background-position: top
+		padding-top: 10rem
+		margin-top: -5rem
 	.text
 		width: 40%
 		@include mobile

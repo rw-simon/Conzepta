@@ -323,7 +323,7 @@ img
 	position: relative
 	text-align: center
 	@include mobile
-		height: 60vh
+		height: calc(100vh - 10rem)
 		padding-top: 3rem
 	h1
 		color: white

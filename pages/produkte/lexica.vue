@@ -14,16 +14,17 @@
 							<div class="grid"></div>
 						</div>
 						<div class="produktemanager" style="align-self: end;">
-							<nuxt-link :to="'/wir#philippe-luethi'"
-								><div class="grid cols-2 small-gap force" style="width: 16rem; align-items: center; margin-top: 2rem">
+							<nuxt-link to="/wir#philippe-luethi">
+								<div class="grid cols-2 small-gap person" style="align-items: center; margin-top: 2rem">
 									<div>
-										<p v-scroll-reveal="{ delay: 0 }" style="margin: 0; line-height: 1em">Produktmanager</p>
-										<p v-scroll-reveal="{ delay: 200 }" style="margin: 0; font-weight: 900">Philippe Lüthi</p>
+										<p v-scroll-reveal="{ delay: 800 }" style="margin: 0; line-height: 1em">Produktmanager</p>
+										<p v-scroll-reveal="{ delay: 1000 }" style="font-weight: 900">Philippe Lüthi</p>
 									</div>
 									<div>
-										<img v-scroll-reveal="{ delay: 400 }" style="height: auto; border-radius: 50%" src="/portrait_placeholder.png" alt="" />
-									</div></div
-							></nuxt-link>
+										<img v-scroll-reveal="{ delay: 1200 }" style="height: auto; border-radius: 50%" src="/portrait_placeholder.png" alt="" />
+									</div>
+								</div>
+							</nuxt-link>
 							<div style="display: grid; grid-template-columns: repeat(6, 2rem); gap: 0.5rem; align-items: center">
 								<span style="padding: 5px">
 									<img style="height: auto; " src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/12/icon_apple.png" v-scroll-reveal="{ delay: 100}" alt="" />
@@ -195,6 +196,12 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.person
+	width: 16rem
+	@include mobile
+		width: auto
+		&.grid.cols-2
+			grid-template-columns: 2fr 1fr
 .produktmanager
 	 padding-left: 5rem
 	 @include mobile

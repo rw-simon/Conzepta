@@ -218,7 +218,7 @@ export default {
 		padding-top: 0
 		margin-top: 22rem
 .banner-footer
-	background-image: url('/interLink-footer.png')
+	background-image: url('/interlink-footer.png')
 	background-repeat: no-repeat
 	background-size: cover
 	background-position: center
@@ -250,7 +250,7 @@ export default {
 	min-height: 80vw
 	@include mobile
 		padding-top: 30vh
-		background-image: url('/interLinkmob.png')
+		background-image: url('/interlinkmob.png')
 .funktionen
 	background-image: url('https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2021/02/background3-1.png')
 	background-repeat: no-repeat
@@ -260,7 +260,7 @@ export default {
 	margin-top: 20rem
 	margin-bottom: -25rem
 	@include mobile
-		background-image: url('/interLinkbg3.png')
+		background-image: url('/interlinkbg3.png')
 		background-position: top center
 		margin-top: 0
 		padding-top: 16rem
@@ -272,7 +272,7 @@ export default {
 	background-position: center
 	min-height: 40vw
 	@include mobile
-		background-image: url('/interLinkbg4.png')
+		background-image: url('/interlinkbg4.png')
 		background-position: top center
 		// margin-top: 0
 		padding-top: 13rem

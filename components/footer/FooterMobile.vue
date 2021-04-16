@@ -6,7 +6,7 @@
 					<p @click="isOpen = 'support'">Support</p>
 					<div :style="[isOpen == 'support' ? { 'max-height': '6rem' } : { 'max-height': 0 }]">
 						<p>Nehmen Sie mit uns Kontakt auf</p>
-						<nuxt-link :to="{ path: '/support', hash: '#support' }"><CButton isOutline isMono text="Kontaktformular" /></nuxt-link>
+						<nuxt-link :to="{ path: '/kontakt', hash: '#kontakt' }"><CButton isOutline isMono text="Kontaktformular" /></nuxt-link>
 					</div>
 				</section>
 				<section class="wir">
@@ -63,7 +63,7 @@
 export default {
 	data() {
 		return {
-			isOpen: '',
+			isOpen: 'support',
 		}
 	},
 }
