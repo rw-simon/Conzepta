@@ -110,7 +110,7 @@
 										<h3>FUNKTIONEN</h3>
 										<h2>Favoriten</h2>
 										<p>
-											Selbstdefinierte Einträge können als Favoriten definiert und somit prominent platziert werden.
+											Individuelle Einträge können als Favoriten definiert und somit prominent platziert werden.
 										</p>
 									</div>
 									<!-- <div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div> -->
@@ -131,7 +131,7 @@
 									<div class="slider-text">
 										<h3>FUNKTIONEN</h3>
 										<h2>Updates</h2>
-										<p>Anpassungen der Ansammlungen oder einzelne Einträge davon, können bequem online gemacht werden. Die persönlichen Notizen der Benutzer bleiben natürlich erhalten.</p>
+										<p>Anpassungen der Ansammlungen oder einzelne Einträge davon, können bequem online gemacht werden. Die persönlichen Daten der Benutzer bleiben natürlich erhalten.</p>
 									</div>
 									<!-- <div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div> -->
 								</div>
