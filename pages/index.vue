@@ -42,7 +42,7 @@
 					<article>
 						<img v-scroll-reveal="{ delay: 300 }" src="/puzzle.png" alt="" />
 						<h2 v-scroll-reveal="{ delay: 400 }">Adaption</h2>
-						<p style="padding: 0 2rem; box-sizing: border-box" v-scroll-reveal="{ delay: 500 }">Wir bieten keine Pakete ab Stange, sondern individuelle Lösungen und persönlichen Support.</p>
+						<p style="padding: 0 2rem; box-sizing: border-box" v-scroll-reveal="{ delay: 500 }">Wir bieten nicht nur Pakete ab Stange, sondern individuelle Lösungen und persönlichen Support.</p>
 					</article>
 					<article>
 						<img v-scroll-reveal="{ delay: 500 }" src="/checkmark.png" alt="" />
@@ -71,7 +71,7 @@
 						<div class="list">
 							<article v-scroll-reveal="{ delay: 300 }">
 								<img src="/icon_tacho.svg" alt="" />
-								<p>Wir reagieren so, wie Sie es sich wünschen: schnell und flexibel</p>
+								<p>Wir reagieren so, wie Sie es sich wünschen: schnell und flexibel.</p>
 							</article>
 							<article v-scroll-reveal="{ delay: 500 }">
 								<img src="/icon_lock.svg" alt="" />

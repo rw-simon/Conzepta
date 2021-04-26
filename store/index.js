@@ -57,6 +57,9 @@ export const actions = {
 	setCookie() {
 		Cookie.set('accepted', 'true')
 	},
+	setConsoleCookie({}, test) {
+		Cookie.set('console', test)
+	},
 	async nuxtServerInit({ commit }) {
 		const pageRequest = await axios.get('https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/pages?per_page=100')
 		const productRequest = await axios.get('https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/products?per_page=100&orderby=menu_order&order=asc')

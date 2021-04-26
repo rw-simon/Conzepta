@@ -10,7 +10,7 @@
 						<input v-model="form.nachname" v-scroll-reveal="{ delay: 400 }" style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%" type="text" placeholder="Nachname" />
 						<input v-model="form.email" v-scroll-reveal="{ delay: 600 }" style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%" type="text" placeholder="Email" />
 						<select v-scroll-reveal="{ delay: 800 }" :style="[selectedAnliegen == '' ? { color: 'gray' } : { color: 'black' }]" name="anliegen" id="" v-model="selectedAnliegen">
-							<option value="" hidden>Anliegen</option>
+							<option value="anliegen" selected>Anliegen</option>
 							<option value="all">Allgemein</option>
 							<option value="bew">Bewerbung</option>
 							<option value="int">InterLink</option>
@@ -43,7 +43,7 @@
 					</div>
 				</div>
 				<div v-else>
-					<h4>Vielen Dank für Ihre Nachricht. Wir werden uns gerne bei Ihnen zurückmelden.</h4>
+					<h4 style="font-weight: normal">Vielen Dank für Ihre Nachricht. Wir werden uns gerne bei Ihnen zurückmelden.</h4>
 				</div>
 			</div>
 			<div class="container" style="margin-top: 8rem">
@@ -72,12 +72,13 @@
 								<li style="margin-bottom: 1rem;">Aussteigen bei Wyleregg</li>
 								<li style="margin-bottom: 1rem;">Der Busrichtung nachlaufen</li>
 								<li style="margin-bottom: 1rem;">Bei der Kreuzung mit der Allmendstrasse rechts einbiegen.</li>
+								<li style="margin-bottom: 1rem;">Die conzepta befindet sich auf der linken Seite.</li>
 							</ul>
 						</p>
 					</div>
 				</div>
 				<div>
-<div>
+					<div>
 						<h3 v-scroll-reveal="{ delay: 0 }">Auf schnellstem Weg</h3>
 						<h2 v-scroll-reveal="{ delay: 200 }">Mit dem Auto</h2>
 						<br />
@@ -89,10 +90,11 @@
 								<li style="margin-bottom: 1rem">Alles geradeaus</li>
 								<li style="margin-bottom: 1rem">Bei der coop Pronto Tankstelle über die Kreuzung fahren (Achtung Ampel)</li>
 								<li style="margin-bottom: 1rem">In die nächste Seitenstrasse Links einbiegen</li>
+								<li style="margin-bottom: 1rem">In die zweite Seitenstrasse (nach FARO) links einbiegen</li>
 							</ul>
 						</p>
 					</div>
-									</div>
+				</div>
 			</div>
 			<br />
 			<div style="margin-top: 4rem">
@@ -116,7 +118,7 @@ export default {
 	async asyncData({ query }) {
 		return {
 			textArea: query.text,
-			selectedAnliegen: query.anliegen,
+			selectedAnliegen: query.anliegen || 'anliegen',
 			sent: false,
 			robot: false,
 			form: {

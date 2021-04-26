@@ -91,7 +91,7 @@
 										<h2>Tags</h2>
 										<p>Tags erleichtern die Suche vor allem von nicht täglichen Begriffen, so kann z.B. nach "Ampel" gesucht werden, obwohl diese als "Lichtsignalanlage" im entsprechenden Gesetz hinterlegt ist.</p>
 									</div>
-									<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
+									<!-- <div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div> -->
 								</div>
 							</swiper-slide>
 							<swiper-slide>
@@ -101,7 +101,7 @@
 										<h2>Notizen</h2>
 										<p>Persönliche Notizen ergänzen einen Eintrag individuell und bleiben bei neuen Versionen erhalten. Zusätzlich werden die Notizen in die Suche einbezogen.</p>
 									</div>
-									<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
+									<!-- <div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div> -->
 								</div>
 							</swiper-slide>
 							<swiper-slide>
@@ -113,7 +113,7 @@
 											Selbstdefinierte Einträge können als Favoriten definiert und somit prominent platziert werden.
 										</p>
 									</div>
-									<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
+									<!-- <div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div> -->
 								</div>
 							</swiper-slide>
 							<swiper-slide>
@@ -123,7 +123,7 @@
 										<h2>Assistenten</h2>
 										<p>Die Assistenten erlauben das Finden von Einträgen mit Hilfe von grafischen Elementen. Die anwendbaren Ziffern werden auf einer Grafik, welche alltägliche Situationen abbildet, schnell und einfach ermittelt.</p>
 									</div>
-									<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
+									<!-- <div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div> -->
 								</div>
 							</swiper-slide>
 							<swiper-slide>
@@ -133,7 +133,7 @@
 										<h2>Updates</h2>
 										<p>Anpassungen der Ansammlungen oder einzelne Einträge davon, können bequem online gemacht werden. Die persönlichen Notizen der Benutzer bleiben natürlich erhalten.</p>
 									</div>
-									<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
+									<!-- <div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div> -->
 								</div>
 							</swiper-slide>
 							<swiper-slide>
@@ -141,9 +141,9 @@
 									<div class="slider-text">
 										<h3>FUNKTIONEN</h3>
 										<h2>Datenaustausch</h2>
-										<p>Lexica kann Daten von und zu anderen System importieren und exportieren. So lassen sich z.B. Ziffern anwählen und ins PolicePad übermitteln. Oder man gelangt von PolicePad zu den detaillierten Informationen von Lexica.</p>
+										<p>Lexica kann Daten von und zu anderen Systemen importieren und exportieren. So lassen sich z.B. Ziffern anwählen und ins PolicePad übermitteln. Oder man gelangt von PolicePad zu den detaillierten Informationen von Lexica.</p>
 									</div>
-									<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
+									<!-- <div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div> -->
 								</div>
 							</swiper-slide>
 							<swiper-slide>
@@ -153,7 +153,7 @@
 										<h2>Backend</h2>
 										<p>Das Backend stellt eine einfache und intuitive Oberfläche zur Verfügung um die Ansammlung von Einträgen praktisch zu Editieren und neue Versionen davon zu generieren. Zusätzlich können Benutzer und Gruppen verwaltet, sowie weitere Einstellungen vorgenommen werden.</p>
 									</div>
-									<div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div>
+									<!-- <div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div> -->
 								</div>
 							</swiper-slide>
 						</swiper>
@@ -206,6 +206,9 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.lexiconnect
+	margin-top: 8rem
+	
 .person
 	width: 16rem
 	@include mobile
@@ -274,6 +277,7 @@ export default {
 	height: 28rem
 	.slider-grid
 		display: grid
+		height: 100%
 		grid-template-columns: 1fr 2fr
 		align-items: center
 		gap: 8rem

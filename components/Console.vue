@@ -1,7 +1,7 @@
 <template>
 	<div id="console" :class="{ 'bc-blue br font-mono': true, active: isActive }">
 		<p>
-			<span v-if="!cookieText" @click="toggleConsole" class="toggle-console">[{{ toggleSymbol }}]</span>
+			<span v-if="!cookieText" @click="setConsoleCookie()" class="toggle-console">[{{ toggleSymbol }}]</span>
 		</p>
 		<div class="content" v-if="cookieText">
 			<p class="title" @click="toggleConsole">Conzepta //</p>
@@ -16,7 +16,7 @@
 				isMono
 				text="Zustimmen"
 			/>
-			<CButton isMono text="Info" />
+			<!-- <CButton isMono text="Info" /> -->
 		</div>
 		<div class="content" v-else>
 			<p class="title" @click="toggleConsole">Conzepta//</p>
@@ -47,6 +47,14 @@ export default {
 		setCookie() {
 			this.$store.dispatch('setCookie')
 		},
+		setConsoleCookie() {
+			this.toggleConsole()
+			if (Cookie.get('console') != 'true') {
+				this.$store.dispatch('setConsoleCookie', 'true')
+			} else {
+				this.$store.dispatch('setConsoleCookie', 'false')
+			}
+		},
 	},
 	mounted() {
 		if (Cookie.get('accepted') == 'true') {
@@ -55,6 +63,10 @@ export default {
 		} else {
 			this.cookieText = true
 		}
+		if (Cookie.get('console') == 'true') {
+			this.isActive = false
+		}
+		this.toggleSymbol = this.isActive ? 'X' : '<'
 	},
 }
 </script>

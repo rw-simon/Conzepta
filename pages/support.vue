@@ -28,7 +28,7 @@
 										13:00 - 17:00 Uhr</a
 									></span
 								><br />
-								<span style="margin-top: 12px; display: inline-block; width: 200px">In Notfällen:</span><span><a href="tel:+41314444444">+41 (0)31 444 44 44</a></span>
+								<!-- <span style="margin-top: 12px; display: inline-block; width: 200px">In Notfällen:</span><span><a href="tel:+41314444444">+41 (0)31 444 44 44</a></span> -->
 							</p>
 						</div>
 					</div>
