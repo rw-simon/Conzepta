@@ -9,10 +9,10 @@
 						<input v-model="form.vorname" v-scroll-reveal="{ delay: 200 }" style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%" type="text" placeholder="Vorname" />
 						<input v-model="form.nachname" v-scroll-reveal="{ delay: 400 }" style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%" type="text" placeholder="Nachname" />
 						<input v-model="form.email" v-scroll-reveal="{ delay: 600 }" style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%" type="text" placeholder="Email" />
-						<select v-scroll-reveal="{ delay: 800 }" :style="[selectedAnliegen == '' ? { color: 'gray' } : { color: 'black' }]" name="anliegen" id="" v-model="selectedAnliegen">
+						<select v-scroll-reveal="{ delay: 800 }" :style="[selectedAnliegen == 'anliegen' ? { color: 'gray' } : { color: 'black' }]" name="anliegen" id="" v-model="selectedAnliegen">
 							<option value="anliegen" selected>Anliegen</option>
 							<option value="all">Allgemein</option>
-							<option value="bew">Bewerbung</option>
+							<!-- <option value="bew">Bewerbung</option> -->
 							<option value="int">InterLink</option>
 							<option value="lex">Lexica</option>
 							<option value="par">ParkingPad</option>
@@ -25,7 +25,7 @@
 					type="text"
 					placeholder="Anliegen"
 				/> -->
-						<textarea v-scroll-reveal="{ delay: 1000 }" style="border: blue 1px solid; border-radius: 5px; width: 100%; grid-column: span 2" name="" id="" cols="30" rows="10" v-model="textArea"></textarea>
+						<textarea placeholder="Ihre Mitteilung" v-scroll-reveal="{ delay: 1000 }" style="border: blue 1px solid; border-radius: 5px; width: 100%; grid-column: span 2" name="" id="" cols="30" rows="10" v-model="textArea"></textarea>
 					</form>
 					<div class="grid cols-3 small-gap" style="align-items: center; margin-top: 2rem">
 						<span style="padding: 0.5rem 2rem 0.5rem 0.5rem; border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%">
@@ -43,7 +43,7 @@
 					</div>
 				</div>
 				<div v-else>
-					<h4 style="font-weight: normal">Vielen Dank für Ihre Nachricht. Wir werden uns gerne bei Ihnen zurückmelden.</h4>
+					<p style="font-weight: normal">Vielen Dank für Ihre Nachricht. Wir werden uns gerne bei Ihnen zurückmelden.</p>
 				</div>
 			</div>
 			<div class="container" style="margin-top: 8rem">
@@ -71,8 +71,8 @@
 								<li style="margin-bottom: 1rem;">Bus Nr. 20 Richtung Bern Wankdorf</li>
 								<li style="margin-bottom: 1rem;">Aussteigen bei Wyleregg</li>
 								<li style="margin-bottom: 1rem;">Der Busrichtung nachlaufen</li>
-								<li style="margin-bottom: 1rem;">Bei der Kreuzung mit der Allmendstrasse rechts einbiegen.</li>
-								<li style="margin-bottom: 1rem;">Die conzepta befindet sich auf der linken Seite.</li>
+								<li style="margin-bottom: 1rem;">Bei der Kreuzung mit der Allmendstrasse rechts einbiegen</li>
+								<li style="margin-bottom: 1rem;">Die Conzepta befindet sich auf der linken Seite</li>
 							</ul>
 						</p>
 					</div>
@@ -98,16 +98,7 @@
 			</div>
 			<br />
 			<div style="margin-top: 4rem">
-				<iframe
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2505.72679096551!2d7.449444113907455!3d46.96051126040452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e39edef28aee1%3A0x62b5697e8242d481!2sAllmendstrasse%2054%2C%203014%20Bern!5e0!3m2!1sen!2sch!4v1611054249814!5m2!1sen!2sch"
-					width="960"
-					height="640"
-					frameborder="0"
-					style="border: 0"
-					allowfullscreen=""
-					aria-hidden="false"
-					tabindex="0"
-				></iframe>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2723.0179833819807!2d7.448399716028299!3d46.96133667914717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e39edef291939%3A0x5d47712ae8b9fa11!2sconzepta%20team%20ag!5e0!3m2!1sde!2sch!4v1619792352890!5m2!1sde!2sch" width="960" height="640" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 			</div>
 		</div>
 	</div>

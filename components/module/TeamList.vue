@@ -40,6 +40,8 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+article
+	scroll-margin-top: 4rem
 .firstmobsec
 	@include mobile
 		grid-row: 2 !important

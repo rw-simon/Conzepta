@@ -117,10 +117,10 @@
 						</h1>
 						<h3 v-scroll-reveal="{ delay: 300 }" style="margin-bottom: 2rem">Nutzer</h3>
 						<h1 v-scroll-reveal="{ delay: 400 }" style="font-size: 4.5rem; margin-bottom: 0; line-height: 1em">
-							<RollingNumber :number="1000000" />
+							<RollingNumber :number="300000" />
 							<!-- {{ content.acf.numbers.numbers_actual.numbers_cases }} -->
 						</h1>
-						<h3 v-scroll-reveal="{ delay: 500 }" style="margin-bottom: 2rem">Fälle im Jahr</h3>
+						<h3 v-scroll-reveal="{ delay: 500 }" style="margin-bottom: 2rem">Fälle im Halbjahr</h3>
 					</div>
 					<div v-scroll-reveal="{ delay: 200 }" style="grid-column: span 2" v-html="content.acf.numbers.numbers_text" />
 				</div>
@@ -199,7 +199,7 @@
 			<div class="container" style="padding: 4rem 0">
 				<h2>Anwender</h2>
 				<div style="display: grid; gap: 2rem; align-items: center" class="grid cols-3">
-					<img v-scroll-reveal="{ delay: 200 * i }" style="padding: 2rem; max-width: 200px" v-for="(img, i) in content.acf.anwender" :key="i" :src="img" alt="" />
+					<nuxt-link v-for="(img, i) in content.acf.anwender" :key="i" to="/portfolio?category=1"><img v-scroll-reveal="{ delay: 200 * i }" style="padding: 2rem; max-width: 200px" :src="img" alt="" /></nuxt-link>
 				</div>
 			</div>
 		</div>
@@ -224,7 +224,7 @@ export default {
 			swiperOption: {
 				slidesPerView: 1,
 				spaceBetween: 48,
-				loop: false,
+				loop: true,
 				mousewheel: true,
 				direction: 'horizontal',
 				pagination: {
@@ -235,6 +235,7 @@ export default {
 				breakpoints: {
 					960: {
 						direction: 'vertical',
+						loop: false,
 					},
 				},
 			},
@@ -292,6 +293,12 @@ export default {
 	top: 50%
 	transform: translateY(-50%)
 	left: -8rem
+	@include mobile
+		transform: rotate(-90deg)
+		left: 50%
+		right: 50%
+		top: auto
+		bottom: -7rem
 .banner
 	margin-top: 8rem
 	display: grid
@@ -317,6 +324,9 @@ img
 	transition: transform 100ms ease
 	&.more-icon
 		cursor: pointer
+		@include mobile
+			position: absolute
+			z-index: 9999
 	&.mirrored
 		transform: scaleY(-1)
 .kompromisslos
@@ -349,9 +359,13 @@ img
 				opacity: 0
 				transition: opacity 300ms ease-out, margin-top 300ms ease-out
 				margin-top: 0rem
+				@include mobile
+					margin-top: -10rem
 				&.active
 					opacity: 1
 					margin-top: 3rem
+					@include mobile
+						margin-top: 5rem
 .funktionen
 	.grid
 		align-items: center

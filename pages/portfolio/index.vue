@@ -56,9 +56,11 @@
 
 <script>
 export default {
+	async asyncData({ query }) {
+		return { selectedCategories: [parseInt(query.category)] || [0] }
+	},
 	data() {
 		return {
-			selectedCategories: [0],
 			productCategories: ['Alle', 'PolicePad', 'Lexica', 'Interlink', 'TachiFox'],
 		}
 	},

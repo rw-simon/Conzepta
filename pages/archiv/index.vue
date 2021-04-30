@@ -11,7 +11,7 @@
 						<input
 							:class="{
 								'br bc-blue': true,
-								active: selectedCategories.includes(i),
+								active: selectedCategories == productCategories[i],
 							}"
 							v-for="(cat, i) in productCategories"
 							:key="i"
@@ -23,27 +23,13 @@
 				</div>
 			</div>
 		</div>
-		<div class="second" :id="`news-${i}`" v-for="(a, i) in news" :key="i">
+		<div class="second" :id="`news-${i}`" v-for="(a, i) in news" :key="i" v-show="a.acf.kategorie.includes(selectedCategories.toLowerCase()) || selectedCategories == 'Alle'">
 			<div class="container">
 				<div class="grid cols-2">
 					<article style="grid-column: 1" class="news-article">
 						<h3>{{ a.acf.datum }}</h3>
 						<h2>{{ a.title.rendered }}</h2>
 						<div v-html="a.content.rendered" />
-					</article>
-				</div>
-			</div>
-		</div>
-		<div class="second">
-			<div class="container">
-				<div class="grid cols-2">
-					<article style="grid-column: 1" class="news-article">
-						<h3>12.11.2018</h3>
-						<h2>Nationaler Zukunftstag</h2>
-						<p>
-							Am Donnerstag, 12. November, fand der jährliche nationale Zukunftstag statt. Auch die Conzepta hat in diesem Jahr Besuch von einem Schüler erhalten. Fünftklässler Robin hat einen Einblick in den IT-Alltag erhalten und
-							konnte tatkräftig mitarbeiten.
-						</p>
 					</article>
 				</div>
 			</div>
@@ -60,22 +46,24 @@ export default {
 	},
 	data() {
 		return {
-			selectedCategories: [0],
+			selectedCategories: 'Alle',
 			productCategories: ['Alle', 'PolicePad', 'Lexica', 'InterLink', 'TachiFox'],
 		}
 	},
 	methods: {
 		toggleCat(cat) {
-			if (cat == 0) {
-				this.selectedCategories = [0]
-			} else {
-				this.selectedCategories = []
-				this.selectedCategories.includes(cat)
-					? (this.selectedCategories = this.selectedCategories.filter((c) => {
-							return c != cat
-					  }))
-					: this.selectedCategories.push(cat)
-			}
+			this.selectedCategories = this.productCategories[cat]
+			// if (cat == 0) {
+			// 	this.selectedCategories = [0]
+			// } else {
+			// 	this.selectedCategories = []
+			// 	this.selectedCategories.includes(cat)
+			// 		? (this.selectedCategories = this.selectedCategories.filter((c) => {
+			// 				return c != cat
+			// 		  }))
+			// 		: this.selectedCategories.push(cat)
+			// }
+			// console.log(this.selectedCategories)
 		},
 	},
 }

@@ -12,7 +12,7 @@
 							<span style="display: inline-block; width: 100px">Telefon:</span><a href="tel:+413486020">+41 (0)31 348 60 20</a>
 						</p>
 						<p>Und übrigens: Wenn alles läuft, sind Sie bei uns erst recht willkommen, zu einer Tasse Kaffee oder Tee. Denn auch das garantieren wir Ihnen: Die besten Gespräche sind doch jene, die ganz ohne Probleme auskommen.</p>
-						<a style="margin-top: 2rem; display: inline-block; line-height: 1em; border: 1px solid blue; border-radius: 4px; padding: 0.3rem 2rem" href="https://teamviewer.com" target="_blank"
+						<a style="margin-top: 2rem; display: inline-block; line-height: 1em; border: 1px solid blue; border-radius: 4px; padding: 0.3rem 2rem" href="https://www.teamviewer.com/de/info/quicksupport/" target="_blank"
 							><img src="/logo-teamviewer.svg" style="height: 1.5rem" alt=""
 						/></a>
 						<div style="margin-top: 8rem">

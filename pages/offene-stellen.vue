@@ -8,8 +8,7 @@
 						<h1>Jobs //</h1>
 						<p>
 							Die Conzepta ist eine kleine, etablierte Software-Firma mit Sitz in Bern. Unser Ziel ist es, das Leben unserer Kunden Stück für Stück einfacher zu machen, damit sie ihren Arbeitsalltag effizienter erledigen können. So
-							entwickeln wir seit über 20 Jahren innovative Software für verschiedenste Kundengruppen, wie z.B. Polizeikorps, Transportunternehmen oder global tätige Konzerne. Wir suchen motivierte Unterstützung, um die Welt von morgen
-							noch ein Stück digitaler zu machen.
+							entwickeln wir seit über 20 Jahren innovative Software für verschiedenste Kundengruppen, wie z.B. Polizeikorps, Transportunternehmen oder global tätige Konzerne.
 						</p>
 					</div>
 				</div>
@@ -80,7 +79,7 @@
 			<div style="background-color: #e7e9ec; padding: 5rem 0; margin-top: 8rem">
 				<div class="container">
 					<div>
-						<p>Zurzeit sind leider keine offenen Stellen zu vergeben. Deine spontane Bewerbung ist jederzeit gerne willkommen.</p>
+						<p>Zurzeit sind keine offenen Stellen zu vergeben. Deine spontane Bewerbung ist jederzeit gerne willkommen.</p>
 					</div>
 				</div>
 			</div>

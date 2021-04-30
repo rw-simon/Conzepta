@@ -34,7 +34,7 @@
 					<a href="https://www.routiers.ch/">
 						<img style="height: auto; width: 10rem; margin-bottom: 2rem" src="/portfolio/tachifox/lesroutierssuisse.png" alt="" />
 					</a>
-					<h3 v-scroll-reveal="{ delay: 0 }">3. Generation</h3>
+					<h3 v-scroll-reveal="{ delay: 0 }">Aktuelle Generation</h3>
 					<h2 v-scroll-reveal="{ delay: 200 }">Unaufhörliches Verbessern</h2>
 					<p v-scroll-reveal="{ delay: 400 }">
 						TachiFox besteht seit rund 15 Jahren und ist mittlerweile in der aktuellen Generation als moderne Web-Anwendung verfügbar. Durch die enge Zusammenarbeit mit Les Routiers Suisses konnten wir das Produkt laufend an die
@@ -69,9 +69,9 @@
 							<swiper-slide>
 								<div class="slider-grid">
 									<div class="slider-text">
-										<h3 v-scroll-reveal="{ delay: 0 }">Alles im Blick</h3>
-										<h2 v-scroll-reveal="{ delay: 200 }">Geordnet</h2>
-										<p v-scroll-reveal="{ delay: 400 }">
+										<h3>Alles im Blick</h3>
+										<h2>Geordnet</h2>
+										<p>
 											Das Einlesen der Fahrer- und Fahrzeugdaten erfolgt über den TachiFoxReader. Dieser übermittelt die Daten an den Server, wo diese weiterverarbeitet und dem entsprechenden Fahrer oder Fahrzeug zugeordnet
 											werden. Die Tachograph-Daten können auch direkt über den Browser hochgeladen werden.
 										</p>
@@ -181,7 +181,7 @@
 						<article>
 							<img src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" class="list-icon" alt="" />
 							<h4>Einlesen</h4>
-							<p>Tachograph Karten und Dateien lassen sich für Fahrer und Farzeug importieren.</p>
+							<p>Tachograph Karten und Dateien lassen sich für Fahrer und Fahrzeug importieren.</p>
 						</article>
 						<article>
 							<img src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" class="list-icon" alt="" />
@@ -226,13 +226,13 @@
 				</div>
 			</div>
 		</div> -->
-		<div class="kontrolle">
+		<!-- <div class="kontrolle">
 			<div class="container">
 				<div class="section" style="text-align: center">
 					<h2>Für eine kontrollierte Fahrt: TachiFox</h2>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 </template>
 
@@ -246,7 +246,7 @@ export default {
 			swiperOption: {
 				slidesPerView: 1,
 				spaceBetween: 48,
-				loop: false,
+				loop: true,
 				mousewheel: true,
 				direction: 'horizontal',
 				pagination: {
@@ -257,6 +257,7 @@ export default {
 				breakpoints: {
 					960: {
 						direction: 'vertical',
+						loop: false,
 					},
 				},
 			},
@@ -289,6 +290,9 @@ export default {
 		padding-left: 3rem
 	@include mobile-landscape
 		gap: 4rem
+.rapporte
+	.section
+		margin-top: 16rem
 .person
 	width: 16rem
 	align-items: center
@@ -352,15 +356,20 @@ export default {
 		margin-top: 0
 .aktivitaten
 	height: 20rem
+	@include mobile
+		height: 35rem
 	.slider-grid
 		display: grid
 		grid-template-columns: 1fr 2fr
 		align-items: center
 		gap: 8rem
 		@include mobile
+			gap: 2rem
 			grid-template-columns: 1fr
 			.slider-image
-				display: none
+				grid-row: 1
+			.slider-text
+				grid-row: 2
 	.swiper-container
 		height: 100%
 	.swiper-slide

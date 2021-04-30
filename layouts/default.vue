@@ -2,7 +2,7 @@
 	<div>
 		<Header />
 		<Nuxt class="nuxt" />
-		<Console />
+		<Console v-if="!this.$route.path.includes('kontakt')" />
 		<Footer id="footer" />
 		<FooterMobile id="footer-mobile" />
 	</div>

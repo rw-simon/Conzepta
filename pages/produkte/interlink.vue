@@ -8,8 +8,8 @@
 						<h3 v-scroll-reveal="{ delay: 0 }">Kommunikatonssystem</h3>
 						<h1 v-scroll-reveal="{ delay: 200 }">InterLink //</h1>
 						<p v-scroll-reveal="{ delay: 400 }">
-							InterLink ist ein zuverlässiges Kommunikationssystem, das Ihre Mitarbeitenden während der Arbeitszeit begleitet: Präferenzzeiten erfassen, Zutritte gewähren, Auftragszeiten buchen. Sie erhalten alle Aktivitäten in
-							Echtzeit, weltweit.
+							InterLink ist ein zuverlässiges Kommunikationssystem, das Ihre Mitarbeitenden während der Arbeitszeit begleitet: Präsenzzeiten erfassen, Zutritte gewähren, Auftragszeiten buchen. Sie erhalten alle Aktivitäten in Echtzeit,
+							weltweit.
 						</p>
 						<img v-scroll-reveal="{ delay: 600 }" style="width: 1.2rem" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/12/icon_windows.png" alt="" />
 						<nuxt-link to="/wir#urs-blaser">
@@ -134,9 +134,9 @@
 			<div class="container" style="padding: 4rem 0">
 				<h2>Anwender</h2>
 				<div class="grid cols-3" style="display: grid; gap: 2rem; align-items: center">
-					<img v-scroll-reveal="{ delay: 0 }" style="padding: 2rem; max-width: 200px; height: auto" src="/portfolio/interlink/allegion.png" alt="" />
-					<img v-scroll-reveal="{ delay: 200 }" style="padding: 2rem; max-width: 200px; height: auto" src="/portfolio/interlink/interflex.png" alt="" />
-					<img v-scroll-reveal="{ delay: 400 }" style="padding: 2rem; max-width: 200px; height: auto" src="/portfolio/interlink/mpdv.png" alt="" />
+					<nuxt-link to="/portfolio?category=3"><img v-scroll-reveal="{ delay: 0 }" style="padding: 2rem; max-width: 200px; height: auto" src="/portfolio/interlink/allegion.png" alt="" /></nuxt-link>
+					<nuxt-link to="/portfolio?category=3"><img v-scroll-reveal="{ delay: 200 }" style="padding: 2rem; max-width: 200px; height: auto" src="/portfolio/interlink/interflex.png" alt="" /></nuxt-link>
+					<nuxt-link to="/portfolio?category=3"><img v-scroll-reveal="{ delay: 400 }" style="padding: 2rem; max-width: 200px; height: auto" src="/portfolio/interlink/mpdv.png" alt="" /></nuxt-link>
 				</div>
 			</div>
 		</div>

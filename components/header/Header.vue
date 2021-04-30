@@ -45,7 +45,7 @@ header
 	box-sizing: border-box
 	transition: height 200ms ease
 	&.opened
-		height: 15rem
+		height: 13rem
 		// grid-template-rows: 17rem
 		@include mobile
 			width: 100%

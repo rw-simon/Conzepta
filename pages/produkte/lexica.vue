@@ -165,9 +165,9 @@
 				<div class="container" style="padding: 4rem 0">
 					<h2>Anwender</h2>
 					<div class="grid cols-3" style="display: grid; gap: 2rem; align-items: center">
-						<img v-scroll-reveal="{ delay: 0 }" style="padding: 2rem; max-width: 200px; height: auto" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2021/02/Screenshot-2021-02-05-at-11.41.08.png" alt="" />
-						<img v-scroll-reveal="{ delay: 200 }" style="padding: 2rem; max-width: 200px; height: auto" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/09/Screenshot-2020-12-03-at-11.09.36.png" alt="" />
-						<img v-scroll-reveal="{ delay: 400 }" style="padding: 2rem; max-width: 200px; height: auto" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/09/Screenshot-2020-12-03-at-11.09.45.png" alt="" />
+						<nuxt-link to="/portfolio?category=2"><img v-scroll-reveal="{ delay: 0 }" style="padding: 2rem; max-width: 200px; height: auto" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2021/02/Screenshot-2021-02-05-at-11.41.08.png" alt="" /></nuxt-link>
+						<nuxt-link to="/portfolio?category=2"><img v-scroll-reveal="{ delay: 200 }" style="padding: 2rem; max-width: 200px; height: auto" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/09/Screenshot-2020-12-03-at-11.09.36.png" alt="" /></nuxt-link>
+						<nuxt-link to="/portfolio?category=2"><img v-scroll-reveal="{ delay: 400 }" style="padding: 2rem; max-width: 200px; height: auto" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/09/Screenshot-2020-12-03-at-11.09.45.png" alt="" /></nuxt-link>
 					</div>
 				</div>
 			</div>
@@ -184,7 +184,7 @@ export default {
 			swiperOption: {
 				slidesPerView: 1,
 				spaceBetween: 96,
-				loop: false,
+				loop: true,
 				mousewheel: true,
 				direction: 'horizontal',
 				simulateTouch: false,
@@ -197,6 +197,7 @@ export default {
 				breakpoints: {
 					960: {
 						direction: 'vertical',
+						loop: false
 					},
 				},
 			},
@@ -296,6 +297,12 @@ export default {
 	top: 50%
 	transform: translateY(-50%)
 	left: -8rem
+	@include mobile
+		transform: rotate(-90deg)
+		left: 50%
+		right: 50%
+		top: auto
+		bottom: -5rem
 .funktionen
 	padding: 8rem 0
 	background-size: contain

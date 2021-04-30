@@ -8,7 +8,6 @@
 				<nuxt-link :to="localePath('wir')">Wir</nuxt-link>
 				<ul class="submenu" v-if="opened">
 					<li style="color: white">&nbsp;</li>
-					<li style="color: white">&nbsp;</li>
 					<li><nuxt-link :to="localePath('portfolio')">Portfolio</nuxt-link></li>
 					<li><nuxt-link :to="{ path: '/archiv' }">News</nuxt-link></li>
 					<li><nuxt-link :to="localePath('offene-stellen')">Jobs</nuxt-link></li>
@@ -19,7 +18,6 @@
 			<li class="menu-item">
 				<nuxt-link :to="localePath('produkte')">Produkte</nuxt-link>
 				<ul class="submenu" v-if="opened">
-					<li style="color: white">&nbsp;</li>
 					<li><nuxt-link :to="localePath('/produkte/policepad')">PolicePad</nuxt-link></li>
 					<li><nuxt-link :to="localePath('/produkte/lexica')">Lexica</nuxt-link></li>
 					<li><nuxt-link :to="localePath('/produkte/interlink')">InterLink</nuxt-link></li>
@@ -30,7 +28,6 @@
 			<li class="menu-item">
 				<nuxt-link :to="{ path: '/kontakt' }">Kontakt</nuxt-link>
 				<ul class="submenu" v-if="opened">
-					<li style="color: white">&nbsp;</li>
 					<li style="color: white">&nbsp;</li>
 					<li style="color: white">&nbsp;</li>
 					<li style="color: white">&nbsp;</li>
