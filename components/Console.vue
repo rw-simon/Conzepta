@@ -73,7 +73,8 @@ export default {
 
 <style lang="sass" scoped>
 #console
-	box-shadow: 0 10px 25px -10px rgba(0,0,0,0.3)
+	// box-shadow: 0 10px 25px -10px rgba(0,0,0,0.3)
+	border: 1px solid white
 	padding: 1rem
 	position: fixed
 	width: 32rem
