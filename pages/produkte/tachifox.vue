@@ -135,40 +135,42 @@
 				</div>
 			</div>
 		</div>
-		<div class="verwaltung">
-			<div class="container">
-				<div class="section grid cols-2">
-					<span></span>
-					<div>
-						<h2 v-scroll-reveal="{ delay: 0 }">Fahrer- und Fahrzeugverwaltung</h2>
-						<p v-scroll-reveal="{ delay: 200 }">
-							Die erfassten Fahrer und Fahrzeuge werden übersichtlich dargestellt und können effizient bearbeitet werden. TachiFox unterstützt die Benutzer durch eine freundliche Erinnerung, Daten einzulesen, wenn dies lange nicht mehr
-							erfolgt ist.
-						</p>
-						<span style="height: 10rem; display: block" />
-						<h2 v-scroll-reveal="{ delay: 300 }">Sondertagsverwaltung</h2>
-						<p v-scroll-reveal="{ delay: 500 }">
-							Unternehmen können firmeneigene Sondertage definieren und erfassen. Dies unterstützt die Verwaltung von Aktivitäten von Gruppen oder einzelnen Fahrern. Fahrer können so manuell Aktivitäten hinzufügen und verwalten, damit
-							alle für die ARV26-Auswertung benötigten Daten vorhanden sind.
-						</p>
+		<div class="gradient">
+			<div class="verwaltung">
+				<div class="container">
+					<div class="section grid cols-2">
+						<span></span>
+						<div>
+							<h2 v-scroll-reveal="{ delay: 0 }">Fahrer- und Fahrzeugverwaltung</h2>
+							<p v-scroll-reveal="{ delay: 200 }">
+								Die erfassten Fahrer und Fahrzeuge werden übersichtlich dargestellt und können effizient bearbeitet werden. TachiFox unterstützt die Benutzer durch eine freundliche Erinnerung, Daten einzulesen, wenn dies lange nicht
+								mehr erfolgt ist.
+							</p>
+							<span style="height: 10rem; display: block" />
+							<h2 v-scroll-reveal="{ delay: 300 }">Sondertagsverwaltung</h2>
+							<p v-scroll-reveal="{ delay: 500 }">
+								Unternehmen können firmeneigene Sondertage definieren und erfassen. Dies unterstützt die Verwaltung von Aktivitäten von Gruppen oder einzelnen Fahrern. Fahrer können so manuell Aktivitäten hinzufügen und verwalten,
+								damit alle für die ARV26-Auswertung benötigten Daten vorhanden sind.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="benutzerverwaltung">
-			<div class="container">
-				<div class="section grid cols-2" style="margin-top: 0">
-					<div class="firstmobsec">
-						<h2 v-scroll-reveal="{ delay: 0 }">Benutzerverwaltung</h2>
-						<p v-scroll-reveal="{ delay: 200 }">
-							In der Benutzerverwaltung werden den Benutzern ihre Rollen und Fahrer zugeordnet. Hier können hierarchische Stufen geschaffen werden, indem Benutzern verschiedene Rollen und Funktionen zugewiesen werden. In einem
-							Unternehmen können so etwa Disponenten und Fahrer erfasst werden. Fahrer haben nur Einblick in ihre eigenen Daten, während Disponenten die Daten aller ihnen zugeteilten Fahrer einsehen und verwalten können.
-						</p>
-						<br /><br />
-						<br />
-						<!-- <CButton v-scroll-reveal="{ delay: 400 }" text="Datenblatt" /> -->
+			<div class="benutzerverwaltung">
+				<div class="container">
+					<div class="section grid cols-2" style="margin-top: 0">
+						<div class="firstmobsec">
+							<h2 v-scroll-reveal="{ delay: 0 }">Benutzerverwaltung</h2>
+							<p v-scroll-reveal="{ delay: 200 }">
+								In der Benutzerverwaltung werden den Benutzern ihre Rollen und Fahrer zugeordnet. Hier können hierarchische Stufen geschaffen werden, indem Benutzern verschiedene Rollen und Funktionen zugewiesen werden. In einem
+								Unternehmen können so etwa Disponenten und Fahrer erfasst werden. Fahrer haben nur Einblick in ihre eigenen Daten, während Disponenten die Daten aller ihnen zugeteilten Fahrer einsehen und verwalten können.
+							</p>
+							<br /><br />
+							<br />
+							<!-- <CButton v-scroll-reveal="{ delay: 400 }" text="Datenblatt" /> -->
+						</div>
+						<img class="secmobfirst" style="height: auto" src="/01.png" alt="" />
 					</div>
-					<img class="secmobfirst" style="height: auto" src="/01.png" alt="" />
 				</div>
 			</div>
 		</div>
@@ -292,7 +294,7 @@ export default {
 		gap: 4rem
 .rapporte
 	.section
-		margin-top: 16rem
+		margin-top: 24rem
 .person
 	width: 16rem
 	align-items: center
@@ -345,7 +347,7 @@ export default {
 		margin-top: 0
 		background-size: 150%
 .background-diagonal-3
-	background-image: url('/bgdiag3.svg')
+	// background-image: url('/bgdiag3.svg')
 	padding: 25rem 0
 	margin-top: -20rem
 	z-index: 0
@@ -397,6 +399,8 @@ export default {
 		@include mobile
 			background-image: none
 			padding-top: 0
+.gradient
+	background-image: linear-gradient(90deg, white, $c-gray-light)
 .background2
 	margin-top: 24rem
 	background-image: linear-gradient(90deg, $c-gray-light, white)

@@ -417,4 +417,6 @@ img
 		width: 40%
 		@include mobile
 			width: auto
+.swiper-pagination-bullet
+	margin: 12px 0 !important
 </style>

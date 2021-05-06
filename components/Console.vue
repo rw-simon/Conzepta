@@ -1,5 +1,5 @@
 <template>
-	<div id="console" :class="{ 'bc-blue br font-mono': true, active: isActive }">
+	<div id="console" :class="{ 'bc-blue br font-mono': true, active: isActive, hideOnMobile: !cookieText }">
 		<p>
 			<span v-if="!cookieText" @click="setConsoleCookie()" class="toggle-console">[{{ toggleSymbol }}]</span>
 		</p>
@@ -121,4 +121,7 @@ export default {
 			bottom: 0
 			p.title
 				margin-bottom: 0
+.hideOnMobile
+	@include mobile
+		display: none !important
 </style>

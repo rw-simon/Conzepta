@@ -74,7 +74,7 @@
 			</div>
 		</div>
 		<div class="lexiconnect">
-			<div class="container">
+			<div class="">
 				<img src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/09/06_LexiConnect.png" style="height: auto" alt="">
 			</div>
 		</div>
@@ -209,14 +209,14 @@ export default {
 <style lang="sass" scoped>
 .lexiconnect
 	margin-top: 8rem
-	
+
 .person
 	width: 16rem
 	@include mobile
 		width: auto
 		&.grid.cols-2
 			grid-template-columns: 2fr 1fr
-.produktmanager
+.produktemanager
 	 padding-left: 5rem
 	 @include mobile
 	 	padding-left: 0

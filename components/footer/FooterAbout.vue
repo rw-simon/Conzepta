@@ -3,7 +3,7 @@
 		<h3>Wir</h3>
 		<div class="small-gap" style="row-gap: 0; column-gap: 1rem">
 			<nuxt-link to="/portfolio"><p>Portfolio</p></nuxt-link>
-			<nuxt-link to="/#news"><p>News</p></nuxt-link>
+			<nuxt-link :to="{ path: '/', hash: '#news' }"><p>News</p></nuxt-link>
 			<nuxt-link to="/offene-stellen"><p>Jobs</p></nuxt-link>
 			<!-- <nuxt-link to="/wir"><p>Geschichte</p></nuxt-link>
 			<nuxt-link :to="{ path: '/support', hash: '#support' }"><p>Kontakt</p></nuxt-link>
