@@ -14,7 +14,7 @@
 							<div class="grid"></div>
 						</div>
 						<div class="produktemanager" style="align-self: end;">
-							<nuxt-link to="/wir#philippe-luethi">
+							<nuxt-link :to="{path: '/wir', hash: '#philippe-luethi'}">
 								<div class="grid cols-2 small-gap person" style="align-items: center; margin-top: 2rem">
 									<div>
 										<p v-scroll-reveal="{ delay: 800 }" style="margin: 0; line-height: 1em">Produktmanager</p>

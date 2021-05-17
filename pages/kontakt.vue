@@ -65,7 +65,33 @@
 						<h3 v-scroll-reveal="{ delay: 0 }">In 10 Minuten</h3>
 						<h2 v-scroll-reveal="{ delay: 200 }">Mit dem ÖV</h2>
 						<br />
-						<p v-scroll-reveal="{ delay: 400 }">
+						<div class="wegbeschreibung">
+							<div class="item">
+								<img src="/nav/01_bahnhofsplatz.svg" alt="" />
+								<p>Am Bahnhof Bern auf den grossen Platz</p>
+							</div>
+							<div class="item">
+								<img src="/nav/02_20.svg" alt="" />
+								<p>Bus Nr. 20 Richtung Bern Wankdorf</p>
+							</div>
+							<div class="item">
+								<img src="/nav/03_bustueren.svg" alt="" />
+								<p>Aussteigen bei Wyleregg</p>
+							</div>
+							<div class="item">
+								<img src="/nav/04_busrichtung.svg" alt="" />
+								<p>Der Busrichtung nachlaufen</p>
+							</div>
+							<div class="item">
+								<img src="/nav/05_rechts.svg" alt="" />
+								<p>Bei der Kreuzung mit der Allmendstrasse rechts einbiegen</p>
+							</div>
+							<div class="item">
+								<img src="/nav/06_fahne.svg" alt="" />
+								<p>Die Conzepta befindet sich auf der linken Seite</p>
+							</div>
+						</div>
+						<!-- <p v-scroll-reveal="{ delay: 400 }">
 							<ul style="padding-left: 2rem;">
 								<li style="margin-bottom: 1rem;">Am Bahnhof Bern auf den grossen Platz</li>
 								<li style="margin-bottom: 1rem;">Bus Nr. 20 Richtung Bern Wankdorf</li>
@@ -74,7 +100,7 @@
 								<li style="margin-bottom: 1rem;">Bei der Kreuzung mit der Allmendstrasse rechts einbiegen</li>
 								<li style="margin-bottom: 1rem;">Die Conzepta befindet sich auf der linken Seite</li>
 							</ul>
-						</p>
+						</p> -->
 					</div>
 				</div>
 				<div>
@@ -82,7 +108,37 @@
 						<h3 v-scroll-reveal="{ delay: 0 }">Auf schnellstem Weg</h3>
 						<h2 v-scroll-reveal="{ delay: 200 }">Mit dem Auto</h2>
 						<br />
-						<p v-scroll-reveal="{ delay: 400 }">
+						<div class="wegbeschreibung">
+							<div class="item">
+								<img src="/nav/07_37.svg" alt="" />
+								<p>Ausfahrt 37 – Bern Wankdorf</p>
+							</div>
+							<div class="item">
+								<img src="/nav/08_linkefahrbahn.svg" alt="" />
+								<p>Linke Fahrbahn benutzen</p>
+							</div>
+							<div class="item">
+								<img src="/nav/05_rechts.svg" alt="" />
+								<p>Im (Untergrund-)Kreisel die erste Ausfahrt (rechts)</p>
+							</div>
+							<div class="item">
+								<img src="/nav/09_geradeaus.svg" alt="" />
+								<p>Alles geradeaus</p>
+							</div>
+							<div class="item">
+								<img src="/nav/09_geradeaus.svg" alt="" />
+								<p>Bei der coop Pronto Tankstelle über die Kreuzung fahren (Achtung Ampel)</p>
+							</div>
+							<div class="item">
+								<img src="/nav/10_links.svg" alt="" />
+								<p>In die nächste Seitenstrasse Links einbiegen</p>
+							</div>
+							<div class="item">
+								<img src="/nav/06_fahne.svg" alt="" />
+								<p>Die Conzepta befindet sich auf der linken Seite</p>
+							</div>
+						</div>
+						<!-- <p v-scroll-reveal="{ delay: 400 }">
 							<ul style="padding-left: 2rem;">
 								<li style="margin-bottom: 1rem">Ausfahrt 37 – Bern Wankdorf</li>
 								<li style="margin-bottom: 1rem">Linke Fahrbahn benutzen</li>
@@ -92,13 +148,20 @@
 								<li style="margin-bottom: 1rem">In die nächste Seitenstrasse Links einbiegen</li>
 								<li style="margin-bottom: 1rem">In die zweite Seitenstrasse (nach FARO) links einbiegen</li>
 							</ul>
-						</p>
+						</p> -->
 					</div>
 				</div>
 			</div>
 			<br />
 			<div style="margin-top: 4rem">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2723.0179833819807!2d7.448399716028299!3d46.96133667914717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e39edef291939%3A0x5d47712ae8b9fa11!2sconzepta%20team%20ag!5e0!3m2!1sde!2sch!4v1619792352890!5m2!1sde!2sch" width="960" height="640" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2723.0179833819807!2d7.448399716028299!3d46.96133667914717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e39edef291939%3A0x5d47712ae8b9fa11!2sconzepta%20team%20ag!5e0!3m2!1sde!2sch!4v1619792352890!5m2!1sde!2sch"
+					width="960"
+					height="640"
+					style="border: 0"
+					allowfullscreen=""
+					loading="lazy"
+				></iframe>
 			</div>
 		</div>
 	</div>
@@ -162,6 +225,16 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.wegbeschreibung
+	margin-left: -4rem
+	.item
+		display: grid
+		grid-template-columns: 2rem 1fr
+		grid-template-rows: 4rem
+		gap: 2rem
+		align-items: center
+		p
+			margin: 0
 #kontaktformular
 	padding-top: 8rem
 	@include mobile

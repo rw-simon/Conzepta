@@ -4,7 +4,7 @@
 			<div class="container" style="width: auto">
 				<!-- <h1 v-scroll-reveal>{{ content.title.rendered }}</h1> -->
 				<img v-scroll-reveal="{ delay: 200 }" src="/icon_white.png" alt="" />
-				<div v-scroll-reveal="{ delay: 400 }" style="width: 64px; text-align: center; margin: auto; margin-top: 5rem; margin-bottom: -5rem">
+				<div v-scroll-reveal="{ delay: 400 }" style="width: 64px; text-align: center; margin: auto; margin-top: 5rem; margin-bottom: -5rem; cursor: pointer">
 					<img @click="scrollDown" src="/arrows.png" alt="" />
 				</div>
 			</div>

@@ -1,6 +1,7 @@
 <template>
 	<div id="team">
-		<article :id="p.post_name" class="list-entry" v-for="(p, i) in list" :key="i">
+		<article class="list-entry" v-for="(p, i) in list" :key="i">
+			<span :id="p.post_name" style="position: absolute; top: -5rem"></span>
 			<div class="container">
 				<div class="grid cols-2">
 					<section class="desc firstmobsec">
@@ -41,7 +42,8 @@ export default {
 
 <style lang="sass" scoped>
 article
-	scroll-margin-top: 4rem
+	position: relative
+	// margin-top: -4rem
 .firstmobsec
 	@include mobile
 		grid-row: 2 !important
