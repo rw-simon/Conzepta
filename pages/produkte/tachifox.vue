@@ -49,7 +49,7 @@
 		<div class="background2">
 			<div class="container">
 				<div class="tachiimg2">
-					<img style="height: auto" src="/tachiimg2.png" alt="" />
+					<img style="height: auto" src="/34_Laptop.png" alt="" />
 				</div>
 				<div class="grid cols-2">
 					<span></span>
@@ -411,5 +411,5 @@ export default {
 		margin-top: 12rem
 	.tachiimg2
 		transform: translateY(-50%)
-		margin-bottom: -20%
+		margin-bottom: -35%
 </style>

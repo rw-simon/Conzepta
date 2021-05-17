@@ -282,6 +282,9 @@ export default {
 		max-width: 100%
 .background-gradient
 	background-image: linear-gradient(90deg, white, #e7e9ec)
+	@include mobile
+		z-index: 99
+		position: relative
 .background-diagonal
 	background-image: url('/bgdiag.svg')
 	background-size: cover
@@ -289,6 +292,8 @@ export default {
 	padding: 8rem 0
 	@include mobile
 		padding-bottom: 4rem
+		margin-top: -7rem
+		z-index: 0
 .swiper-pagination
 	top: 50%
 	transform: translateY(-50%)
