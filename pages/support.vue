@@ -58,6 +58,7 @@ export default {
 <style lang="sass" scoped>
 #support
 	padding: 12rem 0
+	min-height: calc(100vh - 24rem)
 	@include mobile
 		padding: 4rem 0
 .tvb

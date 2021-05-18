@@ -214,6 +214,7 @@ export default {
 	background-repeat: no-repeat
 	margin: -20rem 0
 	padding: 10rem 0
+	background-size: cover
 	@include mobile
 		padding-top: 0
 		margin-top: 22rem

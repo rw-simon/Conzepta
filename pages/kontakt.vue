@@ -131,7 +131,7 @@
 							</div>
 							<div class="item">
 								<img src="/nav/10_links.svg" alt="" />
-								<p>In die nächste Seitenstrasse Links einbiegen</p>
+								<p>In die zweite Seitenstrasse (nach FARO) links einbiegen</p>
 							</div>
 							<div class="item">
 								<img src="/nav/06_fahne.svg" alt="" />
