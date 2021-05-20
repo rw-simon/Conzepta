@@ -13,8 +13,8 @@
 							</p>
 							<div class="grid"></div>
 						</div>
-						<div class="produktemanager" style="align-self: end;">
-							<nuxt-link :to="{path: '/wir', hash: '#philippe-luethi'}">
+						<div class="produktemanager" style="align-self: end">
+							<nuxt-link :to="{ path: '/wir', hash: '#philippe-luethi' }">
 								<div class="grid cols-2 small-gap person" style="align-items: center; margin-top: 2rem">
 									<div>
 										<p v-scroll-reveal="{ delay: 800 }" style="margin: 0; line-height: 1em">Produktmanager</p>
@@ -27,10 +27,10 @@
 							</nuxt-link>
 							<div style="display: grid; grid-template-columns: repeat(6, 2rem); gap: 0.5rem; align-items: center">
 								<span style="padding: 5px">
-									<img style="height: auto; " src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/12/icon_apple.png" v-scroll-reveal="{ delay: 100}" alt="" />
+									<img style="height: auto" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/12/icon_apple.png" v-scroll-reveal="{ delay: 100 }" alt="" />
 								</span>
 								<span style="padding: 5px">
-									<img style="height: auto; opacity: 0.33" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/12/icon_android.png" v-scroll-reveal="{ delay: 100}" alt="" />
+									<img style="height: auto; opacity: 0.33" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/12/icon_android.png" v-scroll-reveal="{ delay: 100 }" alt="" />
 								</span>
 							</div>
 						</div>
@@ -61,21 +61,34 @@
 					<div class="mobilefix">
 						<h3 v-scroll-reveal="{ delay: 0 }">WEIT MEHR ALS EIN BUCH</h3>
 						<h2 v-scroll-reveal="{ delay: 200 }">Was Lexica alles kann</h2>
-						<p v-scroll-reveal="{ delay: 400 }">
-							<ul>
-								<li><strong>Simpel:</strong> unkompliziert Ansammlungen von Einträgen einbinden</li>
-								<li><strong>Erweiterbar:</strong> persönliche Notizen anlegen</li>
-								<li><strong>Hilfsbereit:</strong> schnelle Textsuche und diverse Assistenten erleichtern die Arbeit</li>
-								<li><strong>Umfassend:</strong> Ordnungsbussenverordnung als Hauptanwendung, zahlreiche Erweiterungsmöglichkeiten wie etwa die Hinterlegung von Bewilligungen</li>
-							</ul>
-						</p>
+						<p v-scroll-reveal="{ delay: 400 }"></p>
+						<article>
+							<img class="list-icon" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" alt="" />
+							<h4>Simpel</h4>
+							<p>Unkompliziert Ansammlungen von Einträgen einbinden.</p>
+						</article>
+						<article>
+							<img class="list-icon" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" alt="" />
+							<h4>Erweiterbar</h4>
+							<p>Persönliche Notizen anlegen.</p>
+						</article>
+						<article>
+							<img class="list-icon" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" alt="" />
+							<h4>Hilfsbereit</h4>
+							<p>Schnelle Textsuche und diverse Assistenten erleichtern die Arbeit.</p>
+						</article>
+						<article>
+							<img class="list-icon" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" alt="" />
+							<h4>Umfassend</h4>
+							<p>Ordnungsbussenverordnung als Hauptanwendung, zahlreiche Erweiterungsmöglichkeiten wie etwa die Hinterlegung von Bewilligungen.</p>
+						</article>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="lexiconnect">
 			<div class="">
-				<img src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/09/06_LexiConnect.png" style="height: auto" alt="">
+				<img src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/09/06_LexiConnect.png" style="height: auto" alt="" />
 			</div>
 		</div>
 		<div class="bgdiag">
@@ -83,7 +96,6 @@
 				<div class="container" style="margin-top: 8rem; height: 100%; position: relative">
 					<client-only>
 						<swiper class="swiper" :options="swiperOption">
-							
 							<swiper-slide>
 								<div class="slider-grid">
 									<div class="slider-text">
@@ -109,9 +121,7 @@
 									<div class="slider-text">
 										<h3>FUNKTIONEN</h3>
 										<h2>Favoriten</h2>
-										<p>
-											Individuelle Einträge können als Favoriten definiert und somit prominent platziert werden.
-										</p>
+										<p>Individuelle Einträge können als Favoriten definiert und somit prominent platziert werden.</p>
 									</div>
 									<!-- <div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div> -->
 								</div>
@@ -121,7 +131,9 @@
 									<div class="slider-text">
 										<h3>FUNKTIONEN</h3>
 										<h2>Assistenten</h2>
-										<p>Die Assistenten erlauben das Finden von Einträgen mit Hilfe von grafischen Elementen. Die anwendbaren Ziffern werden auf einer Grafik, welche alltägliche Situationen abbildet, schnell und einfach ermittelt.</p>
+										<p>
+											Die Assistenten erlauben das Finden von Einträgen mit Hilfe von grafischen Elementen. Die anwendbaren Ziffern werden auf einer Grafik, welche alltägliche Situationen abbildet, schnell und einfach ermittelt.
+										</p>
 									</div>
 									<!-- <div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div> -->
 								</div>
@@ -141,7 +153,10 @@
 									<div class="slider-text">
 										<h3>FUNKTIONEN</h3>
 										<h2>Datenaustausch</h2>
-										<p>Lexica kann Daten von und zu anderen Systemen importieren und exportieren. So lassen sich z.B. Ziffern anwählen und ins PolicePad übermitteln. Oder man gelangt von PolicePad zu den detaillierten Informationen von Lexica.</p>
+										<p>
+											Lexica kann Daten von und zu anderen Systemen importieren und exportieren. So lassen sich z.B. Ziffern anwählen und ins PolicePad übermitteln. Oder man gelangt von PolicePad zu den detaillierten
+											Informationen von Lexica.
+										</p>
 									</div>
 									<!-- <div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div> -->
 								</div>
@@ -151,7 +166,10 @@
 									<div class="slider-text">
 										<h3>FUNKTIONEN</h3>
 										<h2>Backend</h2>
-										<p>Das Backend stellt eine einfache und intuitive Oberfläche zur Verfügung um die Ansammlung von Einträgen praktisch zu Editieren und neue Versionen davon zu generieren. Zusätzlich können Benutzer und Gruppen verwaltet, sowie weitere Einstellungen vorgenommen werden.</p>
+										<p>
+											Das Backend stellt eine einfache und intuitive Oberfläche zur Verfügung um die Ansammlung von Einträgen praktisch zu Editieren und neue Versionen davon zu generieren. Zusätzlich können Benutzer und Gruppen
+											verwaltet, sowie weitere Einstellungen vorgenommen werden.
+										</p>
 									</div>
 									<!-- <div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div> -->
 								</div>
@@ -165,9 +183,15 @@
 				<div class="container" style="padding: 4rem 0">
 					<h2>Anwender</h2>
 					<div class="grid cols-3" style="display: grid; gap: 2rem; align-items: center">
-						<nuxt-link to="/portfolio?category=2"><img v-scroll-reveal="{ delay: 0 }" style="padding: 2rem; max-width: 200px; height: auto" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2021/02/Screenshot-2021-02-05-at-11.41.08.png" alt="" /></nuxt-link>
-						<nuxt-link to="/portfolio?category=2"><img v-scroll-reveal="{ delay: 200 }" style="padding: 2rem; max-width: 200px; height: auto" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/09/Screenshot-2020-12-03-at-11.09.36.png" alt="" /></nuxt-link>
-						<nuxt-link to="/portfolio?category=2"><img v-scroll-reveal="{ delay: 400 }" style="padding: 2rem; max-width: 200px; height: auto" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/09/Screenshot-2020-12-03-at-11.09.45.png" alt="" /></nuxt-link>
+						<nuxt-link to="/portfolio?category=2"
+							><img v-scroll-reveal="{ delay: 0 }" style="padding: 2rem; max-width: 200px; height: auto" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2021/02/Screenshot-2021-02-05-at-11.41.08.png" alt=""
+						/></nuxt-link>
+						<nuxt-link to="/portfolio?category=2"
+							><img v-scroll-reveal="{ delay: 200 }" style="padding: 2rem; max-width: 200px; height: auto" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/09/Screenshot-2020-12-03-at-11.09.36.png" alt=""
+						/></nuxt-link>
+						<nuxt-link to="/portfolio?category=2"
+							><img v-scroll-reveal="{ delay: 400 }" style="padding: 2rem; max-width: 200px; height: auto" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/09/Screenshot-2020-12-03-at-11.09.45.png" alt=""
+						/></nuxt-link>
 					</div>
 				</div>
 			</div>
@@ -197,7 +221,7 @@ export default {
 				breakpoints: {
 					960: {
 						direction: 'vertical',
-						loop: false
+						loop: false,
 					},
 				},
 			},
@@ -341,4 +365,16 @@ export default {
 	@include mobile
 		padding: 2rem 0
 		background: none
+article
+	position: relative
+	.list-icon
+		position: absolute
+		left: -4.5rem
+		top: .5rem
+		max-width: 3rem
+		height: 3rem
+		@include mobile
+			left: -3rem
+			max-width: 2rem
+			height: 2rem
 </style>

@@ -94,7 +94,7 @@
 					<h3 v-scroll-reveal="{ delay: 0 }">PolicePad Server</h3>
 					<h2 v-scroll-reveal="{ delay: 200 }">Backend</h2>
 					<p v-scroll-reveal="{ delay: 400 }">
-						Der PolicePad Server ist die Gegenstelle von PolicePad und nimmt die Fälle entgegen, speichert diese, stellt sie dar und bietet diverse Statistiken. Verwalten Sie die Fälle, steuern Sie Gruppen und verwalten Sie die mobilen
+						Der PolicePad Server ist die Gegenstelle von PolicePad und nimmt die Fälle entgegen, speichert diese, stellt sie dar und bietet diverse Statistiken. Bearbeiten Sie die Fälle, steuern Sie Gruppen und verwalten Sie die mobilen
 						Eingabegeräte. Mit dem Bereitstellen der Stammdaten können Sie Inhalte live übertragen und in der App darstellen. Die Exportkontrolle dient der Sicherstellung, dass alle Fälle übertragen wurden.
 					</p>
 				</div>
