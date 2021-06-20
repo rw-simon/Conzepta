@@ -221,6 +221,22 @@
 				</div>
 			</div>
 		</div>
+		<div class="container">
+			<div class="section">
+				<div class="partner">
+					<div>
+						<h2>Partner</h2>
+						<img style="width: 300px; height: auto" src="/portfolio/tachifox/lesroutierssuisse.png" alt="" />
+					</div>
+					<div>
+						<h2>Support &amp; Verkauf</h2>
+						<nuxt-link to="/support#support"><CButton text="Support" style="display: block; width: 200px; background: white; border: 1px solid #1b52f5; color: #1b52f5" class="button"></CButton></nuxt-link>
+						<CButton text="Verkauf" style="display: block; width: 200px; background: white; border: 1px solid #1b52f5; color: #1b52f5" class="button"></CButton>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div></div>
 		<!-- <div class="anwender">
 			<div class="container">
 				<div class="section">
@@ -269,6 +285,10 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.partner
+	display: grid
+	grid-template-columns: 1fr 1fr
+	gap: 4rem
 .list-two-columns
 	display: grid
 	grid-template-columns: 1fr 1fr
