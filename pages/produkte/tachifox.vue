@@ -150,7 +150,7 @@
 							<h2 v-scroll-reveal="{ delay: 300 }">Sondertagsverwaltung</h2>
 							<p v-scroll-reveal="{ delay: 500 }">
 								Unternehmen können firmeneigene Sondertage definieren und erfassen. Dies unterstützt die Verwaltung von Aktivitäten von Gruppen oder einzelnen Fahrern. Fahrer können so manuell Aktivitäten hinzufügen und verwalten,
-								damit alle für die ARV26-Auswertung benötigten Daten vorhanden sind.
+								damit alle für die Halbjahresauswertung (ARV26) benötigten Daten vorhanden sind.
 							</p>
 						</div>
 					</div>

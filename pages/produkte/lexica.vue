@@ -328,7 +328,7 @@ export default {
 		top: auto
 		bottom: -5rem
 .funktionen
-	padding: 8rem 0
+	padding: 1rem 0
 	background-size: contain
 	background-repeat: no-repeat
 	background-position: left center
@@ -367,10 +367,11 @@ export default {
 		background: none
 article
 	position: relative
+	min-height: 80px
 	.list-icon
 		position: absolute
 		left: -4.5rem
-		top: .5rem
+		// top: .5rem
 		max-width: 3rem
 		height: 3rem
 		@include mobile
