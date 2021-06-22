@@ -32,7 +32,7 @@
 				</ul>
 			</li>
 			<li class="menu-item">
-				<nuxt-link :to="{ path: '/kontakt' }">{{ $i18n.locale == 'fr' ? 'Contact' : 'Kontakt' }}</nuxt-link>
+				<nuxt-link :to="localePath({ name: 'kontakt' })">{{ $i18n.locale == 'fr' ? 'Contact' : 'Kontakt' }}</nuxt-link>
 				<ul class="submenu" v-if="opened">
 					<li style="color: white">&nbsp;</li>
 					<li style="color: white">&nbsp;</li>

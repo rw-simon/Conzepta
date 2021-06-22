@@ -48,8 +48,23 @@ export default {
 		'@nuxtjs/axios',
 		'@nuxtjs/style-resources',
 		// https://go.nuxtjs.dev/pwa
-		'@nuxtjs/pwa',
+		// '@nuxtjs/pwa',
 		'nuxt-i18n',
+		[
+			'nuxt-mail',
+			{
+				message: [{ name: 'to-conz', to: ['admin@rechtwinklig.ch', 'salem@imadjane.ch'] }],
+				smtp: {
+					host: 'dali.sui-inter.net',
+					port: 465,
+					secure: true,
+					auth: {
+						user: 'info@rechtwinklig.ch',
+						pass: '!ml18Py3',
+					},
+				},
+			},
+		],
 	],
 
 	i18n: {
@@ -69,14 +84,16 @@ export default {
 		sass: ['@/assets/_variables.sass', '@/assets/_utility.sass'],
 	},
 
-	pwa: {
-		manifest: {
-			name: 'Conzepta',
-			short_name: 'Conzepta',
-			orientation: 'portrait',
-		},
-		workbox: { debug: false },
-	},
+	// pwa: {
+	// 	manifest: {
+	// 		name: 'Conzepta',
+	// 		short_name: 'Conzepta',
+	// 		orientation: 'portrait',
+	// 	},
+	// 	workbox: { debug: false },
+	// },
+
+	// serverMiddleware: ['~/api/contact'],
 
 	// server: {
 	// 	host: '0.0.0.0',

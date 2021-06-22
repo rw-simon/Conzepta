@@ -2,13 +2,31 @@
 	<div>
 		<div style="padding: 4rem 0 4rem; background: #e7e9ec" id="support">
 			<div id="kontaktformular" class="container">
-				<h3>Direkt</h3>
-				<h1>Kontakt</h1>
+				<h3>{{ $i18n.locale == 'fr' ? 'Direct' : 'Direkt' }}</h3>
+				<h1>{{ $i18n.locale == 'fr' ? 'Contact' : 'Kontakt' }}</h1>
 				<div v-if="!sent">
-					<form action="" class="grid cols-2" style="gap: 2rem">
-						<input v-model="form.vorname" v-scroll-reveal="{ delay: 200 }" style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%" type="text" placeholder="Vorname" />
-						<input v-model="form.nachname" v-scroll-reveal="{ delay: 400 }" style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%" type="text" placeholder="Nachname" />
-						<input v-model="form.email" v-scroll-reveal="{ delay: 600 }" style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%" type="text" placeholder="Email" />
+					<form class="grid cols-2" style="gap: 2rem">
+						<input
+							v-model="form.vorname"
+							v-scroll-reveal="{ delay: 200 }"
+							style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%"
+							type="text"
+							:placeholder="$i18n.locale == 'fr' ? 'Prénom' : 'Vorname'"
+						/>
+						<input
+							v-model="form.nachname"
+							v-scroll-reveal="{ delay: 400 }"
+							style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%"
+							type="text"
+							:placeholder="$i18n.locale == 'fr' ? 'Nom de famille' : 'Nachname'"
+						/>
+						<input
+							v-model="form.email"
+							v-scroll-reveal="{ delay: 600 }"
+							style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%"
+							type="text"
+							:placeholder="$i18n.locale == 'fr' ? 'Email' : 'Email'"
+						/>
 						<select v-scroll-reveal="{ delay: 800 }" :style="[selectedAnliegen == 'anliegen' ? { color: 'gray' } : { color: 'black' }]" name="anliegen" id="" v-model="selectedAnliegen">
 							<option value="anliegen" selected>Anliegen</option>
 							<option value="all">Allgemein</option>
@@ -25,18 +43,27 @@
 					type="text"
 					placeholder="Anliegen"
 				/> -->
-						<textarea placeholder="Ihre Mitteilung" v-scroll-reveal="{ delay: 1000 }" style="border: blue 1px solid; border-radius: 5px; width: 100%; grid-column: span 2" name="" id="" cols="30" rows="10" v-model="textArea"></textarea>
+						<textarea
+							:placeholder="$i18n.locale == 'fr' ? 'Votre message' : 'Ihre Mitteilung'"
+							v-scroll-reveal="{ delay: 1000 }"
+							style="border: blue 1px solid; border-radius: 5px; width: 100%; grid-column: span 2"
+							name=""
+							id="textarea"
+							cols="30"
+							rows="10"
+							v-model="textArea"
+						></textarea>
 					</form>
 					<div class="grid cols-3 small-gap" style="align-items: center; margin-top: 2rem">
 						<span style="padding: 0.5rem 2rem 0.5rem 0.5rem; border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%">
 							<input v-model="robot" style="padding: 0; height: 1rem; width: 1rem; border: blue 1px solid; border-radius: 3px; margin-right: 10px; vertical-align: text-top" type="checkbox" name="" id="" />
-							Ich bin kein Roboter
+							{{ $i18n.locale == 'fr' ? 'Je ne suis pas un robot' : 'Ich bin kein Roboter' }}
 						</span>
 						<span style="padding: 0.5rem 2rem 0.5rem 0.5rem; border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%">
 							<input style="padding: 0; height: 1rem; width: 1rem; border: blue 1px solid; border-radius: 3px; margin-right: 10px; vertical-align: text-top" type="checkbox" name="" id="" />
-							Kopie an mich senden
+							{{ $i18n.locale == 'fr' ? 'M’envoyer une copie' : 'Kopie an mich senden' }}
 						</span>
-						<CButton text="Senden" @click.native="send" />
+						<CButton @click.native="registerForm" :text="$i18n.locale == 'fr' ? 'Envoyer' : 'Senden'" />
 					</div>
 					<div v-if="error">
 						<p style="color: red">{{ error }}</p>
@@ -59,7 +86,7 @@
 			</div>
 		</div>
 		<div class="container" style="margin-top: 8rem">
-			<div class="grid cols-2">
+			<div class="grid cols-2" v-if="$i18n.locale == 'de'">
 				<div>
 					<div>
 						<h3 v-scroll-reveal="{ delay: 0 }">In 10 Minuten</h3>
@@ -168,7 +195,15 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
+	name: 'kontakt',
+	nuxtI18n: {
+		paths: {
+			fr: '/contact', // -> accessible at /fr/a-propos
+			de: '/kontakt', // -> accessible at /es/sobre
+		},
+	},
 	async asyncData({ query }) {
 		return {
 			textArea: query.text,
@@ -181,12 +216,8 @@ export default {
 				email: '',
 			},
 			error: '',
-		}
-	},
-	data() {
-		return {
-			// selectedAnliegen: '',
-			// textArea: '',
+			submitting: false,
+			isSubmitted: false,
 		}
 	},
 	mounted() {
@@ -195,31 +226,63 @@ export default {
 		// }
 	},
 	methods: {
-		send() {
-			if (this.form.vorname) {
-				if (this.form.nachname) {
-					if (this.form.email) {
-						if (this.textArea) {
-							if (this.robot) {
-								if (this.selectedAnliegen) {
-									this.sent = true
-								}
-							} else {
-								this.error = 'Bitte wählen Sie die captcha-Checkbox an'
-							}
-						} else {
-							this.error = 'Bitte geben Sie eine Nachricht ein'
-						}
-					} else {
-						this.error = 'Bitte geben Sie eine gültige Email-Adresse an'
-					}
-				} else {
-					this.error = 'Bitte geben Sie einen gültigen Nachnamen an'
-				}
-			} else {
-				this.error = 'Bitte geben Sie einen gültigen Vornamen an'
+		async registerForm() {
+			this.submitting = true
+			try {
+				// await this.$axios.$post('/mail/send', {
+				// 	config: 'to-conz',
+				// 	from: 'Conzepta <info@conzepta.ch>',
+				// 	subject: 'Kopie Ihrer Anfrage Kontaktformular Conzepta',
+				// 	text: 'Vielen Dank für Ihre Anfrage. Wir werden Ihre Anliegen so schnell wie möglich bearbeiten. Freundliche Grüsse, Conzepta',
+				// 	html: '<h1>Vielen Dank für Ihre Anfrage</h1><p> Wir werden Ihre Anliegen so schnell wie möglich bearbeiten.</p><p>Freundliche Grüsse<br />Conzepta</p>',
+				// })
+				await this.$axios.$post('/mail/send', {
+					config: 'to-conz',
+					from: 'Conzepta <info@conzepta.ch>',
+					subject: 'Neue Nachricht via Kontaktformular',
+					text: `Von: ${this.form.vorname} ${this.form.nachname} (${this.form.email}). Nachricht: ${this.textArea}`,
+					html: '<h1>Neue Nachricht via Kontaktformular</h1><h3>' + this.selectedAnliegen + '</h3><p>Von: ' + this.form.vorname + ' ' + this.form.nachname + '</p><p>' + this.textArea + '</p>',
+				})
+				// await this.$axios.$post('', {
+				// 	vorname: ' ', //this.form.vorname || ' ',
+				// 	nachname: ' ', //this.form.name || ' ',
+				// 	email: ' ', //this.form.email || ' ', // String
+				// 	anliegen: ' ', //this.selectedAnliegen || ' ', // Array [{name: '', date: '', time: '', place: ''}, …]
+				// 	nachricht: ' ', //this.textArea || ' ', // Array [{name: '', date: '', time: '', place: ''}, …]
+				// })
+				await new Promise((resolve) => setTimeout(resolve, 2500))
+				this.submitting = false
+				this.isSubmitted = true
+			} catch (err) {
+				this.submitting = false
+				console.log(err)
 			}
 		},
+		// send() {
+		// 	if (this.form.vorname) {
+		// 		if (this.form.nachname) {
+		// 			if (this.form.email) {
+		// 				if (this.textArea) {
+		// 					if (this.robot) {
+		// 						if (this.selectedAnliegen) {
+		// 							this.sent = true
+		// 						}
+		// 					} else {
+		// 						this.error = 'Bitte wählen Sie die captcha-Checkbox an'
+		// 					}
+		// 				} else {
+		// 					this.error = 'Bitte geben Sie eine Nachricht ein'
+		// 				}
+		// 			} else {
+		// 				this.error = 'Bitte geben Sie eine gültige Email-Adresse an'
+		// 			}
+		// 		} else {
+		// 			this.error = 'Bitte geben Sie einen gültigen Nachnamen an'
+		// 		}
+		// 	} else {
+		// 		this.error = 'Bitte geben Sie einen gültigen Vornamen an'
+		// 	}
+		// },
 	},
 }
 </script>

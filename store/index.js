@@ -61,28 +61,28 @@ export const actions = {
 		Cookie.set('console', test)
 	},
 	async nuxtServerInit({ commit }) {
-		const pageRequest = await axios.get('https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/pages?per_page=100')
-		const productRequest = await axios.get('https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/products?per_page=100&orderby=menu_order&order=asc')
-		const productCategoryRequest = await axios.get('https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/product_category?per_page=100')
-		const newsRequest = await axios.get('https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/news?per_page=100')
-		const platformRequest = await axios.get('https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/platform?per_page=100')
-		const personRequest = await axios.get('https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/person?per_page=100')
+		// const pageRequest = await axios.get('https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/pages?per_page=100')
+		// const productRequest = await axios.get('https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/products?per_page=100&orderby=menu_order&order=asc')
+		// const productCategoryRequest = await axios.get('https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/product_category?per_page=100')
+		// const newsRequest = await axios.get('https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/news?per_page=100')
+		// const platformRequest = await axios.get('https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/platform?per_page=100')
+		// const personRequest = await axios.get('https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/person?per_page=100')
 		// const mediaRequest = await axios.get(
 		// 	'https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/media?per_page=100'
 		// )
-		const pageData = pageRequest.data
-		const productData = productRequest.data
-		const productCategoryData = productCategoryRequest.data
-		const newsData = newsRequest.data
-		const platformData = platformRequest.data
-		const personData = personRequest.data
+		// const pageData = pageRequest.data
+		// const productData = productRequest.data
+		// const productCategoryData = productCategoryRequest.data
+		// const newsData = newsRequest.data
+		// const platformData = platformRequest.data
+		// const personData = personRequest.data
 		// const mediaData = mediaRequest.data
-		commit('SET_PAGES', pageData)
-		commit('SET_PRODUCTS', productData)
-		commit('SET_PRODUCTCATEGORIES', productCategoryData)
-		commit('SET_NEWS', newsData)
-		commit('SET_PLATFORM', platformData)
-		commit('SET_PERSON', personData)
+		// commit('SET_PAGES', pageData)
+		// commit('SET_PRODUCTS', productData)
+		// commit('SET_PRODUCTCATEGORIES', productCategoryData)
+		// commit('SET_NEWS', newsData)
+		// commit('SET_PLATFORM', platformData)
+		// commit('SET_PERSON', personData)
 		// commit('SET_MEDIA', mediaData)
 	},
 }
