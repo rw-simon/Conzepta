@@ -6,12 +6,13 @@
 					<div class="grid cols-2">
 						<span></span>
 						<div>
-							<h3 v-scroll-reveal="{ delay: 0 }">Fahrtenschreiber</h3>
+							<div v-html="content.acf.modules[0].text_2_columns_column_2"></div>
+							<!-- <h3 v-scroll-reveal="{ delay: 0 }">Fahrtenschreiber</h3>
 							<h1 v-scroll-reveal="{ delay: 200 }">TachiFox //</h1>
 							<p v-scroll-reveal="{ delay: 400 }">
 								TachiFox ist die praxisorientierte Lösung von Conzepta und Les Routiers Suisses zum Erfassen von Daten, welche der Arbeits- und Ruhezeit Verordnung ARV unterliegen. TachiFox vereinfacht die Auswertung der Daten nach
 								den gesetzlich vorgegebenen Richtwerten. Das System informiert Sie sofort über mögliche Verstösse. Verwalten Sie Fahrer- und Fahrzeugdaten an einem Ort: einlesen, bearbeiten und auswerten.
-							</p>
+							</p> -->
 							<br />
 							<nuxt-link :to="'/wir#philippe-luethi'"
 								><div class="grid cols-2 small-gap person" style="align-items: center; margin-top: 2rem">
@@ -34,12 +35,13 @@
 					<a href="https://www.routiers.ch/">
 						<img style="height: auto; width: 10rem; margin-bottom: 2rem" src="/portfolio/tachifox/lesroutierssuisse.png" alt="" />
 					</a>
-					<h3 v-scroll-reveal="{ delay: 0 }">Aktuelle Generation</h3>
+					<div v-html="content.acf.modules[1].text_2_columns_column_1"></div>
+					<!-- <h3 v-scroll-reveal="{ delay: 0 }">Aktuelle Generation</h3>
 					<h2 v-scroll-reveal="{ delay: 200 }">Unaufhörliches Verbessern</h2>
 					<p v-scroll-reveal="{ delay: 400 }">
 						TachiFox besteht seit rund 15 Jahren und ist mittlerweile in der aktuellen Generation als moderne Web-Anwendung verfügbar. Durch die enge Zusammenarbeit mit Les Routiers Suisses konnten wir das Produkt laufend an die
 						Bedürfnisse der Logistikunternehmen anpassen und um smarte Funktionen erweitern.
-					</p>
+					</p> -->
 				</div>
 				<div class="secmobfirst">
 					<img style="height: auto" src="/tachiimg.png" alt="" />
@@ -53,10 +55,10 @@
 				</div>
 				<div class="grid cols-2">
 					<span></span>
-					<div>
-						<h3 v-scroll-reveal="{ delay: 0 }">Funktionen</h3>
+					<div v-html="content.acf.modules[2].text_1_columns_column_1">
+						<!-- <h3 v-scroll-reveal="{ delay: 0 }">Funktionen</h3>
 						<h2 v-scroll-reveal="{ delay: 200 }">Alles an einem Ort</h2>
-						<p v-scroll-reveal="{ delay: 400 }">Nebst den Grundfunktionen wie Einlesen, Bearbeiten und Auswerten der Daten, unterstützt TachiFox das Verwalten von Organisationen und Einzelfahrern.</p>
+						<p v-scroll-reveal="{ delay: 400 }">Nebst den Grundfunktionen wie Einlesen, Bearbeiten und Auswerten der Daten, unterstützt TachiFox das Verwalten von Organisationen und Einzelfahrern.</p> -->
 					</div>
 				</div>
 			</div>
@@ -66,52 +68,19 @@
 				<div class="container" style="margin-top: 8rem; height: 100%; position: relative">
 					<client-only>
 						<swiper class="swiper" :options="swiperOption">
-							<swiper-slide>
+							<swiper-slide v-for="slide in content.acf.modules[3]['slider-content']" :key="slide['id']">
 								<div class="slider-grid">
-									<div class="slider-text">
-										<h3>Alles im Blick</h3>
+									<div class="slider-text" v-html="slide.slide_text">
+										<!-- <h3>Alles im Blick</h3>
 										<h2>Geordnet</h2>
 										<p>
 											Das Einlesen der Fahrer- und Fahrzeugdaten erfolgt über den TachiFoxReader. Dieser übermittelt die Daten an den Server, wo diese weiterverarbeitet und dem entsprechenden Fahrer oder Fahrzeug zugeordnet
 											werden. Die Tachograph-Daten können auch direkt über den Browser hochgeladen werden.
-										</p>
+										</p> -->
 									</div>
 									<div class="slider-image">
 										<video style="width: 100% !important" autoplay muted loop>
 											<source src="/01_Geordnet_Fahrer (1).mp4" type="video/mp4" />
-											Your browser does not support the video tag.
-										</video>
-									</div>
-								</div>
-							</swiper-slide>
-							<swiper-slide>
-								<div class="slider-grid">
-									<div class="slider-text">
-										<h3>Alles im Blick</h3>
-										<h2>Rückverfolgbar</h2>
-										<p>
-											Eine Aktivität bezieht sich auf eine Arbeitstätigkeit eines Fahrers wie etwa die Lenkzeit oder Bereitschaftszeit. Aktivitäten werden chronologisch aufgelistet und können durch Benutzer eingesehen und
-											bearbeitet werden.
-										</p>
-									</div>
-									<div class="slider-image">
-										<video style="width: 100% !important" autoplay muted loop>
-											<source src="/02_Rueckverfolgbar_Aktivitaet (1).mp4" type="video/mp4" />
-											Your browser does not support the video tag.
-										</video>
-									</div>
-								</div>
-							</swiper-slide>
-							<swiper-slide>
-								<div class="slider-grid">
-									<div class="slider-text">
-										<h3>Alles im Blick</h3>
-										<h2>Übersichtlich</h2>
-										<p>Die Aktivitäten können als Rapport übersichtlich dargestellt werden. Rapporte enthalten grafische Elemente, Zusammenzüge von Fahrerdaten und die Ergebnisse der ARV Auswertung.</p>
-									</div>
-									<div class="slider-image">
-										<video style="width: 100% !important" autoplay muted loop>
-											<source src="/03_Uebersichtlich_Rapport (1).mp4" type="video/mp4" />
 											Your browser does not support the video tag.
 										</video>
 									</div>
@@ -126,10 +95,10 @@
 				<div class="container">
 					<div style="align-items: center" class="section grid cols-2">
 						<img src="/rapport.png" style="height: auto" alt="" />
-						<div>
-							<h3 v-scroll-reveal="{ delay: 0 }">Rapporte</h3>
+						<div v-html="content.acf.modules[4].text_2_columns_column_2">
+							<!-- <h3 v-scroll-reveal="{ delay: 0 }">Rapporte</h3>
 							<h2 v-scroll-reveal="{ delay: 200 }">Einfach übersichtlich auszuwerten</h2>
-							<p v-scroll-reveal="{ delay: 400 }">Die Aktivitäten können als Rapport übersichtlich dargestellt werden. Rapporte enthalten grafische Elemente, Zusammenzüge von Fahrerdaten und die Ergebnisse der ARV Auswertung.</p>
+							<p v-scroll-reveal="{ delay: 400 }">Die Aktivitäten können als Rapport übersichtlich dargestellt werden. Rapporte enthalten grafische Elemente, Zusammenzüge von Fahrerdaten und die Ergebnisse der ARV Auswertung.</p> -->
 						</div>
 					</div>
 				</div>
@@ -140,8 +109,8 @@
 				<div class="container">
 					<div class="section grid cols-2">
 						<span></span>
-						<div>
-							<h2 v-scroll-reveal="{ delay: 0 }">Fahrer- und Fahrzeugverwaltung</h2>
+						<div v-html="content.acf.modules[5].text_2_columns_column_2">
+							<!-- <h2 v-scroll-reveal="{ delay: 0 }">Fahrer- und Fahrzeugverwaltung</h2>
 							<p v-scroll-reveal="{ delay: 200 }">
 								Die erfassten Fahrer und Fahrzeuge werden übersichtlich dargestellt und können effizient bearbeitet werden. TachiFox unterstützt die Benutzer durch eine freundliche Erinnerung, Daten einzulesen, wenn dies lange nicht
 								mehr erfolgt ist.
@@ -151,7 +120,7 @@
 							<p v-scroll-reveal="{ delay: 500 }">
 								Unternehmen können firmeneigene Sondertage definieren und erfassen. Dies unterstützt die Verwaltung von Aktivitäten von Gruppen oder einzelnen Fahrern. Fahrer können so manuell Aktivitäten hinzufügen und verwalten,
 								damit alle für die Halbjahresauswertung (ARV26) benötigten Daten vorhanden sind.
-							</p>
+							</p> -->
 						</div>
 					</div>
 				</div>
@@ -159,14 +128,14 @@
 			<div class="benutzerverwaltung">
 				<div class="container">
 					<div class="section grid cols-2" style="margin-top: 0">
-						<div class="firstmobsec">
-							<h2 v-scroll-reveal="{ delay: 0 }">Benutzerverwaltung</h2>
+						<div class="firstmobsec" v-html="content.acf.modules[6].text_2_columns_column_1">
+							<!-- <h2 v-scroll-reveal="{ delay: 0 }">Benutzerverwaltung</h2>
 							<p v-scroll-reveal="{ delay: 200 }">
 								In der Benutzerverwaltung werden den Benutzern ihre Rollen und Fahrer zugeordnet. Hier können hierarchische Stufen geschaffen werden, indem Benutzern verschiedene Rollen und Funktionen zugewiesen werden. In einem
 								Unternehmen können so etwa Disponenten und Fahrer erfasst werden. Fahrer haben nur Einblick in ihre eigenen Daten, während Disponenten die Daten aller ihnen zugeteilten Fahrer einsehen und verwalten können.
 							</p>
 							<br /><br />
-							<br />
+							<br /> -->
 							<!-- <CButton v-scroll-reveal="{ delay: 400 }" text="Datenblatt" /> -->
 						</div>
 						<img class="secmobfirst" style="height: auto" src="/01.png" alt="" />
@@ -180,12 +149,12 @@
 				<h2 style="margin-bottom: 4rem">Funktionen</h2>
 				<div class="list-two-columns">
 					<div class="column-1">
-						<article>
-							<img src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" class="list-icon" alt="" />
-							<h4>Einlesen</h4>
-							<p>Tachograph Karten und Dateien lassen sich für Fahrer und Fahrzeug importieren.</p>
+						<article v-for="item in content.acf.modules[7].list_2_columns_column_1" :key="item['id']">
+							<img :src="item.list_2_columns_column_1_icon" class="list-icon" alt="" />
+							<h4>{{ item.list_2_columns_column_1_text.list_2_columns_column_1_text_title }}</h4>
+							<p>{{ item.list_2_columns_column_1_text.list_2_columns_column_1_text_content }}</p>
 						</article>
-						<article>
+						<!-- <article>
 							<img src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" class="list-icon" alt="" />
 							<h4>Chauffeurverordnung</h4>
 							<p>ARV Daten können ausgewertet werden.</p>
@@ -199,23 +168,13 @@
 							<img src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" class="list-icon" alt="" />
 							<h4>Verwaltung</h4>
 							<p>Aktivitäten, Benutzer und Fahrerkarten lassen sich einfach verwalten.</p>
-						</article>
+						</article> -->
 					</div>
 					<div class="column-2">
-						<article>
-							<img src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" class="list-icon" alt="" />
-							<h4>Nachverfolgung</h4>
-							<p>Änderungen sind nachverfolgbar.</p>
-						</article>
-						<article>
-							<img src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" class="list-icon" alt="" />
-							<h4>Sondertage</h4>
-							<p>Ein Kalender mit Sondertagen kann aufgerufen werden.</p>
-						</article>
-						<article>
-							<img src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" class="list-icon" alt="" />
-							<h4>Rapporte</h4>
-							<p>Fahrer- und Fahrzeugrapporte lassen sich einfach generieren, ob wöchentlich oder monatlich.</p>
+						<article v-for="item in content.acf.modules[7].list_2_columns_column_2" :key="item['id']">
+							<img :src="item.list_2_columns_column_2_icon" class="list-icon" alt="" />
+							<h4>{{ item.list_2_columns_column_2_text.list_2_columns_column_2_text_title }}</h4>
+							<p>{{ item.list_2_columns_column_2_text.list_2_columns_column_2_text_content }}</p>
 						</article>
 					</div>
 				</div>
@@ -257,7 +216,7 @@
 <script>
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 import 'swiper/css/swiper.min.css'
-
+import axios from 'axios'
 export default {
 	name: 'produkte-tachifox',
 	nuxtI18n: {
@@ -266,6 +225,12 @@ export default {
 			fr: '/produits/tachifox', // -> accessible at /fr/a-propos
 			de: '/produkte/tachifox', // -> accessible at /es/sobre
 		},
+	},
+	async asyncData({ app }) {
+		let content = await axios.get(`https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/products?slug=tachifox&lang=${app.i18n.locale}`)
+		return {
+			content: content.data[0],
+		}
 	},
 	data() {
 		return {

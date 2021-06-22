@@ -5,12 +5,13 @@
 				<div class="grid cols-2">
 					<div></div>
 					<div class="texti">
-						<h3 v-scroll-reveal="{ delay: 0 }">Kommunikatonssystem</h3>
+						<div v-html="content.acf.banner.text"></div>
+						<!-- <h3 v-scroll-reveal="{ delay: 0 }">Kommunikatonssystem</h3>
 						<h1 v-scroll-reveal="{ delay: 200 }">InterLink //</h1>
 						<p v-scroll-reveal="{ delay: 400 }">
 							InterLink ist ein zuverlässiges Kommunikationssystem, das Ihre Mitarbeitenden während der Arbeitszeit begleitet: Präsenzzeiten erfassen, Zutritte gewähren, Auftragszeiten buchen. Sie erhalten alle Aktivitäten in Echtzeit,
 							weltweit.
-						</p>
+						</p> -->
 						<img v-scroll-reveal="{ delay: 600 }" style="width: 1.2rem" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/12/icon_windows.png" alt="" />
 						<nuxt-link to="/wir#urs-blaser">
 							<div class="grid cols-2 small-gap person" style="align-items: center; margin-top: 2rem">
@@ -32,7 +33,7 @@
 				<div style="margin-top: 8rem" class="vernetzen">
 					<div class="container">
 						<div class="grid cols-2">
-							<div style="margin-top: 16rem">
+							<div style="margin-top: 16rem" v-html="content.acf.unabhangig_vernetzen.veretzen_text">
 								<h3 v-scroll-reveal="{ delay: 0 }">Unabhängig Vernetzen</h3>
 								<h2 v-scroll-reveal="{ delay: 200 }">Ein Protokoll für alle Hersteller</h2>
 								<p v-scroll-reveal="{ delay: 400 }">
@@ -47,7 +48,7 @@
 			<div class="something" style="margin-top: 10rem">
 				<div class="container">
 					<h3 v-scroll-reveal="{ delay: 0 }" style="text-align: center">BIXI SYSTEMS / DORMAKABA / MPDV / PCS / PRIMION / TYCO / VICKING</h3>
-					<h2 v-scroll-reveal="{ delay: 200 }" style="text-align: center; margin-bottom: 8rem">InterLink kommuniziert mit Terminals verschiedener Hersteller</h2>
+					<h2 v-scroll-reveal="{ delay: 200 }" style="text-align: center; margin-bottom: 8rem">{{ content.acf.numbers.titel }}</h2>
 					<div class="grid cols-5">
 						<div style="grid-column: span 3">
 							<h1 v-scroll-reveal="{ delay: 0 }" style="margin-bottom: 0; line-height: 1em"><RollingNumber :number="20" /></h1>
@@ -57,11 +58,11 @@
 							<h1 v-scroll-reveal="{ delay: 400 }" style="margin-bottom: 0; line-height: 1em"><RollingNumber :number="3000000" /></h1>
 							<h3 v-scroll-reveal="{ delay: 500 }" style="margin-bottom: 2rem">Buchungen pro Tag</h3>
 						</div>
-						<div style="grid-column: span 2">
-							<p v-scroll-reveal="{ delay: 300 }">
+						<div style="grid-column: span 2" v-html="content.acf.numbers['']">
+							<!-- <p v-scroll-reveal="{ delay: 300 }">
 								Mit seinen weltweit über 30'000 Terminals und den damit gemachten 3 Millionen Buchungen pro Tag hat sich InterLink als bewährtes System etabliert. Unsere Eigenentwicklung steht bereits seit über 20 Jahren mit höchster
 								Zuverlässigkeit im Einsatz. Viele Generationen von Terminals werden unterstützt und laufend werden neue Terminals hinzugefügt.
-							</p>
+							</p> -->
 						</div>
 					</div>
 				</div>
@@ -70,7 +71,7 @@
 				<div class="container">
 					<div class="grid cols-2">
 						<span></span>
-						<div style="margin-top: 6rem">
+						<div style="margin-top: 6rem" v-html="content.acf.funktionen.funktionen_text">
 							<h3 v-scroll-reveal="{ delay: 0 }">Funktionen</h3>
 							<h2 v-scroll-reveal="{ delay: 200 }">Da schaltet die Konkurrenz ab</h2>
 							<p v-scroll-reveal="{ delay: 400 }">Weitere interessante Aspekte sind der Offline-Betrieb, die Datensicherung, sowie ein einzigartiges technisches Analysetool.</p>
@@ -84,13 +85,14 @@
 				<div class="clock">
 					<div class="container">
 						<div :class="{ text: true, open: showContentKomp }">
-							<h3 v-scroll-reveal="{ delay: 0 }">ARBEITSZEITEN AUSWERTEN</h3>
+							<div v-html="content.acf.arbeitszeiten.text_intro"></div>
+							<!-- <h3 v-scroll-reveal="{ delay: 0 }">ARBEITSZEITEN AUSWERTEN</h3>
 							<h2 v-scroll-reveal="{ delay: 200 }">Kommunikation kann so viel mehr</h2>
 							<p v-scroll-reveal="{ delay: 400 }" class="intro">
 								Bewegen sich Mitarbeitende mit einem Badge an ihrem Arbeitsort, passiert im Hintergrund vieles: Türen müssen, je nach Person, öffnen oder verschlossen bleiben. Arbeitszeiten werden erfasst. Viele Schnittstellen, die
 								ineinandergreifen. Und Daten, die Sie im Auge behalten wollen. InterLink bietet Ihnen eine reibungslose Kommunikation aller Zeit- und Zutrittsterminals, die über die verschiedenen Standorte Ihres Betriebs verteilt
 								sind.
-							</p>
+							</p> -->
 							<img
 								@click="toggleContentKomp"
 								:class="{
@@ -100,10 +102,8 @@
 								src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_arrowDown.png"
 								alt=""
 							/>
-							<p :class="{ more: true, active: showContentKomp }">
-								Oftmals stehen in einem Betrieb Terminals verschiedener Hersteller im Einsatz. Dabei zeigt sich folgendes Problem: Die Terminals der verschiedenen Hersteller ‘’sprechen eine unterschiedliche Sprache’’, d.h. die
-								Terminals und das Managementsystem verstehen einander nicht.
-							</p>
+							<div></div>
+							<div :class="{ more: true, active: showContentKomp }" v-html="content.acf.arbeitszeiten.text_ausgeklappt"></div>
 						</div>
 					</div>
 				</div>
@@ -111,7 +111,7 @@
 					<div class="container">
 						<div class="grid cols-2">
 							<div></div>
-							<div class="ppi">
+							<div class="ppi" v-html="content.acf.offnet_turen.turen_text">
 								<h3 v-scroll-reveal="{ delay: 0 }">VERBINDET BESTEHENDE SYSTEME</h3>
 								<h2 v-scroll-reveal="{ delay: 200 }">Öffnet Türen</h2>
 								<p v-scroll-reveal="{ delay: 400 }">
@@ -144,6 +144,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
 	name: 'produkte-interlink',
 	nuxtI18n: {
@@ -152,6 +153,14 @@ export default {
 			fr: '/produits/interlink', // -> accessible at /fr/a-propos
 			de: '/produkte/interlink', // -> accessible at /es/sobre
 		},
+	},
+	async asyncData({ app, store }) {
+		let content = await axios.get(`https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/products?slug=interlink&lang=${app.i18n.locale}`)
+		return {
+			content: content.data[0],
+			platforms: store.state.platforms,
+			person: store.state.person,
+		}
 	},
 	data() {
 		return { showContentKomp: false }
@@ -304,11 +313,11 @@ img
 		padding-top: 2rem
 	p
 		margin: 3rem 0
-		&.more
-			opacity: 0
-			transition: opacity 300ms ease-out, margin-top 300ms ease-out
-			margin-top: 0rem
-			&.active
-				opacity: 1
-				margin-top: 3rem
+.more
+	opacity: 0
+	transition: opacity 300ms ease-out, margin-top 300ms ease-out
+	margin-top: 0rem
+	&.active
+		opacity: 1
+		margin-top: 3rem
 </style>
