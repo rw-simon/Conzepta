@@ -38,10 +38,20 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
-	async asyncData({ store }) {
+	name: 'news',
+	nuxtI18n: {
+		paths: {
+			//   en: '/about-us', // -> accessible at /about-us (no prefix since it's the default locale)
+			fr: '/news', // -> accessible at /fr/a-propos
+			de: '/news', // -> accessible at /es/sobre
+		},
+	},
+	async asyncData({ app }) {
+		let news = await axios.get(`https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/news?lang=${app.i18n.locale}`)
 		return {
-			news: store.state.news,
+			news: news.data,
 		}
 	},
 	data() {

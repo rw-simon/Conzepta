@@ -41,11 +41,18 @@
 
 <script>
 export default {
+	name: 'support',
 	data() {
 		return {
 			selectedAnliegen: '',
 			textArea: '',
 		}
+	},
+	nuxtI18n: {
+		paths: {
+			fr: '/support', // -> accessible at /fr/a-propos
+			de: '/support', // -> accessible at /es/sobre
+		},
 	},
 	mounted() {
 		if (this.$route.params.text == 'huhu') {

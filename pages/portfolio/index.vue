@@ -3,13 +3,13 @@
 		<div class="container">
 			<div class="section">
 				<div class="grid cols-2" style="align-items: end">
-					<div>
-						<h3>Referenzen</h3>
+					<div v-html="content.acf.modules[0].text_2_columns_column_1">
+						<!-- <h3>Referenzen</h3>
 						<h1>Portfolio //</h1>
 						<p>
 							Sie überlegen sich, ob unsere Software auch Ihren Alltag erleichtern könnte? Im Portfolio zeigen wir Ihnen, wer bereits Produkte von Conzepta im Einsatz hat. Denn Erfahrungen, die sie bereits damit machen konnten, können
 							Ihr Ratgeber sein. Setzen Sie sich unverbindlich mit uns in Verbindung, wenn Sie mehr zu spezifischen Projekten erfahren möchten.
-						</p>
+						</p> -->
 					</div>
 					<div class="filter br-2">
 						<input
@@ -55,9 +55,13 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
-	async asyncData({ query }) {
-		return { selectedCategories: [parseInt(query.category)] || [0] }
+	name: 'portfolio',
+
+	async asyncData({ app, query }) {
+		let content = await axios.get(`https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/pages?slug=portfolio&lang=${app.i18n.locale}`)
+		return { content: content.data[0], selectedCategories: [parseInt(query.category)] || [0] }
 	},
 	data() {
 		return {

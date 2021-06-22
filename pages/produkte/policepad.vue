@@ -30,12 +30,7 @@
 			<div class="kompromisslos">
 				<div class="container">
 					<div :class="{ text: true, open: showContentKomp }">
-						<h3 v-scroll-reveal="{ delay: 0 }">Kompromisslos</h3>
-						<h2 v-scroll-reveal="{ delay: 200 }">Genau so, wie es sein soll</h2>
-						<p v-scroll-reveal="{ delay: 400 }" class="intro">
-							Dank langjähriger Erfahrung und der engen Zusammenarbeit mit Polizeikorps überzeugt PolicePad durch seine Effizienz: es ist intiuitiv und einfach zu bedienen. Flexible Module ergänzen die Anwendung mit hilfreichen
-							Funktionen. Durch einfaches und schnelles Konfigurieren lässt sich die App weiter individualisieren.
-						</p>
+						<div v-html="content.acf.intro.intro_text1"></div>
 						<img
 							@click="toggleContentKomp"
 							:class="{
@@ -45,11 +40,7 @@
 							src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_arrowDown.png"
 							alt=""
 						/>
-						<p :class="{ more: true, active: showContentKomp }">
-							PolicePad hatte den besten Treiber für Innovation, den es gibt: die Realität. Die erste Version ging vor rund 30 Jahren in Betrieb. Mit jedem Tag und jedem Einsatz wurde das System besser. Heute steht PolicePad auf
-							verschiedenen Plattformen zur Verfügung. Die Bedienung und zahlreiche Zusatzmodule haben wir in enger Zusammenarbeit mit unseren Kunden ausgearbeitet, verfeinert und mit smarten Funktionen ergänzt. Um den Erfassungsablauf
-							zu vereinfachen, die Eingaben zu beschleunigen und die Datenqualität zu erhöhen.
-						</p>
+						<div :class="{ more: true, active: showContentKomp }" v-html="content.acf.intro.intro_text2"></div>
 					</div>
 				</div>
 			</div>
@@ -61,13 +52,13 @@
 						<div class="image">
 							<img v-scroll-reveal="{ delay: 0 }" src="/polpadintuitiv.png" alt="" />
 						</div>
-						<div class="text">
-							<h3 v-scroll-reveal="{ delay: 0 }">Funktionen</h3>
+						<div class="text" v-html="content.acf.funktionen.funktionen_text">
+							<!-- <h3 v-scroll-reveal="{ delay: 0 }">Funktionen</h3>
 							<h2 v-scroll-reveal="{ delay: 200 }">Simpel und intuitiv</h2>
 							<p v-scroll-reveal="{ delay: 400 }">
 								Die Kernfunktion von PolicePad ist simpel: das Erfassen von Bussen. Doch dahinter steckt sehr viel mehr. Etwa: eine intelligente Suchfunktion, der Live-Abgleich mit mehreren Datenbeständen oder schnelleres Erfassen mit
 								Favoriten.
-							</p>
+							</p> -->
 						</div>
 					</div>
 				</div>
@@ -90,13 +81,13 @@
 		</div>
 		<div style="background-color: #e7e9ec; margin-bottom: 12rem" class="backend">
 			<div class="container">
-				<div class="text">
-					<h3 v-scroll-reveal="{ delay: 0 }">PolicePad Server</h3>
+				<div class="text" v-html="content.acf.backend.backend_text">
+					<!-- <h3 v-scroll-reveal="{ delay: 0 }">PolicePad Server</h3>
 					<h2 v-scroll-reveal="{ delay: 200 }">Backend</h2>
 					<p v-scroll-reveal="{ delay: 400 }">
 						Der PolicePad Server ist die Gegenstelle von PolicePad und nimmt die Fälle entgegen, speichert diese, stellt sie dar und bietet diverse Statistiken. Bearbeiten Sie die Fälle, steuern Sie Gruppen und verwalten Sie die mobilen
 						Eingabegeräte. Mit dem Bereitstellen der Stammdaten können Sie Inhalte live übertragen und in der App darstellen. Die Exportkontrolle dient der Sicherstellung, dass alle Fälle übertragen wurden.
-					</p>
+					</p> -->
 				</div>
 			</div>
 		</div>
@@ -209,14 +200,24 @@
 <script>
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 import 'swiper/css/swiper.min.css'
-
+import axios from 'axios'
 export default {
-	async asyncData({ store }) {
+	name: 'produkte-policepad',
+	async asyncData({ app, store }) {
+		let content = await axios.get(`https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/products?slug=policepad&lang=${app.i18n.locale}`)
 		return {
-			content: store.state.products['policepad'],
+			content: content.data[0],
 			platforms: store.state.platforms,
 			person: store.state.person,
 		}
+	},
+
+	nuxtI18n: {
+		paths: {
+			//   en: '/about-us', // -> accessible at /about-us (no prefix since it's the default locale)
+			fr: '/produits/policepad', // -> accessible at /fr/a-propos
+			de: '/produkte/policepad', // -> accessible at /es/sobre
+		},
 	},
 	data() {
 		return {
@@ -360,17 +361,17 @@ img
 				padding-top: 5rem
 		p
 			margin: 3rem 0
-			&.more
-				opacity: 0
-				transition: opacity 300ms ease-out, margin-top 300ms ease-out
-				margin-top: 0rem
-				@include mobile
-					margin-top: -10rem
-				&.active
-					opacity: 1
-					margin-top: 3rem
-					@include mobile
-						margin-top: 5rem
+.more
+	opacity: 0
+	transition: opacity 300ms ease-out, margin-top 300ms ease-out
+	margin-top: 0rem
+	@include mobile
+		margin-top: -10rem
+	&.active
+		opacity: 1
+		margin-top: 3rem
+		@include mobile
+			margin-top: 5rem
 .funktionen
 	.grid
 		align-items: center

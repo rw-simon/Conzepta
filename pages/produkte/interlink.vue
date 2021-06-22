@@ -145,6 +145,14 @@
 
 <script>
 export default {
+	name: 'produkte-interlink',
+	nuxtI18n: {
+		paths: {
+			//   en: '/about-us', // -> accessible at /about-us (no prefix since it's the default locale)
+			fr: '/produits/interlink', // -> accessible at /fr/a-propos
+			de: '/produkte/interlink', // -> accessible at /es/sobre
+		},
+	},
 	data() {
 		return { showContentKomp: false }
 	},

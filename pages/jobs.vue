@@ -1,16 +1,18 @@
 <template>
 	<div>
+		<!-- <pre>{{ content }}</pre> -->
 		<div id="offene-stellen">
 			<div class="container">
 				<div class="grid cols-2">
-					<div>
+					<div v-html="content.acf.modules[0].text_2_columns_column_1"></div>
+					<!-- <div>
 						<h3>Arbeiten bei Conzepta</h3>
 						<h1>Jobs //</h1>
 						<p>
 							Die Conzepta ist eine kleine, etablierte Software-Firma mit Sitz in Bern. Unser Ziel ist es, das Leben unserer Kunden Stück für Stück einfacher zu machen, damit sie ihren Arbeitsalltag effizienter erledigen können. So
 							entwickeln wir seit über 20 Jahren innovative Software für verschiedenste Kundengruppen, wie z.B. Polizeikorps, Transportunternehmen oder global tätige Konzerne.
 						</p>
-					</div>
+					</div> -->
 				</div>
 			</div>
 			<div style="background-color: #e7e9ec; padding: 5rem 0; margin-top: 8rem; display: none">
@@ -77,10 +79,10 @@
 				</div>
 			</div>
 			<div style="background-color: #e7e9ec; padding: 5rem 0; margin-top: 8rem">
-				<div class="container">
-					<div>
+				<div class="container" v-html="content.acf.modules[1].text_1_columns_column_1">
+					<!-- <div>
 						<p>Zurzeit sind keine offenen Stellen zu vergeben. Deine spontane Bewerbung ist jederzeit gerne willkommen.</p>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
@@ -88,7 +90,23 @@
 </template>
 
 <script>
-export default {}
+import axios from 'axios'
+export default {
+	name: 'jobs',
+	nuxtI18n: {
+		paths: {
+			//   en: '/about-us', // -> accessible at /about-us (no prefix since it's the default locale)
+			fr: '/jobs', // -> accessible at /fr/a-propos
+			de: '/jobs', // -> accessible at /es/sobre
+		},
+	},
+	async asyncData({ app }) {
+		let content = await axios.get(`https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/pages?per_page=100&slug=jobs&lang=${app.i18n.locale}`)
+		return {
+			content: content.data[0],
+		}
+	},
+}
 </script>
 
 <style lang="sass" scoped>

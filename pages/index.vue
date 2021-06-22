@@ -12,50 +12,53 @@
 		<div class="intro">
 			<!-- :style="{ transform: 'translateY(' + pos + 'vh)' }"> -->
 			<div class="container">
-				<span v-if="$i18n.locale == 'fr'">Franz:</span>
-				<h2 v-scroll-reveal>Vorwärts kommen</h2>
+				<div style="width: 33%" v-html="content[0].text_2_columns_column_1"></div>
+				<!-- <h2 v-scroll-reveal>{{}}</h2>
 				<p v-scroll-reveal="{ delay: 200 }">
 					Mehr Effizienz und Sicherheit mit <br />
 					Software von Conzepta.
-				</p>
-				<nuxt-link style="z-index: 99999999; position: relative" v-scroll-reveal="{ delay: 400 }" to="/produkte"><CButton text="Produkte" /></nuxt-link>
+				</p> -->
+				<nuxt-link style="z-index: 99999999; position: relative" v-scroll-reveal="{ delay: 400 }" to="/produkte"><CButton :text="$i18n.locale == 'fr' ? 'Produits' : 'Produkte'" /></nuxt-link>
 			</div>
 		</div>
 		<div class="since">
 			<div class="container">
-				<span v-if="$i18n.locale == 'fr'">Franz:</span>
-				<h3 v-scroll-reveal>Etablierte Lösungen</h3>
+				<div style="width: 33%" v-html="content[1].text_2_columns_column_1"></div>
+				<!-- <h3 v-scroll-reveal>Etablierte Lösungen</h3>
 				<h2 v-scroll-reveal="{ delay: 200 }">Seit 1986</h2>
 				<p v-scroll-reveal="{ delay: 400 }">
 					Die Zeichen der Zeit erkennen und <br />
 					Lösungen dafür suchen: Das haben unsere <br />
 					Gründer vor über 30 Jahren getan.
-				</p>
-				<nuxt-link v-scroll-reveal="{ delay: 600 }" to="/wir"><CButton text="Wir" /></nuxt-link>
+				</p> -->
+				<nuxt-link v-scroll-reveal="{ delay: 600 }" to="/wir"><CButton :text="$i18n.locale == 'fr' ? 'À Propos' : 'Wir'" /></nuxt-link>
 			</div>
 		</div>
 		<div class="vorteile">
 			<div class="container">
-				<span v-if="$i18n.locale == 'fr'">Franz:</span>
-				<h1 v-scroll-reveal="{ delay: 0 }">Vorteile verschaffen mit Conzepta</h1>
+				<div v-html="content[2].text_1_columns_column_1"></div>
+				<!-- <h1 v-scroll-reveal="{ delay: 0 }">Vorteile verschaffen mit Conzepta</h1> -->
 				<div v-scroll-reveal="{ delay: 200 }" class="grid cols-3 small-gap">
 					<article>
 						<img v-scroll-reveal="{ delay: 300 }" src="/puzzle.png" alt="" />
-						<h2 v-scroll-reveal="{ delay: 400 }">Adaption</h2>
-						<p style="padding: 0 2rem; box-sizing: border-box" v-scroll-reveal="{ delay: 500 }">Wir bieten nicht nur Pakete ab Stange, sondern individuelle Lösungen und persönlichen Support.</p>
+						<div v-html="content[3].text_2_columns_column_1"></div>
+						<!-- <h2 v-scroll-reveal="{ delay: 400 }">Adaption</h2>
+						<p style="padding: 0 2rem; box-sizing: border-box" v-scroll-reveal="{ delay: 500 }">Wir bieten nicht nur Pakete ab Stange, sondern individuelle Lösungen und persönlichen Support.</p> -->
 					</article>
 					<article>
 						<img v-scroll-reveal="{ delay: 500 }" src="/checkmark.png" alt="" />
-						<h2 v-scroll-reveal="{ delay: 600 }">Qualität</h2>
-						<p style="padding: 0 2rem; box-sizing: border-box" v-scroll-reveal="{ delay: 700 }">Wir liefern Schweizer Qualitätsprodukte aus Eigenentwicklung.</p>
+						<div v-html="content[3].text_2_columns_column_2"></div>
+						<!-- <h2 v-scroll-reveal="{ delay: 600 }">Qualität</h2>
+						<p style="padding: 0 2rem; box-sizing: border-box" v-scroll-reveal="{ delay: 700 }">Wir liefern Schweizer Qualitätsprodukte aus Eigenentwicklung.</p> -->
 					</article>
 					<article>
 						<img v-scroll-reveal="{ delay: 700 }" src="/grabber.png" alt="" />
-						<h2 v-scroll-reveal="{ delay: 800 }">Modern</h2>
-						<p style="padding: 0 2rem; box-sizing: border-box" v-scroll-reveal="{ delay: 900 }">Wir können Ihre Zukunft nicht vorhersehen. Aber wir können sie programmieren.</p>
+						<div v-html="content[3].text_3_columns_column_3"></div>
+						<!-- <h2 v-scroll-reveal="{ delay: 800 }">Modern</h2>
+						<p style="padding: 0 2rem; box-sizing: border-box" v-scroll-reveal="{ delay: 900 }">Wir können Ihre Zukunft nicht vorhersehen. Aber wir können sie programmieren.</p> -->
 					</article>
 				</div>
-				<nuxt-link to="/wir#unser-angebot"><CButton style="margin-top: 3rem" text="Mehr" /></nuxt-link>
+				<nuxt-link :to="localePath({ name: 'wir' })"><CButton style="margin-top: 3rem" :text="$i18n.locale == 'fr' ? 'Plus' : 'Mehr'" /></nuxt-link>
 			</div>
 		</div>
 		<div class="support">
@@ -63,11 +66,11 @@
 				<div class="grid cols-2">
 					<span></span>
 					<div class="text">
-						<span v-if="$i18n.locale == 'fr'">Franz:</span>
-						<h3 v-scroll-reveal="{ delay: 0 }">Support</h3>
+						<div v-html="content[4].text_2_columns_column_2"></div>
+						<!-- <h3 v-scroll-reveal="{ delay: 0 }">Support</h3>
 						<h2 v-scroll-reveal="{ delay: 200 }">Für Sie da!</h2>
-						<p v-scroll-reveal="{ delay: 400 }">Eine gute Software ist jene, die ohne Probleme läuft. Aber auch eine gute Software kann mal einen schlechten Tag haben. Deshalb sind wir für Sie da, wann immer Sie uns brauchen.</p>
-						<nuxt-link :to="{ path: '/support', hash: '#support' }"><CButton v-scroll-reveal="{ delay: 600 }" text="Support" /></nuxt-link>
+						<p v-scroll-reveal="{ delay: 400 }">Eine gute Software ist jene, die ohne Probleme läuft. Aber auch eine gute Software kann mal einen schlechten Tag haben. Deshalb sind wir für Sie da, wann immer Sie uns brauchen.</p> -->
+						<nuxt-link :to="localePath({ name: 'support', hash: '#support' })"><CButton v-scroll-reveal="{ delay: 600 }" text="Support" /></nuxt-link>
 						<div class="list">
 							<article v-scroll-reveal="{ delay: 300 }">
 								<img src="/icon_tacho.svg" alt="" />
@@ -138,19 +141,18 @@
 				<div class="news-grid">
 					<div>
 						<article style="margin-top: 4rem">
-							<h3>01.01.2021</h3>
-							<nuxt-link to="/archiv"><h2>TachiFox3 – Ein Jahr danach</h2></nuxt-link>
-							<p>
-								Im Januar 2020 konnten wir in Zusammenarbeit mit «Les Routiers Suisses» die neuste Version von TachiFox online schalten. Seither ist die Anwendung ganz einfach im Web erreichbar, nicht wie zuvor als reine
-								Windows-Software. Wie hat das den Transport-Alltag erleichtert? Wir haben uns bei TachiFox-Nutzern umgehört. Hier geht’s zum Artikel.
-							</p>
+							<h3>{{ news[3].acf.datum }}</h3>
+							<nuxt-link :to="localePath({ name: 'news' })"
+								><h2>{{ news[3].title.rendered }}</h2></nuxt-link
+							>
+							<div v-html="news[3].content.rendered"></div>
 						</article>
 						<article style="margin-top: 24rem">
-							<h3>01.04.2019</h3>
-							<nuxt-link to="/archiv"><h2>Sehen wir uns im Wankdorf</h2></nuxt-link>
-							<p>
-								Die Conzepta ist Sponsor des diesjährigen Schweizer-Polizei-Informatik-Kongress SPIK. Wir stellen unsere Polizei-Produkte am SPIK vor. Besuchen Sie uns an unserem Messestand am 4. April 2019 im Stade de Suisse in Bern.
-							</p>
+							<h3>{{ news[1].acf.datum }}</h3>
+							<nuxt-link :to="localePath({ name: 'news' })"
+								><h2>{{ news[1].title.rendered }}</h2></nuxt-link
+							>
+							<div v-html="news[1].content.rendered"></div>
 						</article>
 					</div>
 					<div>
@@ -193,16 +195,15 @@
 						<div class="line">
 							<hr />
 						</div>
-						<nuxt-link to="archiv"><img src="/arrows_bot.png" alt="" /></nuxt-link>
+						<nuxt-link :to="localePath({ name: 'news' })"><img src="/arrows_bot.png" alt="" /></nuxt-link>
 					</div>
 					<div>
 						<article style="margin-top: 24rem">
-							<h3>16.10.2020</h3>
-							<nuxt-link to="/archiv"><h2>Hallo, neue Webseite</h2></nuxt-link>
-							<p>
-								Nach mehreren Monaten Arbeit ist geboren: Unsere neue Präsenz im World Wide Web. Für einmal haben wir übrigens etwas nicht selber programmiert: Wir durften mit den Profis von Formfeld zusammenarbeiten – und freuen uns
-								sehr über das, was entstanden ist. Und natürlich freuen wir uns über jedes Feedback von Ihnen.
-							</p>
+							<h3>{{ news[2].acf.datum }}</h3>
+							<nuxt-link :to="localePath({ name: 'news' })"
+								><h2>{{ news[2].title.rendered }}</h2></nuxt-link
+							>
+							<div v-html="news[2].content.rendered"></div>
 						</article>
 					</div>
 				</div>
@@ -222,11 +223,15 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
-	async asyncData({ store }) {
+	async asyncData({ app }) {
+		let slug = app.i18n.locale == 'fr' ? 'homepage-fr' : 'homepage'
+		let content = await axios.get(`https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/pages?slug=${slug}`)
+		let news = await axios.get(`https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/news?lang=${app.i18n.locale}`)
 		return {
-			content: store.state.pages['homepage'],
-			news: store.state.news,
+			content: content.data[0].acf.modules,
+			news: news.data,
 		}
 	},
 	data() {

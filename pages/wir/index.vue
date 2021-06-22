@@ -7,11 +7,22 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
-	async asyncData({ store }) {
+	name: 'wir',
+	async asyncData({ app }) {
+		let slug = app.i18n.locale == 'fr' ? 'a-propos' : 'wir'
+		let content = await axios.get(`https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/pages?slug=${slug}`)
 		return {
-			content: store.state.pages['wir'],
+			content: content.data[0],
 		}
+	},
+	nuxtI18n: {
+		paths: {
+			//   en: '/about-us', // -> accessible at /about-us (no prefix since it's the default locale)
+			fr: '/a-propos', // -> accessible at /fr/a-propos
+			de: '/wir', // -> accessible at /es/sobre
+		},
 	},
 }
 </script>

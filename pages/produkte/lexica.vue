@@ -4,7 +4,8 @@
 			<div v-scroll-reveal="{ delay: 0 }" class="banner">
 				<div class="container">
 					<div class="section grid cols-2">
-						<div class="padfix">
+						<div class="padfix" v-html="content.acf.modules[0].text_2_columns_column_1"></div>
+						<!-- <div>
 							<h3 v-scroll-reveal="{ delay: 0 }">Nachschlagewerk</h3>
 							<h1 v-scroll-reveal="{ delay: 200 }">Lexica //</h1>
 							<p v-scroll-reveal="{ delay: 400 }">
@@ -12,7 +13,7 @@
 								Einträge individuell mit Tags und Notizen. Mittels einer ausgeklügelten Suchfunktion und einem praktischen Assistenten finden Sie sofort den Artikel, den Sie brauchen.
 							</p>
 							<div class="grid"></div>
-						</div>
+						</div> -->
 						<div class="produktemanager" style="align-self: end">
 							<nuxt-link :to="{ path: '/wir', hash: '#philippe-luethi' }">
 								<div class="grid cols-2 small-gap person" style="align-items: center; margin-top: 2rem">
@@ -40,13 +41,13 @@
 			<div class="gesetze">
 				<div class="container">
 					<div class="section grid cols-2">
-						<div>
-							<h3 v-scroll-reveal="{ delay: 0 }">Moderner Klassiker</h3>
+						<div v-html="content.acf.modules[1].text_2_columns_column_1">
+							<!-- <h3 v-scroll-reveal="{ delay: 0 }">Moderner Klassiker</h3>
 							<h2 v-scroll-reveal="{ delay: 200 }">Gemeinsam mit den Kunden entwickelt</h2>
 							<p v-scroll-reveal="{ delay: 400 }">
 								Es gehörte zur Standardausrüstung jeder Polizistin und jedes Polizisten: das Bussenziffernbüchlein. Sein digitaler Nachfolger heisst Lexica. Die Anwendung, die wir dank Kundenfeedbacks stetig weiterentwickeln, hat sich
 								als erfolgreiches und innovatives Nachschlagewerk im mobilen Polizei- und Sicherheitsalltag etabliert.
-							</p>
+							</p> -->
 						</div>
 					</div>
 				</div>
@@ -62,12 +63,12 @@
 						<h3 v-scroll-reveal="{ delay: 0 }">WEIT MEHR ALS EIN BUCH</h3>
 						<h2 v-scroll-reveal="{ delay: 200 }">Was Lexica alles kann</h2>
 						<p v-scroll-reveal="{ delay: 400 }"></p>
-						<article>
-							<img class="list-icon" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" alt="" />
-							<h4>Simpel</h4>
-							<p>Unkompliziert Ansammlungen von Einträgen einbinden.</p>
+						<article v-for="item in content.acf.modules[2].list_2_columns_column_2" :key="item['id']">
+							<img class="list-icon" :src="item.list_2_columns_column_2_icon" alt="" />
+							<h4>{{ item.list_2_columns_column_2_text.list_2_columns_column_2_text_title }}</h4>
+							<p>{{ item.list_2_columns_column_2_text.list_2_columns_column_2_text_content }}</p>
 						</article>
-						<article>
+						<!-- <article>
 							<img class="list-icon" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" alt="" />
 							<h4>Erweiterbar</h4>
 							<p>Persönliche Notizen anlegen.</p>
@@ -81,7 +82,7 @@
 							<img class="list-icon" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" alt="" />
 							<h4>Umfassend</h4>
 							<p>Ordnungsbussenverordnung als Hauptanwendung, zahlreiche Erweiterungsmöglichkeiten wie etwa die Hinterlegung von Bewilligungen.</p>
-						</article>
+						</article> -->
 					</div>
 				</div>
 			</div>
@@ -96,80 +97,12 @@
 				<div class="container" style="margin-top: 8rem; height: 100%; position: relative">
 					<client-only>
 						<swiper class="swiper" :options="swiperOption">
-							<swiper-slide>
+							<swiper-slide v-for="slide in content.acf.modules[3]['slider-content']" :key="slide['id']">
 								<div class="slider-grid">
-									<div class="slider-text">
-										<h3>FUNKTIONEN</h3>
+									<div class="slider-text" v-html="slide.slide_text">
+										<!-- <h3>FUNKTIONEN</h3>
 										<h2>Tags</h2>
-										<p>Tags erleichtern die Suche vor allem von nicht täglichen Begriffen, so kann z.B. nach "Ampel" gesucht werden, obwohl diese als "Lichtsignalanlage" im entsprechenden Gesetz hinterlegt ist.</p>
-									</div>
-									<!-- <div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div> -->
-								</div>
-							</swiper-slide>
-							<swiper-slide>
-								<div class="slider-grid">
-									<div class="slider-text">
-										<h3>FUNKTIONEN</h3>
-										<h2>Notizen</h2>
-										<p>Persönliche Notizen ergänzen einen Eintrag individuell und bleiben bei neuen Versionen erhalten. Zusätzlich werden die Notizen in die Suche einbezogen.</p>
-									</div>
-									<!-- <div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div> -->
-								</div>
-							</swiper-slide>
-							<swiper-slide>
-								<div class="slider-grid">
-									<div class="slider-text">
-										<h3>FUNKTIONEN</h3>
-										<h2>Favoriten</h2>
-										<p>Individuelle Einträge können als Favoriten definiert und somit prominent platziert werden.</p>
-									</div>
-									<!-- <div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div> -->
-								</div>
-							</swiper-slide>
-							<swiper-slide>
-								<div class="slider-grid">
-									<div class="slider-text">
-										<h3>FUNKTIONEN</h3>
-										<h2>Assistenten</h2>
-										<p>
-											Die Assistenten erlauben das Finden von Einträgen mit Hilfe von grafischen Elementen. Die anwendbaren Ziffern werden auf einer Grafik, welche alltägliche Situationen abbildet, schnell und einfach ermittelt.
-										</p>
-									</div>
-									<!-- <div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div> -->
-								</div>
-							</swiper-slide>
-							<swiper-slide>
-								<div class="slider-grid">
-									<div class="slider-text">
-										<h3>FUNKTIONEN</h3>
-										<h2>Updates</h2>
-										<p>Anpassungen der Ansammlungen oder einzelne Einträge davon, können bequem online gemacht werden. Die persönlichen Daten der Benutzer bleiben natürlich erhalten.</p>
-									</div>
-									<!-- <div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div> -->
-								</div>
-							</swiper-slide>
-							<swiper-slide>
-								<div class="slider-grid">
-									<div class="slider-text">
-										<h3>FUNKTIONEN</h3>
-										<h2>Datenaustausch</h2>
-										<p>
-											Lexica kann Daten von und zu anderen Systemen importieren und exportieren. So lassen sich z.B. Ziffern anwählen und ins PolicePad übermitteln. Oder man gelangt von PolicePad zu den detaillierten
-											Informationen von Lexica.
-										</p>
-									</div>
-									<!-- <div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div> -->
-								</div>
-							</swiper-slide>
-							<swiper-slide>
-								<div class="slider-grid">
-									<div class="slider-text">
-										<h3>FUNKTIONEN</h3>
-										<h2>Backend</h2>
-										<p>
-											Das Backend stellt eine einfache und intuitive Oberfläche zur Verfügung um die Ansammlung von Einträgen praktisch zu Editieren und neue Versionen davon zu generieren. Zusätzlich können Benutzer und Gruppen
-											verwaltet, sowie weitere Einstellungen vorgenommen werden.
-										</p>
+										<p>Tags erleichtern die Suche vor allem von nicht täglichen Begriffen, so kann z.B. nach "Ampel" gesucht werden, obwohl diese als "Lichtsignalanlage" im entsprechenden Gesetz hinterlegt ist.</p> -->
 									</div>
 									<!-- <div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div> -->
 								</div>
@@ -202,7 +135,22 @@
 <script>
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 import 'swiper/css/swiper.min.css'
+import axios from 'axios'
 export default {
+	name: 'produkte-lexica',
+	nuxtI18n: {
+		paths: {
+			//   en: '/about-us', // -> accessible at /about-us (no prefix since it's the default locale)
+			fr: '/produits/lexica', // -> accessible at /fr/a-propos
+			de: '/produkte/lexica', // -> accessible at /es/sobre
+		},
+	},
+	async asyncData({ app }) {
+		let content = await axios.get(`https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/products?slug=lexica&lang=${app.i18n.locale}`)
+		return {
+			content: content.data[0],
+		}
+	},
 	data() {
 		return {
 			swiperOption: {

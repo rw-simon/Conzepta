@@ -259,6 +259,14 @@ import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 import 'swiper/css/swiper.min.css'
 
 export default {
+	name: 'produkte-tachifox',
+	nuxtI18n: {
+		paths: {
+			//   en: '/about-us', // -> accessible at /about-us (no prefix since it's the default locale)
+			fr: '/produits/tachifox', // -> accessible at /fr/a-propos
+			de: '/produkte/tachifox', // -> accessible at /es/sobre
+		},
+	},
 	data() {
 		return {
 			swiperOption: {

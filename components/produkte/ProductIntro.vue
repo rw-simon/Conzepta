@@ -13,11 +13,14 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
 	name: 'ProductIntro',
-	data() {
+	async asyncData({ app }) {
+		let slug = app.i18n.locale == 'fr' ? 'produits' : 'produkte'
+		let content = await axios.get(`https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/pages?slug=${slug}`)
 		return {
-			content: this.$store.state.pages['produkte'],
+			content: content.data[0],
 		}
 	},
 }
