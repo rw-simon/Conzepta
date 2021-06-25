@@ -4,14 +4,14 @@
 		<p>
 			Conzepta Team AG<br />
 			Allmendstrasse 54<br />
-			CH-3014 Bern
+			CH-3014 {{ $i18n.locale == 'fr' ? 'Berne' : 'Bern' }}
 		</p>
 		<p>
 			<a href="mailto:team@conzepta.ch" target="_blank">team@conzepta.ch</a><br />
 			<a href="tel:+41313486020" target="_blank">+41 31 348 60 20</a>
 		</p>
 		<br />
-		<p>Mitglied bei: <a style="font-weight: bold" href="https://www.swissict.ch/">swiss ICT</a></p>
+		<p>{{ $i18n.locale == 'fr' ? 'Membre de' : 'Mitgllied bei:' }} <a style="font-weight: bold" href="https://www.swissict.ch/">swiss ICT</a></p>
 	</div>
 </template>
 

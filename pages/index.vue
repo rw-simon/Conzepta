@@ -74,15 +74,21 @@
 						<div class="list">
 							<article v-scroll-reveal="{ delay: 300 }">
 								<img src="/icon_tacho.svg" alt="" />
-								<p>Wir reagieren so, wie Sie es sich wünschen: schnell und flexibel.</p>
+								<p>{{ $i18n.locale == 'fr' ? 'Nous réagissons comme vous le souhaitez : rapidement et avec souplesse' : 'Wir reagieren so, wie Sie es sich wünschen: schnell und flexibel.' }}</p>
 							</article>
 							<article v-scroll-reveal="{ delay: 500 }">
 								<img src="/icon_lock.svg" alt="" />
-								<p>Wir sprechen so, dass Sie uns verstehen: ehrlich und kompetent.</p>
+								<p>{{ $i18n.locale == 'fr' ? "Nous parlons d'une manière que vous comprenez : honnêtement et avec compétence" : 'Wir sprechen so, dass Sie uns verstehen: ehrlich und kompetent.' }}</p>
 							</article>
 							<article v-scroll-reveal="{ delay: 700 }">
 								<img style="height: 37px" src="/icon_ribbon.png" alt="" />
-								<p>Wir behandeln Sie so, wie wir es uns auch wünschen: freundlich, persönlich und unkompliziert.</p>
+								<p>
+									{{
+										$i18n.locale == 'fr'
+											? 'Nous vous traitons comme nous aimerions être traités : de manière amicale, personnelle et simple'
+											: 'Wir behandeln Sie so, wie wir es uns auch wünschen: freundlich, persönlich und unkompliziert.'
+									}}
+								</p>
 							</article>
 						</div>
 					</div>

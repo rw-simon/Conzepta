@@ -60,8 +60,8 @@
 						<!-- <Poi x="10" text=" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ut, laudantium deleniti ea repellendus, officiis mollitia corporis vero amet maiores perspiciatis! Repellendus exercitationem alias sapiente nam accusamus, voluptas distinctio adipisci." /> -->
 					</span>
 					<div class="mobilefix">
-						<h3 v-scroll-reveal="{ delay: 0 }">WEIT MEHR ALS EIN BUCH</h3>
-						<h2 v-scroll-reveal="{ delay: 200 }">Was Lexica alles kann</h2>
+						<h3 v-scroll-reveal="{ delay: 0 }">{{ $i18n.locale == 'fr' ? 'BIEN PLUS QU’UN LIVRE' : 'WEIT MEHR ALS EIN BUCH' }}</h3>
+						<h2 v-scroll-reveal="{ delay: 200 }">{{ $i18n.locale == 'fr' ? 'Ce que Lexica sait faire' : 'Was Lexica alles kann' }}</h2>
 						<p v-scroll-reveal="{ delay: 400 }"></p>
 						<article v-for="item in content.acf.modules[2].list_2_columns_column_2" :key="item['id']">
 							<img class="list-icon" :src="item.list_2_columns_column_2_icon" alt="" />
@@ -114,7 +114,7 @@
 			</div>
 			<div class="anwender">
 				<div class="container" style="padding: 4rem 0">
-					<h2>Anwender</h2>
+					<h2>{{ $i18n.locale == 'fr' ? 'Utilisateurs' : 'Anwender' }}</h2>
 					<div class="grid cols-3" style="display: grid; gap: 2rem; align-items: center">
 						<nuxt-link to="/portfolio?category=2"
 							><img v-scroll-reveal="{ delay: 0 }" style="padding: 2rem; max-width: 200px; height: auto" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2021/02/Screenshot-2021-02-05-at-11.41.08.png" alt=""

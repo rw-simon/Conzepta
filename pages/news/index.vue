@@ -4,7 +4,7 @@
 			<div class="container">
 				<div class="grid cols-2 small-gap" style="align-items: end">
 					<div>
-						<h3>Aktuell</h3>
+						<h3>{{ $i18n.locale == 'fr' ? 'Actuel' : 'Aktuell' }}</h3>
 						<h1>News //</h1>
 					</div>
 					<div class="filter br-2">
@@ -23,7 +23,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="second" :id="`news-${i}`" v-for="(a, i) in news" :key="i" v-show="a.acf.kategorie.includes(selectedCategories.toLowerCase()) || selectedCategories == 'Alle'">
+		<div class="second" :id="`news-${i}`" v-for="(a, i) in news" :key="i" v-show="a.acf.kategorie.includes(selectedCategories.toLowerCase()) || (selectedCategories == $i18n.locale) == 'fr' ? 'Tous' : 'Alle'">
 			<div class="container">
 				<div class="grid cols-2">
 					<article style="grid-column: 1" class="news-article">
@@ -56,8 +56,8 @@ export default {
 	},
 	data() {
 		return {
-			selectedCategories: 'Alle',
-			productCategories: ['Alle', 'PolicePad', 'Lexica', 'InterLink', 'TachiFox'],
+			selectedCategories: this.$i18n.locale == 'fr' ? 'Tous' : 'Alle',
+			productCategories: [this.$i18n.locale == 'fr' ? 'Tous' : 'Alle', 'PolicePad', 'Lexica', 'InterLink', 'TachiFox'],
 		}
 	},
 	methods: {

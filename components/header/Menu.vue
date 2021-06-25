@@ -2,7 +2,7 @@
 	<nav class="main-menu">
 		<ul :class="{ opened: opened }">
 			<li class="menu-item">
-				<nuxt-link to="/" exact>Home</nuxt-link>
+				<nuxt-link :to="localePath({ name: 'index' })" exact>Home</nuxt-link>
 			</li>
 			<li class="menu-item">
 				<nuxt-link :to="localePath('wir')">{{ $i18n.locale == 'fr' ? 'À Propos' : 'Wir' }}</nuxt-link>

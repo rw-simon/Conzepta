@@ -188,7 +188,7 @@
 		</div>
 		<div style="margin-top: 8rem" class="anwender">
 			<div class="container" style="padding: 4rem 0">
-				<h2>Anwender</h2>
+				<h2>{{ $i18n.locale == 'fr' ? 'Utilisateurs' : 'Anwender' }}</h2>
 				<div style="display: grid; gap: 2rem; align-items: center" class="grid cols-3">
 					<nuxt-link v-for="(img, i) in content.acf.anwender" :key="i" to="/portfolio?category=1"><img v-scroll-reveal="{ delay: 200 * i }" style="padding: 2rem; max-width: 200px" :src="img" alt="" /></nuxt-link>
 				</div>

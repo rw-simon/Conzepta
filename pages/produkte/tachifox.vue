@@ -145,8 +145,8 @@
 		</div>
 		<div class="daskanntachifox">
 			<div class="container">
-				<h3>All das kann Tachifox</h3>
-				<h2 style="margin-bottom: 4rem">Funktionen</h2>
+				<h3>{{ $i18n.locale == 'fr' ? 'TACHIFOX LE MULTIT CHE' : 'All das kann Tachifox' }}</h3>
+				<h2 style="margin-bottom: 4rem">{{ $i18n.locale == 'fr' ? 'Fonctionnalités' : 'Funktionen' }}</h2>
 				<div class="list-two-columns">
 					<div class="column-1">
 						<article v-for="item in content.acf.modules[7].list_2_columns_column_1" :key="item['id']">
@@ -185,12 +185,14 @@
 				<div class="partner">
 					<div>
 						<h2>Partner</h2>
-						<img style="width: 300px; height: auto" src="/portfolio/tachifox/lesroutierssuisse.png" alt="" />
+						<a href="https://www.routiers.ch "><img style="width: 300px; height: auto" src="/portfolio/tachifox/lesroutierssuisse.png" alt="" /></a>
 					</div>
 					<div>
 						<h2>Support &amp; Verkauf</h2>
-						<nuxt-link to="/support#support"><CButton text="Support" style="display: block; width: 200px; background: white; border: 1px solid #1b52f5; color: #1b52f5" class="button"></CButton></nuxt-link>
-						<CButton text="Verkauf" style="display: block; width: 200px; background: white; border: 1px solid #1b52f5; color: #1b52f5" class="button"></CButton>
+						<a href="https://www.tachifox.com/tachifox-fuer-den-chauffeur"><CButton text="Support" style="display: block; width: 200px; background: white; border: 1px solid #1b52f5; color: #1b52f5" class="button"></CButton></a>
+						<a href="https://www.tachifox.com/tachifox-pro-fuer-das-unternehmen/tachifox-pro-anmeldung/ "
+							><CButton text="Verkauf" style="display: block; width: 200px; background: white; border: 1px solid #1b52f5; color: #1b52f5" class="button"></CButton>
+						</a>
 					</div>
 				</div>
 			</div>

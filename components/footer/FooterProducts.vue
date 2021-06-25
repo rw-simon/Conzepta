@@ -1,11 +1,10 @@
 <template>
 	<div class="footer-products">
 		<h3>Produkte</h3>
-		<nuxt-link to="/produkte/policepad"><p>PolicePad</p></nuxt-link>
-		<nuxt-link to="/produkte/lexica"><p>Lexica</p></nuxt-link>
-		<nuxt-link to="/produkte/interlink"><p>InterLink</p></nuxt-link>
-		<nuxt-link to="/produkte/tachifox"><p>TachiFox</p></nuxt-link>
-		<nuxt-link to="/produkte/parkingpad"><p>ParkingPad</p></nuxt-link>
+		<nuxt-link :to="localePath({ name: 'produkte-policepad' })"><p>PolicePad</p></nuxt-link>
+		<nuxt-link :to="localePath({ name: 'produkte-lexica' })"><p>Lexica</p></nuxt-link>
+		<nuxt-link :to="localePath({ name: 'produkte-interlink' })"><p>InterLink</p></nuxt-link>
+		<nuxt-link :to="localePath({ name: 'produkte-tachifox' })"><p>TachiFox</p></nuxt-link>
 	</div>
 </template>
 

@@ -52,11 +52,11 @@
 					<div class="grid cols-5">
 						<div style="grid-column: span 3">
 							<h1 v-scroll-reveal="{ delay: 0 }" style="margin-bottom: 0; line-height: 1em"><RollingNumber :number="20" /></h1>
-							<h3 v-scroll-reveal="{ delay: 100 }" style="margin-bottom: 2rem">Jahre</h3>
+							<h3 v-scroll-reveal="{ delay: 100 }" style="margin-bottom: 2rem">{{ $i18n.locale == 'fr' ? 'Ans' : 'Jahre' }}</h3>
 							<h1 v-scroll-reveal="{ delay: 200 }" style="margin-bottom: 0; line-height: 1em"><RollingNumber :number="30000" /></h1>
-							<h3 v-scroll-reveal="{ delay: 300 }" style="margin-bottom: 2rem">Terminals</h3>
+							<h3 v-scroll-reveal="{ delay: 300 }" style="margin-bottom: 2rem">{{ $i18n.locale == 'fr' ? 'Terminaux' : 'Terminals' }}</h3>
 							<h1 v-scroll-reveal="{ delay: 400 }" style="margin-bottom: 0; line-height: 1em"><RollingNumber :number="3000000" /></h1>
-							<h3 v-scroll-reveal="{ delay: 500 }" style="margin-bottom: 2rem">Buchungen pro Tag</h3>
+							<h3 v-scroll-reveal="{ delay: 500 }" style="margin-bottom: 2rem">{{ $i18n.locale == 'fr' ? 'D’ENREGISTREMENTS PAR JOur' : 'Buchungen pro Tag' }}</h3>
 						</div>
 						<div style="grid-column: span 2" v-html="content.acf.numbers['']">
 							<!-- <p v-scroll-reveal="{ delay: 300 }">
@@ -132,7 +132,7 @@
 		</div> -->
 		<div style="background: #e7e9ec; margin-top: 8rem" class="anwender">
 			<div class="container" style="padding: 4rem 0">
-				<h2>Anwender</h2>
+				<h2>{{ $i18n.locale == 'fr' ? 'Utilisateurs' : 'Anwender' }}</h2>
 				<div class="grid cols-3" style="display: grid; gap: 2rem; align-items: center">
 					<nuxt-link to="/portfolio?category=3"><img v-scroll-reveal="{ delay: 0 }" style="padding: 2rem; max-width: 200px; height: auto" src="/portfolio/interlink/allegion.png" alt="" /></nuxt-link>
 					<nuxt-link to="/portfolio?category=3"><img v-scroll-reveal="{ delay: 200 }" style="padding: 2rem; max-width: 200px; height: auto" src="/portfolio/interlink/interflex.png" alt="" /></nuxt-link>

@@ -1,8 +1,8 @@
 <template>
 	<div class="footer-products">
 		<h3>Support</h3>
-		<p>Nehmen Sie mit uns Kontakt auf.</p>
-		<nuxt-link to="/kontakt"><CButton style="font-size: 0.7rem; padding-left: 0.5rem" isOutline isMono text="Kontaktformular" /></nuxt-link>
+		<p>{{ $i18n.locale == 'fr' ? 'Prenez contact avec nous.' : 'Nehmen Sie mit uns Kontakt auf.' }}</p>
+		<nuxt-link to="/kontakt"><CButton style="font-size: 0.7rem; padding-left: 0.5rem" isOutline isMono :text="$i18n.locale == 'fr' ? 'Formulaire de contact' : 'Kontaktformular'" /></nuxt-link>
 		<!-- <nuxt-link to="/"><CButton isOutline isMono text="Team Viewer" /></nuxt-link> -->
 	</div>
 </template>
