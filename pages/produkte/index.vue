@@ -40,13 +40,10 @@
 					</h2>
 				</div>
 				<div>
-					<p class="page-more-intro" v-scroll-reveal="{ delay: 200 }">Sie finden in unserem Portfolio nicht ganz genau das, was Sie gesucht haben?</p>
 					<p v-scroll-reveal="{ delay: 300 }">
-						Ein Glücksfall, für Sie und für uns. Denn wir lieben es, kreativ zu sein und neue Lösungen von Grund auf zu entwickeln. Wir sind auf dem Gebiet moderner Anwendungen zu Hause. Uns interessiert alles, wo täglich grosse
-						Datenmengen anfallen, Prozesse optimiert, neue Schnittstellen implementiert oder neue Tools adaptiert werden – und wo am Schluss dennoch alles ganz einfach von überall her flexibel bedienbar sein muss.
+						{{ content.acf.product_more.product_more_paragraph }}
 					</p>
-					<p v-scroll-reveal="{ delay: 400 }">Nehmen Sie unverbindlich Kontakt mit uns auf.</p>
-					<nuxt-link :to="{ path: '/kontakt' }" v-scroll-reveal="{ delay: 400 }"><CButton text="Kontaktformular" /></nuxt-link>
+					<nuxt-link :to="localePath({ name: 'kontakt' })" v-scroll-reveal="{ delay: 400 }"><CButton :text="$i18n.locale == 'fr' ? 'Formulaire de contact' : 'Kontaktformular'" /></nuxt-link>
 				</div>
 			</div>
 		</div>

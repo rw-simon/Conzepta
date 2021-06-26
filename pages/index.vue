@@ -18,7 +18,7 @@
 					Mehr Effizienz und Sicherheit mit <br />
 					Software von Conzepta.
 				</p> -->
-				<nuxt-link style="z-index: 99999999; position: relative" v-scroll-reveal="{ delay: 400 }" to="/produkte"><CButton :text="$i18n.locale == 'fr' ? 'Produits' : 'Produkte'" /></nuxt-link>
+				<nuxt-link style="z-index: 99999999; position: relative" v-scroll-reveal="{ delay: 400 }" :to="localePath({ name: 'produkte' })"><CButton :text="$i18n.locale == 'fr' ? 'Produits' : 'Produkte'" /></nuxt-link>
 			</div>
 		</div>
 		<div class="since">
@@ -31,7 +31,7 @@
 					Lösungen dafür suchen: Das haben unsere <br />
 					Gründer vor über 30 Jahren getan.
 				</p> -->
-				<nuxt-link v-scroll-reveal="{ delay: 600 }" to="/wir"><CButton :text="$i18n.locale == 'fr' ? 'À Propos' : 'Wir'" /></nuxt-link>
+				<nuxt-link v-scroll-reveal="{ delay: 600 }" :to="localePath({ name: 'wir' })"><CButton :text="$i18n.locale == 'fr' ? 'À Propos' : 'Wir'" /></nuxt-link>
 			</div>
 		</div>
 		<div class="vorteile">

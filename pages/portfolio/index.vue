@@ -61,11 +61,11 @@ export default {
 
 	async asyncData({ app, query }) {
 		let content = await axios.get(`https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/pages?slug=portfolio&lang=${app.i18n.locale}`)
-		return { content: content.data[0], selectedCategories: [parseInt(query.category)] || [0] }
+		return { content: content.data[0], selectedCategories: [0] || [parseInt(query.category)] }
 	},
 	data() {
 		return {
-			productCategories: ['Alle', 'PolicePad', 'Lexica', 'Interlink', 'TachiFox'],
+			productCategories: [this.$i18n.locale == 'fr' ? 'Tous' : 'Alle', 'PolicePad', 'Lexica', 'Interlink', 'TachiFox'],
 		}
 	},
 	methods: {

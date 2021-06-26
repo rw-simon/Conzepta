@@ -28,15 +28,15 @@
 							:placeholder="$i18n.locale == 'fr' ? 'Email' : 'Email'"
 						/>
 						<select v-scroll-reveal="{ delay: 800 }" :style="[selectedAnliegen == 'anliegen' ? { color: 'gray' } : { color: 'black' }]" name="anliegen" id="" v-model="selectedAnliegen">
-							<option value="anliegen" selected>Anliegen</option>
-							<option value="all">Allgemein</option>
+							<option value="anliegen" selected>{{ $i18n.locale == 'fr' ? 'Thèmes' : 'Anliegen' }}</option>
+							<option value="all">{{ $i18n.locale == 'fr' ? 'Généralités' : 'Allgemein' }}</option>
 							<!-- <option value="bew">Bewerbung</option> -->
 							<option value="int">InterLink</option>
 							<option value="lex">Lexica</option>
 							<option value="par">ParkingPad</option>
-							<option value="pp">Police Pad</option>
+							<option value="pp">PolicePad</option>
 							<option value="tac">TachiFox</option>
-							<option value="techprob">Technische Probleme</option>
+							<option value="techprob">{{ $i18n.locale == 'fr' ? 'Postulation' : 'Technische Probleme' }}</option>
 						</select>
 						<!-- <input
 					style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%"

@@ -38,7 +38,7 @@
 								><span style="display: inline-block"
 									><a
 										>{{ $i18n.locale == 'fr' ? '8 h 00 – 12 h 00' : '08:00 - 12:00 Uhr' }} <br />
-										{{ $i18n.locale == 'fr' ? '13 h 00 – 17 h 00h' : '13:00 - 17:00 Uhr' }}
+										{{ $i18n.locale == 'fr' ? '13 h 00 – 17 h 00' : '13:00 - 17:00 Uhr' }}
 									</a></span
 								><br />
 								<!-- <span style="margin-top: 12px; display: inline-block; width: 200px">In Notfällen:</span><span><a href="tel:+41314444444">+41 (0)31 444 44 44</a></span> -->

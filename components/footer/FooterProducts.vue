@@ -1,6 +1,6 @@
 <template>
 	<div class="footer-products">
-		<h3>Produkte</h3>
+		<h3>{{ $i18n.locale == 'fr' ? 'Produits' : 'Produkte' }}</h3>
 		<nuxt-link :to="localePath({ name: 'produkte-policepad' })"><p>PolicePad</p></nuxt-link>
 		<nuxt-link :to="localePath({ name: 'produkte-lexica' })"><p>Lexica</p></nuxt-link>
 		<nuxt-link :to="localePath({ name: 'produkte-interlink' })"><p>InterLink</p></nuxt-link>

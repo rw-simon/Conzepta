@@ -11,7 +11,7 @@
 			<a href="tel:+41313486020" target="_blank">+41 31 348 60 20</a>
 		</p>
 		<br />
-		<p>{{ $i18n.locale == 'fr' ? 'Membre de' : 'Mitgllied bei:' }} <a style="font-weight: bold" href="https://www.swissict.ch/">swiss ICT</a></p>
+		<p>{{ $i18n.locale == 'fr' ? 'Membre de' : 'Mitglied bei:' }} <a style="font-weight: bold" href="https://www.swissict.ch/">swiss ICT</a></p>
 	</div>
 </template>
 

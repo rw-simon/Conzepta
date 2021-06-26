@@ -1,6 +1,6 @@
 <template>
 	<div class="footer-about-us">
-		<h3>Wir</h3>
+		<h3>{{ $i18n.locale == 'fr' ? 'À propos' : 'Wir' }}</h3>
 		<div class="small-gap" style="row-gap: 0; column-gap: 1rem">
 			<nuxt-link :to="localePath({ name: 'portfolio' })"><p>Portfolio</p></nuxt-link>
 			<nuxt-link :to="localePath({ name: 'index', hash: '#news' })"><p>News</p></nuxt-link>

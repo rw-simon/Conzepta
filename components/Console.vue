@@ -20,9 +20,9 @@
 		</div>
 		<div class="content" v-else>
 			<p class="title" @click="toggleConsole">Conzepta//</p>
-			<p>Unterstützung gefällig? Nehmen Sie mit uns Kontakt auf.</p>
+			<p>{{ $i18n.locale == 'fr' ? 'Besoin de soutien? Prenez contact avec nous!' : 'Unterstützung gefällig? Nehmen Sie mit uns Kontakt auf!' }}</p>
 			<!-- <CButton isOutline isMono text="Team Viewer" /> -->
-			<nuxt-link :to="{ path: '/kontakt' }"><CButton isOutline isMono text="Kontaktformular" /></nuxt-link>
+			<nuxt-link :to="localePath({ name: 'kontakt' })"><CButton isOutline isMono :text="$i18n.locale == 'fr' ? 'Formulaire de contact' : 'Kontaktformular'" /></nuxt-link>
 		</div>
 	</div>
 </template>

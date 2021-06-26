@@ -17,7 +17,7 @@
 							<nuxt-link :to="'/wir#philippe-luethi'"
 								><div class="grid cols-2 small-gap person" style="align-items: center; margin-top: 2rem">
 									<div>
-										<p v-scroll-reveal="{ delay: 300 }" style="margin: 0; line-height: 1em">Produktmanager</p>
+										<p v-scroll-reveal="{ delay: 300 }" style="margin: 0; line-height: 1em">{{ $i18n.locale == 'fr' ? 'Gestionnaire de produit' : 'Produktemanager' }}</p>
 										<p v-scroll-reveal="{ delay: 400 }" style="margin: 0; font-weight: 900">Philippe Lüthi</p>
 									</div>
 									<div>
@@ -184,14 +184,14 @@
 			<div class="section">
 				<div class="partner">
 					<div>
-						<h2>Partner</h2>
+						<h2>{{ $i18n.locale == 'fr' ? 'Partennaire' : 'Partner' }}</h2>
 						<a href="https://www.routiers.ch "><img style="width: 300px; height: auto" src="/portfolio/tachifox/lesroutierssuisse.png" alt="" /></a>
 					</div>
 					<div>
-						<h2>Support &amp; Verkauf</h2>
+						<h2>{{ $i18n.locale == 'fr' ? ' Support & Vente ' : 'Support &amp; Verkauf' }}</h2>
 						<a href="https://www.tachifox.com/tachifox-fuer-den-chauffeur"><CButton text="Support" style="display: block; width: 200px; background: white; border: 1px solid #1b52f5; color: #1b52f5" class="button"></CButton></a>
 						<a href="https://www.tachifox.com/tachifox-pro-fuer-das-unternehmen/tachifox-pro-anmeldung/ "
-							><CButton text="Verkauf" style="display: block; width: 200px; background: white; border: 1px solid #1b52f5; color: #1b52f5" class="button"></CButton>
+							><CButton :text="$i18n.locale == 'fr' ? 'Vente' : 'Verkauf'" style="display: block; width: 200px; background: white; border: 1px solid #1b52f5; color: #1b52f5" class="button"></CButton>
 						</a>
 					</div>
 				</div>

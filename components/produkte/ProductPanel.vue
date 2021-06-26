@@ -10,7 +10,7 @@
 		<div class="product-panel-text p-2">
 			<h4 v-html="product.title.rendered" />
 			<p v-html="product.acf.product_subtitle" />
-			<nuxt-link :to="'/produkte/' + product.slug"><CButton text="Mehr" /></nuxt-link>
+			<nuxt-link :to="localePath({ name: `produkte-${product.slug}` })"><CButton :text="$i18n.locale == 'fr' ? 'Plus' : 'Mehr'" /></nuxt-link>
 		</div>
 	</article>
 </template>

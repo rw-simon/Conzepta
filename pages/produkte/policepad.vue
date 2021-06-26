@@ -10,13 +10,13 @@
 				<div class="container">
 					<div style="display: grid; grid-template-columns: repeat(6, 2rem); gap: 0.5rem; align-items: center">
 						<span v-for="(pf, i) in content.platform" :key="i" style="padding: 5px">
-							<img :src="platforms[pf].acf.platform_icon" v-scroll-reveal="{ delay: 100 * i }" alt="" />
+							<!-- <img :src="platforms[pf].acf.platform_icon" v-scroll-reveal="{ delay: 100 * i }" alt="" /> -->
 						</span>
 					</div>
 					<nuxt-link v-if="content.acf.product_person" :to="'/wir#' + content.acf.product_person.post_name"
 						><div class="grid cols-2 small-gap person" style="align-items: center; margin-top: 2rem">
 							<div>
-								<p v-scroll-reveal="{ delay: 300 }" style="margin: 0; line-height: 1em">Produktmanager</p>
+								<p v-scroll-reveal="{ delay: 300 }" style="margin: 0; line-height: 1em">{{ $i18n.locale == 'fr' ? 'Gestionnaire de produit' : 'Produktemanager' }}</p>
 								<p v-scroll-reveal="{ delay: 400 }" style="margin: 0; font-weight: 900">
 									{{ content.acf.product_person.post_title }}
 								</p>
@@ -101,88 +101,64 @@
 							<RollingNumber :number="30" />
 							<!-- {{ content.acf.numbers.numbers_actual.numbers_years }} -->
 						</h1>
-						<h3 v-scroll-reveal="{ delay: 100 }" style="margin-bottom: 2rem">Jahre</h3>
+						<h3 v-scroll-reveal="{ delay: 100 }" style="margin-bottom: 2rem">{{ $i18n.locale == 'fr' ? 'Années' : 'Jahre' }}</h3>
 						<h1 v-scroll-reveal="{ delay: 200 }" style="font-size: 4.5rem; margin-bottom: 0; line-height: 1em">
 							<RollingNumber :number="3000" />
 							<!-- {{ content.acf.numbers.numbers_actual.numbers_users }} -->
 						</h1>
-						<h3 v-scroll-reveal="{ delay: 300 }" style="margin-bottom: 2rem">Nutzer</h3>
+						<h3 v-scroll-reveal="{ delay: 300 }" style="margin-bottom: 2rem">{{ $i18n.locale == 'fr' ? 'Utilisateur' : 'Nutzer' }}</h3>
 						<h1 v-scroll-reveal="{ delay: 400 }" style="font-size: 4.5rem; margin-bottom: 0; line-height: 1em">
 							<RollingNumber :number="300000" />
 							<!-- {{ content.acf.numbers.numbers_actual.numbers_cases }} -->
 						</h1>
-						<h3 v-scroll-reveal="{ delay: 500 }" style="margin-bottom: 2rem">Fälle im Halbjahr</h3>
+						<h3 v-scroll-reveal="{ delay: 500 }" style="margin-bottom: 2rem">{{ $i18n.locale == 'fr' ? 'Cas au cours du semestre' : 'Fälle im Halbjahr' }}</h3>
 					</div>
 					<div v-scroll-reveal="{ delay: 200 }" style="grid-column: span 2" v-html="content.acf.numbers.numbers_text" />
 				</div>
 			</div>
 		</div>
-		<div id="grundfunk" style="margin-top: 8rem">
-			<div class="container">
-				<h2>Grundfunktionen</h2>
-			</div>
-			<div>
-				<div class="container">
-					<div class="grid cols-2">
-						<h4>Erfassung</h4>
-						<div>
-							<ul>
-								<li>Erfassen von Ordnungsbussen</li>
-								<li>Erfassen von Verzeigungen</li>
-								<li>Erfassen von kantonalrechtlichen Bussen</li>
-								<li>Erfassen von gemeinderechtlichen Bussen</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="bg-gray">
-				<div class="container">
-					<div class="grid cols-2">
+		<div class="container" style="margin-top: 8rem">
+			<h3>Technische Details</h3>
+			<h2>Grundfunktionen</h2>
+			<div class="list-two-columns">
+				<div class="column-1">
+					<article>
+						<img class="list-icon" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" alt="" />
+						<h4>Erfassen</h4>
+						<p>Mit PolicePad erfassen Sie einfach und schnell Ordnungsbussen und Verzeigungen. Auf kantonaler und kommunaler Ebene.</p>
+					</article>
+					<article>
+						<img class="list-icon" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" alt="" />
 						<h4>Bearbeiten</h4>
-						<div>
-							<ul>
-								<li>Kumulieren von Bussen</li>
-								<li>Ergänzen von Bussen</li>
-								<li>Ersetzen von Bussen</li>
-								<li>Löschen von Bussen</li>
-							</ul>
-						</div>
-					</div>
+						<p>Sie können Bussen ganz unkompliziert kumulieren, ergänzen, ersetzen oder löschen.</p>
+					</article>
+					<article>
+						<img class="list-icon" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" alt="" />
+						<h4>On- und Offline</h4>
+						<p>Erfassen Sie Bussen auch in Gebieten, in denen es keinen mobilen Datenempfang gibt.</p>
+					</article>
+					<article>
+						<img class="list-icon" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" alt="" />
+						<h4>Beweissicherung</h4>
+						<p>Machen Sie vor Ort Fotos mit fälschungssicherer Signatur für die Beweissicherung. Lassen Sie sich mithilfe von Favoriten die wahrscheinlichsten Eingaben anzeigen.</p>
+					</article>
 				</div>
-			</div>
-			<div>
-				<div class="container">
-					<div class="grid cols-2">
-						<h4>Integriert</h4>
-						<div>
-							<ul>
-								<li>Offline-fähig: Unkomplizierte Erfassung auch in Gebieten ohne Datenempfang.</li>
-								<li>Camera: Machen Sie vor Ort Fotos zu einem Fall, die dank fälschungssicherer Signatur als Beweismittel dienen.</li>
-								<li>Favorites: Beim manuellen Erfassen werden die wahrscheinlichsten Eingaben als Favoriten angezeigt.</li>
-								<li>
-									LexiConnect: Verbindung zum elektronischen Nachschlagewerk Lexica für gesetzliche Regelwerke. Aus den Eingabefeldern können Sie direkt in die entsprechenden Assistenten des Lexica navigieren und Tatbestände
-									automatisch in den neuen Fall übernehmen.
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="bg-gray">
-				<div class="container">
-					<div class="grid cols-2">
-						<h4>Integrierbare Datenbestände</h4>
-						<div>
-							<ul>
-								<li>Bereits erfasste Bussen und Verzeigungen</li>
-								<li>Parkvorgänge (eParking, easyPark, parkingPay usw.)</li>
-								<li>Bewilligungen (Anwohnerparkkarten, Tagesbewilligungen usw.)</li>
-								<li>Fahndungslisten (RIPOL usw.)</li>
-								<li>MFK-Auskünfte (InfoCar usw.)</li>
-							</ul>
-						</div>
-					</div>
+				<div class="column-2">
+					<article>
+						<img class="list-icon" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" alt="" />
+						<h4>LexiConnect</h4>
+						<p>Konsultieren Sie das Gesetz mit dem integrierten Nachschlagewerk LexiConnect und übernehmen Sie Tatbestände automatisch in einen neuen Fall.</p>
+					</article>
+					<article>
+						<img class="list-icon" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" alt="" />
+						<h4>Alles im Blick</h4>
+						<p>Rufen Sie bereits erfasste Bussen und Verzeigungen in Sekundenschnelle ab. Prüfen Sie vorhandene Parkbewilligungen (eParking, ParkingPay, Anwohnerparkkarten, Tagesbewilligungen etc.).</p>
+					</article>
+					<article>
+						<img class="list-icon" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" alt="" />
+						<h4>Integrierbare Schnittstellen</h4>
+						<p>Fahndungslisten (z.B. RIPOL) und MFK-Auskünfte (z.B. InfoCar) können auf Wunsch eingebunden werden.</p>
+					</article>
 				</div>
 			</div>
 		</div>
@@ -251,6 +227,28 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.list-two-columns
+	display: grid
+	grid-template-columns: 1fr 1fr
+	gap: 8rem
+	article
+		position: relative
+		.list-icon
+			position: absolute
+			left: -4.5rem
+			top: .5rem
+			max-width: 3rem
+			height: 3rem
+			@include mobile
+				left: -3rem
+				max-width: 2rem
+				height: 2rem
+	@include mobile
+		grid-template-columns: 1fr
+		gap: 0
+		padding-left: 3rem
+	@include mobile-landscape
+		gap: 4rem
 .anwender
 	.grid
 		@include mobile
