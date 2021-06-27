@@ -16,7 +16,7 @@
 				"
 				isOutline
 				isMono
-				text="Zustimmen"
+				:text="$i18n.locale == 'fr' ? 'Accepter' : 'Zustimmen'"
 			/>
 			<!-- <CButton isMono text="Info" /> -->
 		</div>
