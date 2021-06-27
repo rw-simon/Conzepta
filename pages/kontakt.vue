@@ -246,7 +246,7 @@ export default {
 										// })
 										await this.$axios.$post('/mail/send', {
 											config: 'to-conz',
-											from: 'Conzepta <info@conzepta.ch>',
+											from: 'Conzepta <info@rechtwinklig.ch>',
 											subject: 'Neue Nachricht via Kontaktformular',
 											text: `Von: ${this.form.vorname} ${this.form.nachname} (${this.form.email}). Nachricht: ${this.textArea}`,
 											html: '<h1>Neue Nachricht via Kontaktformular</h1><h3>' + this.selectedAnliegen + '</h3><p>Von: ' + this.form.vorname + ' ' + this.form.nachname + '</p><p>' + this.textArea + '</p>',
