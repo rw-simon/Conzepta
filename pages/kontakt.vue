@@ -29,14 +29,14 @@
 						/>
 						<select v-scroll-reveal="{ delay: 800 }" :style="[selectedAnliegen == 'anliegen' ? { color: 'gray' } : { color: 'black' }]" name="anliegen" id="" v-model="selectedAnliegen">
 							<option value="anliegen" selected>{{ $i18n.locale == 'fr' ? 'Thèmes' : 'Anliegen' }}</option>
-							<option value="all">{{ $i18n.locale == 'fr' ? 'Généralités' : 'Allgemein' }}</option>
+							<option value="Allgemein">{{ $i18n.locale == 'fr' ? 'Généralités' : 'Allgemein' }}</option>
 							<!-- <option value="bew">Bewerbung</option> -->
-							<option value="int">InterLink</option>
-							<option value="lex">Lexica</option>
-							<option value="par">ParkingPad</option>
-							<option value="pp">PolicePad</option>
-							<option value="tac">TachiFox</option>
-							<option value="techprob">{{ $i18n.locale == 'fr' ? 'Postulation' : 'Technische Probleme' }}</option>
+							<option value="Interlink">InterLink</option>
+							<option value="Lexica">Lexica</option>
+							<option value="ParkingPad">ParkingPad</option>
+							<option value="PolicePad">PolicePad</option>
+							<option value="TachiFox">TachiFox</option>
+							<option value="Technische Probleme">{{ $i18n.locale == 'fr' ? 'Postulation' : 'Technische Probleme' }}</option>
 						</select>
 						<!-- <input
 					style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%"
@@ -70,7 +70,9 @@
 					</div>
 				</div>
 				<div v-else>
-					<p style="font-weight: normal">Vielen Dank für Ihre Nachricht. Wir werden uns gerne bei Ihnen zurückmelden.</p>
+					<p style="font-weight: normal">
+						{{ $i18n.locale == 'de' ? 'Vielen Dank für Ihre Nachricht. Wir werden uns gerne bei Ihnen zurückmelden.' : 'Merci pour votre demande. Nous traiterons votre demande dans les meilleurs délais.' }}
+					</p>
 				</div>
 			</div>
 			<div class="container" style="margin-top: 8rem">
@@ -227,62 +229,60 @@ export default {
 	},
 	methods: {
 		async registerForm() {
-			this.submitting = true
-			try {
-				// await this.$axios.$post('/mail/send', {
-				// 	config: 'to-conz',
-				// 	from: 'Conzepta <info@conzepta.ch>',
-				// 	subject: 'Kopie Ihrer Anfrage Kontaktformular Conzepta',
-				// 	text: 'Vielen Dank für Ihre Anfrage. Wir werden Ihre Anliegen so schnell wie möglich bearbeiten. Freundliche Grüsse, Conzepta',
-				// 	html: '<h1>Vielen Dank für Ihre Anfrage</h1><p> Wir werden Ihre Anliegen so schnell wie möglich bearbeiten.</p><p>Freundliche Grüsse<br />Conzepta</p>',
-				// })
-				await this.$axios.$post('/mail/send', {
-					config: 'to-conz',
-					from: 'Conzepta <info@conzepta.ch>',
-					subject: 'Neue Nachricht via Kontaktformular',
-					text: `Von: ${this.form.vorname} ${this.form.nachname} (${this.form.email}). Nachricht: ${this.textArea}`,
-					html: '<h1>Neue Nachricht via Kontaktformular</h1><h3>' + this.selectedAnliegen + '</h3><p>Von: ' + this.form.vorname + ' ' + this.form.nachname + '</p><p>' + this.textArea + '</p>',
-				})
-				// await this.$axios.$post('', {
-				// 	vorname: ' ', //this.form.vorname || ' ',
-				// 	nachname: ' ', //this.form.name || ' ',
-				// 	email: ' ', //this.form.email || ' ', // String
-				// 	anliegen: ' ', //this.selectedAnliegen || ' ', // Array [{name: '', date: '', time: '', place: ''}, …]
-				// 	nachricht: ' ', //this.textArea || ' ', // Array [{name: '', date: '', time: '', place: ''}, …]
-				// })
-				await new Promise((resolve) => setTimeout(resolve, 2500))
-				this.submitting = false
-				this.isSubmitted = true
-			} catch (err) {
-				this.submitting = false
-				console.log(err)
+			if (this.form.vorname) {
+				if (this.form.nachname) {
+					if (this.form.email) {
+						if (this.textArea) {
+							if (this.robot) {
+								if (this.selectedAnliegen) {
+									this.submitting = true
+									try {
+										// await this.$axios.$post('/mail/send', {
+										// 	config: 'to-conz',
+										// 	from: 'Conzepta <info@conzepta.ch>',
+										// 	subject: 'Kopie Ihrer Anfrage Kontaktformular Conzepta',
+										// 	text: 'Vielen Dank für Ihre Anfrage. Wir werden Ihre Anliegen so schnell wie möglich bearbeiten. Freundliche Grüsse, Conzepta',
+										// 	html: '<h1>Vielen Dank für Ihre Anfrage</h1><p> Wir werden Ihre Anliegen so schnell wie möglich bearbeiten.</p><p>Freundliche Grüsse<br />Conzepta</p>',
+										// })
+										await this.$axios.$post('/mail/send', {
+											config: 'to-conz',
+											from: 'Conzepta <info@conzepta.ch>',
+											subject: 'Neue Nachricht via Kontaktformular',
+											text: `Von: ${this.form.vorname} ${this.form.nachname} (${this.form.email}). Nachricht: ${this.textArea}`,
+											html: '<h1>Neue Nachricht via Kontaktformular</h1><h3>' + this.selectedAnliegen + '</h3><p>Von: ' + this.form.vorname + ' ' + this.form.nachname + '</p><p>' + this.textArea + '</p>',
+										})
+										// await this.$axios.$post('', {
+										// 	vorname: ' ', //this.form.vorname || ' ',
+										// 	nachname: ' ', //this.form.name || ' ',
+										// 	email: ' ', //this.form.email || ' ', // String
+										// 	anliegen: ' ', //this.selectedAnliegen || ' ', // Array [{name: '', date: '', time: '', place: ''}, …]
+										// 	nachricht: ' ', //this.textArea || ' ', // Array [{name: '', date: '', time: '', place: ''}, …]
+										// })
+										await new Promise((resolve) => setTimeout(resolve, 2500))
+										this.submitting = false
+										this.isSubmitted = true
+										this.sent = true
+									} catch (err) {
+										this.submitting = false
+										console.log(err)
+									}
+								}
+							} else {
+								this.error = 'Bitte wählen Sie die captcha-Checkbox an'
+							}
+						} else {
+							this.error = 'Bitte geben Sie eine Nachricht ein'
+						}
+					} else {
+						this.error = 'Bitte geben Sie eine gültige Email-Adresse an'
+					}
+				} else {
+					this.error = 'Bitte geben Sie einen gültigen Nachnamen an'
+				}
+			} else {
+				this.error = 'Bitte geben Sie einen gültigen Vornamen an'
 			}
 		},
-		// send() {
-		// 	if (this.form.vorname) {
-		// 		if (this.form.nachname) {
-		// 			if (this.form.email) {
-		// 				if (this.textArea) {
-		// 					if (this.robot) {
-		// 						if (this.selectedAnliegen) {
-		// 							this.sent = true
-		// 						}
-		// 					} else {
-		// 						this.error = 'Bitte wählen Sie die captcha-Checkbox an'
-		// 					}
-		// 				} else {
-		// 					this.error = 'Bitte geben Sie eine Nachricht ein'
-		// 				}
-		// 			} else {
-		// 				this.error = 'Bitte geben Sie eine gültige Email-Adresse an'
-		// 			}
-		// 		} else {
-		// 			this.error = 'Bitte geben Sie einen gültigen Nachnamen an'
-		// 		}
-		// 	} else {
-		// 		this.error = 'Bitte geben Sie einen gültigen Vornamen an'
-		// 	}
-		// },
 	},
 }
 </script>
