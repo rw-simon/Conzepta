@@ -53,7 +53,7 @@ export default {
 		[
 			'nuxt-mail',
 			{
-				message: [{ name: 'to-conz', to: ['admin@rechtwinklig.ch', 'salem@imadjane.ch'] }],
+				message: [{ name: 'to-conz', to: ['admin@rechtwinklig.ch'] }],
 				smtp: {
 					host: 'dali.sui-inter.net',
 					port: 465,
