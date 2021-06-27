@@ -12,7 +12,7 @@
 		<div class="intro">
 			<!-- :style="{ transform: 'translateY(' + pos + 'vh)' }"> -->
 			<div class="container">
-				<div style="width: 33%" v-html="content[0].text_2_columns_column_1"></div>
+				<div style="width: 33%; min-width: 300px" v-html="content[0].text_2_columns_column_1"></div>
 				<!-- <h2 v-scroll-reveal>{{}}</h2>
 				<p v-scroll-reveal="{ delay: 200 }">
 					Mehr Effizienz und Sicherheit mit <br />
@@ -23,7 +23,7 @@
 		</div>
 		<div class="since">
 			<div class="container">
-				<div style="width: 33%" v-html="content[1].text_2_columns_column_1"></div>
+				<div style="width: 33%; min-width: 300px" v-html="content[1].text_2_columns_column_1"></div>
 				<!-- <h3 v-scroll-reveal>Etablierte Lösungen</h3>
 				<h2 v-scroll-reveal="{ delay: 200 }">Seit 1986</h2>
 				<p v-scroll-reveal="{ delay: 400 }">

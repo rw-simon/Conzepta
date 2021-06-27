@@ -117,7 +117,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="container" style="margin-top: 8rem">
+		<div v-if="$i18n.locale == 'de'" class="container" style="margin-top: 8rem">
 			<h3>Technische Details</h3>
 			<h2>Grundfunktionen</h2>
 			<div class="list-two-columns">
