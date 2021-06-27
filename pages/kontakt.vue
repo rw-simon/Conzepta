@@ -83,7 +83,7 @@
 				</p>
 				<p>
 					<span style="display: inline-block; width: 100px">Email:</span><a href="mailto:team@conzepta.ch">team@conzepta.ch</a><br />
-					<span style="display: inline-block; width: 100px">Telefon:</span><a href="tel:+413486020">+41 348 60 20</a>
+					<span style="display: inline-block; width: 100px">Telefon:</span><a href="tel:+41313486020">+41 (0)31 348 60 20</a>
 				</p>
 			</div>
 		</div>

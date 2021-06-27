@@ -145,7 +145,7 @@
 		</div>
 		<div class="daskanntachifox">
 			<div class="container">
-				<h3>{{ $i18n.locale == 'fr' ? 'TACHIFOX LE MULTIT CHE' : 'All das kann Tachifox' }}</h3>
+				<h3>{{ $i18n.locale == 'fr' ? 'TACHIFOX LE MULTITÂCHE' : 'All das kann Tachifox' }}</h3>
 				<h2 style="margin-bottom: 4rem">{{ $i18n.locale == 'fr' ? 'Fonctionnalités' : 'Funktionen' }}</h2>
 				<div class="list-two-columns">
 					<div class="column-1">

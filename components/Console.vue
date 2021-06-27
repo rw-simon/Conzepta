@@ -5,7 +5,9 @@
 		</p>
 		<div class="content" v-if="cookieText">
 			<p class="title" @click="toggleConsole">Conzepta //</p>
-			<p>Wir verwenden Cookies um unsere Seite zu optimieren.</p>
+			<p>
+				{{ $i18n.locale == 'fr' ? 'Nous utilisons des cookies pour optimiser notre site!' : 'Wir verwenden Cookies um unsere Seite zu optimieren!' }}
+			</p>
 			<!-- <CButton isOutline isMono text="Team Viewer" /> -->
 			<CButton
 				@click.native="
