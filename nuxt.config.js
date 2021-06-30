@@ -14,7 +14,7 @@ export default {
 				content: 'we make IT happen',
 			},
 		],
-		// link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+		link: [{ rel: 'icon', type: 'image/x-icon', href: '/icon.png' }],
 	},
 
 	loading: { color: '#1b52f5', height: '3px' },
