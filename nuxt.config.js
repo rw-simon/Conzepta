@@ -71,7 +71,6 @@ export default {
 		locales: [
 			{ code: 'de', iso: 'de-CH' },
 			{ code: 'fr', iso: 'fr-FR' },
-			{ code: 'en', iso: 'en-US' },
 		],
 		defaultLocale: 'de',
 		seo: true,
