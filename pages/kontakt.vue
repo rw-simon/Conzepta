@@ -244,11 +244,10 @@ export default {
 										// 	text: 'Vielen Dank für Ihre Anfrage. Wir werden Ihre Anliegen so schnell wie möglich bearbeiten. Freundliche Grüsse, Conzepta',
 										// 	html: '<h1>Vielen Dank für Ihre Anfrage</h1><p> Wir werden Ihre Anliegen so schnell wie möglich bearbeiten.</p><p>Freundliche Grüsse<br />Conzepta</p>',
 										// })
-										await this.$axios.$post('/mail/send', {
-											config: 'to-conz',
-											from: 'Conzepta <info@rechtwinklig.ch>',
+										await this.$mail.send({
+											from: 'Conzepta <info@conzepta.ch>',
 											subject: 'Neue Nachricht via Kontaktformular',
-											text: `Von: ${this.form.vorname} ${this.form.nachname} (${this.form.email}). Nachricht: ${this.textArea}`,
+											text: `Von: ${this.form.vorname} ${this.form.nachname} (${this.form.email}). Anliegen ${this.selectedAnliegen}. Nachricht: ${this.textArea}`,
 											html: '<h1>Neue Nachricht via Kontaktformular</h1><h3>' + this.selectedAnliegen + '</h3><p>Von: ' + this.form.vorname + ' ' + this.form.nachname + '</p><p>' + this.textArea + '</p>',
 										})
 										// await this.$axios.$post('', {
