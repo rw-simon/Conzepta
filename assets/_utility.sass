@@ -1,0 +1,83 @@
+@mixin mobile
+	@media ( max-device-width: 768px ) and (orientation: portrait)
+		// MOBILE
+		@content
+
+@mixin mobile-landscape
+	@media ( max-device-height: 768px ) and (orientation: landscape)
+		// MOBILE
+		@content
+
+@mixin tablet
+	@media ( max-device-width: 1280px )
+		// MOBILE
+		@content
+
+.clickable
+	padding: .5rem
+	margin: -.5rem
+
+// Color
+.bc-blue
+	background-color: $c-blue
+	color: white
+	*
+		color: white
+
+.c-blue
+	color: $c-blue
+
+// Text
+.font-mono
+	font-family: 'Lucida Console'
+
+// Layout
+.grid
+	display: grid
+	gap: 8rem
+	&.small-gap
+		gap: 4rem
+	@for $i from 1 through 12
+		&.cols-#{$i}
+			grid-template-columns: repeat(#{$i}, 1fr)
+			@include mobile
+				grid-template-columns: 1fr
+			@include mobile-landscape
+				grid-template-columns: 1fr 1fr
+	@include mobile
+		gap: 4rem
+		&.small-gap
+			gap: 1rem
+
+.valign-center
+	align-items: center
+
+.valign-end
+	align-items: end
+
+.p-1
+	padding: 1rem 1.66rem
+	box-sizing: border-box
+.p-2
+	padding: 2rem
+	box-sizing: border-box
+
+.br
+	border-radius: 5px
+
+.br-2
+	border-radius: 8px
+
+.jarallax, .jarallax-fast, .jarallax-slow
+	position: relative
+	z-index: 0
+	.jarallax-img
+		position: absolute
+		object-fit: cover
+		/* support for plugin https://github.com/bfred-it/object-fit-images */
+		font-family: 'object-fit: cover;'
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: -1
