@@ -132,7 +132,7 @@
 		</div> -->
 		<div style="background: #e7e9ec; margin-top: 8rem" class="anwender">
 			<div class="container" style="padding: 4rem 0">
-				<h2>{{ $i18n.locale == 'fr' ? 'Utilisateurs' : 'Anwender' }}</h2>
+				<h2>{{ $i18n.locale == 'fr' ? 'Utilisateurs' : 'Einige unserer Anwender' }}</h2>
 				<div class="grid cols-3" style="display: grid; gap: 2rem; align-items: center">
 					<nuxt-link to="/portfolio?category=3"><img v-scroll-reveal="{ delay: 0 }" style="padding: 2rem; max-width: 200px; height: auto" src="/portfolio/interlink/allegion.png" alt="" /></nuxt-link>
 					<nuxt-link to="/portfolio?category=3"><img v-scroll-reveal="{ delay: 200 }" style="padding: 2rem; max-width: 200px; height: auto" src="/portfolio/interlink/interflex.png" alt="" /></nuxt-link>
@@ -235,6 +235,7 @@ export default {
 	@include mobile
 		padding-top: 0
 		margin-top: 22rem
+		margin-bottom: -10rem
 .banner-footer
 	background-image: url('/interlink-footer.png')
 	background-repeat: no-repeat

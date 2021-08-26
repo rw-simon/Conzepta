@@ -9,8 +9,14 @@
 			<div class="pp-icons">
 				<div class="container">
 					<div style="display: grid; grid-template-columns: repeat(6, 2rem); gap: 0.5rem; align-items: center">
-						<span v-for="(pf, i) in content.platform" :key="i" style="padding: 5px">
-							<!-- <img :src="platforms[pf].acf.platform_icon" v-scroll-reveal="{ delay: 100 * i }" alt="" /> -->
+						<span style="padding: 5px">
+							<img style="height: auto" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/12/icon_windows.png" v-scroll-reveal="{ delay: 100 }" alt="" />
+						</span>
+						<span style="padding: 5px">
+							<img style="height: auto; opacity: 0.33" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/12/icon_android.png" v-scroll-reveal="{ delay: 100 }" alt="" />
+						</span>
+						<span style="padding: 5px">
+							<img style="height: auto; opacity: 0.33" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/12/icon_apple.png" v-scroll-reveal="{ delay: 100 }" alt="" />
 						</span>
 					</div>
 					<nuxt-link v-if="content.acf.product_person" :to="'/wir#' + content.acf.product_person.post_name"
@@ -164,7 +170,7 @@
 		</div>
 		<div style="margin-top: 8rem" class="anwender">
 			<div class="container" style="padding: 4rem 0">
-				<h2>{{ $i18n.locale == 'fr' ? 'Utilisateurs' : 'Anwender' }}</h2>
+				<h2>{{ $i18n.locale == 'fr' ? 'Utilisateurs' : 'Einige unserer' }}</h2>
 				<div style="display: grid; gap: 2rem; align-items: center" class="grid cols-3">
 					<nuxt-link v-for="(img, i) in content.acf.anwender" :key="i" to="/portfolio?category=1"><img v-scroll-reveal="{ delay: 200 * i }" style="padding: 2rem; max-width: 200px" :src="img" alt="" /></nuxt-link>
 				</div>

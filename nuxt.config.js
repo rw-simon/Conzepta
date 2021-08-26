@@ -53,7 +53,7 @@ export default {
 		[
 			'nuxt-mail',
 			{
-				message: { to: ['admin@rechtwinklig.ch', 'info@conzepta.ch'] },
+				message: { to: ['admin@rechtwinklig.ch', 'team@conzepta.ch'] },
 				// smtp: {
 				// 	host: 'dali.sui-inter.net',
 				// 	port: 465,

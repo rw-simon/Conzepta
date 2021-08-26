@@ -3,7 +3,7 @@
 		<div style="padding: 4rem 0 4rem; background: #e7e9ec" id="support">
 			<div id="kontaktformular" class="container">
 				<h3>{{ $i18n.locale == 'fr' ? 'Direct' : 'Direkt' }}</h3>
-				<h1>{{ $i18n.locale == 'fr' ? 'Contact' : 'Kontakt' }}</h1>
+				<h1>{{ $i18n.locale == 'fr' ? 'Contact //' : 'Kontakt //' }}</h1>
 				<div v-if="!sent">
 					<form class="grid cols-2" style="gap: 2rem">
 						<input

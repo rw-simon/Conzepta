@@ -147,21 +147,21 @@
 				<div class="news-grid">
 					<div>
 						<article style="margin-top: 4rem">
-							<h3>{{ news[3].acf.datum }}</h3>
+							<h3>{{ formatDate(news[3].acf.datum) }}</h3>
 							<nuxt-link :to="localePath({ name: 'news' })"
 								><h2>{{ news[3].title.rendered }}</h2></nuxt-link
 							>
 							<div v-html="news[3].content.rendered"></div>
 						</article>
 						<article style="margin-top: 24rem">
-							<h3>{{ news[1].acf.datum }}</h3>
+							<h3>{{ formatDate(news[1].acf.datum) }}</h3>
 							<nuxt-link :to="localePath({ name: 'news' })"
 								><h2>{{ news[1].title.rendered }}</h2></nuxt-link
 							>
 							<div v-html="news[1].content.rendered"></div>
 						</article>
 					</div>
-					<div>
+					<div class="liness">
 						<div class="line">
 							<hr />
 						</div>
@@ -205,12 +205,15 @@
 					</div>
 					<div>
 						<article style="margin-top: 24rem">
-							<h3>{{ news[2].acf.datum }}</h3>
+							<h3>{{ formatDate(news[2].acf.datum) }}</h3>
 							<nuxt-link :to="localePath({ name: 'news' })"
 								><h2>{{ news[2].title.rendered }}</h2></nuxt-link
 							>
 							<div v-html="news[2].content.rendered"></div>
 						</article>
+					</div>
+					<div class="mobobly">
+						<nuxt-link :to="localePath({ name: 'news' })"><img src="/arrows_bot.png" alt="" /></nuxt-link>
 					</div>
 				</div>
 			</div>
@@ -247,6 +250,11 @@ export default {
 		}
 	},
 	methods: {
+		formatDate(date) {
+			let _d = ''
+			_d = `${date.substring(6)}.${date.substring(4, 6)}.${date.substring(0, 4)}`
+			return _d
+		},
 		handleScroll() {
 			// Your scroll handling here
 			// let variable = window.innerHeight / window.scrollY
@@ -428,10 +436,22 @@ img
 	// margin-top: -10rem
 	padding-top: 10rem
 	margin-bottom: 10rem
-	@include mobile
+	.mobobly
 		display: none
+		width: 4rem
+		margin: auto
+	@include mobile
+		.mobobly
+			display: block
 		margin-top: 0
 		padding-top: 0
+		.news-grid
+			grid-template-columns: auto
+			gap: 0
+			.liness
+				display: none
+			article
+				margin-top: 4rem !important
 		h1
 			margin-bottom: 0
 </style>

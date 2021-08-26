@@ -23,11 +23,11 @@
 				</div>
 			</div>
 		</div>
-		<div class="second" :id="`news-${i}`" v-for="(a, i) in news" :key="i" v-show="a.acf.kategorie.includes(selectedCategories.toLowerCase()) || (selectedCategories == $i18n.locale) == 'fr' ? 'Tous' : 'Alle'">
+		<div class="second" :id="`news-${i}`" v-for="(a, i) in news" :key="i" v-show="a.acf.kategorie.includes(selectedCategories.toLowerCase()) || selectedCategories == ($i18n.locale == 'fr' ? 'Tous' : 'Alle')">
 			<div class="container">
 				<div class="grid cols-2">
 					<article style="grid-column: 1" class="news-article">
-						<h3>{{ a.acf.datum }}</h3>
+						<h3>{{ formatDate(a.acf.datum) }}</h3>
 						<h2>{{ a.title.rendered }}</h2>
 						<div v-html="a.content.rendered" />
 					</article>
@@ -50,8 +50,11 @@ export default {
 	},
 	async asyncData({ app }) {
 		let news = await axios.get(`https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/news?lang=${app.i18n.locale}`)
+		// news = news
 		return {
-			news: news.data,
+			news: news.data.sort(function (a, b) {
+				return parseFloat(b.acf.datum) - parseFloat(a.acf.datum)
+			}),
 		}
 	},
 	data() {
@@ -61,7 +64,13 @@ export default {
 		}
 	},
 	methods: {
+		formatDate(date) {
+			let _d = ''
+			_d = `${date.substring(6)}.${date.substring(4, 6)}.${date.substring(0, 4)}`
+			return _d
+		},
 		toggleCat(cat) {
+			console.log(cat)
 			this.selectedCategories = this.productCategories[cat]
 			// if (cat == 0) {
 			// 	this.selectedCategories = [0]

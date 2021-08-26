@@ -114,7 +114,7 @@
 			</div>
 			<div class="anwender">
 				<div class="container" style="padding: 4rem 0">
-					<h2>{{ $i18n.locale == 'fr' ? 'Utilisateurs' : 'Anwender' }}</h2>
+					<h2>{{ $i18n.locale == 'fr' ? 'Utilisateurs' : 'Einige unserer Anwender' }}</h2>
 					<div class="grid cols-3" style="display: grid; gap: 2rem; align-items: center">
 						<nuxt-link to="/portfolio?category=2"
 							><img v-scroll-reveal="{ delay: 0 }" style="padding: 2rem; max-width: 200px; height: auto" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2021/02/Screenshot-2021-02-05-at-11.41.08.png" alt=""

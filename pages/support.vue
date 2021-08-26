@@ -5,7 +5,7 @@
 				<div class="grid cols-2" style="row-gap: 2rem">
 					<div>
 						<h3 v-scroll-reveal="{ delay: 0 }">Support</h3>
-						<h1 v-scroll-reveal="{ delay: 200 }">{{ $i18n.locale == 'fr' ? 'Là pour vous//' : 'Für Sie da//' }}</h1>
+						<h1 v-scroll-reveal="{ delay: 200 }">{{ $i18n.locale == 'fr' ? 'Là pour vous //' : 'Für Sie da //' }}</h1>
 						<p v-scroll-reveal="{ delay: 400 }">
 							{{
 								$i18n.locale == 'fr'
