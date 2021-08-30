@@ -247,42 +247,42 @@ export default {
 				if (this.form.nachname) {
 					if (this.form.email) {
 						if (this.textArea) {
-							if (this.robot) {
-								if (this.selectedAnliegen) {
-									this.submitting = true
-									try {
-										// await this.$axios.$post('/mail/send', {
-										// 	config: 'to-conz',
-										// 	from: 'Conzepta <info@conzepta.ch>',
-										// 	subject: 'Kopie Ihrer Anfrage Kontaktformular Conzepta',
-										// 	text: 'Vielen Dank für Ihre Anfrage. Wir werden Ihre Anliegen so schnell wie möglich bearbeiten. Freundliche Grüsse, Conzepta',
-										// 	html: '<h1>Vielen Dank für Ihre Anfrage</h1><p> Wir werden Ihre Anliegen so schnell wie möglich bearbeiten.</p><p>Freundliche Grüsse<br />Conzepta</p>',
-										// })
-										await this.$mail.send({
-											from: 'Conzepta <info@conzepta.ch>',
-											subject: 'Neue Nachricht via Kontaktformular',
-											text: `Von: ${this.form.vorname} ${this.form.nachname} (${this.form.email}). Anliegen ${this.selectedAnliegen}. Nachricht: ${this.textArea}`,
-											html: '<h1>Neue Nachricht via Kontaktformular</h1><h3>' + this.selectedAnliegen + '</h3><p>Von: ' + this.form.vorname + ' ' + this.form.nachname + '</p><p>' + this.textArea + '</p>',
-										})
-										// await this.$axios.$post('', {
-										// 	vorname: ' ', //this.form.vorname || ' ',
-										// 	nachname: ' ', //this.form.name || ' ',
-										// 	email: ' ', //this.form.email || ' ', // String
-										// 	anliegen: ' ', //this.selectedAnliegen || ' ', // Array [{name: '', date: '', time: '', place: ''}, …]
-										// 	nachricht: ' ', //this.textArea || ' ', // Array [{name: '', date: '', time: '', place: ''}, …]
-										// })
-										await new Promise((resolve) => setTimeout(resolve, 2500))
-										this.submitting = false
-										this.isSubmitted = true
-										this.sent = true
-									} catch (err) {
-										this.submitting = false
-										console.log(err)
-									}
+							// if (this.robot) {
+							if (this.selectedAnliegen) {
+								this.submitting = true
+								try {
+									// await this.$axios.$post('/mail/send', {
+									// 	config: 'to-conz',
+									// 	from: 'Conzepta <info@conzepta.ch>',
+									// 	subject: 'Kopie Ihrer Anfrage Kontaktformular Conzepta',
+									// 	text: 'Vielen Dank für Ihre Anfrage. Wir werden Ihre Anliegen so schnell wie möglich bearbeiten. Freundliche Grüsse, Conzepta',
+									// 	html: '<h1>Vielen Dank für Ihre Anfrage</h1><p> Wir werden Ihre Anliegen so schnell wie möglich bearbeiten.</p><p>Freundliche Grüsse<br />Conzepta</p>',
+									// })
+									await this.$mail.send({
+										from: 'Conzepta <info@conzepta.ch>',
+										subject: 'Neue Nachricht via Kontaktformular',
+										text: `Von: ${this.form.vorname} ${this.form.nachname} (${this.form.email}). Anliegen ${this.selectedAnliegen}. Nachricht: ${this.textArea}`,
+										html: '<h1>Neue Nachricht via Kontaktformular</h1><h3>' + this.selectedAnliegen + '</h3><p>Von: ' + this.form.vorname + ' ' + this.form.nachname + '</p><p>' + this.textArea + '</p>',
+									})
+									// await this.$axios.$post('', {
+									// 	vorname: ' ', //this.form.vorname || ' ',
+									// 	nachname: ' ', //this.form.name || ' ',
+									// 	email: ' ', //this.form.email || ' ', // String
+									// 	anliegen: ' ', //this.selectedAnliegen || ' ', // Array [{name: '', date: '', time: '', place: ''}, …]
+									// 	nachricht: ' ', //this.textArea || ' ', // Array [{name: '', date: '', time: '', place: ''}, …]
+									// })
+									await new Promise((resolve) => setTimeout(resolve, 2500))
+									this.submitting = false
+									this.isSubmitted = true
+									this.sent = true
+								} catch (err) {
+									this.submitting = false
+									console.log(err)
 								}
-							} else {
-								this.error = 'Bitte wählen Sie die captcha-Checkbox an'
 							}
+							// } else {
+							// 	this.error = 'Bitte wählen Sie die captcha-Checkbox an'
+							// }
 						} else {
 							this.error = 'Bitte geben Sie eine Nachricht ein'
 						}
