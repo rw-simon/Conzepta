@@ -101,8 +101,8 @@
 			<div class="container">
 				<!-- <h3 v-scroll-reveal="{ delay: 0 }" style="text-align: center">STAPO ZÜRICH / BERNER KAPO / ZÜRCHER KAPO / PRIVATE</h3> -->
 				<h2 v-scroll-reveal="{ delay: 200 }" style="text-align: center; margin-bottom: 8rem">{{ content.acf.numbers.numbers_title }}</h2>
-				<div class="grid cols-5 small-gap">
-					<div style="grid-column: span 3">
+				<div class="grid cols-4 small-gap">
+					<div style="grid-column: span 2">
 						<h1 v-scroll-reveal="{ delay: 0 }" style="font-size: 4.5rem; margin-bottom: 0; line-height: 1em">
 							<RollingNumber :number="30" />
 							<!-- {{ content.acf.numbers.numbers_actual.numbers_years }} -->
@@ -209,6 +209,7 @@ export default {
 				spaceBetween: 48,
 				loop: true,
 				mousewheel: true,
+				longSwipesMs: 20,
 				direction: 'horizontal',
 				pagination: {
 					el: '.swiper-pagination',
@@ -238,6 +239,7 @@ export default {
 	grid-template-columns: 1fr 1fr
 	gap: 8rem
 	article
+		min-height: 150px
 		position: relative
 		.list-icon
 			position: absolute

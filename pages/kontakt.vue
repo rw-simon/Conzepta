@@ -55,9 +55,10 @@
 						></textarea>
 					</form>
 					<div class="grid cols-3 small-gap" style="align-items: center; margin-top: 2rem">
-						<span style="padding: 0.5rem 2rem 0.5rem 0.5rem; border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%">
-							<input v-model="robot" style="padding: 0; height: 1rem; width: 1rem; border: blue 1px solid; border-radius: 3px; margin-right: 10px; vertical-align: text-top" type="checkbox" name="" id="" />
-							{{ $i18n.locale == 'fr' ? 'Je ne suis pas un robot' : 'Ich bin kein Roboter' }}
+						<span style="padding: 0.5rem 2rem 0.5rem 0.5rem; border-box; margin: 0; width: 100%">
+							<!-- <input v-model="robot" style="padding: 0; height: 1rem; width: 1rem; border: blue 1px solid; border-radius: 3px; margin-right: 10px; vertical-align: text-top" type="checkbox" name="" id="" />
+							{{ $i18n.locale == 'fr' ? 'Je ne suis pas un robot' : 'Ich bin kein Roboter' }} -->
+							<recaptcha />
 						</span>
 						<span style="padding: 0.5rem 2rem 0.5rem 0.5rem; border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%">
 							<input style="padding: 0; height: 1rem; width: 1rem; border: blue 1px solid; border-radius: 3px; margin-right: 10px; vertical-align: text-top" type="checkbox" name="" id="" />
@@ -228,6 +229,19 @@ export default {
 		// }
 	},
 	methods: {
+		async onSubmit() {
+			try {
+				const token = await this.$recaptcha.getResponse()
+				console.log('ReCaptcha token:', token)
+
+				// send token to server alongside your form data
+
+				// at the end you need to reset recaptcha
+				await this.$recaptcha.reset()
+			} catch (error) {
+				console.log('Login error:', error)
+			}
+		},
 		async registerForm() {
 			if (this.form.vorname) {
 				if (this.form.nachname) {

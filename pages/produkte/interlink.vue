@@ -49,8 +49,8 @@
 				<div class="container">
 					<h3 v-scroll-reveal="{ delay: 0 }" style="text-align: center">BIXI SYSTEMS / DORMAKABA / MPDV / PCS / PRIMION / TYCO / VICKING</h3>
 					<h2 v-scroll-reveal="{ delay: 200 }" style="text-align: center; margin-bottom: 8rem">{{ content.acf.numbers.titel }}</h2>
-					<div class="grid cols-5">
-						<div style="grid-column: span 3">
+					<div class="grid cols-4">
+						<div style="grid-column: span 2">
 							<h1 v-scroll-reveal="{ delay: 0 }" style="margin-bottom: 0; line-height: 1em"><RollingNumber :number="20" /></h1>
 							<h3 v-scroll-reveal="{ delay: 100 }" style="margin-bottom: 2rem">{{ $i18n.locale == 'fr' ? 'Ans' : 'Jahre' }}</h3>
 							<h1 v-scroll-reveal="{ delay: 200 }" style="margin-bottom: 0; line-height: 1em"><RollingNumber :number="30000" /></h1>
@@ -84,26 +84,31 @@
 			<div class="padding-large">
 				<div class="clock">
 					<div class="container">
-						<div :class="{ text: true, open: showContentKomp }">
-							<div v-html="content.acf.arbeitszeiten.text_intro"></div>
-							<!-- <h3 v-scroll-reveal="{ delay: 0 }">ARBEITSZEITEN AUSWERTEN</h3>
+						<div class="grid cols-2">
+							<div :class="{ text: true, open: showContentKomp }">
+								<div v-html="content.acf.arbeitszeiten.text_intro"></div>
+								<!-- <h3 v-scroll-reveal="{ delay: 0 }">ARBEITSZEITEN AUSWERTEN</h3>
 							<h2 v-scroll-reveal="{ delay: 200 }">Kommunikation kann so viel mehr</h2>
 							<p v-scroll-reveal="{ delay: 400 }" class="intro">
 								Bewegen sich Mitarbeitende mit einem Badge an ihrem Arbeitsort, passiert im Hintergrund vieles: Türen müssen, je nach Person, öffnen oder verschlossen bleiben. Arbeitszeiten werden erfasst. Viele Schnittstellen, die
 								ineinandergreifen. Und Daten, die Sie im Auge behalten wollen. InterLink bietet Ihnen eine reibungslose Kommunikation aller Zeit- und Zutrittsterminals, die über die verschiedenen Standorte Ihres Betriebs verteilt
 								sind.
 							</p> -->
-							<img
-								@click="toggleContentKomp"
-								:class="{
-									'more-icon': true,
-									mirrored: showContentKomp,
-								}"
-								src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_arrowDown.png"
-								alt=""
-							/>
-							<div></div>
-							<div :class="{ more: true, active: showContentKomp }" v-html="content.acf.arbeitszeiten.text_ausgeklappt"></div>
+								<img
+									@click="toggleContentKomp"
+									:class="{
+										'more-icon': true,
+										mirrored: showContentKomp,
+									}"
+									src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_arrowDown.png"
+									alt=""
+								/>
+								<div></div>
+								<div :class="{ more: true, active: showContentKomp }" v-html="content.acf.arbeitszeiten.text_ausgeklappt"></div>
+							</div>
+							<span>
+								<poi x="-100" y="150" text="Um 1700 ist für Claudia keineswegs Feierabend: Ab zum Fussbalmatch der Kinder."></poi>
+							</span>
 						</div>
 					</div>
 				</div>
@@ -305,7 +310,7 @@ img
 	&.mirrored
 		transform: scaleY(-1)
 .text
-	width: 40%
+	// width: 40%
 	transition: padding-top 350ms ease-out
 	padding-top: 8rem
 	@include mobile

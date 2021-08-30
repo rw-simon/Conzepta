@@ -56,9 +56,12 @@
 		<div class="funktionen">
 			<div class="container">
 				<div class="section grid cols-2">
-					<span>
-						<!-- <Poi x="10" text=" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ut, laudantium deleniti ea repellendus, officiis mollitia corporis vero amet maiores perspiciatis! Repellendus exercitationem alias sapiente nam accusamus, voluptas distinctio adipisci." /> -->
-					</span>
+					<div>
+						<!-- <poi
+							x="10"
+							text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ut, laudantium deleniti ea repellendus, officiis mollitia corporis vero amet maiores perspiciatis! Repellendus exercitationem alias sapiente nam accusamus, voluptas distinctio adipisci."
+						></poi> -->
+					</div>
 					<div class="mobilefix">
 						<h3 v-scroll-reveal="{ delay: 0 }">{{ $i18n.locale == 'fr' ? 'BIEN PLUS QU’UN LIVRE' : 'WEIT MEHR ALS EIN BUCH' }}</h3>
 						<h2 v-scroll-reveal="{ delay: 200 }">{{ $i18n.locale == 'fr' ? 'Ce que Lexica sait faire' : 'Was Lexica alles kann' }}</h2>

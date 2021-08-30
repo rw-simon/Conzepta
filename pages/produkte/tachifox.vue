@@ -4,7 +4,9 @@
 			<div class="background">
 				<div class="container">
 					<div class="grid cols-2">
-						<span></span>
+						<span>
+							<poi x="-100" y="600" text="Sieht nach Zukunft aus! Bei Technik und ScienceFiction schlägt Philippe's Herz gleich höher"></poi>
+						</span>
 						<div>
 							<div v-html="content.acf.modules[0].text_2_columns_column_2"></div>
 							<!-- <h3 v-scroll-reveal="{ delay: 0 }">Fahrtenschreiber</h3>
