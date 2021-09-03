@@ -55,7 +55,7 @@
 						></textarea>
 					</form>
 					<div class="grid cols-3 small-gap" style="align-items: center; margin-top: 2rem">
-						<span style="padding: 0.5rem 2rem 0.5rem 0.5rem; border-box; margin: 0; width: 100%">
+						<span style="border-box; margin: 0; width: 100%">
 							<!-- <input v-model="robot" style="padding: 0; height: 1rem; width: 1rem; border: blue 1px solid; border-radius: 3px; margin-right: 10px; vertical-align: text-top" type="checkbox" name="" id="" />
 							{{ $i18n.locale == 'fr' ? 'Je ne suis pas un robot' : 'Ich bin kein Roboter' }} -->
 							<recaptcha />
@@ -64,7 +64,7 @@
 							<input style="padding: 0; height: 1rem; width: 1rem; border: blue 1px solid; border-radius: 3px; margin-right: 10px; vertical-align: text-top" type="checkbox" name="" id="" />
 							{{ $i18n.locale == 'fr' ? 'M’envoyer une copie' : 'Kopie an mich senden' }}
 						</span>
-						<CButton @click.native="registerForm" :text="$i18n.locale == 'fr' ? 'Envoyer' : 'Senden'" />
+						<CButton style="z-index: 9999999" @click.native="registerForm" :text="$i18n.locale == 'fr' ? 'Envoyer' : 'Senden'" />
 					</div>
 					<div v-if="error">
 						<p style="color: red">{{ error }}</p>

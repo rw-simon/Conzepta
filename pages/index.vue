@@ -27,7 +27,7 @@
 					<div style="min-width: 300px" v-html="content[1].text_2_columns_column_1"></div>
 					<span>
 						<poi x="0" y="200" text="Wenn Urs nicht gerade die Berge erklimmt, dann weil er wiedereinmal mit dem Motorrad unterwegs ist."></poi>
-						<poi x="200" y="-470" text="Mit Solar auf dem Dach und Nachsicht im Verstand wollen wir der Umwelt Sorge tragen."></poi>
+						<poi x="0" y="-400" text="Mit Solar auf dem Dach und Nachsicht im Verstand wollen wir der Umwelt Sorge tragen."></poi>
 					</span>
 				</div>
 				<!-- <h3 v-scroll-reveal>Etablierte Lösungen</h3>

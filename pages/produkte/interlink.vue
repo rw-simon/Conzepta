@@ -45,7 +45,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="something" style="margin-top: 10rem">
+			<div class="something" style="margin-top: 6rem">
 				<div class="container">
 					<h3 v-scroll-reveal="{ delay: 0 }" style="text-align: center">BIXI SYSTEMS / DORMAKABA / MPDV / PCS / PRIMION / TYCO / VICKING</h3>
 					<h2 v-scroll-reveal="{ delay: 200 }" style="text-align: center; margin-bottom: 8rem">{{ content.acf.numbers.titel }}</h2>
