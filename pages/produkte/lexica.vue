@@ -107,7 +107,7 @@
 										<h2>Tags</h2>
 										<p>Tags erleichtern die Suche vor allem von nicht täglichen Begriffen, so kann z.B. nach "Ampel" gesucht werden, obwohl diese als "Lichtsignalanlage" im entsprechenden Gesetz hinterlegt ist.</p> -->
 									</div>
-									<!-- <div class="slider-image"><img style="height: auto" src="/tachiimg3.png" alt="" /></div> -->
+									<div class="slider-image"><img style="height: auto" :src="slide.slide_image" alt="" /></div>
 								</div>
 							</swiper-slide>
 						</swiper>
