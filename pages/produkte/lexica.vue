@@ -15,6 +15,14 @@
 							<div class="grid"></div>
 						</div> -->
 						<div class="produktemanager" style="align-self: end">
+							<div style="display: grid; grid-template-columns: repeat(6, 2rem); gap: 0.5rem; align-items: center">
+								<span style="padding: 5px">
+									<img style="height: auto" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/12/icon_apple.png" v-scroll-reveal="{ delay: 100 }" alt="" />
+								</span>
+								<span style="padding: 5px">
+									<img style="height: auto; opacity: 0.33" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/12/icon_android.png" v-scroll-reveal="{ delay: 100 }" alt="" />
+								</span>
+							</div>
 							<nuxt-link :to="{ path: '/wir', hash: '#philippe-luethi' }">
 								<div class="grid cols-2 small-gap person" style="align-items: center; margin-top: 2rem">
 									<div>
@@ -26,14 +34,6 @@
 									</div>
 								</div>
 							</nuxt-link>
-							<div style="display: grid; grid-template-columns: repeat(6, 2rem); gap: 0.5rem; align-items: center">
-								<span style="padding: 5px">
-									<img style="height: auto" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/12/icon_apple.png" v-scroll-reveal="{ delay: 100 }" alt="" />
-								</span>
-								<span style="padding: 5px">
-									<img style="height: auto; opacity: 0.33" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/12/icon_android.png" v-scroll-reveal="{ delay: 100 }" alt="" />
-								</span>
-							</div>
 						</div>
 					</div>
 				</div>
