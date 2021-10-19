@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div data-test="onebyte-heroku-auto-deploy">
 		<div style="padding: 4rem 0 4rem; background: #e7e9ec" id="support">
 			<div id="kontaktformular" class="container">
 				<h3>{{ $i18n.locale == 'fr' ? 'Direct' : 'Direkt' }}</h3>
