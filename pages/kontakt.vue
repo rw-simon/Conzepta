@@ -211,10 +211,10 @@ export default {
     },
   },
   async asyncData({ query }) {
-    const { data } = await axios.get('https://admin.conzepta.ch/test.php')
+    const { data } = await axios.get('https://admin.conzepta.ch/wp_forms.php')
         .then(res => {
           let html = res.data;
-
+          console.log(html)
           // For testing purpose;
           html = html.replace(`action="/test.php#wpcf7-f678-o1"`, `action="https://admin.conzepta.ch/#wpcf7-f678-o1"`)
 
