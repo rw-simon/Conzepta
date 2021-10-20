@@ -75,10 +75,13 @@
             {{ $i18n.locale == 'de' ? 'Vielen Dank für Ihre Nachricht. Wir werden uns gerne bei Ihnen zurückmelden.' : 'Merci pour votre demande. Nous traiterons votre demande dans les meilleurs délais.' }}
           </p>
         </div>
+
+        <!-- WP Forms --> 
+        <div class="wp-forms" style="display: none">
+          <div v-html="wpForms"></div>
+        </div>
       </div>
-      <div class="wp-forms" style="display: none">
-        <div v-html="wpForms"></div>
-      </div>
+
       <div class="container" style="margin-top: 8rem">
         <p>
           Conzepta Team AG <br />
@@ -214,7 +217,7 @@ export default {
     const { data } = await axios.get('https://admin.conzepta.ch/wp_forms.php')
         .then(res => {
           let html = res.data;
-    
+
           // For testing purpose;
           // TODO: Parse with reg
           html = html.replace(`action="/wp_forms.php#wpcf7-f678-o1"`, `action="https://admin.conzepta.ch/#wpcf7-f678-o1"`)
@@ -350,6 +353,28 @@ select
 input, select
   @include mobile
     grid-column: span 2
+input,textarea
+  border: blue 1px solid
+  border-radius: 5px
+  box-sizing: border-box
+  margin: 0
+  width: 100%
+  visibility: visible
+  opacity: 1
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+  transition: opacity 0.5s ease-out 0.4s, transform 0.5s ease-out 0.4s
+.wpcf7-submit
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  padding: .5rem 2rem
+  margin: .5rem 0
+  background: #004dff
+  display: inline-block
+  border: none
+  color: #fff
+  font-family: "Arboria",sans-serif
+
 iframe
   @include mobile
     max-width: 100% !important
