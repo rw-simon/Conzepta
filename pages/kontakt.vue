@@ -76,7 +76,7 @@
           </p>
         </div>
 
-        <!-- WP Forms --> 
+        <!-- WP Forms -->
         <div class="wp-forms" style="display: none">
           <div v-html="wpForms"></div>
         </div>
@@ -244,7 +244,7 @@ export default {
     }
   },
   mounted() {
-    console.log(this)
+    console.log(this,document.querySelector('.wpcf7'))
     // if (this.$route.params.text == 'huhu') {
     // 	console.log('HUHU')
     // }
