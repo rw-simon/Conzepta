@@ -213,8 +213,8 @@ export default {
       de: '/kontakt', // -> accessible at /es/sobre
     },
   },
-  async asyncData({ query }) {
-    const { data } = await axios.get('https://admin.conzepta.ch/wp_forms.php?locale=de')
+  async asyncData({ query , app }) {
+    const { data } = await axios.get('https://admin.conzepta.ch/wp_forms.php?locale='+app.i18n.locale)
         .then(res => {
           let html = res.data;
 
@@ -228,7 +228,7 @@ export default {
         })
         .catch(r => {return {data:''}});
     return {
-      _query:  query,
+      currentLang:  app.i18n.locale,
       textArea: query.text,
       selectedAnliegen: query.anliegen || 'anliegen',
       sent: false,
