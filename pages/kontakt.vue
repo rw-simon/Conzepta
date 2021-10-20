@@ -244,10 +244,42 @@ export default {
     }
   },
   mounted() {
-    console.log(this,document.querySelector('.wpcf7'))
-    // if (this.$route.params.text == 'huhu') {
-    // 	console.log('HUHU')
-    // }
+    console.log(this)
+    const formWpcf = document.querySelector('.wpcf7 form');
+    formWpcf.addEventListener("submit", (e) => {
+      // Store reference to form to make later code easier to read
+      const form = e.target;
+
+      // Post data using the Fetch API
+      fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+      })
+          // We turn the response into text as we expect HTML
+          .then((res) => res.text())
+
+          // Let's turn it into an HTML document
+          .then((text) => new DOMParser().parseFromString(text, "text/html"))
+
+          // Now we have a document to work with let's replace the <form>
+          .then((doc) => {
+            // Create result message container and copy HTML from doc
+            const result = document.createElement("div");
+            result.innerHTML = `<h1>${doc.body.innerHTML}</h1>`;
+
+            // Allow focussing this element with JavaScript
+            result.tabIndex = -1;
+
+            // And replace the form with the response children
+            form.parentNode.replaceChild(result, form);
+
+            // Move focus to the status message
+            result.focus();
+          });
+
+      // Prevent the default form submit
+      e.preventDefault();
+    });
   },
   methods: {
     async onSubmit() {
@@ -350,9 +382,6 @@ select
   margin: 0
   width: 100%
   background-color: white
-input, select
-  @include mobile
-    grid-column: span 2
 input,textarea
   border: blue 1px solid
   border-radius: 5px
@@ -374,7 +403,10 @@ input,textarea
   border: none
   color: #fff
   font-family: "Arboria",sans-serif
-
+  cursor: pointer
+input, select
+  @include mobile
+    grid-column: span 2
 iframe
   @include mobile
     max-width: 100% !important
