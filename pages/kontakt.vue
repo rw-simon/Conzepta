@@ -1,5 +1,5 @@
 <template>
-  <div data-test="onebyte-heroku-auto-deploy-1">
+  <div>
     <div style="padding: 4rem 0 4rem; background: #e7e9ec" id="support">
       <div id="kontaktformular" class="container">
         <h3>{{ $i18n.locale == 'fr' ? 'Direct' : 'Direkt' }}</h3>
@@ -208,7 +208,7 @@ export default {
     },
   },
   async asyncData({ query }) {
-    const { data } = await axios.get('https://admin.conzepta.ch/test.php')
+    const { data } = await axios.get('https://admin.conzepta.ch/test.php').catch(r => {return {data:null}})
     return {
       textArea: query.text,
       selectedAnliegen: query.anliegen || 'anliegen',
