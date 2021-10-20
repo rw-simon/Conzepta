@@ -214,7 +214,7 @@ export default {
     },
   },
   async asyncData({ query }) {
-    const { data } = await axios.get('https://admin.conzepta.ch/wp_forms.php')
+    const { data } = await axios.get('https://admin.conzepta.ch/wp_forms.php?locale=de')
         .then(res => {
           let html = res.data;
 
@@ -228,7 +228,7 @@ export default {
         })
         .catch(r => {return {data:''}});
     return {
-      locale:this.$i18n.locale,
+      _query:  query,
       textArea: query.text,
       selectedAnliegen: query.anliegen || 'anliegen',
       sent: false,
