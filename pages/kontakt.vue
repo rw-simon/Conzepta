@@ -214,9 +214,10 @@ export default {
     const { data } = await axios.get('https://admin.conzepta.ch/wp_forms.php')
         .then(res => {
           let html = res.data;
-          console.log(html)
+    
           // For testing purpose;
-          html = html.replace(`action="/test.php#wpcf7-f678-o1"`, `action="https://admin.conzepta.ch/#wpcf7-f678-o1"`)
+          // TODO: Parse with reg
+          html = html.replace(`action="/wp_forms.php#wpcf7-f678-o1"`, `action="https://admin.conzepta.ch/#wpcf7-f678-o1"`)
 
           return {
             data:html
