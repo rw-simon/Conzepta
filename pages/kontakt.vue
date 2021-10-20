@@ -244,37 +244,31 @@ export default {
     }
   },
   mounted() {
-    console.log(this)
     const formWpcf = document.querySelector('.wpcf7 form');
     formWpcf.addEventListener("submit", (e) => {
       // Store reference to form to make later code easier to read
       const form = e.target;
 
       // Post data using the Fetch API
+      console.log('Sending data to:', form.action)
       fetch(form.action, {
         method: form.method,
         body: new FormData(form),
       })
-          // We turn the response into text as we expect HTML
           .then((res) => res.text())
+         // .then((text) => new DOMParser().parseFromString(text, "text/html"))
+          .then((text) => {
 
-          // Let's turn it into an HTML document
-          .then((text) => new DOMParser().parseFromString(text, "text/html"))
+            if(!text){
+               return
+            }
 
-          // Now we have a document to work with let's replace the <form>
-          .then((doc) => {
             // Create result message container and copy HTML from doc
             const result = document.createElement("div");
-            result.innerHTML = `<h1>${doc.body.innerHTML}</h1>`;
+            result.innerHTML = `<h2>${text}</h2>`;
 
-            // Allow focussing this element with JavaScript
-            result.tabIndex = -1;
-
-            // And replace the form with the response children
+            // Replace the form with the response children
             form.parentNode.replaceChild(result, form);
-
-            // Move focus to the status message
-            result.focus();
           });
 
       // Prevent the default form submit
@@ -382,7 +376,7 @@ export default {
   margin: 0
   width: 100%
   background-color: white
-.page-contact input.wpcf7-form-control, 
+.page-contact input.wpcf7-form-control,
 .page-contact textarea.wpcf7-form-control
   border: blue 1px solid
   border-radius: 5px
