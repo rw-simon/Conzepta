@@ -88,6 +88,9 @@
         </p>
       </div>
     </div>
+    <div>
+      {{{ wpForms }}}
+    </div>
     <div class="container" style="margin-top: 8rem">
       <div class="grid cols-2" v-if="$i18n.locale == 'de'">
         <div>
@@ -208,7 +211,7 @@ export default {
     },
   },
   async asyncData({ query }) {
-    const { data } = await axios.get('https://admin.conzepta.ch/test.php').catch(r => {return {data:null}})
+    const { data } = await axios.get('https://admin.conzepta.ch/test.php').catch(r => {return {data:''}})
     return {
       textArea: query.text,
       selectedAnliegen: query.anliegen || 'anliegen',
@@ -222,7 +225,7 @@ export default {
       error: '',
       submitting: false,
       isSubmitted: false,
-      test:data
+      wpForms:data
     }
   },
   mounted() {
