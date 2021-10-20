@@ -89,7 +89,7 @@
       </div>
     </div>
     <div>
-      {{{ wpForms }}}
+      <div v-html="wpForms"></div>
     </div>
     <div class="container" style="margin-top: 8rem">
       <div class="grid cols-2" v-if="$i18n.locale == 'de'">
