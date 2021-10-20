@@ -226,8 +226,9 @@ export default {
             data:html
           }
         })
-        .catch(r => {return {data:''}})
+        .catch(r => {return {data:''}});
     return {
+      locale:this.$i18n.locale,
       textArea: query.text,
       selectedAnliegen: query.anliegen || 'anliegen',
       sent: false,
