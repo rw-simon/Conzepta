@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page-contact">
     <div style="padding: 4rem 0 4rem; background: #e7e9ec" id="support">
       <div id="kontaktformular" class="container">
         <h3>{{ $i18n.locale == 'fr' ? 'Direct' : 'Direkt' }}</h3>
@@ -353,7 +353,7 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 .wegbeschreibung
   margin-left: -4rem
   .item
@@ -368,21 +368,22 @@ export default {
   padding-top: 8rem
   @include mobile
     padding-top: 0
-.tvb
+.page-contact .tvb
   @include mobile
     a
       display: block
       width: 100%
       box-sizing: border-box
       text-align: center
-select
+.page-contact select
   border: blue 1px solid
   border-radius: 5px
   box-sizing: border-box
   margin: 0
   width: 100%
   background-color: white
-input,textarea
+.page-contact input.wpcf7-form-control, 
+.page-contact textarea.wpcf7-form-control
   border: blue 1px solid
   border-radius: 5px
   box-sizing: border-box
@@ -404,10 +405,10 @@ input,textarea
   color: #fff
   font-family: "Arboria",sans-serif
   cursor: pointer
-input, select
+.page-contact input, .page-contact select
   @include mobile
     grid-column: span 2
-iframe
+.page-contact iframe
   @include mobile
     max-width: 100% !important
 </style>
