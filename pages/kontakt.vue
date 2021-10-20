@@ -76,6 +76,9 @@
           </p>
         </div>
       </div>
+      <div class="wp-forms" style="display: none">
+        <div v-html="wpForms"></div>
+      </div>
       <div class="container" style="margin-top: 8rem">
         <p>
           Conzepta Team AG <br />
@@ -87,9 +90,6 @@
           <span style="display: inline-block; width: 100px">Telefon:</span><a href="tel:+41313486020">+41 (0)31 348 60 20</a>
         </p>
       </div>
-    </div>
-    <div>
-      <div v-html="wpForms"></div>
     </div>
     <div class="container" style="margin-top: 8rem">
       <div class="grid cols-2" v-if="$i18n.locale == 'de'">
@@ -211,7 +211,18 @@ export default {
     },
   },
   async asyncData({ query }) {
-    const { data } = await axios.get('https://admin.conzepta.ch/test.php').catch(r => {return {data:''}})
+    const { data } = await axios.get('https://admin.conzepta.ch/test.php')
+        .then(res => {
+          let html = res.data;
+
+          // For testing purpose;
+          html = html.replace(`action="/test.php#wpcf7-f678-o1"`, `action="https://admin.conzepta.ch/#wpcf7-f678-o1"`)
+
+          return {
+            data:html
+          }
+        })
+        .catch(r => {return {data:''}})
     return {
       textArea: query.text,
       selectedAnliegen: query.anliegen || 'anliegen',
