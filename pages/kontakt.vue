@@ -214,13 +214,15 @@ export default {
     },
   },
   async asyncData({ query , app }) {
-    const { data } = await axios.get('https://admin.conzepta.ch/wp_forms.php?locale='+app.i18n.locale)
+    const localeQuery = '?locale='+app.i18n.locale;
+    const { data } = await axios.get('https://admin.conzepta.ch/wp_forms.php' + localeQuery)
         .then(res => {
           let html = res.data;
 
           // For testing purpose;
-          // TODO: Parse with reg
-          html = html.replace(`action="/wp_forms.php#wpcf7-f678-o1"`, `action="https://admin.conzepta.ch/#wpcf7-f678-o1"`)
+          // TODO: Parse with reg (ID)
+          html = html.replace(`action="/wp_forms.php${localeQuery}#wpcf7-f678-o1"`, `action="https://admin.conzepta.ch/#wpcf7-f678-o1"`)
+          html = html.replace(`action="/wp_forms.php${localeQuery}#wpcf7-f680-o1"`, `action="https://admin.conzepta.ch/#wpcf7-f680-o1"`)
 
           return {
             data:html
@@ -228,7 +230,6 @@ export default {
         })
         .catch(r => {return {data:''}});
     return {
-      currentLang:  app.i18n.locale,
       textArea: query.text,
       selectedAnliegen: query.anliegen || 'anliegen',
       sent: false,
@@ -245,7 +246,7 @@ export default {
     }
   },
   mounted() {
-    console.log(this);
+
     const formWpcf = document.querySelector('.wpcf7 form');
     formWpcf.addEventListener("submit", (e) => {
       // Store reference to form to make later code easier to read
