@@ -7,6 +7,7 @@
         <!-- WP Forms -->
         <div class="wp-forms">
           <div v-html="wpForms"></div>
+          <recaptcha />
         </div>
       </div>
       <div class="container" style="margin-top: 8rem">
@@ -147,8 +148,6 @@ export default {
       html = html.replace(`action="/wp_forms.php${localeQuery}#wpcf7-f678-o1"`, `action="https://admin.conzepta.ch/#wpcf7-f678-o1"`)
       html = html.replace(`action="/wp_forms.php${localeQuery}#wpcf7-f680-o1"`, `action="https://admin.conzepta.ch/#wpcf7-f680-o1"`)
 
-      html += '<recaptcha />';
-
       return {
         data:html
       }
@@ -173,8 +172,14 @@ export default {
       wpForms:data
     }
   },
-  mounted() {
-    console.log(this);
+  async mounted() {
+    console.log(this)
+    try {
+      await this.$recaptcha.init()
+    } catch (e) {
+      console.error(e);
+    }
+
     const formWpcf = document.querySelector('.wpcf7 form');
     formWpcf.addEventListener("submit", (e) => {
       // Store reference to form to make later code easier to read
