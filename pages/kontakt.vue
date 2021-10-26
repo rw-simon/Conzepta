@@ -7,7 +7,7 @@
         <!-- WP Forms -->
         <div class="wp-forms">
           <div v-html="wpForms"></div>
-          <div id="recaptcha-container">
+          <div id="recaptcha-container" style="padding-bottom: 20px">
             <recaptcha></recaptcha>
           </div>
         </div>
