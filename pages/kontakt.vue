@@ -2,93 +2,15 @@
   <div class="page-contact">
     <div style="padding: 4rem 0 4rem; background: #e7e9ec" id="support">
       <div id="kontaktformular" class="container">
-       
         <h3>{{ $i18n.locale == 'fr' ? 'Direct' : 'Direkt' }}</h3>
         <h1>{{ $i18n.locale == 'fr' ? 'Contact //' : 'Kontakt //' }}</h1>
-        <div  style="display: none">
-          <div v-if="!sent">
-            <form class="grid cols-2" style="gap: 2rem">
-              <input
-                  v-model="form.vorname"
-                  v-scroll-reveal="{ delay: 200 }"
-                  style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%"
-                  type="text"
-                  :placeholder="$i18n.locale == 'fr' ? 'Prénom' : 'Vorname'"
-              />
-              <input
-                  v-model="form.nachname"
-                  v-scroll-reveal="{ delay: 400 }"
-                  style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%"
-                  type="text"
-                  :placeholder="$i18n.locale == 'fr' ? 'Nom de famille' : 'Nachname'"
-              />
-              <input
-                  v-model="form.email"
-                  v-scroll-reveal="{ delay: 600 }"
-                  style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%"
-                  type="text"
-                  :placeholder="$i18n.locale == 'fr' ? 'Email' : 'Email'"
-              />
-              <select v-scroll-reveal="{ delay: 800 }" :style="[selectedAnliegen == 'anliegen' ? { color: 'gray' } : { color: 'black' }]" name="anliegen" id="" v-model="selectedAnliegen">
-                <option value="anliegen" selected>{{ $i18n.locale == 'fr' ? 'Thèmes' : 'Anliegen' }}</option>
-                <option value="Allgemein">{{ $i18n.locale == 'fr' ? 'Généralités' : 'Allgemein' }}</option>
-                <!-- <option value="bew">Bewerbung</option> -->
-                <option value="Interlink">InterLink</option>
-                <option value="Lexica">Lexica</option>
-                <option value="ParkingPad">ParkingPad</option>
-                <option value="PolicePad">PolicePad</option>
-                <option value="TachiFox">TachiFox</option>
-                <option value="Technische Probleme">{{ $i18n.locale == 'fr' ? 'Postulation' : 'Technische Probleme' }}</option>
-              </select>
-              <!-- <input
-            style="border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%"
-            type="text"
-            placeholder="Anliegen"
-          /> -->
-              <textarea
-                  :placeholder="$i18n.locale == 'fr' ? 'Votre message' : 'Ihre Mitteilung'"
-                  v-scroll-reveal="{ delay: 1000 }"
-                  style="border: blue 1px solid; border-radius: 5px; width: 100%; grid-column: span 2"
-                  name=""
-                  id="textarea"
-                  cols="30"
-                  rows="10"
-                  v-model="textArea"
-              ></textarea>
-            </form>
-            <div class="grid cols-3 small-gap" style="align-items: center; margin-top: 2rem">
-						<span style="border-box; margin: 0; width: 100%">
-							<!-- <input v-model="robot" style="padding: 0; height: 1rem; width: 1rem; border: blue 1px solid; border-radius: 3px; margin-right: 10px; vertical-align: text-top" type="checkbox" name="" id="" />
-							{{ $i18n.locale == 'fr' ? 'Je ne suis pas un robot' : 'Ich bin kein Roboter' }} -->
-							<recaptcha />
-						</span>
-              <span style="padding: 0.5rem 2rem 0.5rem 0.5rem; border: blue 1px solid; border-radius: 5px; box-sizing: border-box; margin: 0; width: 100%">
-							<input style="padding: 0; height: 1rem; width: 1rem; border: blue 1px solid; border-radius: 3px; margin-right: 10px; vertical-align: text-top" type="checkbox" name="" id="" />
-							{{ $i18n.locale == 'fr' ? 'M’envoyer une copie' : 'Kopie an mich senden' }}
-						</span>
-              <CButton style="z-index: 9999999" @click.native="registerForm" :text="$i18n.locale == 'fr' ? 'Envoyer' : 'Senden'" />
-            </div>
-            <div v-if="error">
-              <p style="color: red">{{ error }}</p>
-            </div>
-          </div>
-          <div v-else>
-            <p style="font-weight: normal">
-              {{ $i18n.locale == 'de' ? 'Vielen Dank für Ihre Nachricht. Wir werden uns gerne bei Ihnen zurückmelden.' : 'Merci pour votre demande. Nous traiterons votre demande dans les meilleurs délais.' }}
-            </p>
-          </div>
-        </div>
         <!-- WP Forms -->
         <div class="wp-forms">
           <div v-html="wpForms"></div>
         </div>
       </div>
-
       <div class="container" style="margin-top: 8rem">
-        <p>
-          Conzepta Team AG <br />
-          Allmendstrasse 54 <br />
-          3014 Bern
+        <p>Conzepta Team AG <br />Allmendstrasse 54 <br />3014 Bern
         </p>
         <p>
           <span style="display: inline-block; width: 100px">Email:</span><a href="mailto:team@conzepta.ch">team@conzepta.ch</a><br />
@@ -206,7 +128,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+import axios from 'axios';
 export default {
   name: 'kontakt',
   nuxtI18n: {
@@ -217,20 +139,24 @@ export default {
   },
   async asyncData({ query , app }) {
     const localeQuery = '?locale='+app.i18n.locale;
+    const parseResultData = (res) => {
+      let html = res.data;
+
+      // For testing purpose;
+      // TODO: Parse with reg (ID)
+      html = html.replace(`action="/wp_forms.php${localeQuery}#wpcf7-f678-o1"`, `action="https://admin.conzepta.ch/#wpcf7-f678-o1"`)
+      html = html.replace(`action="/wp_forms.php${localeQuery}#wpcf7-f680-o1"`, `action="https://admin.conzepta.ch/#wpcf7-f680-o1"`)
+
+      html += '<recaptcha />';
+
+      return {
+        data:html
+      }
+    }
+
     const { data } = await axios.get('https://admin.conzepta.ch/wp_forms.php' + localeQuery)
-        .then(res => {
-          let html = res.data;
+         .then(parseResultData).catch(r => {return {data:''}});
 
-          // For testing purpose;
-          // TODO: Parse with reg (ID)
-          html = html.replace(`action="/wp_forms.php${localeQuery}#wpcf7-f678-o1"`, `action="https://admin.conzepta.ch/#wpcf7-f678-o1"`)
-          html = html.replace(`action="/wp_forms.php${localeQuery}#wpcf7-f680-o1"`, `action="https://admin.conzepta.ch/#wpcf7-f680-o1"`)
-
-          return {
-            data:html
-          }
-        })
-        .catch(r => {return {data:''}});
     return {
       textArea: query.text,
       selectedAnliegen: query.anliegen || 'anliegen',
