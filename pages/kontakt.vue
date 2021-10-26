@@ -7,7 +7,7 @@
         <!-- WP Forms -->
         <div class="wp-forms">
           <div v-html="wpForms"></div>
-          <div>
+          <div id="recaptcha-container">
             <recaptcha></recaptcha>
           </div>
         </div>
@@ -182,6 +182,13 @@ export default {
     } catch (e) {
       console.error(e);
     }
+
+
+    const $recaptchaContainer = document.getElementById('recaptcha-container');
+
+    const $target =  document.querySelector('.wpcf7 form . wpcf7-submit');
+
+    $target.before($recaptchaContainer);
 
     const formWpcf = document.querySelector('.wpcf7 form');
     formWpcf.addEventListener("submit", async (e) => {
