@@ -202,8 +202,17 @@ export default {
 
       // Store reference to form to make later code easier to read
       const form = e.target;
+      let isValid = true;
+      [... formWpcf.querySelectorAll('form *[required]')].map(input => {
+        if(!input.value){
+          isValid = false;
+        }
+      })
 
-
+      if(!isValid){
+        alert(  this.$i18n.locale == 'fr'  ? 'Veuillez remplir tous les champs' : 'Bitte füllen Sie alle Felder aus');
+      }
+      
       // Verify fields
 
       try {
