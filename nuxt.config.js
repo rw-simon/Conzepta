@@ -49,6 +49,7 @@ export default {
 		'@nuxtjs/style-resources',
 		// https://go.nuxtjs.dev/pwa
 		// '@nuxtjs/pwa',
+    '@nuxtjs/recaptcha',
 		'nuxt-i18n',
 		[
 			'nuxt-mail',
