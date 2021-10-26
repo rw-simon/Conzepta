@@ -174,7 +174,7 @@ export default {
     }
   },
   mounted() {
-
+    console.log(this);
     const formWpcf = document.querySelector('.wpcf7 form');
     formWpcf.addEventListener("submit", (e) => {
       // Store reference to form to make later code easier to read
