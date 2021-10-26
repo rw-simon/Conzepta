@@ -183,6 +183,10 @@ export default {
       console.error(e);
     }
 
+    console.log(
+        this
+    )
+
 
     const $recaptchaContainer = document.getElementById('recaptcha-container');
 
@@ -204,7 +208,7 @@ export default {
 
       try {
         const token = await this.$recaptcha.getResponse()
-        console.log('ReCaptcha token:', token , this.$recaptcha);
+        //console.log('ReCaptcha token:', token , this.$recaptcha);
 
         // Post data using the Fetch API
         console.log('Sending data to:', form.action);
@@ -228,6 +232,7 @@ export default {
         await this.$recaptcha.reset()
       } catch (error) {
         console.log('Login error:', error)
+        alert(  $i18n.locale == 'fr'  ? 'ReCaptcha n\'est pas valide' : 'ReCaptcha ist nicht gültig');
       }
     });
   },
