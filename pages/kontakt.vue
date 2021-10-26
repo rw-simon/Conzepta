@@ -7,7 +7,6 @@
         <!-- WP Forms -->
         <div class="wp-forms">
           <div v-html="wpForms"></div>
-          <recaptcha />
         </div>
       </div>
       <div class="container" style="margin-top: 8rem">
@@ -19,6 +18,7 @@
         </p>
       </div>
     </div>
+
     <div class="container" style="margin-top: 8rem">
       <div class="grid cols-2" v-if="$i18n.locale == 'de'">
         <div>
@@ -147,7 +147,7 @@ export default {
       // TODO: Parse with reg (ID)
       html = html.replace(`action="/wp_forms.php${localeQuery}#wpcf7-f678-o1"`, `action="https://admin.conzepta.ch/#wpcf7-f678-o1"`)
       html = html.replace(`action="/wp_forms.php${localeQuery}#wpcf7-f680-o1"`, `action="https://admin.conzepta.ch/#wpcf7-f680-o1"`)
-
+      html += '   <recaptcha></recaptcha>';
       return {
         data:html
       }
