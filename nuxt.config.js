@@ -47,6 +47,7 @@ export default {
 		// https://go.nuxtjs.dev/axios
 		'@nuxtjs/axios',
 		'@nuxtjs/style-resources',
+    '@nuxtjs/recaptcha',
 		// https://go.nuxtjs.dev/pwa
 		// '@nuxtjs/pwa',
 		'nuxt-i18n',
@@ -75,7 +76,12 @@ export default {
 			},
 		],
 	],
-
+	recaptcha: {
+		hideBadge: false,
+		siteKey: '6LcYRTMcAAAAAGxI3XAb_rbJ1amuurHn5lLFH4wP', // Site key for requests
+		version: 2, // Version
+		size: 'normal', // Size: 'compact', 'normal', 'invisible' (v2)
+	},
 	i18n: {
 		locales: [
 			{ code: 'de', iso: 'de-CH' },
