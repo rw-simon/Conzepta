@@ -232,7 +232,7 @@ export default {
         await this.$recaptcha.reset()
       } catch (error) {
         console.log('Login error:', error)
-        alert(  $i18n.locale == 'fr'  ? 'ReCaptcha n\'est pas valide' : 'ReCaptcha ist nicht gültig');
+        alert(  this.$i18n.locale == 'fr'  ? 'ReCaptcha n\'est pas valide' : 'ReCaptcha ist nicht gültig');
       }
     });
   },
