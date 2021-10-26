@@ -190,7 +190,7 @@ export default {
 
     const $recaptchaContainer = document.getElementById('recaptcha-container');
 
-    const $target =  document.querySelector('.wpcf7 form . wpcf7-submit');
+    const $target =  document.querySelector('.wpcf7 form .wpcf7-submit');
 
     $target.before($recaptchaContainer);
 
