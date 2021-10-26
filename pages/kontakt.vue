@@ -173,7 +173,7 @@ export default {
     }
   },
   async mounted() {
-    console.log(this)
+
     try {
       await this.$recaptcha.init()
     } catch (e) {
@@ -181,104 +181,48 @@ export default {
     }
 
     const formWpcf = document.querySelector('.wpcf7 form');
-    formWpcf.addEventListener("submit", (e) => {
-      // Store reference to form to make later code easier to read
-      const form = e.target;
-
-      // Post data using the Fetch API
-      console.log('Sending data to:', form.action)
-      fetch(form.action, {
-        method: form.method,
-        body: new FormData(form),
-      })
-          .then((res) => res.text())
-          // .then((text) => new DOMParser().parseFromString(text, "text/html"))
-          .then((text) => {
-
-            if(!text){
-              return
-            }
-
-            // Create result message container and copy HTML from doc
-            const result = document.createElement("div");
-            result.innerHTML = `<h2>${text}</h2>`;
-
-            // Replace the form with the response children
-            form.parentNode.replaceChild(result, form);
-          });
+    formWpcf.addEventListener("submit", async (e) => {
 
       // Prevent the default form submit
       e.preventDefault();
-    });
-  },
-  methods: {
-    async onSubmit() {
+
+      // Store reference to form to make later code easier to read
+      const form = e.target;
+
+
+      // Verify fields
+
       try {
         const token = await this.$recaptcha.getResponse()
-        console.log('ReCaptcha token:', token)
+        console.log('ReCaptcha token:', token , this.$recaptcha);
 
-        // send token to server alongside your form data
+        // Post data using the Fetch API
+        console.log('Sending data to:', form.action);
+        fetch(form.action, {method: form.method, body: new FormData(form),})
+            .then((res) => res.text())
+            // .then((text) => new DOMParser().parseFromString(text, "text/html"))
+            .then((text) => {
+
+              if(!text){return}
+
+              // Create result message container and copy HTML from doc
+              const result = document.createElement("div");
+              result.innerHTML = `<h2>${text}</h2>`;
+
+              // Replace the form with the response children
+              form.parentNode.replaceChild(result, form);
+            });
+
 
         // at the end you need to reset recaptcha
         await this.$recaptcha.reset()
       } catch (error) {
         console.log('Login error:', error)
       }
-    },
-    async registerForm() {
-      if (this.form.vorname) {
-        if (this.form.nachname) {
-          if (this.form.email) {
-            if (this.textArea) {
-              // if (this.robot) {
-              if (this.selectedAnliegen) {
-                this.submitting = true
-                try {
-                  // await this.$axios.$post('/mail/send', {
-                  // 	config: 'to-conz',
-                  // 	from: 'Conzepta <info@conzepta.ch>',
-                  // 	subject: 'Kopie Ihrer Anfrage Kontaktformular Conzepta',
-                  // 	text: 'Vielen Dank für Ihre Anfrage. Wir werden Ihre Anliegen so schnell wie möglich bearbeiten. Freundliche Grüsse, Conzepta',
-                  // 	html: '<h1>Vielen Dank für Ihre Anfrage</h1><p> Wir werden Ihre Anliegen so schnell wie möglich bearbeiten.</p><p>Freundliche Grüsse<br />Conzepta</p>',
-                  // })
-                  await this.$mail.send({
-                    from: 'Conzepta <info@conzepta.ch>',
-                    subject: 'Neue Nachricht via Kontaktformular',
-                    text: `Von: ${this.form.vorname} ${this.form.nachname} (${this.form.email}). Anliegen ${this.selectedAnliegen}. Nachricht: ${this.textArea}`,
-                    html: '<h1>Neue Nachricht via Kontaktformular</h1><h3>' + this.selectedAnliegen + '</h3><p>Von: ' + this.form.vorname + ' ' + this.form.nachname + '</p><p>' + this.textArea + '</p>',
-                  })
-                  // await this.$axios.$post('', {
-                  // 	vorname: ' ', //this.form.vorname || ' ',
-                  // 	nachname: ' ', //this.form.name || ' ',
-                  // 	email: ' ', //this.form.email || ' ', // String
-                  // 	anliegen: ' ', //this.selectedAnliegen || ' ', // Array [{name: '', date: '', time: '', place: ''}, …]
-                  // 	nachricht: ' ', //this.textArea || ' ', // Array [{name: '', date: '', time: '', place: ''}, …]
-                  // })
-                  await new Promise((resolve) => setTimeout(resolve, 2500))
-                  this.submitting = false
-                  this.isSubmitted = true
-                  this.sent = true
-                } catch (err) {
-                  this.submitting = false
-                  console.log(err)
-                }
-              }
-              // } else {
-              // 	this.error = 'Bitte wählen Sie die captcha-Checkbox an'
-              // }
-            } else {
-              this.error = 'Bitte geben Sie eine Nachricht ein'
-            }
-          } else {
-            this.error = 'Bitte geben Sie eine gültige Email-Adresse an'
-          }
-        } else {
-          this.error = 'Bitte geben Sie einen gültigen Nachnamen an'
-        }
-      } else {
-        this.error = 'Bitte geben Sie einen gültigen Vornamen an'
-      }
-    },
+    });
+  },
+  methods: {
+
   },
 }
 </script>
