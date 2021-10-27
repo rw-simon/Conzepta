@@ -217,6 +217,7 @@ export default {
           }
           if(!validateEmail(input.value)){
             isValid = false;
+            alert('Email is invalid')
           }
         }
         if(sessionStorage.getItem('debug')){
