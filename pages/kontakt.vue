@@ -233,7 +233,7 @@ export default {
 
       try {
         const token = await this.$recaptcha.getResponse()
-        //console.log('ReCaptcha token:', token , this.$recaptcha);
+        console.log('ReCaptcha token:', token , this.$recaptcha);
 
         // Post data using the Fetch API
         console.log('Sending data to:', form.action);
