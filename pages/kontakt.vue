@@ -209,12 +209,23 @@ export default {
       ].map(input => {
         if(!input.value){
           isValid = false;
-          console.log(input)
+        }
+        if(input.name === 'your-email' && input.value){
+          function validateEmail(email) {
+            const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+          }
+          if(!validateEmail(input.value)){
+            isValid = false;
+          }
+        }
+        if(sessionStorage.getItem('debug')){
+          console.log(input.name,input)
         }
       })
 
       if(!isValid){
-        alert(  this.$i18n.locale == 'fr'  ? 'Veuillez remplir tous les champs' : 'Bitte füllen Sie alle Felder aus');
+        return alert(  this.$i18n.locale == 'fr'  ? 'Veuillez remplir tous les champs' : 'Bitte füllen Sie alle Felder aus');
       }
 
       // Verify fields
