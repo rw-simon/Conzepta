@@ -242,8 +242,8 @@ import axios from 'axios'
 export default {
 	async asyncData({ app }) {
 		let slug = app.i18n.locale == 'fr' ? 'homepage-fr' : 'homepage'
-		let content = await axios.get(`https://admin.conzepta.ch/index.php/wp-json/wp/v2/pages?slug=${slug}`)
-		let news = await axios.get(`https://admin.conzepta.ch/index.php/wp-json/wp/v2/news?lang=${app.i18n.locale}`)
+		let content = await axios.get(`https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/pages?slug=${slug}`)
+		let news = await axios.get(`https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/news?lang=${app.i18n.locale}`)
 		return {
 			content: content.data[0].acf.modules,
 			news: news.data,

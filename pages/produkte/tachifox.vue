@@ -236,7 +236,7 @@ export default {
 		},
 	},
 	async asyncData({ app }) {
-		let content = await axios.get(`https://admin.conzepta.ch/index.php/wp-json/wp/v2/products?slug=tachifox&lang=${app.i18n.locale}`)
+		let content = await axios.get(`https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/products?slug=tachifox&lang=${app.i18n.locale}`)
 		return {
 			content: content.data[0],
 		}

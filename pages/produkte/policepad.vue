@@ -186,7 +186,7 @@ import axios from 'axios'
 export default {
 	name: 'produkte-policepad',
 	async asyncData({ app, store }) {
-		let content = await axios.get(`https://admin.conzepta.ch/index.php/wp-json/wp/v2/products?slug=policepad&lang=${app.i18n.locale}`)
+		let content = await axios.get(`https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/products?slug=policepad&lang=${app.i18n.locale}`)
 		return {
 			content: content.data[0],
 			platforms: store.state.platforms,

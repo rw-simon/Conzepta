@@ -61,14 +61,14 @@ export const actions = {
 		Cookie.set('console', test)
 	},
 	async nuxtServerInit({ commit }) {
-		// const pageRequest = await axios.get('https://admin.conzepta.ch/index.php/wp-json/wp/v2/pages?per_page=100')
-		// const productRequest = await axios.get('https://admin.conzepta.ch/index.php/wp-json/wp/v2/products?per_page=100&orderby=menu_order&order=asc')
-		// const productCategoryRequest = await axios.get('https://admin.conzepta.ch/index.php/wp-json/wp/v2/product_category?per_page=100')
-		// const newsRequest = await axios.get('https://admin.conzepta.ch/index.php/wp-json/wp/v2/news?per_page=100')
-		// const platformRequest = await axios.get('https://admin.conzepta.ch/index.php/wp-json/wp/v2/platform?per_page=100')
-		// const personRequest = await axios.get('https://admin.conzepta.ch/index.php/wp-json/wp/v2/person?per_page=100')
+		// const pageRequest = await axios.get('https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/pages?per_page=100')
+		// const productRequest = await axios.get('https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/products?per_page=100&orderby=menu_order&order=asc')
+		// const productCategoryRequest = await axios.get('https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/product_category?per_page=100')
+		// const newsRequest = await axios.get('https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/news?per_page=100')
+		// const platformRequest = await axios.get('https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/platform?per_page=100')
+		// const personRequest = await axios.get('https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/person?per_page=100')
 		// const mediaRequest = await axios.get(
-		// 	'https://admin.conzepta.ch/index.php/wp-json/wp/v2/media?per_page=100'
+		// 	'https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/media?per_page=100'
 		// )
 		// const pageData = pageRequest.data
 		// const productData = productRequest.data

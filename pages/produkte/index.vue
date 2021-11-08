@@ -68,8 +68,8 @@ export default {
 	},
 	async asyncData({ app }) {
 		let slug = app.i18n.locale == 'fr' ? 'produits' : 'produkte'
-		let content = await axios.get(`https://admin.conzepta.ch/index.php/wp-json/wp/v2/pages?slug=${slug}`)
-		let products = await axios.get(`https://admin.conzepta.ch/index.php/wp-json/wp/v2/products?lang=${app.i18n.locale}`)
+		let content = await axios.get(`https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/pages?slug=${slug}`)
+		let products = await axios.get(`https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/products?lang=${app.i18n.locale}`)
 		return {
 			content: content.data[0],
 			products: products.data,
