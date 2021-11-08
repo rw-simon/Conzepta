@@ -60,7 +60,7 @@ export default {
 	name: 'portfolio',
 
 	async asyncData({ app, query }) {
-		let content = await axios.get(`https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/pages?slug=portfolio&lang=${app.i18n.locale}`)
+		let content = await axios.get(`https://admin.conzepta.ch/index.php/wp-json/wp/v2/pages?slug=portfolio&lang=${app.i18n.locale}`)
 		return { content: content.data[0], selectedCategories: [0] || [parseInt(query.category)] }
 	},
 	data() {
