@@ -192,9 +192,9 @@ export default {
 		&.grid.cols-2
 			grid-template-columns: 2fr 1fr
 .produktemanager
-	 padding-left: 5rem
-	 @include mobile
-	 	padding-left: 0
+	padding-left: 5rem
+	@include mobile
+		padding-left: 0
 .mobilefix
 	@include mobile
 		padding-top: 5rem

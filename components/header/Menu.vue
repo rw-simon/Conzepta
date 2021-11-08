@@ -76,10 +76,10 @@ export default {
 			// display: inline-block
 			padding: 0 .5rem
 			// padding-right: .5rem
-			z-index: 99999;
+			z-index: 99999
 			.submenu
 				position: absolute
-				z-index: 50;
+				z-index: 50
 				top: 0
 				padding-top: 3rem
 				border-left: 1px solid $c-blue

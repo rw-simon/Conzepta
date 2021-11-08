@@ -49,7 +49,7 @@ export default {
 		},
 	},
 	async asyncData({ app }) {
-		let news = await axios.get(`https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/news?lang=${app.i18n.locale}`)
+		let news = await axios.get(`https://admin.conzepta.ch/index.php/wp-json/wp/v2/news?lang=${app.i18n.locale}`)
 		// news = news
 		return {
 			news: news.data.sort(function (a, b) {
