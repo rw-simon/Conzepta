@@ -12,7 +12,7 @@ export default {
 	name: 'wir',
 	async asyncData({ app }) {
 		let slug = app.i18n.locale == 'fr' ? 'a-propos' : 'wir'
-		let content = await axios.get(`https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/pages?slug=${slug}`)
+		let content = await axios.get(`https://admin.conzepta.ch/index.php/wp-json/wp/v2/pages?slug=${slug}`)
 		return {
 			content: content.data[0],
 		}

@@ -25,11 +25,13 @@
 		</div>
 		<div class="second" :id="`news-${i}`" v-for="(a, i) in news" :key="i" v-show="a.acf.kategorie.includes(selectedCategories.toLowerCase()) || selectedCategories == ($i18n.locale == 'fr' ? 'Tous' : 'Alle')">
 			<div class="container">
-				<div class="grid cols-2">
-					<article style="grid-column: 1" class="news-article">
-						<h3>{{ formatDate(a.acf.datum) }}</h3>
-						<h2>{{ a.title.rendered }}</h2>
-						<div v-html="a.content.rendered" />
+				<div>
+					<article style="" :class="{ 'news-article': true, long: a.content.rendered.length > 750 }">
+						<div class="inner">
+							<h3>{{ formatDate(a.acf.datum) }}</h3>
+							<h2>{{ a.title.rendered }}</h2>
+							<div v-html="a.content.rendered" />
+						</div>
 					</article>
 				</div>
 			</div>
@@ -89,6 +91,21 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+article.news-article
+	position: relative
+	// .inner
+	// 	max-height: 300px
+	// 	overflow: hidden
+	// 	transition: max-height 500ms ease-in-out
+	&.long
+		padding-bottom: 3rem
+	.open-news
+		position: absolute
+		bottom: 0
+		text-align: center
+		width: 100%
+	&.open
+		max-height: 100vh
 .header
 	background-image: linear-gradient(90deg, white, $c-gray-light)
 	padding: 10rem 0 15rem

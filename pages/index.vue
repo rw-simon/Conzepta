@@ -153,18 +153,18 @@
 				<div class="news-grid">
 					<div>
 						<article style="margin-top: 4rem">
-							<h3>{{ formatDate(news[3].acf.datum) }}</h3>
+							<h3>{{ formatDate(news[2].acf.datum) }}</h3>
 							<nuxt-link :to="localePath({ name: 'news' })"
-								><h2>{{ news[3].title.rendered }}</h2></nuxt-link
+								><h2>{{ news[2].title.rendered }}</h2></nuxt-link
 							>
-							<div v-html="news[3].content.rendered"></div>
+							<div v-html="news[2].content.rendered"></div>
 						</article>
 						<article style="margin-top: 24rem">
-							<h3>{{ formatDate(news[1].acf.datum) }}</h3>
+							<h3>{{ formatDate(news[0].acf.datum) }}</h3>
 							<nuxt-link :to="localePath({ name: 'news' })"
-								><h2>{{ news[1].title.rendered }}</h2></nuxt-link
+								><h2>{{ news[0].title.rendered }}</h2></nuxt-link
 							>
-							<div v-html="news[1].content.rendered"></div>
+							<div v-html="news[0].content.rendered"></div>
 						</article>
 					</div>
 					<div class="liness">
@@ -211,11 +211,11 @@
 					</div>
 					<div>
 						<article style="margin-top: 24rem">
-							<h3>{{ formatDate(news[2].acf.datum) }}</h3>
+							<h3>{{ formatDate(news[1].acf.datum) }}</h3>
 							<nuxt-link :to="localePath({ name: 'news' })"
-								><h2>{{ news[2].title.rendered }}</h2></nuxt-link
+								><h2>{{ news[1].title.rendered }}</h2></nuxt-link
 							>
-							<div v-html="news[2].content.rendered"></div>
+							<div v-html="news[1].content.rendered"></div>
 						</article>
 					</div>
 					<div class="mobobly">
@@ -242,11 +242,13 @@ import axios from 'axios'
 export default {
 	async asyncData({ app }) {
 		let slug = app.i18n.locale == 'fr' ? 'homepage-fr' : 'homepage'
-		let content = await axios.get(`https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/pages?slug=${slug}`)
-		let news = await axios.get(`https://admin.conzepta.rechtwinklig.ch/index.php/wp-json/wp/v2/news?lang=${app.i18n.locale}`)
+		let content = await axios.get(`https://admin.conzepta.ch/index.php/wp-json/wp/v2/pages?slug=${slug}`)
+		let news = await axios.get(`https://admin.conzepta.ch/index.php/wp-json/wp/v2/news?lang=${app.i18n.locale}`)
 		return {
 			content: content.data[0].acf.modules,
-			news: news.data,
+			news: news.data.sort(function (a, b) {
+				return parseFloat(a.acf.datum) - parseFloat(b.acf.datum)
+			}),
 		}
 	},
 	data() {
