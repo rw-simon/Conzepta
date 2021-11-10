@@ -147,24 +147,25 @@
 				</div>
 			</div>
 		</div> -->
+		<!-- <pre>{{ news }}</pre> -->
 		<div class="news" id="news">
 			<div class="container">
 				<h1>News</h1>
 				<div class="news-grid">
 					<div>
 						<article style="margin-top: 4rem">
-							<h3>{{ formatDate(news[2].acf.datum) }}</h3>
-							<nuxt-link :to="localePath({ name: 'news' })"
-								><h2>{{ news[2].title.rendered }}</h2></nuxt-link
-							>
-							<div v-html="news[2].content.rendered"></div>
-						</article>
-						<article style="margin-top: 24rem">
 							<h3>{{ formatDate(news[0].acf.datum) }}</h3>
 							<nuxt-link :to="localePath({ name: 'news' })"
 								><h2>{{ news[0].title.rendered }}</h2></nuxt-link
 							>
 							<div v-html="news[0].content.rendered"></div>
+						</article>
+						<article style="margin-top: 24rem">
+							<h3>{{ formatDate(news[2].acf.datum) }}</h3>
+							<nuxt-link :to="localePath({ name: 'news' })"
+								><h2>{{ news[2].title.rendered }}</h2></nuxt-link
+							>
+							<div v-html="news[2].content.rendered"></div>
 						</article>
 					</div>
 					<div class="liness">
@@ -175,10 +176,8 @@
 							<hr />
 						</div>
 						<div class="line">
-							<span style="top: -1.75rem; left: 15rem">2021</span>
-							<hr style="width: 250%" />
-						</div>
-						<div class="line">
+							<!-- <span style="top: -1.75rem; left: 15rem">2021</span> -->
+							<!-- <hr style="width: 250%" /> -->
 							<hr />
 						</div>
 						<div class="line">
@@ -188,7 +187,10 @@
 							<hr />
 						</div>
 						<div class="line">
-							<span style="top: -1.75rem; right: 15rem; text-align: right">2020</span>
+							<hr />
+						</div>
+						<div class="line">
+							<span style="top: -1.75rem; right: 15rem; text-align: right">2021</span>
 							<hr style="width: 250%; margin-left: -150%" />
 						</div>
 						<div class="line">
@@ -201,8 +203,9 @@
 							<hr />
 						</div>
 						<div class="line">
-							<span style="top: -1.75rem; left: 15rem">2019</span>
+							<span style="top: -1.75rem; left: 15rem">2020</span>
 							<hr style="width: 250%" />
+							<!-- <hr /> -->
 						</div>
 						<div class="line">
 							<hr />
@@ -247,7 +250,7 @@ export default {
 		return {
 			content: content.data[0].acf.modules,
 			news: news.data.sort(function (a, b) {
-				return parseFloat(a.acf.datum) - parseFloat(b.acf.datum)
+				return parseFloat(b.acf.datum) - parseFloat(a.acf.datum)
 			}),
 		}
 	},
@@ -295,6 +298,8 @@ export default {
 	grid-template-columns: 1fr 5rem 1fr
 	article
 		text-align: left
+		max-height: 320px
+		overflow: hidden
 		@include mobile
 			border-bottom: 1px solid $c-gray
 			padding-bottom: 1rem
