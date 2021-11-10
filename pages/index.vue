@@ -59,7 +59,7 @@
 					</article>
 					<article>
 						<img v-scroll-reveal="{ delay: 700 }" src="/grabber.png" alt="" />
-						<div v-html="content[3].text_3_columns_column_3"></div>
+						<div v-html="content[3].text_3_columns_column_3" class="none"></div>
 						<!-- <h2 v-scroll-reveal="{ delay: 800 }">Modern</h2>
 						<p style="padding: 0 2rem; box-sizing: border-box" v-scroll-reveal="{ delay: 900 }">Wir können Ihre Zukunft nicht vorhersehen. Aber wir können sie programmieren.</p> -->
 					</article>

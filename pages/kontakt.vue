@@ -66,7 +66,7 @@
             </p> -->
 					</div>
 				</div>
-				<div>
+				<!-- <div>
 					<div>
 						<h3 v-scroll-reveal="{ delay: 0 }">Auf schnellstem Weg</h3>
 						<h2 v-scroll-reveal="{ delay: 200 }">Mit dem Auto</h2>
@@ -101,19 +101,19 @@
 								<p>Die Conzepta befindet sich auf der linken Seite</p>
 							</div>
 						</div>
-						<!-- <p v-scroll-reveal="{ delay: 400 }">
-              <ul style="padding-left: 2rem;">
-                <li style="margin-bottom: 1rem">Ausfahrt 37 – Bern Wankdorf</li>
-                <li style="margin-bottom: 1rem">Linke Fahrbahn benutzen</li>
-                <li style="margin-bottom: 1rem">Im (Untergrund-)Kreisel die erste Ausfahrt (rechts)</li>
-                <li style="margin-bottom: 1rem">Alles geradeaus</li>
-                <li style="margin-bottom: 1rem">Bei der coop Pronto Tankstelle über die Kreuzung fahren (Achtung Ampel)</li>
-                <li style="margin-bottom: 1rem">In die nächste Seitenstrasse Links einbiegen</li>
-                <li style="margin-bottom: 1rem">In die zweite Seitenstrasse (nach FARO) links einbiegen</li>
-              </ul>
-            </p> -->
+						<p v-scroll-reveal="{ delay: 400 }">
+							<ul style="padding-left: 2rem;">
+								<li style="margin-bottom: 1rem">Ausfahrt 37 – Bern Wankdorf</li>
+								<li style="margin-bottom: 1rem">Linke Fahrbahn benutzen</li>
+								<li style="margin-bottom: 1rem">Im (Untergrund-)Kreisel die erste Ausfahrt (rechts)</li>
+								<li style="margin-bottom: 1rem">Alles geradeaus</li>
+								<li style="margin-bottom: 1rem">Bei der coop Pronto Tankstelle über die Kreuzung fahren (Achtung Ampel)</li>
+								<li style="margin-bottom: 1rem">In die nächste Seitenstrasse Links einbiegen</li>
+								<li style="margin-bottom: 1rem">In die zweite Seitenstrasse (nach FARO) links einbiegen</li>
+							</ul>
+						</p>
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<br />
 			<div style="margin-top: 4rem">
