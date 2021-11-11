@@ -26,7 +26,7 @@
 				<div class="grid cols-2">
 					<div style="min-width: 300px" v-html="content[1].text_2_columns_column_1"></div>
 					<span>
-						<poi x="-100" y="250" text="Wenn Urs nicht gerade die Berge erklimmt, dann weil er wiedereinmal mit dem Motorrad unterwegs ist."></poi>
+						<poi x="100" y="350" text="Wenn Urs nicht gerade die Berge erklimmt, dann weil er wiedereinmal mit dem Motorrad unterwegs ist."></poi>
 						<poi x="0" y="-400" text="Mit Solar auf dem Dach und Nachsicht im Verstand wollen wir der Umwelt Sorge tragen."></poi>
 					</span>
 				</div>
@@ -155,9 +155,9 @@
 					<div>
 						<article style="margin-top: 4rem">
 							<h3>{{ formatDate(news[0].acf.datum) }}</h3>
-							<nuxt-link :to="localePath({ name: 'news' })"
-								><h2>{{ news[0].title.rendered }}</h2></nuxt-link
-							>
+							<nuxt-link :to="localePath({ name: 'news' })">
+								<h2>{{ news[0].title.rendered }}</h2>
+							</nuxt-link>
 							<div v-html="news[0].content.rendered"></div>
 						</article>
 						<article style="margin-top: 24rem">
