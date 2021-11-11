@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<Header />
+		<main-header />
 		<Nuxt class="nuxt" />
 		<Console v-if="!this.$route.path.includes('kontakt')" />
 		<Footer id="footer" />
@@ -9,7 +9,9 @@
 </template>
 
 <script>
+import MainHeader from '~/components/header/MainHeader.vue'
 export default {
+	components: { MainHeader },
 	head: {
 		title: 'Conzepta – we make IT happen',
 	},

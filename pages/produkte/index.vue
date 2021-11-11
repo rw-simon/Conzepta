@@ -27,7 +27,8 @@
 			</div> -->
 		</div>
 		<div class="products-list grid cols-3 small-gap">
-			<ProductPanel v-for="p in products" :key="p.id" :product="p" v-scroll-reveal="{ delay: 200 }" />
+			<product-panel v-for="p in products" :key="p.id" :product="p" v-scroll-reveal="{ delay: 200 }" />
+			<!-- <ProductPanel /> -->
 		</div>
 		<div class="more section">
 			<div class="grid cols-2 small-gap">
@@ -52,7 +53,9 @@
 
 <script>
 import axios from 'axios'
+import ProductPanel from '~/components/produkte/ProductPanel.vue'
 export default {
+	components: { ProductPanel },
 	name: 'produkte',
 	nuxtI18n: {
 		paths: {

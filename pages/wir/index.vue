@@ -1,14 +1,16 @@
 <template>
 	<div class="wir">
 		<div class="module" v-for="(m, i) in content.acf.modules" :key="i">
-			<Module :module="m" />
+			<module :module="m" />
 		</div>
 	</div>
 </template>
 
 <script>
 import axios from 'axios'
+import Module from '~/components/module/Module.vue'
 export default {
+	components: { Module },
 	name: 'wir',
 	async asyncData({ app }) {
 		let slug = app.i18n.locale == 'fr' ? 'a-propos' : 'wir'

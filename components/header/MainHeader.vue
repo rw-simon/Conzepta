@@ -1,17 +1,24 @@
 <template>
 	<header :class="{ opened: showSubmenu }" @mouseenter="showSubmenu = true" @mouseleave="showSubmenu = false">
-		<Logo />
-		<Menu class="menuu" :opened="showSubmenu" />
-		<LanguagePicker />
-		<MobileIcon @click.native="showSubmenu = !showSubmenu" />
-		<ScrollIndicator style="grid-column: 1/-1" />
-		<MobileMenu class="menumob" />
+		<logo />
+		<main-menu class="menuu" :opened="showSubmenu" />
+		<language-picker />
+		<mobile-icon @click.native="showSubmenu = !showSubmenu" />
+		<scroll-indicator style="grid-column: 1/-1" />
+		<mobile-menu class="menumob" />
 	</header>
 </template>
 
 <script>
+import Logo from '../Logo.vue'
+import LanguagePicker from './LanguagePicker.vue'
+import MainMenu from './MainMenu.vue'
+import MobileIcon from './MobileIcon.vue'
+import MobileMenu from './MobileMenu.vue'
+import ScrollIndicator from './ScrollIndicator.vue'
 export default {
-	name: 'Header',
+	components: { Logo, MainMenu, LanguagePicker, MobileIcon, ScrollIndicator, MobileMenu },
+	name: 'MainHeader',
 	data() {
 		return { showSubmenu: false }
 	},

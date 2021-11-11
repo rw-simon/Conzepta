@@ -52,7 +52,7 @@
 
 <script>
 export default {
-	name: 'Menu',
+	name: 'MainMenu',
 	props: ['opened'],
 }
 </script>
