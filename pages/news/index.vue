@@ -64,16 +64,17 @@ export default {
 		return {
 			selectedCategories: this.$i18n.locale == 'fr' ? 'Tous' : 'Alle',
 			productCategories: [this.$i18n.locale == 'fr' ? 'Tous' : 'Alle', 'PolicePad', 'Lexica', 'InterLink', 'TachiFox'],
-			openNews: -1,
+			openNews: 99,
 		}
 	},
 	methods: {
 		toggleOpen(i) {
 			if (this.openNews == i) {
-				this.openNews == -1
+				this.openNews = 99
 			} else {
 				this.openNews = i
 			}
+			console.log(this.openNews)
 		},
 		formatDate(date) {
 			let _d = ''
@@ -109,13 +110,22 @@ article.news-article
 		padding-bottom: 3rem
 		.arrow-open
 			display: block
+			cursor: pointer
 		.inner
 			max-height: 300px
 			overflow: hidden
 			transition: max-height 500ms ease-in-out
+		.inner:after
+			content: ""
+			position: absolute
+			top: 0
+			bottom: 7rem
+			left: -30px
+			right: -30px
+			box-shadow: inset white 0 -40px 30px
 		&.opened
 			.inner
-				max-height: 5000px
+				max-height: 2000px
 			.arrow-open
 				transform: rotate(180deg)
 	.open-news
