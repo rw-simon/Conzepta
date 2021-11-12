@@ -26,12 +26,13 @@
 		<div class="second" :id="`news-${i}`" v-for="(a, i) in news" :key="i" v-show="a.acf.kategorie.includes(selectedCategories.toLowerCase()) || selectedCategories == ($i18n.locale == 'fr' ? 'Tous' : 'Alle')">
 			<div class="container">
 				<div>
-					<article style="" :class="{ 'news-article': true, long: a.content.rendered.length > 750 }">
+					<article style="" :class="{ 'news-article': true, long: a.content.rendered.length > 750, opened: openNews == i }">
 						<div class="inner">
 							<h3>{{ formatDate(a.acf.datum) }}</h3>
 							<h2>{{ a.title.rendered }}</h2>
 							<div v-html="a.content.rendered" />
 						</div>
+						<div @click="toggleOpen(i)" class="arrow-open"><img src="/arrows_bot.png" alt="" /></div>
 					</article>
 				</div>
 			</div>
@@ -63,9 +64,17 @@ export default {
 		return {
 			selectedCategories: this.$i18n.locale == 'fr' ? 'Tous' : 'Alle',
 			productCategories: [this.$i18n.locale == 'fr' ? 'Tous' : 'Alle', 'PolicePad', 'Lexica', 'InterLink', 'TachiFox'],
+			openNews: -1,
 		}
 	},
 	methods: {
+		toggleOpen(i) {
+			if (this.openNews == i) {
+				this.openNews == -1
+			} else {
+				this.openNews = i
+			}
+		},
 		formatDate(date) {
 			let _d = ''
 			_d = `${date.substring(6)}.${date.substring(4, 6)}.${date.substring(0, 4)}`
@@ -93,12 +102,22 @@ export default {
 <style lang="sass" scoped>
 article.news-article
 	position: relative
-	// .inner
-	// 	max-height: 300px
-	// 	overflow: hidden
-	// 	transition: max-height 500ms ease-in-out
+	.arrow-open
+		display: none
+		width: 4rem
 	&.long
 		padding-bottom: 3rem
+		.arrow-open
+			display: block
+		.inner
+			max-height: 300px
+			overflow: hidden
+			transition: max-height 500ms ease-in-out
+		&.opened
+			.inner
+				max-height: 5000px
+			.arrow-open
+				transform: rotate(180deg)
 	.open-news
 		position: absolute
 		bottom: 0
