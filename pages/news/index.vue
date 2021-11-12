@@ -115,14 +115,14 @@ article.news-article
 			max-height: 300px
 			overflow: hidden
 			transition: max-height 500ms ease-in-out
-		.inner:after
-			content: ""
-			position: absolute
-			top: 0
-			bottom: 7rem
-			left: -30px
-			right: -30px
-			box-shadow: inset white 0 -40px 30px
+		// .inner:after
+		// 	content: ""
+		// 	position: absolute
+		// 	top: 0
+		// 	bottom: 7rem
+		// 	left: -30px
+		// 	right: -30px
+		// 	box-shadow: inset white 0 -40px 30px
 		&.opened
 			.inner
 				max-height: 2000px

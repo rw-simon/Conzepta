@@ -87,13 +87,6 @@
 						<div class="grid cols-2">
 							<div :class="{ text: true, open: showContentKomp }">
 								<div v-html="content.acf.arbeitszeiten.text_intro"></div>
-								<!-- <h3 v-scroll-reveal="{ delay: 0 }">ARBEITSZEITEN AUSWERTEN</h3>
-							<h2 v-scroll-reveal="{ delay: 200 }">Kommunikation kann so viel mehr</h2>
-							<p v-scroll-reveal="{ delay: 400 }" class="intro">
-								Bewegen sich Mitarbeitende mit einem Badge an ihrem Arbeitsort, passiert im Hintergrund vieles: Türen müssen, je nach Person, öffnen oder verschlossen bleiben. Arbeitszeiten werden erfasst. Viele Schnittstellen, die
-								ineinandergreifen. Und Daten, die Sie im Auge behalten wollen. InterLink bietet Ihnen eine reibungslose Kommunikation aller Zeit- und Zutrittsterminals, die über die verschiedenen Standorte Ihres Betriebs verteilt
-								sind.
-							</p> -->
 								<img
 									@click="toggleContentKomp"
 									:class="{
@@ -106,6 +99,7 @@
 								<div></div>
 								<div :class="{ more: true, active: showContentKomp }" v-html="content.acf.arbeitszeiten.text_ausgeklappt"></div>
 							</div>
+							<div>as</div>
 							<span>
 								<poi x="-100" y="150" text="Um 1700 ist für Claudia keineswegs Feierabend: Ab zum Fussbalmatch der Kinder."></poi>
 							</span>
