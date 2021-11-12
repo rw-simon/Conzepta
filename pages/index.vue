@@ -197,10 +197,8 @@
 							<hr />
 						</div>
 						<div class="line">
-							<span style="top: -1.75rem; right: 15rem; text-align: right">2021</span>
-							<hr style="width: 250%; margin-left: -150%" />
-						</div>
-						<div class="line">
+							<!-- <span style="top: -1.75rem; right: 15rem; text-align: right">2021</span>
+							<hr style="width: 250%; margin-left: -150%" /> -->
 							<hr />
 						</div>
 						<div class="line">
@@ -210,9 +208,12 @@
 							<hr />
 						</div>
 						<div class="line">
-							<span style="top: -1.75rem; left: 15rem">2020</span>
-							<hr style="width: 250%" />
-							<!-- <hr /> -->
+							<hr />
+						</div>
+						<div class="line">
+							<!-- <span style="top: -1.75rem; left: 15rem">2020</span>
+							<hr style="width: 250%" /> -->
+							<hr />
 						</div>
 						<div class="line">
 							<hr />
