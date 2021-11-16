@@ -23,6 +23,8 @@ export default {
 .asp
 	@include mobile
 		display: none
+	@include large
+		display: none
 .poi
 	position: absolute
 	&.active

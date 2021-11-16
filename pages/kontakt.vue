@@ -231,6 +231,7 @@ export default {
 						// Create result message container and copy HTML from doc
 						const result = document.createElement('div')
 						result.innerHTML = `<h2>${text}</h2>`
+						window.scrollTo(0, 0)
 
 						// Replace the form with the response children
 						form.parentNode.replaceChild(result, form)
