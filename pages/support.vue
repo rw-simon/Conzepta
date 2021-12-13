@@ -16,7 +16,7 @@
 						<p v-scroll-reveal="{ delay: 450 }">
 							<span style="display: inline-block; width: 100px">Email:</span><a href="mailto:team@conzepta.ch">team@conzepta.ch</a><br />
 							<span style="display: inline-block; width: 100px">{{ $i18n.locale == 'fr' ? 'Tél:' : 'Telefon:' }}</span
-							><a href="tel:+41313486020">+41 (0)31 348 60 20</a>
+							><a href="tel:+41313486020">+41 031 348 60 20</a>
 						</p>
 						<p v-scroll-reveal="{ delay: 500 }">
 							{{
@@ -41,7 +41,7 @@
 										{{ $i18n.locale == 'fr' ? '13 h 00 – 17 h 00' : '13:00 - 17:00 Uhr' }}
 									</a></span
 								><br />
-								<!-- <span style="margin-top: 12px; display: inline-block; width: 200px">In Notfällen:</span><span><a href="tel:+41314444444">+41 (0)31 444 44 44</a></span> -->
+								<!-- <span style="margin-top: 12px; display: inline-block; width: 200px">In Notfällen:</span><span><a href="tel:+41314444444">+41 031 444 44 44</a></span> -->
 							</p>
 						</div>
 					</div>
