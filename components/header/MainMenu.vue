@@ -7,12 +7,14 @@
 			<li class="menu-item">
 				<nuxt-link :to="localePath('wir')">{{ $i18n.locale == 'fr' ? 'À Propos' : 'Wir' }}</nuxt-link>
 				<ul class="submenu" v-if="opened">
-					<li style="color: white">&nbsp;</li>
 					<li>
 						<nuxt-link :to="localePath({ name: 'portfolio' })">{{ $i18n.locale == 'fr' ? 'Portfolio' : 'Portfolio' }}</nuxt-link>
 					</li>
 					<li>
 						<nuxt-link :to="localePath({ name: 'news' })">{{ $i18n.locale == 'fr' ? 'News' : 'News' }}</nuxt-link>
+					</li>
+					<li>
+						<nuxt-link :to="localePath({ path: 'leitbild' })">{{ $i18n.locale == 'fr' ? 'Leitbild' : 'Leitbild' }}</nuxt-link>
 					</li>
 					<li>
 						<nuxt-link :to="localePath({ name: 'jobs' })">{{ $i18n.locale == 'fr' ? 'Jobs' : 'Jobs' }}</nuxt-link>

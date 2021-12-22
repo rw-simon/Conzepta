@@ -15,7 +15,7 @@
 		<div style="text-align: center; margin-top: 1rem">
 			<p>
 				&copy; 2021 Conzepta Team AG. All rights reserved.
-				<!-- <nuxt-link to="/impressum">Impressum</nuxt-link> | <nuxt-link to="/agb">AGB</nuxt-link> -->
+				<nuxt-link :to="localePath({ path: 'impressum' })">Impressum</nuxt-link> | <nuxt-link :to="localePath({ path: 'agb' })">AGB</nuxt-link>
 			</p>
 		</div>
 	</footer>

@@ -18,7 +18,9 @@
 				isMono
 				:text="$i18n.locale == 'fr' ? 'Accepter' : 'Zustimmen'"
 			/>
-			<!-- <CButton isMono text="Info" /> -->
+			<nuxt-link :to="localePath({ path: 'datenschutz' })">
+				<CButton isOutline isMono text="Datenschutz" />
+			</nuxt-link>
 		</div>
 		<div class="content" v-else>
 			<p class="title" @click="toggleConsole">Conzepta//</p>

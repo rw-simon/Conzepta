@@ -11,6 +11,9 @@
 					<ul class="submenu" v-if="opened == 'wir'">
 						<li><nuxt-link :to="localePath('portfolio')">Portfolio</nuxt-link></li>
 						<li><nuxt-link :to="localePath({ name: 'news', hash: '#news' })">News</nuxt-link></li>
+						<li>
+							<nuxt-link :to="localePath({ path: 'leitbild' })">{{ $i18n.locale == 'fr' ? 'Leitbild' : 'Leitbild' }}</nuxt-link>
+						</li>
 						<li><nuxt-link :to="localePath('jobs')">Jobs</nuxt-link></li>
 						<!-- <li><nuxt-link :to="localePath('archiv')">Archiv</nuxt-link></li>
 						<li><nuxt-link :to="localePath('wir')">Geschichte</nuxt-link></li> -->
