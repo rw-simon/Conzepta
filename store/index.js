@@ -55,10 +55,10 @@ export const mutations = {
 
 export const actions = {
 	setCookie() {
-		Cookie.set('accepted', 'true')
+		Cookie.set('accepted', 'true', { expires: 365 })
 	},
 	setConsoleCookie({}, test) {
-		Cookie.set('console', test)
+		Cookie.set('console', test, { expires: 365 })
 	},
 	async nuxtServerInit({ commit }) {
 		// const pageRequest = await axios.get('https://admin.conzepta.ch/index.php/wp-json/wp/v2/pages?per_page=100')
