@@ -63,7 +63,7 @@ export default {
 	data() {
 		return {
 			selectedCategories: this.$i18n.locale == 'fr' ? 'Tous' : 'Alle',
-			productCategories: [this.$i18n.locale == 'fr' ? 'Tous' : 'Alle', 'fr' ? 'A' : 'Allgemein', 'PolicePad', 'Lexica', 'InterLink', 'TachiFox'],
+			productCategories: [this.$i18n.locale == 'fr' ? 'Tous' : 'Alle', this.$i18n.locale == 'fr' ? 'Général' : 'Allgemein', 'PolicePad', 'Lexica', 'InterLink', 'TachiFox'],
 			openNews: 99,
 		}
 	},
@@ -147,7 +147,7 @@ article.news-article
 .filter
 		border: 1px solid $c-blue
 		display: grid
-		grid-template-columns: auto auto auto auto auto
+		grid-template-columns: auto auto auto auto auto auto
 		@include mobile
 			grid-template-columns: 1fr
 		@include mobile-landscape
