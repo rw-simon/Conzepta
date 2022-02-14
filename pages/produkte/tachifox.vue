@@ -199,7 +199,9 @@
 						<a target="_blank" :href="$i18n.locale == 'fr' ? 'https://www.tachifox.com/tachifox-pour-le-chauffeur/?lang=fr' : `https://www.tachifox.com/tachifox-fuer-den-chauffeur`"
 							><CButton text="Support" style="display: block; width: 200px; background: white; border: 1px solid #1b52f5; color: #1b52f5" class="button"></CButton
 						></a>
-						<a target="_blank" href="https://www.tachifox.com/tachifox-pro-fuer-das-unternehmen/tachifox-pro-anmeldung/ "
+						<a
+							target="_blank"
+							:href="$i18n.locale == 'de' ? 'https://www.tachifox.com/tachifox-pro-fuer-das-unternehmen/tachifox-pro-anmeldung/' : 'https://www.tachifox.com/tachifox-pro-pour-lentreprise/tachifox-pro-inscription/?lang=fr'"
 							><CButton :text="$i18n.locale == 'fr' ? 'Vente' : 'Verkauf'" style="display: block; width: 200px; background: white; border: 1px solid #1b52f5; color: #1b52f5" class="button"></CButton>
 						</a>
 					</div>
