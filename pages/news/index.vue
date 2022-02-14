@@ -63,7 +63,7 @@ export default {
 	data() {
 		return {
 			selectedCategories: this.$i18n.locale == 'fr' ? 'Tous' : 'Alle',
-			productCategories: [this.$i18n.locale == 'fr' ? 'Tous' : 'Alle', 'PolicePad', 'Lexica', 'InterLink', 'TachiFox'],
+			productCategories: [this.$i18n.locale == 'fr' ? 'Tous' : 'Alle', 'fr' ? 'A' : 'Allgemein', 'PolicePad', 'Lexica', 'InterLink', 'TachiFox'],
 			openNews: 99,
 		}
 	},

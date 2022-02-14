@@ -5,6 +5,7 @@
 			<nuxt-link :to="localePath({ name: 'portfolio' })"><p>Portfolio</p></nuxt-link>
 			<nuxt-link :to="localePath({ name: 'index', hash: '#news' })"><p>News</p></nuxt-link>
 			<nuxt-link :to="localePath({ name: 'jobs' })"><p>Jobs</p></nuxt-link>
+			<nuxt-link :to="localePath({ path: 'leitbild' })"><p>Leitbild</p></nuxt-link>
 			<!-- <nuxt-link to="/wir"><p>Geschichte</p></nuxt-link>
 			<nuxt-link :to="{ path: '/support', hash: '#support' }"><p>Kontakt</p></nuxt-link>
 			<nuxt-link to="/impressum"><p>Impressum</p></nuxt-link>
