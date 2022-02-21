@@ -14,7 +14,7 @@
 						<nuxt-link :to="localePath({ name: 'news' })">{{ $i18n.locale == 'fr' ? 'News' : 'News' }}</nuxt-link>
 					</li>
 					<li>
-						<nuxt-link :to="localePath({ path: 'leitbild' })">{{ $i18n.locale == 'fr' ? 'Leitbild' : 'Leitbild' }}</nuxt-link>
+						<nuxt-link :to="localePath({ path: '/leitbild' })">{{ $i18n.locale == 'fr' ? 'Mission' : 'Leitbild' }}</nuxt-link>
 					</li>
 					<li>
 						<nuxt-link :to="localePath({ name: 'jobs' })">{{ $i18n.locale == 'fr' ? 'Jobs' : 'Jobs' }}</nuxt-link>
