@@ -16,7 +16,7 @@
 						<p v-scroll-reveal="{ delay: 450 }">
 							<span style="display: inline-block; width: 100px">Email:</span><a href="mailto:team@conzepta.ch">team@conzepta.ch</a><br />
 							<span style="display: inline-block; width: 100px">{{ $i18n.locale == 'fr' ? 'Tél:' : 'Telefon:' }}</span
-							><a href="tel:+41313486020">+41 31 348 60 20</a>
+							><a href="tel:+41313486020">+41 031 348 60 20</a>
 						</p>
 						<p v-scroll-reveal="{ delay: 500 }">
 							{{
