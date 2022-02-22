@@ -11,8 +11,7 @@ import axios from 'axios'
 import Module from '~/components/module/Module.vue'
 export default {
 	components: { Module },
-	async asyncData({ app, params }) {
-		let slug = app.i18n.locale == 'fr' ? 'a-propos' : 'wir'
+	async asyncData({ params }) {
 		let content = await axios.get(`https://admin.conzepta.ch/index.php/wp-json/wp/v2/pages?slug=${params.slug}`)
 		return {
 			content: content.data[0],

@@ -10,8 +10,8 @@
 			<a href="mailto:team@conzepta.ch" target="_blank">team@conzepta.ch</a><br />
 			<a href="tel:+41313486020" target="_blank">+41 31 348 60 20</a>
 		</p>
-		<br />
-		<p>{{ $i18n.locale == 'fr' ? 'Membre de' : 'Mitglied bei:' }} <a style="font-weight: bold" href="https://www.swissict.ch/">swiss ICT</a></p>
+		<!-- <br /> -->
+		<!-- <p>{{ $i18n.locale == 'fr' ? 'Membre de' : 'Mitglied bei:' }} <a style="font-weight: bold" href="https://www.swissict.ch/">swiss ICT</a></p> -->
 	</div>
 </template>
 

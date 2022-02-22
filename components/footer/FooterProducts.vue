@@ -1,10 +1,10 @@
 <template>
 	<div class="footer-products">
 		<h3>{{ $i18n.locale == 'fr' ? 'Produits' : 'Produkte' }}</h3>
-		<nuxt-link :to="localePath({ name: 'produkte-policepad' })"><p>PolicePad</p></nuxt-link>
-		<nuxt-link :to="localePath({ name: 'produkte-lexica' })"><p>Lexica</p></nuxt-link>
-		<nuxt-link :to="localePath({ name: 'produkte-interlink' })"><p>InterLink</p></nuxt-link>
-		<nuxt-link :to="localePath({ name: 'produkte-tachifox' })"><p>TachiFox</p></nuxt-link>
+
+		<nuxt-link :to="localePath({ path: `/produkte/${item.slug}` })" v-for="(item, i) in $store.state.menu[$i18n.locale].footer.items[1].child_items" :key="i"
+			><p>{{ item.title }}</p></nuxt-link
+		>
 	</div>
 </template>
 

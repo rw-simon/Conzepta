@@ -1,53 +1,16 @@
 <template>
 	<nav class="main-menu">
 		<ul :class="{ opened: opened }">
-			<li class="menu-item">
-				<nuxt-link :to="localePath({ name: 'index' })" exact>Home</nuxt-link>
-			</li>
-			<li class="menu-item">
-				<nuxt-link :to="localePath('wir')">{{ $i18n.locale == 'fr' ? 'À Propos' : 'Wir' }}</nuxt-link>
-				<ul class="submenu" v-if="opened">
-					<li>
-						<nuxt-link :to="localePath({ name: 'portfolio' })">{{ $i18n.locale == 'fr' ? 'Portfolio' : 'Portfolio' }}</nuxt-link>
+			<li v-for="(item, i) in $store.state.menu[$i18n.locale].header.items" :key="i" class="menu-item">
+				<nuxt-link v-if="item.slug.includes('homepage')" :to="localePath({ name: 'index' })" exact>{{ item.title }}</nuxt-link>
+				<nuxt-link v-else :to="localePath({ path: `/${item.slug}` })">{{ item.title }}</nuxt-link>
+				<ul class="submenu" v-if="opened && item.child_items">
+					<li v-for="(subitem, j) in item.child_items" :key="j">
+						<nuxt-link v-if="subitem.object == 'page'" :to="localePath({ path: `/${subitem.slug}` })">{{ subitem.title }}</nuxt-link>
+						<nuxt-link v-else :to="localePath({ path: `/produkte/${subitem.slug}` })">{{ subitem.title }}</nuxt-link>
 					</li>
-					<li>
-						<nuxt-link :to="localePath({ name: 'news' })">{{ $i18n.locale == 'fr' ? 'News' : 'News' }}</nuxt-link>
-					</li>
-					<li>
-						<nuxt-link :to="localePath({ path: '/leitbild' })">{{ $i18n.locale == 'fr' ? 'Mission' : 'Leitbild' }}</nuxt-link>
-					</li>
-					<li>
-						<nuxt-link :to="localePath({ name: 'jobs' })">{{ $i18n.locale == 'fr' ? 'Jobs' : 'Jobs' }}</nuxt-link>
-					</li>
-					<!-- <li><nuxt-link :to="localePath('archiv')">Archiv</nuxt-link></li> -->
-					<!-- <li><nuxt-link :to="localePath('wir')">Geschichte</nuxt-link></li> -->
 				</ul>
 			</li>
-			<li class="menu-item">
-				<nuxt-link :to="localePath({ name: 'produkte' })">{{ $i18n.locale == 'fr' ? 'Produits' : 'Produkte' }}</nuxt-link>
-				<ul class="submenu" v-if="opened">
-					<li><nuxt-link :to="localePath({ name: 'produkte-policepad' })">PolicePad</nuxt-link></li>
-					<li><nuxt-link :to="localePath({ name: 'produkte-lexica' })">Lexica</nuxt-link></li>
-					<li><nuxt-link :to="localePath({ name: 'produkte-interlink' })">InterLink</nuxt-link></li>
-					<li><nuxt-link :to="localePath({ name: 'produkte-tachifox' })">TachiFox</nuxt-link></li>
-					<!-- <li><nuxt-link :to="localePath('/produkte/parkingpad')">ParkingPad</nuxt-link></li> -->
-				</ul>
-			</li>
-			<li class="menu-item">
-				<nuxt-link :to="localePath({ name: 'kontakt' })">{{ $i18n.locale == 'fr' ? 'Contact' : 'Kontakt' }}</nuxt-link>
-				<ul class="submenu" v-if="opened">
-					<li style="color: white">&nbsp;</li>
-					<li style="color: white">&nbsp;</li>
-					<li style="color: white">&nbsp;</li>
-					<li>
-						<nuxt-link :to="localePath({ name: 'support', hash: '#support' })">{{ $i18n.locale == 'fr' ? 'Support' : 'Support' }}</nuxt-link>
-					</li>
-					<!-- <li><nuxt-link :to="{ path: '/support', hash: '#kontaktformular' }">Kontaktformular</nuxt-link></li> -->
-				</ul>
-			</li>
-			<!-- <li class="menu-item">
-				<nuxt-link :to="localePath('portfolio')">Portfolio</nuxt-link>
-			</li> -->
 		</ul>
 	</nav>
 </template>

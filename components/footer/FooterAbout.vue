@@ -2,10 +2,12 @@
 	<div class="footer-about-us">
 		<h3>{{ $i18n.locale == 'fr' ? 'À propos' : 'Wir' }}</h3>
 		<div class="small-gap" style="row-gap: 0; column-gap: 1rem">
-			<nuxt-link :to="localePath({ name: 'portfolio' })"><p>Portfolio</p></nuxt-link>
-			<nuxt-link :to="localePath({ name: 'index', hash: '#news' })"><p>News</p></nuxt-link>
-			<nuxt-link :to="localePath({ name: 'jobs' })"><p>Jobs</p></nuxt-link>
-			<nuxt-link :to="localePath({ path: 'leitbild' })"><p>Leitbild</p></nuxt-link>
+			<!-- <nuxt-link to="/" v-for="(item, i) in $store.state.menu[0].child_items" :key="i">
+				<p>{{ item.title }}</p>
+			</nuxt-link> -->
+			<nuxt-link :to="localePath({ path: `/${item.slug}` })" v-for="(item, i) in $store.state.menu[$i18n.locale].footer.items[0].child_items" :key="i"
+				><p>{{ item.title }}</p></nuxt-link
+			>
 			<!-- <nuxt-link to="/wir"><p>Geschichte</p></nuxt-link>
 			<nuxt-link :to="{ path: '/support', hash: '#support' }"><p>Kontakt</p></nuxt-link>
 			<nuxt-link to="/impressum"><p>Impressum</p></nuxt-link>

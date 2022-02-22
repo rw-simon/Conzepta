@@ -14,6 +14,8 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.footer-products
+	grid-column: span 2
 h3
 	margin-bottom: 2rem
 	font-size: 1.1rem

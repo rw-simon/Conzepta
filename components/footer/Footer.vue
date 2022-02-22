@@ -1,5 +1,6 @@
 <template>
-	<footer class="p-1 font-mono">
+	<footer class="p-1 font-mono" style="position: relative">
+		<a target="_blank" href="https://ch.linkedin.com/company/conzepta-team-ag?trk=public_profile_topcard-current-company"><img class="linkedin-icon" src="/LinkedIn.svg" alt="" /></a>
 		<div class="grid cols-2 small-gap" style="gap: 1rem">
 			<section class="footer-left br bc-blue small-gap grid cols-3" style="column-gap: 1rem">
 				<span></span>
@@ -9,14 +10,14 @@
 			<section class="footer-right br bc-blue small-gap grid cols-3">
 				<FooterContact />
 				<FooterSupport />
-				<span></span>
 			</section>
 		</div>
-		<div style="text-align: center; margin-top: 1rem">
-			<p>
-				&copy; 2021 Conzepta Team AG. All rights reserved.
-				<nuxt-link :to="localePath({ path: 'impressum' })">Impressum</nuxt-link> | <nuxt-link :to="localePath({ path: 'agb' })">AGB</nuxt-link>
-			</p>
+		<div style="display: grid; grid-template-columns: 1fr 250px; align-items: center; padding: 0 1rem">
+			<p style="color: gray; margin: 0; padding: 0">&copy; 2022 Conzepta Team AG. All rights reserved.</p>
+			<div class="partner-logos">
+				<a target="_blank" href="https://www.swissict.ch/"><img src="/swissict_logo_sw.png" alt="" /></a>
+				<a target="_blank" href="https://www.swissmadesoftware.org/home.html"><img src="/swissmade_logo_sw.png" alt="" /></a>
+			</div>
 		</div>
 	</footer>
 </template>
@@ -29,7 +30,7 @@ export default {
 
 <style lang="sass" scoped>
 footer
-	font-size: .7rem
+	font-size: .75rem
 	margin-top: 5rem
 	@include mobile
 		margin-bottom: 5rem
@@ -40,4 +41,16 @@ section
 			padding: 0
 .grid
 	grid-template-columns: 5fr 3fr
+.partner-logos
+	display: grid
+	grid-template-columns: 1fr 1fr
+	align-items: center
+	gap: 1rem
+	img
+		height: auto
+.linkedin-icon
+	height: 2.3rem
+	position: absolute
+	right: 1.66rem
+	top: -1.8rem
 </style>
