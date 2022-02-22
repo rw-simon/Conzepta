@@ -100,7 +100,7 @@
 								<div :class="{ more: true, active: showContentKomp }" v-html="content.acf.arbeitszeiten.text_ausgeklappt"></div>
 							</div>
 							<span>
-								<poi x="-100" y="150" text="Um 1700 ist für Claudia keineswegs Feierabend: Ab zum Fussbalmatch der Kinder."></poi>
+								<poi v-if="content.acf.easteregg[0].anzeigen" x="-100" y="150" :text="content.acf.easteregg[0].inhalt"></poi>
 							</span>
 						</div>
 					</div>

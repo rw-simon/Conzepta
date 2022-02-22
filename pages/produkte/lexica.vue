@@ -4,36 +4,38 @@
 			<div v-scroll-reveal="{ delay: 0 }" class="banner">
 				<div class="container">
 					<div class="section grid cols-2">
-						<div class="padfix" v-html="content.acf.modules[0].text_2_columns_column_1"></div>
-						<!-- <div>
-							<h3 v-scroll-reveal="{ delay: 0 }">Nachschlagewerk</h3>
-							<h1 v-scroll-reveal="{ delay: 200 }">Lexica //</h1>
-							<p v-scroll-reveal="{ delay: 400 }">
-								Lexica ist das digitale Nachschlagewerk für alle, die im Namen des Gesetzes unterwegs sind: Gesetze, Regeln, Statuten und vieles mehr in einer einzigen App. Und Lexica ist ein ganz persönlicher Helfer: Ergänzen Sie die
-								Einträge individuell mit Tags und Notizen. Mittels einer ausgeklügelten Suchfunktion und einem praktischen Assistenten finden Sie sofort den Artikel, den Sie brauchen.
-							</p>
-							<div class="grid"></div>
-						</div> -->
-						<div class="produktemanager" style="align-self: end">
-							<div style="display: grid; grid-template-columns: repeat(6, 2rem); gap: 0.5rem; align-items: center">
-								<span style="padding: 5px">
-									<img style="height: auto" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/12/icon_apple.png" v-scroll-reveal="{ delay: 100 }" alt="" />
-								</span>
-								<span style="padding: 5px">
-									<img style="height: auto; opacity: 0.33" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/12/icon_android.png" v-scroll-reveal="{ delay: 100 }" alt="" />
-								</span>
-							</div>
-							<nuxt-link :to="{ path: '/wir', hash: '#philippe-luethi' }">
-								<div class="grid cols-2 small-gap person" style="align-items: center; margin-top: 2rem">
-									<div>
-										<p v-scroll-reveal="{ delay: 800 }" style="margin: 0; line-height: 1em">{{ $i18n.locale == 'fr' ? 'Gestionnaire de produit' : 'Produktemanager' }}</p>
-										<p v-scroll-reveal="{ delay: 1000 }" style="font-weight: 900">Philippe Lüthi</p>
-									</div>
-									<div>
-										<img v-scroll-reveal="{ delay: 1200 }" style="height: auto; border-radius: 50%" src="/portrait_placeholder.png" alt="" />
-									</div>
+						<div>
+							<div class="padfix" v-html="content.acf.modules[0].text_2_columns_column_1"></div>
+							<!-- <div>
+								<h3 v-scroll-reveal="{ delay: 0 }">Nachschlagewerk</h3>
+								<h1 v-scroll-reveal="{ delay: 200 }">Lexica //</h1>
+								<p v-scroll-reveal="{ delay: 400 }">
+									Lexica ist das digitale Nachschlagewerk für alle, die im Namen des Gesetzes unterwegs sind: Gesetze, Regeln, Statuten und vieles mehr in einer einzigen App. Und Lexica ist ein ganz persönlicher Helfer: Ergänzen Sie die
+									Einträge individuell mit Tags und Notizen. Mittels einer ausgeklügelten Suchfunktion und einem praktischen Assistenten finden Sie sofort den Artikel, den Sie brauchen.
+								</p>
+								<div class="grid"></div>
+							</div> -->
+							<div class="produktemanager">
+								<div style="display: grid; grid-template-columns: repeat(6, 2rem); gap: 0.5rem; align-items: center">
+									<span style="padding: 5px">
+										<img style="height: auto" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/12/icon_apple.png" v-scroll-reveal="{ delay: 100 }" alt="" />
+									</span>
+									<span style="padding: 5px">
+										<img style="height: auto; opacity: 0.33" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/12/icon_android.png" v-scroll-reveal="{ delay: 100 }" alt="" />
+									</span>
 								</div>
-							</nuxt-link>
+								<nuxt-link :to="{ path: '/wir', hash: '#philippe-luethi' }">
+									<div class="grid cols-2 small-gap person" style="align-items: center; margin-top: 2rem">
+										<div>
+											<p v-scroll-reveal="{ delay: 800 }" style="margin: 0; line-height: 1em">{{ $i18n.locale == 'fr' ? 'Gestionnaire de produit' : 'Produktemanager' }}</p>
+											<p v-scroll-reveal="{ delay: 1000 }" style="font-weight: 900">Philippe Lüthi</p>
+										</div>
+										<div>
+											<img v-scroll-reveal="{ delay: 1200 }" style="height: auto; border-radius: 50%" src="/portrait_placeholder.png" alt="" />
+										</div>
+									</div>
+								</nuxt-link>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -191,10 +193,6 @@ export default {
 		width: auto
 		&.grid.cols-2
 			grid-template-columns: 2fr 1fr
-.produktemanager
-	padding-left: 5rem
-	@include mobile
-		padding-left: 0
 .mobilefix
 	@include mobile
 		padding-top: 5rem
@@ -202,7 +200,7 @@ export default {
 	@include mobile
 		grid-template-columns: 3fr 1fr !important
 .padfix
-	padding: 12rem 0
+	padding: 2rem 0
 	@include mobile
 		padding: 0
 .easteregg
@@ -308,7 +306,7 @@ export default {
 		background-size: 150%
 		margin-top: -5rem
 .banner
-	padding: 12rem 0
+	padding: 16rem 0
 	background-size: cover
 	background-repeat: no-repeat
 	background-position: center center

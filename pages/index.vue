@@ -26,8 +26,8 @@
 				<div class="grid cols-2">
 					<div style="min-width: 300px" v-html="content[1].text_2_columns_column_1"></div>
 					<span>
-						<poi x="100" y="350" text="Wenn Urs nicht gerade die Berge erklimmt, dann weil er wiedereinmal mit dem Motorrad unterwegs ist."></poi>
-						<poi x="0" y="-400" text="Mit Solar auf dem Dach und Nachsicht im Verstand wollen wir der Umwelt Sorge tragen."></poi>
+						<poi v-if="eastereggs[0].anzeigen" x="0" y="-400" :text="eastereggs[0].inhalt"></poi>
+						<poi v-if="eastereggs[1].anzeigen" x="100" y="350" :text="eastereggs[1].inhalt"></poi>
 					</span>
 				</div>
 				<!-- <h3 v-scroll-reveal>Etablierte Lösungen</h3>
@@ -260,6 +260,7 @@ export default {
 		let news = await axios.get(`https://admin.conzepta.ch/index.php/wp-json/wp/v2/news?lang=${app.i18n.locale}`)
 		return {
 			content: content.data[0].acf.modules,
+			eastereggs: content.data[0].acf.easteregg,
 			news: news.data.sort(function (a, b) {
 				return parseFloat(b.acf.datum) - parseFloat(a.acf.datum)
 			}),

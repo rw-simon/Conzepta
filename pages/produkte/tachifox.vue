@@ -5,7 +5,7 @@
 				<div class="container">
 					<div class="grid cols-2">
 						<span>
-							<poi x="-100" y="600" text="Sieht nach Zukunft aus! Bei Technik und ScienceFiction schlägt Philippe's Herz gleich höher"></poi>
+							<poi v-if="content.acf.easteregg[0].anzeigen" x="-100" y="600" :text="content.acf.easteregg[0].inhalt"></poi>
 						</span>
 						<div>
 							<div v-html="content.acf.modules[0].text_2_columns_column_2"></div>
