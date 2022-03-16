@@ -27,10 +27,11 @@
 			<div class="container">
 				<div>
 					<article style="" :class="{ 'news-article': true, long: a.content.rendered.length > 750, opened: openNews == i }">
+						<h3>{{ formatDate(a.acf.datum) }}</h3>
+						<h2>{{ a.title.rendered }}</h2>
+						<div v-html="a.acf.vorschau" />
 						<div class="inner">
-							<h3>{{ formatDate(a.acf.datum) }}</h3>
-							<h2>{{ a.title.rendered }}</h2>
-							<div v-html="a.content.rendered" />
+							<div v-html="a.acf.ausgeklappt" />
 						</div>
 						<div @click="toggleOpen(i)" class="arrow-open"><img src="/arrows_bot.png" alt="" /></div>
 					</article>
@@ -112,7 +113,7 @@ article.news-article
 			display: block
 			cursor: pointer
 		.inner
-			max-height: 300px
+			max-height: 0px
 			overflow: hidden
 			transition: max-height 500ms ease-in-out
 		// .inner:after

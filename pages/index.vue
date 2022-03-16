@@ -154,17 +154,17 @@
 				<div class="news-grid">
 					<div>
 						<article style="margin-top: 4rem; position: relative">
-							<nuxt-link v-if="news[0].content.rendered.length > 750" class="news-link-arrows" :to="localePath({ name: 'news', hash: `#news-0` })"
+							<nuxt-link v-if="news[0].acf.ausgeklappt" class="news-link-arrows" :to="localePath({ name: 'news', hash: `#news-0` })"
 								><div style="position: absolute; bottom: -3rem; width: 100%; text-align: center"><span class="blue">Mehr</span></div>
 							</nuxt-link>
 							<h3>{{ formatDate(news[0].acf.datum) }}</h3>
 							<nuxt-link :to="localePath({ name: 'news', hash: `#news-0` })">
 								<h2>{{ news[0].title.rendered }}</h2>
 							</nuxt-link>
-							<div class="content" v-html="news[0].content.rendered"></div>
+							<div class="content" v-html="news[0].acf.vorschau"></div>
 						</article>
 						<article style="margin-top: 24rem; position: relative">
-							<nuxt-link v-if="news[2].content.rendered.length > 750" class="news-link-arrows" :to="localePath({ name: 'news', hash: `#news-0` })"
+							<nuxt-link v-if="news[2].acf.ausgeklappt" class="news-link-arrows" :to="localePath({ name: 'news', hash: `#news-0` })"
 								><div style="position: absolute; bottom: -3rem; width: 100%; text-align: center"><span class="blue">Mehr</span></div>
 							</nuxt-link>
 
@@ -172,7 +172,7 @@
 							<nuxt-link :to="localePath({ name: 'news', hash: `#news-2` })"
 								><h2>{{ news[2].title.rendered }}</h2></nuxt-link
 							>
-							<div class="content" v-html="news[2].content.rendered"></div>
+							<div class="vorschau" v-html="news[2].acf.vorschau"></div>
 						</article>
 					</div>
 					<div class="liness">
@@ -222,14 +222,14 @@
 					</div>
 					<div>
 						<article style="margin-top: 24rem; position: relative">
-							<nuxt-link v-if="news[1].content.rendered.length > 750" class="news-link-arrows" :to="localePath({ name: 'news', hash: `#news-0` })"
+							<nuxt-link v-if="news[1].acf.ausgeklappt" class="news-link-arrows" :to="localePath({ name: 'news', hash: `#news-0` })"
 								><div style="position: absolute; bottom: -3rem; width: 100%; text-align: center"><span class="blue">Mehr</span></div>
 							</nuxt-link>
 							<h3>{{ formatDate(news[1].acf.datum) }}</h3>
 							<nuxt-link :to="localePath({ name: 'news', hash: `#news-1` })"
 								><h2>{{ news[1].title.rendered }}</h2></nuxt-link
 							>
-							<div class="content" v-html="news[1].content.rendered"></div>
+							<div class="content" v-html="news[1].acf.vorschau"></div>
 						</article>
 					</div>
 					<div class="mobobly">
@@ -313,9 +313,6 @@ export default {
 		.news-link-arrows
 			@include mobile
 				display: none
-		.content
-			max-height: 250px
-			overflow: hidden
 		// .content:after
 		// 	content: ""
 		// 	position: absolute
