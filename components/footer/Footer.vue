@@ -15,8 +15,8 @@
 		<div style="display: grid; grid-template-columns: 1fr 250px; align-items: center; padding: 0 1rem">
 			<p style="color: gray; margin: 0; padding: 0">&copy; 2022 Conzepta Team AG. All rights reserved.</p>
 			<div class="partner-logos">
-				<a target="_blank" href="https://www.swissict.ch/"><img src="/swissict_logo_sw.png" alt="" /></a>
-				<a target="_blank" href="https://www.swissmadesoftware.org/home.html"><img src="/swissmade_logo_sw.png" alt="" /></a>
+				<a target="_blank" href="https://www.swissict.ch/"><img src="/swissict_logo.png" alt="" /></a>
+				<a target="_blank" href="https://www.swissmadesoftware.org/home.html"><img src="/swissmade_logo.png" alt="" /></a>
 			</div>
 		</div>
 	</footer>
