@@ -26,7 +26,7 @@
 		<div class="second" :id="`news-${i}`" v-for="(a, i) in news" :key="i" v-show="a.acf.kategorie.includes(selectedCategories.toLowerCase()) || selectedCategories == ($i18n.locale == 'fr' ? 'Tous' : 'Alle')">
 			<div class="container">
 				<div>
-					<article style="" :class="{ 'news-article': true, long: a.content.rendered.length > 750, opened: openNews == i }">
+					<article style="" :class="{ 'news-article': true, long: a.acf.ausgeklappt, opened: openNews == i }">
 						<h3>{{ formatDate(a.acf.datum) }}</h3>
 						<h2>{{ a.title.rendered }}</h2>
 						<div v-html="a.acf.vorschau" />
