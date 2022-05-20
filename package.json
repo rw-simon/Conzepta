@@ -30,6 +30,7 @@
 		"sass-loader": "^10.0.2",
 		"swiper": "^5.3.7",
 		"validator": "^13.6.0",
+		"vercel-builder": "^0.0.2",
 		"vue": "^2.6.12",
 		"vue-awesome-swiper": "^4.1.1",
 		"vue-scroll-reveal": "^1.0.11",
