@@ -168,6 +168,11 @@
 				</div>
 			</div>
 		</div>
+		<div style="margin-top: 8rem">
+			<div class="container">
+				<div class="video" style="width: 100%" v-html="content.acf.video"></div>
+			</div>
+		</div>
 		<div style="margin-top: 8rem" class="anwender">
 			<div class="container" style="padding: 4rem 0">
 				<h2>{{ $i18n.locale == 'fr' ? 'Certains de nos utilisateurs' : 'Einige unserer Anwender' }}</h2>
@@ -234,6 +239,9 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.video
+	iframe
+		max-width: 100% !important
 .list-two-columns
 	display: grid
 	grid-template-columns: 1fr 1fr
