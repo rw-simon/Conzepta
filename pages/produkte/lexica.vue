@@ -17,11 +17,8 @@
 							</div> -->
 							<div class="produktemanager">
 								<div style="display: grid; grid-template-columns: repeat(6, 2rem); gap: 0.5rem; align-items: center">
-									<span style="padding: 5px">
-										<img style="height: auto" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/12/icon_apple.png" v-scroll-reveal="{ delay: 100 }" alt="" />
-									</span>
-									<span style="padding: 5px">
-										<img style="height: auto; opacity: 0.33" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/12/icon_android.png" v-scroll-reveal="{ delay: 100 }" alt="" />
+									<span v-for="(platform, i) in content.platform" :key="i" style="padding: 5px">
+										<img style="height: auto" :src="$store.state.platforms[platform].acf.platform_icon" alt="" />
 									</span>
 								</div>
 								<nuxt-link :to="{ path: '/wir', hash: '#philippe-luethi' }">
@@ -117,6 +114,9 @@
 					</client-only>
 				</div>
 			</div>
+			<div class="container video">
+				<div v-html="content.acf.modules[4]['text_1_columns_column_1']"></div>
+			</div>
 			<div class="anwender">
 				<div class="container" style="padding: 4rem 0">
 					<h2>{{ $i18n.locale == 'fr' ? 'Certains de nos utilisateurs' : 'Einige unserer Anwender' }}</h2>
@@ -186,6 +186,10 @@ export default {
 <style lang="sass" scoped>
 .lexiconnect
 	margin-top: 8rem
+.video
+	iframe
+		width: 100% !important
+
 
 .person
 	width: 16rem

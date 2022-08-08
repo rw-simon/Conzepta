@@ -16,9 +16,10 @@
 								den gesetzlich vorgegebenen Richtwerten. Das System informiert Sie sofort über mögliche Verstösse. Verwalten Sie Fahrer- und Fahrzeugdaten an einem Ort: einlesen, bearbeiten und auswerten.
 							</p> -->
 							<br />
+
 							<div style="display: grid; grid-template-columns: repeat(6, 2rem); gap: 0.5rem; align-items: center">
-								<span style="padding: 5px">
-									<img style="height: auto" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/12/icon_windows.png" v-scroll-reveal="{ delay: 100 }" alt="" />
+								<span v-for="(platform, i) in content.platform" :key="i" style="padding: 5px">
+									<img style="height: auto" :src="$store.state.platforms[platform].acf.platform_icon" alt="" />
 								</span>
 							</div>
 							<nuxt-link :to="'/wir#philippe-luethi'"

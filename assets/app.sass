@@ -97,7 +97,10 @@ img
 
 .video
 	iframe
-		max-width: 100% !important
+		width: 100% !important
+		min-height: 480px
+		@include mobile
+			min-height: auto
 
 .section
 	margin-top: 10rem

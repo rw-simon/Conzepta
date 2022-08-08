@@ -9,6 +9,7 @@ export const state = () => ({
 	person: {},
 	platforms: {},
 	menu: {},
+	platform_ids: [30, 31, 32, 33, 60, 62, 64, 85, 86],
 })
 
 export const mutations = {
@@ -73,7 +74,7 @@ export const actions = {
 		// const productRequest = await axios.get('https://admin.conzepta.ch/index.php/wp-json/wp/v2/products?per_page=100&orderby=menu_order&order=asc')
 		// const productCategoryRequest = await axios.get('https://admin.conzepta.ch/index.php/wp-json/wp/v2/product_category?per_page=100')
 		// const newsRequest = await axios.get('https://admin.conzepta.ch/index.php/wp-json/wp/v2/news?per_page=100')
-		// const platformRequest = await axios.get('https://admin.conzepta.ch/index.php/wp-json/wp/v2/platform?per_page=100')
+		const platformRequest = await axios.get('https://admin.conzepta.ch/index.php/wp-json/wp/v2/platform?per_page=100')
 		// const personRequest = await axios.get('https://admin.conzepta.ch/index.php/wp-json/wp/v2/person?per_page=100')
 		// const mediaRequest = await axios.get(
 		// 	'https://admin.conzepta.ch/index.php/wp-json/wp/v2/media?per_page=100'
@@ -82,14 +83,14 @@ export const actions = {
 		// const productData = productRequest.data
 		// const productCategoryData = productCategoryRequest.data
 		// const newsData = newsRequest.data
-		// const platformData = platformRequest.data
+		const platformData = platformRequest.data
 		// const personData = personRequest.data
 		// const mediaData = mediaRequest.data
 		// commit('SET_PAGES', pageData)
 		// commit('SET_PRODUCTS', productData)
 		// commit('SET_PRODUCTCATEGORIES', productCategoryData)
 		// commit('SET_NEWS', newsData)
-		// commit('SET_PLATFORM', platformData)
+		commit('SET_PLATFORM', platformData)
 		// commit('SET_PERSON', personData)
 		// commit('SET_MEDIA', mediaData)
 		commit('INITIALIZE_MENU', { de: { header: menuRequestHauptDE.data, footer: menuRequestFooterDE.data }, fr: { header: menuRequestHauptFR.data, footer: menuRequestFooterFR.data } })

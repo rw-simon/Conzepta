@@ -9,14 +9,8 @@
 			<div class="pp-icons">
 				<div class="container">
 					<div style="display: grid; grid-template-columns: repeat(6, 2rem); gap: 0.5rem; align-items: center">
-						<span style="padding: 5px">
-							<img style="height: auto" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/12/icon_windows.png" v-scroll-reveal="{ delay: 100 }" alt="" />
-						</span>
-						<span style="padding: 5px">
-							<img style="height: auto; opacity: 0.33" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/12/icon_android.png" v-scroll-reveal="{ delay: 100 }" alt="" />
-						</span>
-						<span style="padding: 5px">
-							<img style="height: auto; opacity: 0.33" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/12/icon_apple.png" v-scroll-reveal="{ delay: 100 }" alt="" />
+						<span v-for="(platform, i) in content.platform" :key="i" style="padding: 5px">
+							<img style="height: auto" :src="$store.state.platforms[platform].acf.platform_icon" alt="" />
 						</span>
 					</div>
 					<nuxt-link v-if="content.acf.product_person" :to="'/wir#' + content.acf.product_person.post_name"

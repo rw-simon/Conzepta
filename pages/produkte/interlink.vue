@@ -12,7 +12,12 @@
 							InterLink ist ein zuverlässiges Kommunikationssystem, das Ihre Mitarbeitenden während der Arbeitszeit begleitet: Präsenzzeiten erfassen, Zutritte gewähren, Auftragszeiten buchen. Sie erhalten alle Aktivitäten in Echtzeit,
 							weltweit.
 						</p> -->
-						<img v-scroll-reveal="{ delay: 600 }" style="width: 1.2rem" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/12/icon_windows.png" alt="" />
+
+						<div style="display: grid; grid-template-columns: repeat(6, 2rem); gap: 0.5rem; align-items: center">
+							<span v-for="(platform, i) in content.platform" :key="i" style="padding: 5px">
+								<img style="height: auto" :src="$store.state.platforms[platform].acf.platform_icon" alt="" />
+							</span>
+						</div>
 						<nuxt-link to="/wir#urs-blaser">
 							<div class="grid cols-2 small-gap person" style="align-items: center; margin-top: 2rem">
 								<div>
