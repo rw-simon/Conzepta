@@ -3,7 +3,7 @@
 		<div class="popup" v-scroll-reveal>
 			<span class="close" @click="closePopup()">[x]</span>
 			<div v-html="content.content.text" />
-			<a :href="content.content.button.link">
+			<a :href="content.content.button.link" @click="closePopup()">
 				<CButton isOutline :text="content.content.button.anzeigetext" />
 			</a>
 		</div>
