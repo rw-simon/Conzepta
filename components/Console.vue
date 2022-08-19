@@ -23,10 +23,11 @@
 			</nuxt-link>
 		</div>
 		<div class="content" v-else>
-			<p class="title" @click="toggleConsole">Conzepta//</p>
-			<p>{{ $i18n.locale == 'fr' ? 'Besoin de soutien? Prenez contact avec nous!' : 'Unterstützung gefällig? Nehmen Sie mit uns Kontakt auf!' }}</p>
+			<div v-html="content.acf.content.text"></div>
+			<!-- <p class="title" @click="toggleConsole">Conzepta//</p> -->
+			<!-- <p>{{ $i18n.locale == 'fr' ? 'Besoin de soutien? Prenez contact avec nous!' : 'Unterstützung gefällig? Nehmen Sie mit uns Kontakt auf!' }}</p> -->
 			<!-- <CButton isOutline isMono text="Team Viewer" /> -->
-			<nuxt-link :to="localePath({ name: 'kontakt' })"><CButton isOutline isMono :text="$i18n.locale == 'fr' ? 'Formulaire de contact' : 'Kontaktformular'" /></nuxt-link>
+			<a :href="content.acf.content.button.link"><CButton isOutline isMono :text="content.acf.content.button.anzeigetext" /></a>
 		</div>
 	</div>
 </template>
@@ -43,6 +44,7 @@ export default {
 			toggleSymbol: 'X',
 		}
 	},
+
 	methods: {
 		toggleConsole() {
 			this.isActive = !this.isActive
@@ -58,6 +60,11 @@ export default {
 			} else {
 				this.$store.dispatch('setConsoleCookie', 'false')
 			}
+		},
+	},
+	computed: {
+		content() {
+			return this.$i18n.locale == 'fr' ? this.$store.state.console[1] : this.$store.state.console[0]
 		},
 	},
 	mounted() {
