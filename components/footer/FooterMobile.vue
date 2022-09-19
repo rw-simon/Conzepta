@@ -1,6 +1,7 @@
 <template>
 	<footer>
 		<a target="_blank" href="https://ch.linkedin.com/company/conzepta-team-ag?trk=public_profile_topcard-current-company"><img class="linkedin-icon" src="/LinkedIn.svg" alt="" /></a>
+		<a target="_blank" href="https://twitter.com/conzepta_ch"><img class="twitter-icon" src="/twitter.svg" alt="" /></a>
 
 		<div class="blue">
 			<div class="container font-mono">
@@ -79,6 +80,12 @@ footer
 		position: absolute
 		right: .5rem
 		top: -1.8rem
+	.twitter-icon
+		height: 2.3rem
+		position: absolute
+		right: 4rem
+		top: -1.8rem
+		opacity: .5
 	.partner-logos
 		display: grid
 		grid-template-columns: 1fr 1fr

@@ -1,6 +1,7 @@
 <template>
 	<footer class="p-1 font-mono" style="position: relative">
 		<a target="_blank" href="https://ch.linkedin.com/company/conzepta-team-ag?trk=public_profile_topcard-current-company"><img class="linkedin-icon" src="/LinkedIn.svg" alt="" /></a>
+		<a target="_blank" href="https://twitter.com/conzepta_ch"><img class="twitter-icon" src="/twitter.svg" alt="" /></a>
 		<div class="grid cols-2 small-gap" style="gap: 1rem">
 			<section class="footer-left br bc-blue small-gap grid cols-3" style="column-gap: 1rem">
 				<span></span>
@@ -52,5 +53,11 @@ section
 	height: 2.3rem
 	position: absolute
 	right: 1.66rem
+	top: -1.8rem
+.twitter-icon
+	height: 2.3rem
+	position: absolute
+	right: 5rem
+	opacity: .5
 	top: -1.8rem
 </style>
