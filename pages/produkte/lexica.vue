@@ -21,7 +21,7 @@
 										<img style="height: auto" :src="$store.state.platforms[platform].acf.platform_icon" alt="" />
 									</span>
 								</div>
-								<nuxt-link :to="{ path: '/wir', hash: '#philippe-luethi' }">
+								<nuxt-link :to="{ path: '/wir', hash: '#alin-andersen' }">
 									<div class="grid cols-2 small-gap person" style="align-items: center; margin-top: 2rem">
 										<div>
 											<p v-scroll-reveal="{ delay: 800 }" style="margin: 0; line-height: 1em">{{ $i18n.locale == 'fr' ? 'Gestionnaire de produit' : 'Produktemanager' }}</p>
