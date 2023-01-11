@@ -25,7 +25,7 @@
 									<div class="grid cols-2 small-gap person" style="align-items: center; margin-top: 2rem">
 										<div>
 											<p v-scroll-reveal="{ delay: 800 }" style="margin: 0; line-height: 1em">{{ $i18n.locale == 'fr' ? 'Gestionnaire de produit' : 'Produktemanager' }}</p>
-											<p v-scroll-reveal="{ delay: 1000 }" style="font-weight: 900">Philippe Lüthi</p>
+											<p v-scroll-reveal="{ delay: 1000 }" style="font-weight: 900">Alin Andersen</p>
 										</div>
 										<div>
 											<img v-scroll-reveal="{ delay: 1200 }" style="height: auto; border-radius: 50%" src="/portrait_placeholder.png" alt="" />
