@@ -118,46 +118,21 @@
 			</div>
 		</div>
 		<div v-if="$i18n.locale == 'de'" class="container" style="margin-top: 8rem">
-			<h3>Technische Details</h3>
-			<h2>Grundfunktionen</h2>
+			<h3>{{ content.acf.grundfunktionen.untertitel }}</h3>
+			<h2>{{ content.acf.grundfunktionen.title }}</h2>
 			<div class="list-two-columns">
 				<div class="column-1">
-					<article>
-						<img class="list-icon" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" alt="" />
-						<h4>Erfassen</h4>
-						<p>Mit PolicePad erfassen Sie einfach und schnell Ordnungsbussen und Verzeigungen. Auf kantonaler und kommunaler Ebene.</p>
-					</article>
-					<article>
-						<img class="list-icon" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" alt="" />
-						<h4>Bearbeiten</h4>
-						<p>Sie können Bussen ganz unkompliziert kumulieren, ergänzen, ersetzen oder löschen.</p>
-					</article>
-					<article>
-						<img class="list-icon" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" alt="" />
-						<h4>On- und Offline</h4>
-						<p>Erfassen Sie Bussen auch in Gebieten, in denen es keinen mobilen Datenempfang gibt.</p>
-					</article>
-					<article>
-						<img class="list-icon" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" alt="" />
-						<h4>Beweissicherung</h4>
-						<p>Machen Sie vor Ort Fotos mit fälschungssicherer Signatur für die Beweissicherung. Lassen Sie sich mithilfe von Favoriten die wahrscheinlichsten Eingaben anzeigen.</p>
+					<article v-for="(a, i) in content.acf.grundfunktionen.list.slice(0, Math.ceil(content.acf.grundfunktionen.list.length / 2))">
+						<img :src="a.symbol" alt="" class="list-icon" />
+						<h4>{{ a.text.title }}</h4>
+						<p>{{ a.text.content }}</p>
 					</article>
 				</div>
 				<div class="column-2">
-					<article>
-						<img class="list-icon" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" alt="" />
-						<h4>LexiConnect</h4>
-						<p>Konsultieren Sie das Gesetz mit dem integrierten Nachschlagewerk LexiConnect und übernehmen Sie Tatbestände automatisch in einen neuen Fall.</p>
-					</article>
-					<article>
-						<img class="list-icon" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" alt="" />
-						<h4>Alles im Blick</h4>
-						<p>Rufen Sie bereits erfasste Bussen und Verzeigungen in Sekundenschnelle ab. Prüfen Sie vorhandene Parkbewilligungen (eParking, ParkingPay, Anwohnerparkkarten, Tagesbewilligungen etc.).</p>
-					</article>
-					<article>
-						<img class="list-icon" src="https://admin.conzepta.rechtwinklig.ch/wp-content/uploads/2020/11/icon_circle.png" alt="" />
-						<h4>Integrierbare Schnittstellen</h4>
-						<p>Fahndungslisten (z.B. RIPOL) und MFK-Auskünfte (z.B. InfoCar) können auf Wunsch eingebunden werden.</p>
+					<article v-for="(a, i) in content.acf.grundfunktionen.list.slice(Math.ceil(content.acf.grundfunktionen.list.length / 2))">
+						<img :src="a.symbol" alt="" class="list-icon" />
+						<h4>{{ a.text.title }}</h4>
+						<p>{{ a.text.content }}</p>
 					</article>
 				</div>
 			</div>
