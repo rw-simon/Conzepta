@@ -24,6 +24,7 @@
 					<a v-else @click="opened = 'produkte'">{{ $i18n.locale == 'de' ? 'Produkte' : 'Produits' }}</a>
 					<ul class="submenu" v-if="opened == 'produkte'">
 						<li><nuxt-link :to="localePath({ name: 'produkte-policepad' })">PolicePad</nuxt-link></li>
+						<!-- <li><nuxt-link :to="localePath({ name: 'produkte-veripark' })">VeriPark</nuxt-link></li> -->
 						<li><nuxt-link :to="localePath({ name: 'produkte-lexica' })">Lexica</nuxt-link></li>
 						<li><nuxt-link :to="localePath({ name: 'produkte-interlink' })">InterLink</nuxt-link></li>
 						<li><nuxt-link :to="localePath({ name: 'produkte-tachifox' })">TachiFox</nuxt-link></li>

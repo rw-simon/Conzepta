@@ -22,11 +22,11 @@
 									<img style="height: auto" :src="$store.state.platforms[platform].acf.platform_icon" alt="" />
 								</span>
 							</div>
-							<nuxt-link :to="'/wir#philippe-luethi'"
+							<nuxt-link :to="'/wir#cyril-imadjane'"
 								><div class="grid cols-2 small-gap person" style="align-items: center; margin-top: 2rem">
 									<div>
 										<p v-scroll-reveal="{ delay: 300 }" style="margin: 0; line-height: 1em">{{ $i18n.locale == 'fr' ? 'Gestionnaire de produit' : 'Produktemanager' }}</p>
-										<p v-scroll-reveal="{ delay: 400 }" style="margin: 0; font-weight: 900">Philippe Lüthi</p>
+										<p v-scroll-reveal="{ delay: 400 }" style="margin: 0; font-weight: 900">Cyril Imadjane</p>
 									</div>
 									<div>
 										<img v-scroll-reveal="{ delay: 500 }" style="height: auto; border-radius: 50%" src="/portrait_placeholder.png" alt="" />

@@ -1,5 +1,6 @@
 <template>
 	<footer class="p-1 font-mono" style="position: relative">
+		<a target="_blank" href="https://www.facebook.com/profile.php?id=100089606696517"><img class="facebook-icon" src="/Facebook.svg" alt="" /></a>
 		<a target="_blank" href="https://ch.linkedin.com/company/conzepta-team-ag?trk=public_profile_topcard-current-company"><img class="linkedin-icon" src="/LinkedIn.svg" alt="" /></a>
 		<a target="_blank" href="https://twitter.com/conzepta_ch"><img class="twitter-icon" src="/twitter.svg" alt="" /></a>
 		<div class="grid cols-2 small-gap" style="gap: 1rem">
@@ -58,6 +59,12 @@ section
 	height: 2.3rem
 	position: absolute
 	right: 5rem
+	opacity: .5
+	top: -1.8rem
+.facebook-icon
+	height: 2.3rem
+	position: absolute
+	right: 8.33rem
 	opacity: .5
 	top: -1.8rem
 </style>

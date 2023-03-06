@@ -1,5 +1,6 @@
 <template>
 	<footer>
+		<a target="_blank" href="https://www.facebook.com/profile.php?id=100089606696517"><img class="facebook-icon" src="/Facebook.svg" alt="" /></a>
 		<a target="_blank" href="https://ch.linkedin.com/company/conzepta-team-ag?trk=public_profile_topcard-current-company"><img class="linkedin-icon" src="/LinkedIn.svg" alt="" /></a>
 		<a target="_blank" href="https://twitter.com/conzepta_ch"><img class="twitter-icon" src="/twitter.svg" alt="" /></a>
 
@@ -86,6 +87,12 @@ footer
 		right: 4rem
 		top: -1.8rem
 		opacity: .5
+	.facebook-icon
+		height: 2.3rem
+		position: absolute
+		right: 7.5rem
+		opacity: .5
+		top: -1.8rem
 	.partner-logos
 		display: grid
 		grid-template-columns: 1fr 1fr

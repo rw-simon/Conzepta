@@ -43,7 +43,7 @@
 						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(3)" class="interlink" src="/portfolio/interlink/interflex.png" alt="" />
 						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(3)" class="interlink" src="/portfolio/interlink/migros.png" alt="" />
 						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(3)" class="interlink" src="/portfolio/interlink/mpdv.png" alt="" />
-						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(3)" class="interlink" src="/portfolio/interlink/polypoint.png" alt="" />
+						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(3)" class="interlink" src="/portfolio/interlink/polypoint_new.png" alt="" />
 						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(3)" class="interlink" src="/portfolio/interlink/spital_bern.png" alt="" />
 						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(3)" class="interlink" src="/portfolio/interlink/zeit_ag.png" alt="" />
 						<img v-if="selectedCategories.includes(0) || selectedCategories.includes(4)" class="tachifox" src="/portfolio/tachifox/lesroutierssuisse.png" alt="" />
