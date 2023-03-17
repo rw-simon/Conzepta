@@ -3,6 +3,8 @@
 		<h3>Support</h3>
 		<p>{{ $i18n.locale == 'fr' ? 'Prenez contact avec nous.' : 'Nehmen Sie mit uns Kontakt auf.' }}</p>
 		<nuxt-link :to="localePath({ name: 'kontakt' })"><CButton style="font-size: 0.7rem; padding-left: 0.5rem" isOutline isMono :text="$i18n.locale == 'fr' ? 'Formulaire de contact' : 'Kontaktformular'" /></nuxt-link>
+		<a class="ml-onclick-form" href="javascript:void(0)" onclick="ml('show', 'LvbjMu', true)"><CButton style="font-size: 0.7rem; padding-left: 0.5rem" isOutline isMono :text="$i18n.locale == 'fr' ? 'Newsletter' : 'Newsletter anmelden'" /></a>
+
 		<!-- <nuxt-link to="/"><CButton isOutline isMono text="Team Viewer" /></nuxt-link> -->
 	</div>
 </template>

@@ -14,6 +14,7 @@ export default {
 				content: 'we make IT happen',
 			},
 		],
+		script: [{ src: '/mlscript.js' }],
 		link: [{ rel: 'icon', type: 'image/x-icon', href: '/icon.png' }],
 	},
 
