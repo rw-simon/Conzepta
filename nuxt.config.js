@@ -119,5 +119,13 @@ export default {
 	axios: { baseURL: 'https://www.conzepta.ch' },
 
 	// Build Configuration (https://go.nuxtjs.dev/config-build)
-	build: {},
+	build: {
+		extractCSS: true,
+		// source-map for production debugging; TODO: remove for beta-launch
+		extend(config, { isClient }) {
+			if (isClient) {
+				config.devtool = 'source-map'
+			}
+		},
+	},
 }
