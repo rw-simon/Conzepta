@@ -2,14 +2,14 @@
 	"name": "conzepta",
 	"version": "1.0.0",
 	"private": true,
-	"engines": {
-		"node": ">=16.0.0 <17.0.0"
-	},
 	"scripts": {
 		"dev": "nuxt",
 		"build": "nuxt build",
 		"start": "nuxt start",
 		"generate": "nuxt generate"
+	},
+	"engines": {
+		"node": ">=14.0.0 <15.0.0"
 	},
 	"dependencies": {
 		"@nuxtjs/axios": "^5.12.5",
@@ -17,6 +17,7 @@
 		"@nuxtjs/pwa": "^3.0.2",
 		"@nuxtjs/recaptcha": "^1.0.4",
 		"@nuxtjs/style-resources": "^1.0.0",
+		"@nuxtjs/vercel-builder": "^0.24.0",
 		"core-js": "^3.6.5",
 		"express": "^4.17.1",
 		"jarallax": "^1.12.4",
